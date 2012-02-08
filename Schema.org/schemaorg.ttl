@@ -1,0 +1,4147 @@
+# Saved by TopBraid on Tue Feb 07 17:58:06 PST 2012
+# baseURI: http://schema.rdfs.org/all
+# imports: http://xmlns.com/foaf/0.1/
+# imports: http://purl.org/dc/terms/
+
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+schema:AboutPage
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: About page."@en ;
+      rdfs:isDefinedBy schema:AboutPage ;
+      rdfs:label "About Page"@en ;
+      rdfs:subClassOf schema:WebPage .
+
+schema:AccountingService
+      rdf:type rdfs:Class ;
+      rdfs:comment "Accountancy business."@en ;
+      rdfs:isDefinedBy schema:AccountingService ;
+      rdfs:label "Accounting Service"@en ;
+      rdfs:subClassOf schema:FinancialService , schema:ProfessionalService .
+
+schema:AdministrativeArea
+      rdf:type rdfs:Class ;
+      rdfs:comment "A geographical region under the jurisdiction of a particular government."@en ;
+      rdfs:isDefinedBy schema:AdministrativeArea ;
+      rdfs:label "Administrative Area"@en ;
+      rdfs:subClassOf schema:Place .
+
+schema:AdultEntertainment
+      rdf:type rdfs:Class ;
+      rdfs:comment "An adult entertainment establishment."@en ;
+      rdfs:isDefinedBy schema:AdultEntertainment ;
+      rdfs:label "Adult Entertainment"@en ;
+      rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:AggregateOffer
+      rdf:type rdfs:Class ;
+      rdfs:comment "When a single product that has different offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used."@en ;
+      rdfs:isDefinedBy schema:AggregateOffer ;
+      rdfs:label "Aggregate Offer"@en ;
+      rdfs:subClassOf schema:Offer .
+
+schema:AggregateRating
+      rdf:type rdfs:Class ;
+      rdfs:comment "The average rating based on multiple ratings or reviews."@en ;
+      rdfs:isDefinedBy schema:AggregateRating ;
+      rdfs:label "Aggregate Rating"@en ;
+      rdfs:subClassOf schema:Rating .
+
+schema:Airport
+      rdf:type rdfs:Class ;
+      rdfs:comment "An airport."@en ;
+      rdfs:isDefinedBy schema:Airport ;
+      rdfs:label "Airport"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:AmusementPark
+      rdf:type rdfs:Class ;
+      rdfs:comment "An amusement park."@en ;
+      rdfs:isDefinedBy schema:AmusementPark ;
+      rdfs:label "Amusement Park"@en ;
+      rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:AnimalShelter
+      rdf:type rdfs:Class ;
+      rdfs:comment "Animal shelter."@en ;
+      rdfs:isDefinedBy schema:AnimalShelter ;
+      rdfs:label "Animal Shelter"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:ApartmentComplex
+      rdf:type rdfs:Class ;
+      rdfs:comment "Residence type: Apartment complex."@en ;
+      rdfs:isDefinedBy schema:ApartmentComplex ;
+      rdfs:label "Apartment Complex"@en ;
+      rdfs:subClassOf schema:Residence .
+
+schema:Aquarium
+      rdf:type rdfs:Class ;
+      rdfs:comment "Aquarium."@en ;
+      rdfs:isDefinedBy schema:Aquarium ;
+      rdfs:label "Aquarium"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:ArtGallery
+      rdf:type rdfs:Class ;
+      rdfs:comment "An art gallery."@en ;
+      rdfs:isDefinedBy schema:ArtGallery ;
+      rdfs:label "Art Gallery"@en ;
+      rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:Article
+      rdf:type rdfs:Class ;
+      rdfs:comment "An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all."@en ;
+      rdfs:isDefinedBy schema:Article ;
+      rdfs:label "Article"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:Attorney
+      rdf:type rdfs:Class ;
+      rdfs:comment "Professional service: Attorney."@en ;
+      rdfs:isDefinedBy schema:Attorney ;
+      rdfs:label "Attorney"@en ;
+      rdfs:subClassOf schema:ProfessionalService .
+
+schema:AudioObject
+      rdf:type rdfs:Class ;
+      rdfs:comment "An audio file."@en ;
+      rdfs:isDefinedBy schema:AudioObject ;
+      rdfs:label "Audio Object"@en ;
+      rdfs:subClassOf schema:MediaObject .
+
+schema:AutoBodyShop
+      rdf:type rdfs:Class ;
+      rdfs:comment "Auto body shop."@en ;
+      rdfs:isDefinedBy schema:AutoBodyShop ;
+      rdfs:label "Auto Body Shop"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:AutoDealer
+      rdf:type rdfs:Class ;
+      rdfs:comment "An car dealership."@en ;
+      rdfs:isDefinedBy schema:AutoDealer ;
+      rdfs:label "Auto Dealer"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:AutoPartsStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "An auto parts store."@en ;
+      rdfs:isDefinedBy schema:AutoPartsStore ;
+      rdfs:label "Auto Parts Store"@en ;
+      rdfs:subClassOf schema:Store , schema:AutomotiveBusiness .
+
+schema:AutoRental
+      rdf:type rdfs:Class ;
+      rdfs:comment "A car rental business."@en ;
+      rdfs:isDefinedBy schema:AutoRental ;
+      rdfs:label "Auto Rental"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:AutoRepair
+      rdf:type rdfs:Class ;
+      rdfs:comment "Car repair business."@en ;
+      rdfs:isDefinedBy schema:AutoRepair ;
+      rdfs:label "Auto Repair"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:AutoWash
+      rdf:type rdfs:Class ;
+      rdfs:comment "A car wash business."@en ;
+      rdfs:isDefinedBy schema:AutoWash ;
+      rdfs:label "Auto Wash"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:AutomatedTeller
+      rdf:type rdfs:Class ;
+      rdfs:comment "ATM/cash machine."@en ;
+      rdfs:isDefinedBy schema:AutomatedTeller ;
+      rdfs:label "Automated Teller"@en ;
+      rdfs:subClassOf schema:FinancialService .
+
+schema:AutomotiveBusiness
+      rdf:type rdfs:Class ;
+      rdfs:comment "Car repair, sales, or parts."@en ;
+      rdfs:isDefinedBy schema:AutomotiveBusiness ;
+      rdfs:label "Automotive Business"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Bakery
+      rdf:type rdfs:Class ;
+      rdfs:comment "A bakery."@en ;
+      rdfs:isDefinedBy schema:Bakery ;
+      rdfs:label "Bakery"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:BankOrCreditUnion
+      rdf:type rdfs:Class ;
+      rdfs:comment "Bank or credit union."@en ;
+      rdfs:isDefinedBy schema:BankOrCreditUnion ;
+      rdfs:label "Bank or Credit Union"@en ;
+      rdfs:subClassOf schema:FinancialService .
+
+schema:BarOrPub
+      rdf:type rdfs:Class ;
+      rdfs:comment "A bar or pub."@en ;
+      rdfs:isDefinedBy schema:BarOrPub ;
+      rdfs:label "Bar or Pub"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Beach
+      rdf:type rdfs:Class ;
+      rdfs:comment "Beach."@en ;
+      rdfs:isDefinedBy schema:Beach ;
+      rdfs:label "Beach"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:BeautySalon
+      rdf:type rdfs:Class ;
+      rdfs:comment "Beauty salon."@en ;
+      rdfs:isDefinedBy schema:BeautySalon ;
+      rdfs:label "Beauty Salon"@en ;
+      rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:BedAndBreakfast
+      rdf:type rdfs:Class ;
+      rdfs:comment "Bed and breakfast."@en ;
+      rdfs:isDefinedBy schema:BedAndBreakfast ;
+      rdfs:label "Bed And Breakfast"@en ;
+      rdfs:subClassOf schema:LodgingBusiness .
+
+schema:BikeStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A bike store."@en ;
+      rdfs:isDefinedBy schema:BikeStore ;
+      rdfs:label "Bike Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Blog
+      rdf:type rdfs:Class ;
+      rdfs:comment "A blog"@en ;
+      rdfs:isDefinedBy schema:Blog ;
+      rdfs:label "Blog"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:BlogPosting
+      rdf:type rdfs:Class ;
+      rdfs:comment "A blog post."@en ;
+      rdfs:isDefinedBy schema:BlogPosting ;
+      rdfs:label "Blog Posting"@en ;
+      rdfs:subClassOf schema:Article .
+
+schema:BodyOfWater
+      rdf:type rdfs:Class ;
+      rdfs:comment "A body of water, such as a sea, ocean, or lake."@en ;
+      rdfs:isDefinedBy schema:BodyOfWater ;
+      rdfs:label "Body of Water"@en ;
+      rdfs:subClassOf schema:Landform .
+
+schema:Book
+      rdf:type rdfs:Class ;
+      rdfs:comment "A book."@en ;
+      rdfs:isDefinedBy schema:Book ;
+      rdfs:label "Book"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:BookFormatType
+      rdf:type rdfs:Class ;
+      rdfs:comment "The publication format of the book."@en ;
+      rdfs:isDefinedBy schema:BookFormatType ;
+      rdfs:label "Book Format Type"@en ;
+      rdfs:subClassOf schema:Enumeration .
+
+schema:BookStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A bookstore."@en ;
+      rdfs:isDefinedBy schema:BookStore ;
+      rdfs:label "Book Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:BowlingAlley
+      rdf:type rdfs:Class ;
+      rdfs:comment "A bowling alley."@en ;
+      rdfs:isDefinedBy schema:BowlingAlley ;
+      rdfs:label "Bowling Alley"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:Brewery
+      rdf:type rdfs:Class ;
+      rdfs:comment "Brewery."@en ;
+      rdfs:isDefinedBy schema:Brewery ;
+      rdfs:label "Brewery"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:BuddhistTemple
+      rdf:type rdfs:Class ;
+      rdfs:comment "A Buddhist temple."@en ;
+      rdfs:isDefinedBy schema:BuddhistTemple ;
+      rdfs:label "Buddhist Temple"@en ;
+      rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:BusStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A bus station."@en ;
+      rdfs:isDefinedBy schema:BusStation ;
+      rdfs:label "Bus Station"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:BusStop
+      rdf:type rdfs:Class ;
+      rdfs:comment "A bus stop."@en ;
+      rdfs:isDefinedBy schema:BusStop ;
+      rdfs:label "Bus Stop"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:BusinessEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Business event."@en ;
+      rdfs:isDefinedBy schema:BusinessEvent ;
+      rdfs:label "Business Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:CafeOrCoffeeShop
+      rdf:type rdfs:Class ;
+      rdfs:comment "A cafe or coffee shop."@en ;
+      rdfs:isDefinedBy schema:CafeOrCoffeeShop ;
+      rdfs:label "Cafe or Coffee Shop"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Campground
+      rdf:type rdfs:Class ;
+      rdfs:comment "A campground."@en ;
+      rdfs:isDefinedBy schema:Campground ;
+      rdfs:label "Campground"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:Canal
+      rdf:type rdfs:Class ;
+      rdfs:comment "A canal, like the Panama Canal"@en ;
+      rdfs:isDefinedBy schema:Canal ;
+      rdfs:label "Canal"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:Casino
+      rdf:type rdfs:Class ;
+      rdfs:comment "A casino."@en ;
+      rdfs:isDefinedBy schema:Casino ;
+      rdfs:label "Casino"@en ;
+      rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:CatholicChurch
+      rdf:type rdfs:Class ;
+      rdfs:comment "A Catholic church."@en ;
+      rdfs:isDefinedBy schema:CatholicChurch ;
+      rdfs:label "Catholic Church"@en ;
+      rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:Cemetery
+      rdf:type rdfs:Class ;
+      rdfs:comment "A graveyard."@en ;
+      rdfs:isDefinedBy schema:Cemetery ;
+      rdfs:label "Cemetery"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:CheckoutPage
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: Checkout page."@en ;
+      rdfs:isDefinedBy schema:CheckoutPage ;
+      rdfs:label "Checkout Page"@en ;
+      rdfs:subClassOf schema:WebPage .
+
+schema:ChildCare
+      rdf:type rdfs:Class ;
+      rdfs:comment "A Childcare center."@en ;
+      rdfs:isDefinedBy schema:ChildCare ;
+      rdfs:label "Child Care"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:ChildrensEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Children's event."@en ;
+      rdfs:isDefinedBy schema:ChildrensEvent ;
+      rdfs:label "Childrens Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:Church
+      rdf:type rdfs:Class ;
+      rdfs:comment "A church."@en ;
+      rdfs:isDefinedBy schema:Church ;
+      rdfs:label "Church"@en ;
+      rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:City
+      rdf:type rdfs:Class ;
+      rdfs:comment "A city or town."@en ;
+      rdfs:isDefinedBy schema:City ;
+      rdfs:label "City"@en ;
+      rdfs:subClassOf schema:AdministrativeArea .
+
+schema:CityHall
+      rdf:type rdfs:Class ;
+      rdfs:comment "A city hall."@en ;
+      rdfs:isDefinedBy schema:CityHall ;
+      rdfs:label "City Hall"@en ;
+      rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:CivicStructure
+      rdf:type rdfs:Class ;
+      rdfs:comment "A public structure, such as a town hall or concert hall."@en ;
+      rdfs:isDefinedBy schema:CivicStructure ;
+      rdfs:label "Civic Structure"@en ;
+      rdfs:subClassOf schema:Place .
+
+schema:ClothingStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A clothing store."@en ;
+      rdfs:isDefinedBy schema:ClothingStore ;
+      rdfs:label "Clothing Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:CollectionPage
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: Collection page."@en ;
+      rdfs:isDefinedBy schema:CollectionPage ;
+      rdfs:label "Collection Page"@en ;
+      rdfs:subClassOf schema:WebPage .
+
+schema:CollegeOrUniversity
+      rdf:type rdfs:Class ;
+      rdfs:comment "A college, university, or other third-level educational institution."@en ;
+      rdfs:isDefinedBy schema:CollegeOrUniversity ;
+      rdfs:label "College or University"@en ;
+      rdfs:subClassOf schema:EducationalOrganization .
+
+schema:ComedyClub
+      rdf:type rdfs:Class ;
+      rdfs:comment "A comedy club."@en ;
+      rdfs:isDefinedBy schema:ComedyClub ;
+      rdfs:label "Comedy Club"@en ;
+      rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:ComedyEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Comedy event."@en ;
+      rdfs:isDefinedBy schema:ComedyEvent ;
+      rdfs:label "Comedy Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:ComputerStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A computer store."@en ;
+      rdfs:isDefinedBy schema:ComputerStore ;
+      rdfs:label "Computer Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:ContactPage
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: Contact page."@en ;
+      rdfs:isDefinedBy schema:ContactPage ;
+      rdfs:label "Contact Page"@en ;
+      rdfs:subClassOf schema:WebPage .
+
+schema:ContactPoint
+      rdf:type rdfs:Class ;
+      rdfs:comment "A contact point—for example, a Customer Complaints department."@en ;
+      rdfs:isDefinedBy schema:ContactPoint ;
+      rdfs:label "Contact Point"@en ;
+      rdfs:subClassOf schema:StructuredValue .
+
+schema:Continent
+      rdf:type rdfs:Class ;
+      rdfs:comment "One of the continents (for example, Europe or Africa)."@en ;
+      rdfs:isDefinedBy schema:Continent ;
+      rdfs:label "Continent"@en ;
+      rdfs:subClassOf schema:Landform .
+
+schema:ConvenienceStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A convenience store."@en ;
+      rdfs:isDefinedBy schema:ConvenienceStore ;
+      rdfs:label "Convenience Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Corporation
+      rdf:type rdfs:Class ;
+      rdfs:comment "Organization: A business corporation."@en ;
+      rdfs:isDefinedBy schema:Corporation ;
+      rdfs:label "Corporation"@en ;
+      rdfs:subClassOf schema:Organization .
+
+schema:Country
+      rdf:type rdfs:Class ;
+      rdfs:comment "A country."@en ;
+      rdfs:isDefinedBy schema:Country ;
+      rdfs:label "Country"@en ;
+      rdfs:subClassOf schema:AdministrativeArea .
+
+schema:Courthouse
+      rdf:type rdfs:Class ;
+      rdfs:comment "A courthouse."@en ;
+      rdfs:isDefinedBy schema:Courthouse ;
+      rdfs:label "Courthouse"@en ;
+      rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:CreativeWork
+      rdf:type rdfs:Class ;
+      rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Creative Work"@en ;
+      rdfs:subClassOf schema:Thing .
+
+schema:Crematorium
+      rdf:type rdfs:Class ;
+      rdfs:comment "A crematorium."@en ;
+      rdfs:isDefinedBy schema:Crematorium ;
+      rdfs:label "Crematorium"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:DanceEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: A social dance."@en ;
+      rdfs:isDefinedBy schema:DanceEvent ;
+      rdfs:label "Dance Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:DanceGroup
+      rdf:type rdfs:Class ;
+      rdfs:comment "A dance group—for example, the Alvin Ailey Dance Theater or Riverdance."@en ;
+      rdfs:isDefinedBy schema:DanceGroup ;
+      rdfs:label "Dance Group"@en ;
+      rdfs:subClassOf schema:PerformingGroup .
+
+schema:DaySpa
+      rdf:type rdfs:Class ;
+      rdfs:comment "A day spa."@en ;
+      rdfs:isDefinedBy schema:DaySpa ;
+      rdfs:label "Day Spa"@en ;
+      rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:DefenceEstablishment
+      rdf:type rdfs:Class ;
+      rdfs:comment "A defence establishment, such as an army or navy base."@en ;
+      rdfs:isDefinedBy schema:DefenceEstablishment ;
+      rdfs:label "Defence Establishment"@en ;
+      rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:Dentist
+      rdf:type rdfs:Class ;
+      rdfs:comment "A dentist."@en ;
+      rdfs:isDefinedBy schema:Dentist ;
+      rdfs:label "Dentist"@en ;
+      rdfs:subClassOf schema:ProfessionalService , schema:MedicalOrganization .
+
+schema:DepartmentStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A department store."@en ;
+      rdfs:isDefinedBy schema:DepartmentStore ;
+      rdfs:label "Department Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Distance
+      rdf:type rdfs:Class ;
+      rdfs:comment "Properties that take Distances as values are of the form '<Number> <Length unit of measure>'. E.g., '7 ft'"@en ;
+      rdfs:isDefinedBy schema:Distance ;
+      rdfs:label "Distance"@en ;
+      rdfs:subClassOf schema:Quantity .
+
+schema:DryCleaningOrLaundry
+      rdf:type rdfs:Class ;
+      rdfs:comment "A dry-cleaning business."@en ;
+      rdfs:isDefinedBy schema:DryCleaningOrLaundry ;
+      rdfs:label "Dry Cleaning or Laundry"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Duration
+      rdf:type rdfs:Class ;
+      rdfs:comment "Quantity: Duration (use  ISO 8601 duration format)."@en ;
+      rdfs:isDefinedBy schema:Duration ;
+      rdfs:label "Duration"@en ;
+      rdfs:subClassOf schema:Quantity .
+
+schema:EducationEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Education event."@en ;
+      rdfs:isDefinedBy schema:EducationEvent ;
+      rdfs:label "Education Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:EducationalOrganization
+      rdf:type rdfs:Class ;
+      rdfs:comment "An educational organization."@en ;
+      rdfs:isDefinedBy schema:EducationalOrganization ;
+      rdfs:label "Educational Organization"@en ;
+      rdfs:subClassOf schema:Organization .
+
+schema:Electrician
+      rdf:type rdfs:Class ;
+      rdfs:comment "An electrician."@en ;
+      rdfs:isDefinedBy schema:Electrician ;
+      rdfs:label "Electrician"@en ;
+      rdfs:subClassOf schema:ProfessionalService , schema:HomeAndConstructionBusiness .
+
+schema:ElectronicsStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "An electronics store."@en ;
+      rdfs:isDefinedBy schema:ElectronicsStore ;
+      rdfs:label "Electronics Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:ElementarySchool
+      rdf:type rdfs:Class ;
+      rdfs:comment "An elementary school."@en ;
+      rdfs:isDefinedBy schema:ElementarySchool ;
+      rdfs:label "Elementary School"@en ;
+      rdfs:subClassOf schema:EducationalOrganization .
+
+schema:Embassy
+      rdf:type rdfs:Class ;
+      rdfs:comment "An embassy."@en ;
+      rdfs:isDefinedBy schema:Embassy ;
+      rdfs:label "Embassy"@en ;
+      rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:EmergencyService
+      rdf:type rdfs:Class ;
+      rdfs:comment "An emergency service, such as a fire station or ER."@en ;
+      rdfs:isDefinedBy schema:EmergencyService ;
+      rdfs:label "Emergency Service"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:EmploymentAgency
+      rdf:type rdfs:Class ;
+      rdfs:comment "An employment agency."@en ;
+      rdfs:isDefinedBy schema:EmploymentAgency ;
+      rdfs:label "Employment Agency"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Energy
+      rdf:type rdfs:Class ;
+      rdfs:comment "Properties that take Enerygy as values are of the form '<Number> <Energy unit of measure>'"@en ;
+      rdfs:isDefinedBy schema:Energy ;
+      rdfs:label "Energy"@en ;
+      rdfs:subClassOf schema:Quantity .
+
+schema:EntertainmentBusiness
+      rdf:type rdfs:Class ;
+      rdfs:comment "A business providing entertainment."@en ;
+      rdfs:isDefinedBy schema:EntertainmentBusiness ;
+      rdfs:label "Entertainment Business"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Enumeration
+      rdf:type rdfs:Class ;
+      rdfs:comment "Lists or enumerations—for example, a list of cuisines or music genres, etc."@en ;
+      rdfs:isDefinedBy schema:Enumeration ;
+      rdfs:label "Enumeration"@en ;
+      rdfs:subClassOf schema:Intangible .
+
+schema:Event
+      rdf:type rdfs:Class ;
+      rdfs:comment "An event happening at a certain time at a certain location."@en ;
+      rdfs:isDefinedBy schema:Event ;
+      rdfs:label "Event"@en ;
+      rdfs:subClassOf schema:Thing .
+
+schema:EventVenue
+      rdf:type rdfs:Class ;
+      rdfs:comment "An event venue."@en ;
+      rdfs:isDefinedBy schema:EventVenue ;
+      rdfs:label "Event Venue"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:ExerciseGym
+      rdf:type rdfs:Class ;
+      rdfs:comment "A gym."@en ;
+      rdfs:isDefinedBy schema:ExerciseGym ;
+      rdfs:label "Exercise Gym"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:FastFoodRestaurant
+      rdf:type rdfs:Class ;
+      rdfs:comment "A fast-food restaurant."@en ;
+      rdfs:isDefinedBy schema:FastFoodRestaurant ;
+      rdfs:label "Fast Food Restaurant"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Festival
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Festival."@en ;
+      rdfs:isDefinedBy schema:Festival ;
+      rdfs:label "Festival"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:FinancialService
+      rdf:type rdfs:Class ;
+      rdfs:comment "Financial services business."@en ;
+      rdfs:isDefinedBy schema:FinancialService ;
+      rdfs:label "Financial Service"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:FireStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A fire station. With firemen."@en ;
+      rdfs:isDefinedBy schema:FireStation ;
+      rdfs:label "Fire Station"@en ;
+      rdfs:subClassOf schema:EmergencyService , schema:CivicStructure .
+
+schema:Florist
+      rdf:type rdfs:Class ;
+      rdfs:comment "A florist."@en ;
+      rdfs:isDefinedBy schema:Florist ;
+      rdfs:label "Florist"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:FoodEstablishment
+      rdf:type rdfs:Class ;
+      rdfs:comment "A food-related business."@en ;
+      rdfs:isDefinedBy schema:FoodEstablishment ;
+      rdfs:label "Food Establishment"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:FoodEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Food event."@en ;
+      rdfs:isDefinedBy schema:FoodEvent ;
+      rdfs:label "Food Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:FurnitureStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A furniture store."@en ;
+      rdfs:isDefinedBy schema:FurnitureStore ;
+      rdfs:label "Furniture Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:GardenStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A garden store."@en ;
+      rdfs:isDefinedBy schema:GardenStore ;
+      rdfs:label "Garden Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:GasStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A gas station."@en ;
+      rdfs:isDefinedBy schema:GasStation ;
+      rdfs:label "Gas Station"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:GatedResidenceCommunity
+      rdf:type rdfs:Class ;
+      rdfs:comment "Residence type: Gated community."@en ;
+      rdfs:isDefinedBy schema:GatedResidenceCommunity ;
+      rdfs:label "Gated Residence Community"@en ;
+      rdfs:subClassOf schema:Residence .
+
+schema:GeneralContractor
+      rdf:type rdfs:Class ;
+      rdfs:comment "A general contractor."@en ;
+      rdfs:isDefinedBy schema:GeneralContractor ;
+      rdfs:label "General Contractor"@en ;
+      rdfs:subClassOf schema:ProfessionalService , schema:HomeAndConstructionBusiness .
+
+schema:GeoCoordinates
+      rdf:type rdfs:Class ;
+      rdfs:comment "The geographic coordinates of a place or event."@en ;
+      rdfs:isDefinedBy schema:GeoCoordinates ;
+      rdfs:label "Geo Coordinates"@en ;
+      rdfs:subClassOf schema:StructuredValue .
+
+schema:GeoShape
+      rdf:type rdfs:Class ;
+      rdfs:comment "The geographic shape of a place."@en ;
+      rdfs:isDefinedBy schema:GeoShape ;
+      rdfs:label "Geo Shape"@en ;
+      rdfs:subClassOf schema:StructuredValue .
+
+schema:GolfCourse
+      rdf:type rdfs:Class ;
+      rdfs:comment "A golf course."@en ;
+      rdfs:isDefinedBy schema:GolfCourse ;
+      rdfs:label "Golf Course"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:GovernmentBuilding
+      rdf:type rdfs:Class ;
+      rdfs:comment "A government building."@en ;
+      rdfs:isDefinedBy schema:GovernmentBuilding ;
+      rdfs:label "Government Building"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:GovernmentOffice
+      rdf:type rdfs:Class ;
+      rdfs:comment "A government office—for example, an IRS or DMV office."@en ;
+      rdfs:isDefinedBy schema:GovernmentOffice ;
+      rdfs:label "Government Office"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:GovernmentOrganization
+      rdf:type rdfs:Class ;
+      rdfs:comment "A governmental organization or agency."@en ;
+      rdfs:isDefinedBy schema:GovernmentOrganization ;
+      rdfs:label "Government Organization"@en ;
+      rdfs:subClassOf schema:Organization .
+
+schema:GroceryStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A grocery store."@en ;
+      rdfs:isDefinedBy schema:GroceryStore ;
+      rdfs:label "Grocery Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:HVACBusiness
+      rdf:type rdfs:Class ;
+      rdfs:comment "An HVAC service."@en ;
+      rdfs:isDefinedBy schema:HVACBusiness ;
+      rdfs:label "HVAC Business"@en ;
+      rdfs:subClassOf schema:HomeAndConstructionBusiness .
+
+schema:HairSalon
+      rdf:type rdfs:Class ;
+      rdfs:comment "A hair salon."@en ;
+      rdfs:isDefinedBy schema:HairSalon ;
+      rdfs:label "Hair Salon"@en ;
+      rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:HardwareStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A hardware store."@en ;
+      rdfs:isDefinedBy schema:HardwareStore ;
+      rdfs:label "Hardware Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:HealthAndBeautyBusiness
+      rdf:type rdfs:Class ;
+      rdfs:comment "Health and beauty."@en ;
+      rdfs:isDefinedBy schema:HealthAndBeautyBusiness ;
+      rdfs:label "Health And Beauty Business"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:HealthClub
+      rdf:type rdfs:Class ;
+      rdfs:comment "A health club."@en ;
+      rdfs:isDefinedBy schema:HealthClub ;
+      rdfs:label "Health Club"@en ;
+      rdfs:subClassOf schema:HealthAndBeautyBusiness , schema:SportsActivityLocation .
+
+schema:HighSchool
+      rdf:type rdfs:Class ;
+      rdfs:comment "A high school."@en ;
+      rdfs:isDefinedBy schema:HighSchool ;
+      rdfs:label "High School"@en ;
+      rdfs:subClassOf schema:EducationalOrganization .
+
+schema:HinduTemple
+      rdf:type rdfs:Class ;
+      rdfs:comment "A Hindu temple."@en ;
+      rdfs:isDefinedBy schema:HinduTemple ;
+      rdfs:label "Hindu Temple"@en ;
+      rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:HobbyShop
+      rdf:type rdfs:Class ;
+      rdfs:comment "A hobby store."@en ;
+      rdfs:isDefinedBy schema:HobbyShop ;
+      rdfs:label "Hobby Shop"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:HomeAndConstructionBusiness
+      rdf:type rdfs:Class ;
+      rdfs:comment "A construction business."@en ;
+      rdfs:isDefinedBy schema:HomeAndConstructionBusiness ;
+      rdfs:label "Home And Construction Business"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:HomeGoodsStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A home goods store."@en ;
+      rdfs:isDefinedBy schema:HomeGoodsStore ;
+      rdfs:label "Home Goods Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Hospital
+      rdf:type rdfs:Class ;
+      rdfs:comment "A hospital."@en ;
+      rdfs:isDefinedBy schema:Hospital ;
+      rdfs:label "Hospital"@en ;
+      rdfs:subClassOf schema:EmergencyService , schema:MedicalOrganization , schema:CivicStructure .
+
+schema:Hostel
+      rdf:type rdfs:Class ;
+      rdfs:comment "A hostel."@en ;
+      rdfs:isDefinedBy schema:Hostel ;
+      rdfs:label "Hostel"@en ;
+      rdfs:subClassOf schema:LodgingBusiness .
+
+schema:Hotel
+      rdf:type rdfs:Class ;
+      rdfs:comment "A hotel."@en ;
+      rdfs:isDefinedBy schema:Hotel ;
+      rdfs:label "Hotel"@en ;
+      rdfs:subClassOf schema:LodgingBusiness .
+
+schema:HousePainter
+      rdf:type rdfs:Class ;
+      rdfs:comment "A house painting service."@en ;
+      rdfs:isDefinedBy schema:HousePainter ;
+      rdfs:label "House Painter"@en ;
+      rdfs:subClassOf schema:ProfessionalService , schema:HomeAndConstructionBusiness .
+
+schema:IceCreamShop
+      rdf:type rdfs:Class ;
+      rdfs:comment "An ice cream shop"@en ;
+      rdfs:isDefinedBy schema:IceCreamShop ;
+      rdfs:label "Ice Cream Shop"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:ImageGallery
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: Image gallery page."@en ;
+      rdfs:isDefinedBy schema:ImageGallery ;
+      rdfs:label "Image Gallery"@en ;
+      rdfs:subClassOf schema:CollectionPage .
+
+schema:ImageObject
+      rdf:type rdfs:Class ;
+      rdfs:comment "An image file."@en ;
+      rdfs:isDefinedBy schema:ImageObject ;
+      rdfs:label "Image Object"@en ;
+      rdfs:subClassOf schema:MediaObject .
+
+schema:InsuranceAgency
+      rdf:type rdfs:Class ;
+      rdfs:comment "Insurance agency."@en ;
+      rdfs:isDefinedBy schema:InsuranceAgency ;
+      rdfs:label "Insurance Agency"@en ;
+      rdfs:subClassOf schema:FinancialService .
+
+schema:Intangible
+      rdf:type rdfs:Class ;
+      rdfs:comment "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc."@en ;
+      rdfs:isDefinedBy schema:Intangible ;
+      rdfs:label "Intangible"@en ;
+      rdfs:subClassOf schema:Thing .
+
+schema:InternetCafe
+      rdf:type rdfs:Class ;
+      rdfs:comment "An internet cafe."@en ;
+      rdfs:isDefinedBy schema:InternetCafe ;
+      rdfs:label "Internet Cafe"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:ItemAvailability
+      rdf:type rdfs:Class ;
+      rdfs:comment "A list of possible product availablity options."@en ;
+      rdfs:isDefinedBy schema:ItemAvailability ;
+      rdfs:label "Item Availability"@en ;
+      rdfs:subClassOf schema:Enumeration .
+
+schema:ItemList
+      rdf:type rdfs:Class ;
+      rdfs:comment "A list of items of any sort—for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting."@en ;
+      rdfs:isDefinedBy schema:ItemList ;
+      rdfs:label "Item List"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:ItemPage
+      rdf:type rdfs:Class ;
+      rdfs:comment "A page devoted to a single item, such as a particular product or hotel."@en ;
+      rdfs:isDefinedBy schema:ItemPage ;
+      rdfs:label "Item Page"@en ;
+      rdfs:subClassOf schema:WebPage .
+
+schema:JewelryStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A jewelry store."@en ;
+      rdfs:isDefinedBy schema:JewelryStore ;
+      rdfs:label "Jewelry Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:JobPosting
+      rdf:type rdfs:Class ;
+      rdfs:comment "A listing that describes a job opening in a certain organization."@en ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Job Posting"@en ;
+      rdfs:subClassOf schema:Intangible .
+
+schema:LakeBodyOfWater
+      rdf:type rdfs:Class ;
+      rdfs:comment "A lake (for example, Lake Pontrachain)."@en ;
+      rdfs:isDefinedBy schema:LakeBodyOfWater ;
+      rdfs:label "Lake Body of Water"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:Landform
+      rdf:type rdfs:Class ;
+      rdfs:comment "A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins."@en ;
+      rdfs:isDefinedBy schema:Landform ;
+      rdfs:label "Landform"@en ;
+      rdfs:subClassOf schema:Place .
+
+schema:LandmarksOrHistoricalBuildings
+      rdf:type rdfs:Class ;
+      rdfs:comment "An historical landmark or building."@en ;
+      rdfs:isDefinedBy schema:LandmarksOrHistoricalBuildings ;
+      rdfs:label "Landmarks or Historical Buildings"@en ;
+      rdfs:subClassOf schema:Place .
+
+schema:Language
+      rdf:type rdfs:Class ;
+      rdfs:comment "Natural languages such as Spanish, Tamil, Hindi, English, etc. and programming languages such as Scheme and Lisp."@en ;
+      rdfs:isDefinedBy schema:Language ;
+      rdfs:label "Language"@en ;
+      rdfs:subClassOf schema:Intangible .
+
+schema:LegislativeBuilding
+      rdf:type rdfs:Class ;
+      rdfs:comment "A legislative building—for example, the state capitol."@en ;
+      rdfs:isDefinedBy schema:LegislativeBuilding ;
+      rdfs:label "Legislative Building"@en ;
+      rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:Library
+      rdf:type rdfs:Class ;
+      rdfs:comment "A library."@en ;
+      rdfs:isDefinedBy schema:Library ;
+      rdfs:label "Library"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:LiquorStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A liquor store."@en ;
+      rdfs:isDefinedBy schema:LiquorStore ;
+      rdfs:label "Liquor Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:LiteraryEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Literary event."@en ;
+      rdfs:isDefinedBy schema:LiteraryEvent ;
+      rdfs:label "Literary Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:LocalBusiness
+      rdf:type rdfs:Class ;
+      rdfs:comment "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc."@en ;
+      rdfs:isDefinedBy schema:LocalBusiness ;
+      rdfs:label "Local Business"@en ;
+      rdfs:subClassOf schema:Organization , schema:Place .
+
+schema:Locksmith
+      rdf:type rdfs:Class ;
+      rdfs:comment "A locksmith."@en ;
+      rdfs:isDefinedBy schema:Locksmith ;
+      rdfs:label "Locksmith"@en ;
+      rdfs:subClassOf schema:ProfessionalService , schema:HomeAndConstructionBusiness .
+
+schema:LodgingBusiness
+      rdf:type rdfs:Class ;
+      rdfs:comment "A lodging business, such as a motel, hotel, or inn."@en ;
+      rdfs:isDefinedBy schema:LodgingBusiness ;
+      rdfs:label "Lodging Business"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Map
+      rdf:type rdfs:Class ;
+      rdfs:comment "A map."@en ;
+      rdfs:isDefinedBy schema:Map ;
+      rdfs:label "Map"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:Mass
+      rdf:type rdfs:Class ;
+      rdfs:comment "Properties that take Mass as values are of the form '<Number> <Mass unit of measure>'. E.g., '7 kg'"@en ;
+      rdfs:isDefinedBy schema:Mass ;
+      rdfs:label "Mass"@en ;
+      rdfs:subClassOf schema:Quantity .
+
+schema:MediaObject
+      rdf:type rdfs:Class ;
+      rdfs:comment "An image, video, or audio object embedded in a web page. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's)."@en ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Media Object"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:MedicalClinic
+      rdf:type rdfs:Class ;
+      rdfs:comment "A medical clinic."@en ;
+      rdfs:isDefinedBy schema:MedicalClinic ;
+      rdfs:label "Medical Clinic"@en ;
+      rdfs:subClassOf schema:MedicalOrganization .
+
+schema:MedicalOrganization
+      rdf:type rdfs:Class ;
+      rdfs:comment "A medical organization, such as a doctor's office or clinic."@en ;
+      rdfs:isDefinedBy schema:MedicalOrganization ;
+      rdfs:label "Medical Organization"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:MensClothingStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A men's clothing store."@en ;
+      rdfs:isDefinedBy schema:MensClothingStore ;
+      rdfs:label "Mens Clothing Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:MiddleSchool
+      rdf:type rdfs:Class ;
+      rdfs:comment "A middle school."@en ;
+      rdfs:isDefinedBy schema:MiddleSchool ;
+      rdfs:label "Middle School"@en ;
+      rdfs:subClassOf schema:EducationalOrganization .
+
+schema:MobilePhoneStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A mobile-phone store."@en ;
+      rdfs:isDefinedBy schema:MobilePhoneStore ;
+      rdfs:label "Mobile Phone Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Mosque
+      rdf:type rdfs:Class ;
+      rdfs:comment "A mosque."@en ;
+      rdfs:isDefinedBy schema:Mosque ;
+      rdfs:label "Mosque"@en ;
+      rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:Motel
+      rdf:type rdfs:Class ;
+      rdfs:comment "A motel."@en ;
+      rdfs:isDefinedBy schema:Motel ;
+      rdfs:label "Motel"@en ;
+      rdfs:subClassOf schema:LodgingBusiness .
+
+schema:MotorcycleDealer
+      rdf:type rdfs:Class ;
+      rdfs:comment "A motorcycle dealer."@en ;
+      rdfs:isDefinedBy schema:MotorcycleDealer ;
+      rdfs:label "Motorcycle Dealer"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:MotorcycleRepair
+      rdf:type rdfs:Class ;
+      rdfs:comment "A motorcycle repair shop."@en ;
+      rdfs:isDefinedBy schema:MotorcycleRepair ;
+      rdfs:label "Motorcycle Repair"@en ;
+      rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:Mountain
+      rdf:type rdfs:Class ;
+      rdfs:comment "A mountain, like Mount Whitney or Mount Everest"@en ;
+      rdfs:isDefinedBy schema:Mountain ;
+      rdfs:label "Mountain"@en ;
+      rdfs:subClassOf schema:Landform .
+
+schema:Movie
+      rdf:type rdfs:Class ;
+      rdfs:comment "A movie."@en ;
+      rdfs:isDefinedBy schema:Movie ;
+      rdfs:label "Movie"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:MovieRentalStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A movie rental store."@en ;
+      rdfs:isDefinedBy schema:MovieRentalStore ;
+      rdfs:label "Movie Rental Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:MovieTheater
+      rdf:type rdfs:Class ;
+      rdfs:comment "A movie theater."@en ;
+      rdfs:isDefinedBy schema:MovieTheater ;
+      rdfs:label "Movie Theater"@en ;
+      rdfs:subClassOf schema:EntertainmentBusiness , schema:CivicStructure .
+
+schema:MovingCompany
+      rdf:type rdfs:Class ;
+      rdfs:comment "A moving company."@en ;
+      rdfs:isDefinedBy schema:MovingCompany ;
+      rdfs:label "Moving Company"@en ;
+      rdfs:subClassOf schema:HomeAndConstructionBusiness .
+
+schema:Museum
+      rdf:type rdfs:Class ;
+      rdfs:comment "A museum."@en ;
+      rdfs:isDefinedBy schema:Museum ;
+      rdfs:label "Museum"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:MusicAlbum
+      rdf:type rdfs:Class ;
+      rdfs:comment "A collection of music tracks."@en ;
+      rdfs:isDefinedBy schema:MusicAlbum ;
+      rdfs:label "Music Album"@en ;
+      rdfs:subClassOf schema:MusicPlaylist .
+
+schema:MusicEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Music event."@en ;
+      rdfs:isDefinedBy schema:MusicEvent ;
+      rdfs:label "Music Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:MusicGroup
+      rdf:type rdfs:Class ;
+      rdfs:comment "A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician."@en ;
+      rdfs:isDefinedBy schema:MusicGroup ;
+      rdfs:label "Music Group"@en ;
+      rdfs:subClassOf schema:PerformingGroup .
+
+schema:MusicPlaylist
+      rdf:type rdfs:Class ;
+      rdfs:comment "A collection of music tracks in playlist form."@en ;
+      rdfs:isDefinedBy schema:MusicPlaylist ;
+      rdfs:label "Music Playlist"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:MusicRecording
+      rdf:type rdfs:Class ;
+      rdfs:comment "A music recording (track), usually a single song."@en ;
+      rdfs:isDefinedBy schema:MusicRecording ;
+      rdfs:label "Music Recording"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:MusicStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A music store."@en ;
+      rdfs:isDefinedBy schema:MusicStore ;
+      rdfs:label "Music Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:MusicVenue
+      rdf:type rdfs:Class ;
+      rdfs:comment "A music venue."@en ;
+      rdfs:isDefinedBy schema:MusicVenue ;
+      rdfs:label "Music Venue"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:MusicVideoObject
+      rdf:type rdfs:Class ;
+      rdfs:comment "A music video file."@en ;
+      rdfs:isDefinedBy schema:MusicVideoObject ;
+      rdfs:label "Music Video Object"@en ;
+      rdfs:subClassOf schema:MediaObject .
+
+schema:NGO
+      rdf:type rdfs:Class ;
+      rdfs:comment "Organization: Non-governmental Organization."@en ;
+      rdfs:isDefinedBy schema:NGO ;
+      rdfs:label "NGO"@en ;
+      rdfs:subClassOf schema:Organization .
+
+schema:NailSalon
+      rdf:type rdfs:Class ;
+      rdfs:comment "A nail salon."@en ;
+      rdfs:isDefinedBy schema:NailSalon ;
+      rdfs:label "Nail Salon"@en ;
+      rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:NewsArticle
+      rdf:type rdfs:Class ;
+      rdfs:comment "A news article"@en ;
+      rdfs:isDefinedBy schema:NewsArticle ;
+      rdfs:label "News Article"@en ;
+      rdfs:subClassOf schema:Article .
+
+schema:NightClub
+      rdf:type rdfs:Class ;
+      rdfs:comment "A nightclub or discotheque."@en ;
+      rdfs:isDefinedBy schema:NightClub ;
+      rdfs:label "Night Club"@en ;
+      rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:Notary
+      rdf:type rdfs:Class ;
+      rdfs:comment "A notary."@en ;
+      rdfs:isDefinedBy schema:Notary ;
+      rdfs:label "Notary"@en ;
+      rdfs:subClassOf schema:ProfessionalService .
+
+schema:NutritionInformation
+      rdf:type rdfs:Class ;
+      rdfs:comment "Nutritional information about the recipe."@en ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Nutrition Information"@en ;
+      rdfs:subClassOf schema:StructuredValue .
+
+schema:OceanBodyOfWater
+      rdf:type rdfs:Class ;
+      rdfs:comment "An ocean (for example, the Pacific)."@en ;
+      rdfs:isDefinedBy schema:OceanBodyOfWater ;
+      rdfs:label "Ocean Body of Water"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:Offer
+      rdf:type rdfs:Class ;
+      rdfs:comment "An offer to sell an item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event."@en ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Offer"@en ;
+      rdfs:subClassOf schema:Intangible .
+
+schema:OfferItemCondition
+      rdf:type rdfs:Class ;
+      rdfs:comment "A list of possible conditions for the item for sale."@en ;
+      rdfs:isDefinedBy schema:OfferItemCondition ;
+      rdfs:label "Offer Item Condition"@en ;
+      rdfs:subClassOf schema:Enumeration .
+
+schema:OfficeEquipmentStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "An office equipment store."@en ;
+      rdfs:isDefinedBy schema:OfficeEquipmentStore ;
+      rdfs:label "Office Equipment Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Optician
+      rdf:type rdfs:Class ;
+      rdfs:comment "An optician's store."@en ;
+      rdfs:isDefinedBy schema:Optician ;
+      rdfs:label "Optician"@en ;
+      rdfs:subClassOf schema:MedicalOrganization .
+
+schema:Organization
+      rdf:type rdfs:Class ;
+      rdfs:comment "An organization such as a school, NGO, corporation, club, etc."@en ;
+      rdfs:isDefinedBy schema:Organization ;
+      rdfs:label "Organization"@en ;
+      rdfs:subClassOf schema:Thing .
+
+schema:OutletStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "An outlet store."@en ;
+      rdfs:isDefinedBy schema:OutletStore ;
+      rdfs:label "Outlet Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Painting
+      rdf:type rdfs:Class ;
+      rdfs:comment "A painting."@en ;
+      rdfs:isDefinedBy schema:Painting ;
+      rdfs:label "Painting"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:Park
+      rdf:type rdfs:Class ;
+      rdfs:comment "A park."@en ;
+      rdfs:isDefinedBy schema:Park ;
+      rdfs:label "Park"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:ParkingFacility
+      rdf:type rdfs:Class ;
+      rdfs:comment "A parking lot or other parking facility."@en ;
+      rdfs:isDefinedBy schema:ParkingFacility ;
+      rdfs:label "Parking Facility"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:PawnShop
+      rdf:type rdfs:Class ;
+      rdfs:comment "A pawnstore."@en ;
+      rdfs:isDefinedBy schema:PawnShop ;
+      rdfs:label "Pawn Shop"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:PerformingArtsTheater
+      rdf:type rdfs:Class ;
+      rdfs:comment "A theatre or other performing art center."@en ;
+      rdfs:isDefinedBy schema:PerformingArtsTheater ;
+      rdfs:label "Performing Arts Theater"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:PerformingGroup
+      rdf:type rdfs:Class ;
+      rdfs:comment "A performance group, such as a band, an orchestra, or a circus."@en ;
+      rdfs:isDefinedBy schema:PerformingGroup ;
+      rdfs:label "Performing Group"@en ;
+      rdfs:subClassOf schema:Organization .
+
+schema:Person
+      rdf:type rdfs:Class ;
+      rdfs:comment "A person (alive, dead, undead, or fictional)."@en ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Person"@en ;
+      rdfs:subClassOf schema:Thing .
+
+schema:PetStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A pet store."@en ;
+      rdfs:isDefinedBy schema:PetStore ;
+      rdfs:label "Pet Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Pharmacy
+      rdf:type rdfs:Class ;
+      rdfs:comment "A pharmacy or drugstore."@en ;
+      rdfs:isDefinedBy schema:Pharmacy ;
+      rdfs:label "Pharmacy"@en ;
+      rdfs:subClassOf schema:MedicalOrganization .
+
+schema:Photograph
+      rdf:type rdfs:Class ;
+      rdfs:comment "A photograph."@en ;
+      rdfs:isDefinedBy schema:Photograph ;
+      rdfs:label "Photograph"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:Physician
+      rdf:type rdfs:Class ;
+      rdfs:comment "A doctor's office."@en ;
+      rdfs:isDefinedBy schema:Physician ;
+      rdfs:label "Physician"@en ;
+      rdfs:subClassOf schema:MedicalOrganization .
+
+schema:Place
+      rdf:type rdfs:Class ;
+      rdfs:comment "Entities that have a somewhat fixed, physical extension."@en ;
+      rdfs:isDefinedBy schema:Place ;
+      rdfs:label "Place"@en ;
+      rdfs:subClassOf schema:Thing .
+
+schema:PlaceOfWorship
+      rdf:type rdfs:Class ;
+      rdfs:comment "Place of worship, such as a church, synagogue, or mosque."@en ;
+      rdfs:isDefinedBy schema:PlaceOfWorship ;
+      rdfs:label "Place of Worship"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:Playground
+      rdf:type rdfs:Class ;
+      rdfs:comment "A playground."@en ;
+      rdfs:isDefinedBy schema:Playground ;
+      rdfs:label "Playground"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:Plumber
+      rdf:type rdfs:Class ;
+      rdfs:comment "A plumbing service."@en ;
+      rdfs:isDefinedBy schema:Plumber ;
+      rdfs:label "Plumber"@en ;
+      rdfs:subClassOf schema:ProfessionalService , schema:HomeAndConstructionBusiness .
+
+schema:PoliceStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A police station."@en ;
+      rdfs:isDefinedBy schema:PoliceStation ;
+      rdfs:label "Police Station"@en ;
+      rdfs:subClassOf schema:EmergencyService , schema:CivicStructure .
+
+schema:Pond
+      rdf:type rdfs:Class ;
+      rdfs:comment "A pond"@en ;
+      rdfs:isDefinedBy schema:Pond ;
+      rdfs:label "Pond"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:PostOffice
+      rdf:type rdfs:Class ;
+      rdfs:comment "A post office."@en ;
+      rdfs:isDefinedBy schema:PostOffice ;
+      rdfs:label "Post Office"@en ;
+      rdfs:subClassOf schema:GovernmentOffice .
+
+schema:PostalAddress
+      rdf:type rdfs:Class ;
+      rdfs:comment "The mailing address."@en ;
+      rdfs:isDefinedBy schema:PostalAddress ;
+      rdfs:label "Postal Address"@en ;
+      rdfs:subClassOf schema:ContactPoint .
+
+schema:Preschool
+      rdf:type rdfs:Class ;
+      rdfs:comment "A preschool."@en ;
+      rdfs:isDefinedBy schema:Preschool ;
+      rdfs:label "Preschool"@en ;
+      rdfs:subClassOf schema:EducationalOrganization .
+
+schema:Product
+      rdf:type rdfs:Class ;
+      rdfs:comment "A product is anything that is made available for sale—for example, a pair of shoes, a concert ticket, or a car."@en ;
+      rdfs:isDefinedBy schema:Product ;
+      rdfs:label "Product"@en ;
+      rdfs:subClassOf schema:Thing .
+
+schema:ProfessionalService
+      rdf:type rdfs:Class ;
+      rdfs:comment "Provider of professional services."@en ;
+      rdfs:isDefinedBy schema:ProfessionalService ;
+      rdfs:label "Professional Service"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:ProfilePage
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: Profile page."@en ;
+      rdfs:isDefinedBy schema:ProfilePage ;
+      rdfs:label "Profile Page"@en ;
+      rdfs:subClassOf schema:WebPage .
+
+schema:PublicSwimmingPool
+      rdf:type rdfs:Class ;
+      rdfs:comment "A public swimming pool."@en ;
+      rdfs:isDefinedBy schema:PublicSwimmingPool ;
+      rdfs:label "Public Swimming Pool"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:Quantity
+      rdf:type rdfs:Class ;
+      rdfs:comment "Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 Kg' or '4 milligrams'."@en ;
+      rdfs:isDefinedBy schema:Quantity ;
+      rdfs:label "Quantity"@en ;
+      rdfs:subClassOf schema:Intangible .
+
+schema:RVPark
+      rdf:type rdfs:Class ;
+      rdfs:comment "An RV park."@en ;
+      rdfs:isDefinedBy schema:RVPark ;
+      rdfs:label "RV Park"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:RadioStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A radio station."@en ;
+      rdfs:isDefinedBy schema:RadioStation ;
+      rdfs:label "Radio Station"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Rating
+      rdf:type rdfs:Class ;
+      rdfs:comment "The rating of the video."@en ;
+      rdfs:isDefinedBy schema:Rating ;
+      rdfs:label "Rating"@en ;
+      rdfs:subClassOf schema:Intangible .
+
+schema:RealEstateAgent
+      rdf:type rdfs:Class ;
+      rdfs:comment "A real-estate agent."@en ;
+      rdfs:isDefinedBy schema:RealEstateAgent ;
+      rdfs:label "Real Estate Agent"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Recipe
+      rdf:type rdfs:Class ;
+      rdfs:comment "A recipe."@en ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Recipe"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:RecyclingCenter
+      rdf:type rdfs:Class ;
+      rdfs:comment "A recycling center."@en ;
+      rdfs:isDefinedBy schema:RecyclingCenter ;
+      rdfs:label "Recycling Center"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:Reservoir
+      rdf:type rdfs:Class ;
+      rdfs:comment "A reservoir, like the Lake Kariba reservoir."@en ;
+      rdfs:isDefinedBy schema:Reservoir ;
+      rdfs:label "Reservoir"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:Residence
+      rdf:type rdfs:Class ;
+      rdfs:comment "The place where a person lives."@en ;
+      rdfs:isDefinedBy schema:Residence ;
+      rdfs:label "Residence"@en ;
+      rdfs:subClassOf schema:Place .
+
+schema:Restaurant
+      rdf:type rdfs:Class ;
+      rdfs:comment "A restaurant."@en ;
+      rdfs:isDefinedBy schema:Restaurant ;
+      rdfs:label "Restaurant"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Review
+      rdf:type rdfs:Class ;
+      rdfs:comment "A review of an item - for example, a restaurant, movie, or store."@en ;
+      rdfs:isDefinedBy schema:Review ;
+      rdfs:label "Review"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:RiverBodyOfWater
+      rdf:type rdfs:Class ;
+      rdfs:comment "A river (for example, the broad majestic Shannon)."@en ;
+      rdfs:isDefinedBy schema:RiverBodyOfWater ;
+      rdfs:label "River Body of Water"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:RoofingContractor
+      rdf:type rdfs:Class ;
+      rdfs:comment "A roofing contractor."@en ;
+      rdfs:isDefinedBy schema:RoofingContractor ;
+      rdfs:label "Roofing Contractor"@en ;
+      rdfs:subClassOf schema:ProfessionalService , schema:HomeAndConstructionBusiness .
+
+schema:SaleEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Sales event."@en ;
+      rdfs:isDefinedBy schema:SaleEvent ;
+      rdfs:label "Sale Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:ScholarlyArticle
+      rdf:type rdfs:Class ;
+      rdfs:comment "A scholarly article."@en ;
+      rdfs:isDefinedBy schema:ScholarlyArticle ;
+      rdfs:label "Scholarly Article"@en ;
+      rdfs:subClassOf schema:Article .
+
+schema:School
+      rdf:type rdfs:Class ;
+      rdfs:comment "A school."@en ;
+      rdfs:isDefinedBy schema:School ;
+      rdfs:label "School"@en ;
+      rdfs:subClassOf schema:EducationalOrganization .
+
+schema:Sculpture
+      rdf:type rdfs:Class ;
+      rdfs:comment "A piece of sculpture."@en ;
+      rdfs:isDefinedBy schema:Sculpture ;
+      rdfs:label "Sculpture"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:SeaBodyOfWater
+      rdf:type rdfs:Class ;
+      rdfs:comment "A sea (for example, the Caspian sea)."@en ;
+      rdfs:isDefinedBy schema:SeaBodyOfWater ;
+      rdfs:label "Sea Body of Water"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:SearchResultsPage
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: Search results page."@en ;
+      rdfs:isDefinedBy schema:SearchResultsPage ;
+      rdfs:label "Search Results Page"@en ;
+      rdfs:subClassOf schema:WebPage .
+
+schema:SelfStorage
+      rdf:type rdfs:Class ;
+      rdfs:comment "Self-storage facility."@en ;
+      rdfs:isDefinedBy schema:SelfStorage ;
+      rdfs:label "Self Storage"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:ShoeStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A shoe store."@en ;
+      rdfs:isDefinedBy schema:ShoeStore ;
+      rdfs:label "Shoe Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:ShoppingCenter
+      rdf:type rdfs:Class ;
+      rdfs:comment "A shopping center or mall."@en ;
+      rdfs:isDefinedBy schema:ShoppingCenter ;
+      rdfs:label "Shopping Center"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:SingleFamilyResidence
+      rdf:type rdfs:Class ;
+      rdfs:comment "Residence type: Single-family home."@en ;
+      rdfs:isDefinedBy schema:SingleFamilyResidence ;
+      rdfs:label "Single Family Residence"@en ;
+      rdfs:subClassOf schema:Residence .
+
+schema:SiteNavigationElement
+      rdf:type rdfs:Class ;
+      rdfs:comment "A navigation element of the page."@en ;
+      rdfs:isDefinedBy schema:SiteNavigationElement ;
+      rdfs:label "Site Navigation Element"@en ;
+      rdfs:subClassOf schema:WebPageElement .
+
+schema:SkiResort
+      rdf:type rdfs:Class ;
+      rdfs:comment "A ski resort."@en ;
+      rdfs:isDefinedBy schema:SkiResort ;
+      rdfs:label "Ski Resort"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:SocialEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Social event."@en ;
+      rdfs:isDefinedBy schema:SocialEvent ;
+      rdfs:label "Social Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:SportingGoodsStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A sporting goods store."@en ;
+      rdfs:isDefinedBy schema:SportingGoodsStore ;
+      rdfs:label "Sporting Goods Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:SportsActivityLocation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A sports location, such as a playing field."@en ;
+      rdfs:isDefinedBy schema:SportsActivityLocation ;
+      rdfs:label "Sports Activity Location"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:SportsClub
+      rdf:type rdfs:Class ;
+      rdfs:comment "A sports club."@en ;
+      rdfs:isDefinedBy schema:SportsClub ;
+      rdfs:label "Sports Club"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:SportsEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Sports event."@en ;
+      rdfs:isDefinedBy schema:SportsEvent ;
+      rdfs:label "Sports Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:SportsTeam
+      rdf:type rdfs:Class ;
+      rdfs:comment "Organization: Sports team."@en ;
+      rdfs:isDefinedBy schema:SportsTeam ;
+      rdfs:label "Sports Team"@en ;
+      rdfs:subClassOf schema:Organization .
+
+schema:StadiumOrArena
+      rdf:type rdfs:Class ;
+      rdfs:comment "A stadium."@en ;
+      rdfs:isDefinedBy schema:StadiumOrArena ;
+      rdfs:label "Stadium or Arena"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation , schema:CivicStructure .
+
+schema:State
+      rdf:type rdfs:Class ;
+      rdfs:comment "A state or province."@en ;
+      rdfs:isDefinedBy schema:State ;
+      rdfs:label "State"@en ;
+      rdfs:subClassOf schema:AdministrativeArea .
+
+schema:Store
+      rdf:type rdfs:Class ;
+      rdfs:comment "A retail good store."@en ;
+      rdfs:isDefinedBy schema:Store ;
+      rdfs:label "Store"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:StructuredValue
+      rdf:type rdfs:Class ;
+      rdfs:comment "Structured values are strings—for example, addresses—that have certain constraints on their structure."@en ;
+      rdfs:isDefinedBy schema:StructuredValue ;
+      rdfs:label "Structured Value"@en ;
+      rdfs:subClassOf schema:Intangible .
+
+schema:SubwayStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A subway station."@en ;
+      rdfs:isDefinedBy schema:SubwayStation ;
+      rdfs:label "Subway Station"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:Synagogue
+      rdf:type rdfs:Class ;
+      rdfs:comment "A synagogue."@en ;
+      rdfs:isDefinedBy schema:Synagogue ;
+      rdfs:label "Synagogue"@en ;
+      rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:TVEpisode
+      rdf:type rdfs:Class ;
+      rdfs:comment "An episode of a TV series or season."@en ;
+      rdfs:isDefinedBy schema:TVEpisode ;
+      rdfs:label "TV Episode"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:TVSeason
+      rdf:type rdfs:Class ;
+      rdfs:comment "A TV season."@en ;
+      rdfs:isDefinedBy schema:TVSeason ;
+      rdfs:label "TV Season"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:TVSeries
+      rdf:type rdfs:Class ;
+      rdfs:comment "A television series."@en ;
+      rdfs:isDefinedBy schema:TVSeries ;
+      rdfs:label "TV Series"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:Table
+      rdf:type rdfs:Class ;
+      rdfs:comment "A table on the page."@en ;
+      rdfs:isDefinedBy schema:Table ;
+      rdfs:label "Table"@en ;
+      rdfs:subClassOf schema:WebPageElement .
+
+schema:TattooParlor
+      rdf:type rdfs:Class ;
+      rdfs:comment "A tattoo parlor."@en ;
+      rdfs:isDefinedBy schema:TattooParlor ;
+      rdfs:label "Tattoo Parlor"@en ;
+      rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:TaxiStand
+      rdf:type rdfs:Class ;
+      rdfs:comment "A taxi stand."@en ;
+      rdfs:isDefinedBy schema:TaxiStand ;
+      rdfs:label "Taxi Stand"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:TelevisionStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A television station."@en ;
+      rdfs:isDefinedBy schema:TelevisionStation ;
+      rdfs:label "Television Station"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:TennisComplex
+      rdf:type rdfs:Class ;
+      rdfs:comment "A tennis complex."@en ;
+      rdfs:isDefinedBy schema:TennisComplex ;
+      rdfs:label "Tennis Complex"@en ;
+      rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:TheaterEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Theater performance."@en ;
+      rdfs:isDefinedBy schema:TheaterEvent ;
+      rdfs:label "Theater Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:TheaterGroup
+      rdf:type rdfs:Class ;
+      rdfs:comment "A theater group or company—for example, the Royal Shakespeare Company or Druid Theatre."@en ;
+      rdfs:isDefinedBy schema:TheaterGroup ;
+      rdfs:label "Theater Group"@en ;
+      rdfs:subClassOf schema:PerformingGroup .
+
+schema:Thing
+      rdf:type rdfs:Class ;
+      rdfs:comment "The most generic type of item."@en ;
+      rdfs:isDefinedBy schema:Thing ;
+      rdfs:label "Thing"@en .
+
+schema:TireShop
+      rdf:type rdfs:Class ;
+      rdfs:comment "A tire shop."@en ;
+      rdfs:isDefinedBy schema:TireShop ;
+      rdfs:label "Tire Shop"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:TouristAttraction
+      rdf:type rdfs:Class ;
+      rdfs:comment "A tourist attraction."@en ;
+      rdfs:isDefinedBy schema:TouristAttraction ;
+      rdfs:label "Tourist Attraction"@en ;
+      rdfs:subClassOf schema:Place .
+
+schema:TouristInformationCenter
+      rdf:type rdfs:Class ;
+      rdfs:comment "A tourist information center."@en ;
+      rdfs:isDefinedBy schema:TouristInformationCenter ;
+      rdfs:label "Tourist Information Center"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:ToyStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A toystore."@en ;
+      rdfs:isDefinedBy schema:ToyStore ;
+      rdfs:label "Toy Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:TrainStation
+      rdf:type rdfs:Class ;
+      rdfs:comment "A train station."@en ;
+      rdfs:isDefinedBy schema:TrainStation ;
+      rdfs:label "Train Station"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:TravelAgency
+      rdf:type rdfs:Class ;
+      rdfs:comment "A travel agency."@en ;
+      rdfs:isDefinedBy schema:TravelAgency ;
+      rdfs:label "Travel Agency"@en ;
+      rdfs:subClassOf schema:LocalBusiness .
+
+schema:UserBlocks
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: Block this content."@en ;
+      rdfs:isDefinedBy schema:UserBlocks ;
+      rdfs:label "User Blocks"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserCheckins
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: Check-in at a place."@en ;
+      rdfs:isDefinedBy schema:UserCheckins ;
+      rdfs:label "User Checkins"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserComments
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: A comment about an item."@en ;
+      rdfs:isDefinedBy schema:UserComments ;
+      rdfs:label "User Comments"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserDownloads
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: Download of an item."@en ;
+      rdfs:isDefinedBy schema:UserDownloads ;
+      rdfs:label "User Downloads"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserInteraction
+      rdf:type rdfs:Class ;
+      rdfs:comment "A user interacting with a page"@en ;
+      rdfs:isDefinedBy schema:UserInteraction ;
+      rdfs:label "User Interaction"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:UserLikes
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: Like an item."@en ;
+      rdfs:isDefinedBy schema:UserLikes ;
+      rdfs:label "User Likes"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserPageVisits
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: Visit to a web page."@en ;
+      rdfs:isDefinedBy schema:UserPageVisits ;
+      rdfs:label "User Page Visits"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserPlays
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: Play count of an item, for example a video or a song."@en ;
+      rdfs:isDefinedBy schema:UserPlays ;
+      rdfs:label "User Plays"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserPlusOnes
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: +1."@en ;
+      rdfs:isDefinedBy schema:UserPlusOnes ;
+      rdfs:label "User Plus Ones"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:UserTweets
+      rdf:type rdfs:Class ;
+      rdfs:comment "User interaction: Tweets."@en ;
+      rdfs:isDefinedBy schema:UserTweets ;
+      rdfs:label "User Tweets"@en ;
+      rdfs:subClassOf schema:UserInteraction .
+
+schema:VeterinaryCare
+      rdf:type rdfs:Class ;
+      rdfs:comment "A vet's office."@en ;
+      rdfs:isDefinedBy schema:VeterinaryCare ;
+      rdfs:label "Veterinary Care"@en ;
+      rdfs:subClassOf schema:MedicalOrganization .
+
+schema:VideoGallery
+      rdf:type rdfs:Class ;
+      rdfs:comment "Web page type: Video gallery page."@en ;
+      rdfs:isDefinedBy schema:VideoGallery ;
+      rdfs:label "Video Gallery"@en ;
+      rdfs:subClassOf schema:CollectionPage .
+
+schema:VideoObject
+      rdf:type rdfs:Class ;
+      rdfs:comment "A video file."@en ;
+      rdfs:isDefinedBy schema:VideoObject ;
+      rdfs:label "Video Object"@en ;
+      rdfs:subClassOf schema:MediaObject .
+
+schema:VisualArtsEvent
+      rdf:type rdfs:Class ;
+      rdfs:comment "Event type: Visual arts event."@en ;
+      rdfs:isDefinedBy schema:VisualArtsEvent ;
+      rdfs:label "Visual Arts Event"@en ;
+      rdfs:subClassOf schema:Event .
+
+schema:Volcano
+      rdf:type rdfs:Class ;
+      rdfs:comment "A volcano, like Fuji san"@en ;
+      rdfs:isDefinedBy schema:Volcano ;
+      rdfs:label "Volcano"@en ;
+      rdfs:subClassOf schema:Landform .
+
+schema:WPAdBlock
+      rdf:type rdfs:Class ;
+      rdfs:comment "An advertising section of the page."@en ;
+      rdfs:isDefinedBy schema:WPAdBlock ;
+      rdfs:label "WP Ad Block"@en ;
+      rdfs:subClassOf schema:WebPageElement .
+
+schema:WPFooter
+      rdf:type rdfs:Class ;
+      rdfs:comment "The footer section of the page."@en ;
+      rdfs:isDefinedBy schema:WPFooter ;
+      rdfs:label "WP Footer"@en ;
+      rdfs:subClassOf schema:WebPageElement .
+
+schema:WPHeader
+      rdf:type rdfs:Class ;
+      rdfs:comment "The header section of the page."@en ;
+      rdfs:isDefinedBy schema:WPHeader ;
+      rdfs:label "WP Header"@en ;
+      rdfs:subClassOf schema:WebPageElement .
+
+schema:WPSideBar
+      rdf:type rdfs:Class ;
+      rdfs:comment "A sidebar section of the page."@en ;
+      rdfs:isDefinedBy schema:WPSideBar ;
+      rdfs:label "WP Side Bar"@en ;
+      rdfs:subClassOf schema:WebPageElement .
+
+schema:Waterfall
+      rdf:type rdfs:Class ;
+      rdfs:comment "A waterfall, like Niagara"@en ;
+      rdfs:isDefinedBy schema:Waterfall ;
+      rdfs:label "Waterfall"@en ;
+      rdfs:subClassOf schema:BodyOfWater .
+
+schema:WebPage
+      rdf:type rdfs:Class ;
+      rdfs:comment "A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as breadcrumb may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page"@en ;
+      rdfs:isDefinedBy schema:WebPage ;
+      rdfs:label "Web Page"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:WebPageElement
+      rdf:type rdfs:Class ;
+      rdfs:comment "A web page element, like a table or an image"@en ;
+      rdfs:isDefinedBy schema:WebPageElement ;
+      rdfs:label "Web Page Element"@en ;
+      rdfs:subClassOf schema:CreativeWork .
+
+schema:WholesaleStore
+      rdf:type rdfs:Class ;
+      rdfs:comment "A wholesale store."@en ;
+      rdfs:isDefinedBy schema:WholesaleStore ;
+      rdfs:label "Wholesale Store"@en ;
+      rdfs:subClassOf schema:Store .
+
+schema:Winery
+      rdf:type rdfs:Class ;
+      rdfs:comment "A winery."@en ;
+      rdfs:isDefinedBy schema:Winery ;
+      rdfs:label "Winery"@en ;
+      rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Zoo
+      rdf:type rdfs:Class ;
+      rdfs:comment "A zoo."@en ;
+      rdfs:isDefinedBy schema:Zoo ;
+      rdfs:label "Zoo"@en ;
+      rdfs:subClassOf schema:CivicStructure .
+
+schema:about
+      rdf:type rdf:Property ;
+      rdfs:comment "The subject matter of the content."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "About"@en ;
+      rdfs:range schema:Thing .
+
+schema:acceptsReservations
+      rdf:type rdf:Property ;
+      rdfs:comment "Either Yes/No, or a URL at which reservations can be made."@en ;
+      rdfs:domain schema:FoodEstablishment ;
+      rdfs:isDefinedBy schema:FoodEstablishment ;
+      rdfs:label "Accepts Reservations"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:string rdfs:Resource)
+              ] .
+
+schema:accountablePerson
+      rdf:type rdf:Property ;
+      rdfs:comment "Specifies the Person that is legally accountable for the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Accountable Person"@en ;
+      rdfs:range schema:Person .
+
+schema:actors
+      rdf:type rdf:Property ;
+      rdfs:comment "A cast member of the movie, TV series, season, or episode, or video."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVEpisode schema:Movie schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:Movie , schema:TVEpisode ;
+      rdfs:label "Actors"@en ;
+      rdfs:range schema:Person .
+
+schema:additionalName
+      rdf:type rdf:Property ;
+      rdfs:comment "An additional name for a Person, can be used for a middle name."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Additional Name"@en ;
+      rdfs:range xsd:string .
+
+schema:address
+      rdf:type rdf:Property ;
+      rdfs:comment "Physical address of the item."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:Place schema:Person)
+              ] ;
+      rdfs:isDefinedBy schema:Person , schema:Place , schema:Organization ;
+      rdfs:label "Address"@en ;
+      rdfs:range schema:PostalAddress .
+
+schema:addressCountry
+      rdf:type rdf:Property ;
+      rdfs:comment "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code."@en ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:isDefinedBy schema:PostalAddress ;
+      rdfs:label "Address Country"@en ;
+      rdfs:range schema:Country .
+
+schema:addressLocality
+      rdf:type rdf:Property ;
+      rdfs:comment "The locality. For example, Mountain View."@en ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:isDefinedBy schema:PostalAddress ;
+      rdfs:label "Address Locality"@en ;
+      rdfs:range xsd:string .
+
+schema:addressRegion
+      rdf:type rdf:Property ;
+      rdfs:comment "The region. For example, CA."@en ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:isDefinedBy schema:PostalAddress ;
+      rdfs:label "Address Region"@en ;
+      rdfs:range xsd:string .
+
+schema:affiliation
+      rdf:type rdf:Property ;
+      rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Affiliation"@en ;
+      rdfs:range schema:Organization .
+
+schema:aggregateRating
+      rdf:type rdf:Property ;
+      rdfs:comment "The overall rating, based on a collection of reviews or ratings, of the item."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:Product schema:CreativeWork schema:Place schema:Offer)
+              ] ;
+      rdfs:isDefinedBy schema:Organization , schema:Place , schema:CreativeWork , schema:Offer , schema:Product ;
+      rdfs:label "Aggregate Rating"@en ;
+      rdfs:range schema:AggregateRating .
+
+schema:albums
+      rdf:type rdf:Property ;
+      rdfs:comment "A collection of music albums."@en ;
+      rdfs:domain schema:MusicGroup ;
+      rdfs:isDefinedBy schema:MusicGroup ;
+      rdfs:label "Albums"@en ;
+      rdfs:range schema:MusicAlbum .
+
+schema:alternativeHeadline
+      rdf:type rdf:Property ;
+      rdfs:comment "A secondary title of the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Alternative Headline"@en ;
+      rdfs:range xsd:string .
+
+schema:alumni
+      rdf:type rdf:Property ;
+      rdfs:comment "Alumni of educational organization."@en ;
+      rdfs:domain schema:EducationalOrganization ;
+      rdfs:isDefinedBy schema:EducationalOrganization ;
+      rdfs:label "Alumni"@en ;
+      rdfs:range schema:Person .
+
+schema:alumniOf
+      rdf:type rdf:Property ;
+      rdfs:comment "An educational organizations that the person is an alumni of."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Alumni of"@en ;
+      rdfs:range schema:EducationalOrganization .
+
+schema:articleBody
+      rdf:type rdf:Property ;
+      rdfs:comment "The actual body of the article."@en ;
+      rdfs:domain schema:Article ;
+      rdfs:isDefinedBy schema:Article ;
+      rdfs:label "Article Body"@en ;
+      rdfs:range xsd:string .
+
+schema:articleSection
+      rdf:type rdf:Property ;
+      rdfs:comment "Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc."@en ;
+      rdfs:domain schema:Article ;
+      rdfs:isDefinedBy schema:Article ;
+      rdfs:label "Article Section"@en ;
+      rdfs:range xsd:string .
+
+schema:associatedArticle
+      rdf:type rdf:Property ;
+      rdfs:comment "A NewsArticle associated with the Media Object."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Associated Article"@en ;
+      rdfs:range schema:NewsArticle .
+
+schema:associatedMedia
+      rdf:type rdf:Property ;
+      rdfs:comment "The media objects that encode this creative work. This property is a synonym for encodings."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Associated Media"@en ;
+      rdfs:range schema:MediaObject .
+
+schema:attendees
+      rdf:type rdf:Property ;
+      rdfs:comment "A person attending the event."@en ;
+      rdfs:domain schema:Event ;
+      rdfs:isDefinedBy schema:Event ;
+      rdfs:label "Attendees"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:audio
+      rdf:type rdf:Property ;
+      rdfs:comment "An embedded audio object."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Audio"@en ;
+      rdfs:range schema:AudioObject .
+
+schema:author
+      rdf:type rdf:Property ;
+      rdfs:comment "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangabely."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Author"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:availability
+      rdf:type rdf:Property ;
+      rdfs:comment "The availability of this item—for example In stock, Out of stock, Pre-order, etc."@en ;
+      rdfs:domain schema:Offer ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Availability"@en ;
+      rdfs:range schema:ItemAvailability .
+
+schema:awards
+      rdf:type rdf:Property ;
+      rdfs:comment "Awards won by this person or for this creative work."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:CreativeWork)
+              ] ;
+      rdfs:isDefinedBy schema:CreativeWork , schema:Person ;
+      rdfs:label "Awards"@en ;
+      rdfs:range xsd:string .
+
+schema:baseSalary
+      rdf:type rdf:Property ;
+      rdfs:comment "The base salary of the job."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Base Salary"@en ;
+      rdfs:range xsd:decimal .
+
+schema:benefits
+      rdf:type rdf:Property ;
+      rdfs:comment "Description of benefits associated with the job."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Benefits"@en ;
+      rdfs:range xsd:string .
+
+schema:bestRating
+      rdf:type rdf:Property ;
+      rdfs:comment "The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed."@en ;
+      rdfs:domain schema:Rating ;
+      rdfs:isDefinedBy schema:Rating ;
+      rdfs:label "Best Rating"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:decimal xsd:string)
+              ] .
+
+schema:birthDate
+      rdf:type rdf:Property ;
+      rdfs:comment "Date of birth."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Birth Date"@en ;
+      rdfs:range xsd:date .
+
+schema:bitrate
+      rdf:type rdf:Property ;
+      rdfs:comment "The bitrate of the media object."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Bitrate"@en ;
+      rdfs:range xsd:string .
+
+schema:blogPosts
+      rdf:type rdf:Property ;
+      rdfs:comment "The postings that are part of this blog"@en ;
+      rdfs:domain schema:Blog ;
+      rdfs:isDefinedBy schema:Blog ;
+      rdfs:label "Blog Posts"@en ;
+      rdfs:range schema:BlogPosting .
+
+schema:bookEdition
+      rdf:type rdf:Property ;
+      rdfs:comment "The edition of the book."@en ;
+      rdfs:domain schema:Book ;
+      rdfs:isDefinedBy schema:Book ;
+      rdfs:label "Book Edition"@en ;
+      rdfs:range xsd:string .
+
+schema:bookFormat
+      rdf:type rdf:Property ;
+      rdfs:comment "The format of the book."@en ;
+      rdfs:domain schema:Book ;
+      rdfs:isDefinedBy schema:Book ;
+      rdfs:label "Book Format"@en ;
+      rdfs:range schema:BookFormatType .
+
+schema:box
+      rdf:type rdf:Property ;
+      rdfs:comment "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical."@en ;
+      rdfs:domain schema:GeoShape ;
+      rdfs:isDefinedBy schema:GeoShape ;
+      rdfs:label "Box"@en ;
+      rdfs:range xsd:string .
+
+schema:branchOf
+      rdf:type rdf:Property ;
+      rdfs:comment "The larger organization that this local business is a branch of, if any."@en ;
+      rdfs:domain schema:LocalBusiness ;
+      rdfs:isDefinedBy schema:LocalBusiness ;
+      rdfs:label "Branch of"@en ;
+      rdfs:range schema:Organization .
+
+schema:brand
+      rdf:type rdf:Property ;
+      rdfs:comment "The brand of the product."@en ;
+      rdfs:domain schema:Product ;
+      rdfs:isDefinedBy schema:Product ;
+      rdfs:label "Brand"@en ;
+      rdfs:range schema:Organization .
+
+schema:breadcrumb
+      rdf:type rdf:Property ;
+      rdfs:comment "A set of links that can help a user understand and navigate a website hierarchy."@en ;
+      rdfs:domain schema:WebPage ;
+      rdfs:isDefinedBy schema:WebPage ;
+      rdfs:label "Breadcrumb"@en ;
+      rdfs:range xsd:string .
+
+schema:byArtist
+      rdf:type rdf:Property ;
+      rdfs:comment "The artist that performed this album or recording."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:MusicAlbum schema:MusicRecording)
+              ] ;
+      rdfs:isDefinedBy schema:MusicRecording , schema:MusicAlbum ;
+      rdfs:label "By Artist"@en ;
+      rdfs:range schema:MusicGroup .
+
+schema:calories
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of calories"@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Calories"@en ;
+      rdfs:range schema:Energy .
+
+schema:caption
+      rdf:type rdf:Property ;
+      rdfs:comment "The caption for this object."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:VideoObject schema:ImageObject)
+              ] ;
+      rdfs:isDefinedBy schema:ImageObject , schema:VideoObject ;
+      rdfs:label "Caption"@en ;
+      rdfs:range xsd:string .
+
+schema:carbohydrateContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of carbohydrates."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Carbohydrate Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:children
+      rdf:type rdf:Property ;
+      rdfs:comment "A child of the person."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Children"@en ;
+      rdfs:range schema:Person .
+
+schema:cholesterolContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of milligrams of cholesterol."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Cholesterol Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:circle
+      rdf:type rdf:Property ;
+      rdfs:comment "A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters."@en ;
+      rdfs:domain schema:GeoShape ;
+      rdfs:isDefinedBy schema:GeoShape ;
+      rdfs:label "Circle"@en ;
+      rdfs:range xsd:string .
+
+schema:colleagues
+      rdf:type rdf:Property ;
+      rdfs:comment "A colleague of the person."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Colleagues"@en ;
+      rdfs:range schema:Person .
+
+schema:comment
+      rdf:type rdf:Property ;
+      rdfs:comment "Comments, typically from users, on this CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Comment"@en ;
+      rdfs:range schema:UserComments .
+
+schema:commentText
+      rdf:type rdf:Property ;
+      rdfs:comment "The text of the UserComment."@en ;
+      rdfs:domain schema:UserComments ;
+      rdfs:isDefinedBy schema:UserComments ;
+      rdfs:label "Comment Text"@en ;
+      rdfs:range xsd:string .
+
+schema:commentTime
+      rdf:type rdf:Property ;
+      rdfs:comment "The time at which the UserComment was made."@en ;
+      rdfs:domain schema:UserComments ;
+      rdfs:isDefinedBy schema:UserComments ;
+      rdfs:label "Comment Time"@en ;
+      rdfs:range xsd:date .
+
+schema:contactPoints
+      rdf:type rdf:Property ;
+      rdfs:comment "A contact point for a person or organization."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:Person)
+              ] ;
+      rdfs:isDefinedBy schema:Person , schema:Organization ;
+      rdfs:label "Contact Points"@en ;
+      rdfs:range schema:ContactPoint .
+
+schema:contactType
+      rdf:type rdf:Property ;
+      rdfs:comment "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point."@en ;
+      rdfs:domain schema:ContactPoint ;
+      rdfs:isDefinedBy schema:ContactPoint ;
+      rdfs:label "Contact Type"@en ;
+      rdfs:range xsd:string .
+
+schema:containedIn
+      rdf:type rdf:Property ;
+      rdfs:comment "The basic containment relation between places."@en ;
+      rdfs:domain schema:Place ;
+      rdfs:isDefinedBy schema:Place ;
+      rdfs:label "Contained in"@en ;
+      rdfs:range schema:Place .
+
+schema:contentLocation
+      rdf:type rdf:Property ;
+      rdfs:comment "The location of the content."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Content Location"@en ;
+      rdfs:range schema:Place .
+
+schema:contentRating
+      rdf:type rdf:Property ;
+      rdfs:comment "Official rating of a piece of content—for example,'MPAA PG-13'."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Content Rating"@en ;
+      rdfs:range xsd:string .
+
+schema:contentSize
+      rdf:type rdf:Property ;
+      rdfs:comment "File size in (mega/kilo) bytes."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Content Size"@en ;
+      rdfs:range xsd:string .
+
+schema:contentURL
+      rdf:type rdf:Property ;
+      rdfs:comment "Actual bytes of the media object, for example the image file or video file."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Content URL"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:contributor
+      rdf:type rdf:Property ;
+      rdfs:comment "A secondary contributor to the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Contributor"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:cookTime
+      rdf:type rdf:Property ;
+      rdfs:comment "The time it takes to actually cook the dish, in ISO 8601 duration format."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Cook Time"@en ;
+      rdfs:range schema:Duration .
+
+schema:cookingMethod
+      rdf:type rdf:Property ;
+      rdfs:comment "The method of cooking, such as Frying, Steaming, ..."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Cooking Method"@en ;
+      rdfs:range xsd:string .
+
+schema:copyrightHolder
+      rdf:type rdf:Property ;
+      rdfs:comment "The party holding the legal copyright to the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Copyright Holder"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:copyrightYear
+      rdf:type rdf:Property ;
+      rdfs:comment "The year during which the claimed copyright for the CreativeWork was first asserted."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Copyright Year"@en ;
+      rdfs:range xsd:decimal .
+
+schema:creator
+      rdf:type rdf:Property ;
+      rdfs:comment "The creator/author of this CreativeWork or UserComments. This is the same as the Author property for CreativeWork."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:UserComments schema:CreativeWork)
+              ] ;
+      rdfs:isDefinedBy schema:CreativeWork , schema:UserComments ;
+      rdfs:label "Creator"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:currenciesAccepted
+      rdf:type rdf:Property ;
+      rdfs:comment "The currency accepted (in ISO 4217 currency format)."@en ;
+      rdfs:domain schema:LocalBusiness ;
+      rdfs:isDefinedBy schema:LocalBusiness ;
+      rdfs:label "Currencies Accepted"@en ;
+      rdfs:range xsd:string .
+
+schema:dateCreated
+      rdf:type rdf:Property ;
+      rdfs:comment "The date on which the CreativeWork was created."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Date Created"@en ;
+      rdfs:range xsd:date .
+
+schema:dateModified
+      rdf:type rdf:Property ;
+      rdfs:comment "The date on which the CreativeWork was most recently modified."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Date Modified"@en ;
+      rdfs:range xsd:date .
+
+schema:datePosted
+      rdf:type rdf:Property ;
+      rdfs:comment "Publication date for the job posting."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Date Posted"@en ;
+      rdfs:range xsd:date .
+
+schema:datePublished
+      rdf:type rdf:Property ;
+      rdfs:comment "Date of first broadcast/publication."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Date Published"@en ;
+      rdfs:range xsd:date .
+
+schema:dateline
+      rdf:type rdf:Property ;
+      rdfs:comment "The location where the NewsArticle was produced."@en ;
+      rdfs:domain schema:NewsArticle ;
+      rdfs:isDefinedBy schema:NewsArticle ;
+      rdfs:label "Dateline"@en ;
+      rdfs:range xsd:string .
+
+schema:deathDate
+      rdf:type rdf:Property ;
+      rdfs:comment "Date of death."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Death Date"@en ;
+      rdfs:range xsd:date .
+
+schema:description
+      rdf:type rdf:Property ;
+      rdfs:comment "A short description of the item."@en ;
+      rdfs:domain schema:Thing ;
+      rdfs:isDefinedBy schema:Thing ;
+      rdfs:label "Description"@en ;
+      rdfs:range xsd:string .
+
+schema:director
+      rdf:type rdf:Property ;
+      rdfs:comment "The director of the movie, TV episode, or series."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVEpisode schema:Movie schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:Movie , schema:TVEpisode ;
+      rdfs:label "Director"@en ;
+      rdfs:range schema:Person .
+
+schema:discusses
+      rdf:type rdf:Property ;
+      rdfs:comment "Specifies the CreativeWork associated with the UserComment."@en ;
+      rdfs:domain schema:UserComments ;
+      rdfs:isDefinedBy schema:UserComments ;
+      rdfs:label "Discusses"@en ;
+      rdfs:range schema:CreativeWork .
+
+schema:discussionUrl
+      rdf:type rdf:Property ;
+      rdfs:comment "A link to the page containing the comments of the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Discussion Url"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:duration
+      rdf:type rdf:Property ;
+      rdfs:comment "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Movie schema:MediaObject schema:MusicRecording schema:Event)
+              ] ;
+      rdfs:isDefinedBy schema:Event , schema:MusicRecording , schema:MediaObject , schema:Movie ;
+      rdfs:label "Duration"@en ;
+      rdfs:range schema:Duration .
+
+schema:editor
+      rdf:type rdf:Property ;
+      rdfs:comment "Specifies the Person who edited the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Editor"@en ;
+      rdfs:range schema:Person .
+
+schema:educationRequirements
+      rdf:type rdf:Property ;
+      rdfs:comment "Educational background needed for the position."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Education Requirements"@en ;
+      rdfs:range xsd:string .
+
+schema:elevation
+      rdf:type rdf:Property ;
+      rdfs:comment "The elevation of a location."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:GeoShape schema:GeoCoordinates)
+              ] ;
+      rdfs:isDefinedBy schema:GeoCoordinates , schema:GeoShape ;
+      rdfs:label "Elevation"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:string xsd:decimal)
+              ] .
+
+schema:email
+      rdf:type rdf:Property ;
+      rdfs:comment "Email address."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:ContactPoint schema:Person)
+              ] ;
+      rdfs:isDefinedBy schema:Person , schema:ContactPoint , schema:Organization ;
+      rdfs:label "Email"@en ;
+      rdfs:range xsd:string .
+
+schema:embedURL
+      rdf:type rdf:Property ;
+      rdfs:comment "A URL pointing to a player for a specific video. In general, this is the information in the src element of an embed tag and should not be the same as the content of the loc tag."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Embed URL"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:employees
+      rdf:type rdf:Property ;
+      rdfs:comment "People working for this organization."@en ;
+      rdfs:domain schema:Organization ;
+      rdfs:isDefinedBy schema:Organization ;
+      rdfs:label "Employees"@en ;
+      rdfs:range schema:Person .
+
+schema:employmentType
+      rdf:type rdf:Property ;
+      rdfs:comment "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship)."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Employment Type"@en ;
+      rdfs:range xsd:string .
+
+schema:encodesCreativeWork
+      rdf:type rdf:Property ;
+      rdfs:comment "The creative work encoded by this media object"@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Encodes Creative Work"@en ;
+      rdfs:range schema:CreativeWork .
+
+schema:encodingFormat
+      rdf:type rdf:Property ;
+      rdfs:comment "mp3, mpeg4, etc."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Encoding Format"@en ;
+      rdfs:range xsd:string .
+
+schema:encodings
+      rdf:type rdf:Property ;
+      rdfs:comment "The media objects that encode this creative work"@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Encodings"@en ;
+      rdfs:range schema:MediaObject .
+
+schema:endDate
+      rdf:type rdf:Property ;
+      rdfs:comment "The end date and time of the event (in ISO 8601 date format)."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVSeason schema:Event schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:Event , schema:TVSeason ;
+      rdfs:label "End Date"@en ;
+      rdfs:range xsd:date .
+
+schema:episodeNumber
+      rdf:type rdf:Property ;
+      rdfs:comment "The episode number."@en ;
+      rdfs:domain schema:TVEpisode ;
+      rdfs:isDefinedBy schema:TVEpisode ;
+      rdfs:label "Episode Number"@en ;
+      rdfs:range xsd:decimal .
+
+schema:episodes
+      rdf:type rdf:Property ;
+      rdfs:comment "The episode of a TV series or season."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVSeason schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:TVSeason ;
+      rdfs:label "Episodes"@en ;
+      rdfs:range schema:TVEpisode .
+
+schema:events
+      rdf:type rdf:Property ;
+      rdfs:comment "Upcoming or past events associated with this place or organization."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:Place)
+              ] ;
+      rdfs:isDefinedBy schema:Place , schema:Organization ;
+      rdfs:label "Events"@en ;
+      rdfs:range schema:Event .
+
+schema:exifData
+      rdf:type rdf:Property ;
+      rdfs:comment "exif data for this object."@en ;
+      rdfs:domain schema:ImageObject ;
+      rdfs:isDefinedBy schema:ImageObject ;
+      rdfs:label "Exif Data"@en ;
+      rdfs:range xsd:string .
+
+schema:experienceRequirements
+      rdf:type rdf:Property ;
+      rdfs:comment "Description of skills and experience needed for the position."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Experience Requirements"@en ;
+      rdfs:range xsd:string .
+
+schema:expires
+      rdf:type rdf:Property ;
+      rdfs:comment "Date the content expires and is no longer useful or available. Useful for videos."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Expires"@en ;
+      rdfs:range xsd:date .
+
+schema:familyName
+      rdf:type rdf:Property ;
+      rdfs:comment "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the Name property."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Family Name"@en ;
+      rdfs:range xsd:string .
+
+schema:fatContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of fat."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Fat Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:faxNumber
+      rdf:type rdf:Property ;
+      rdfs:comment "The fax number."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:ContactPoint schema:Place schema:Person)
+              ] ;
+      rdfs:isDefinedBy schema:Person , schema:Place , schema:ContactPoint , schema:Organization ;
+      rdfs:label "Fax Number"@en ;
+      rdfs:range xsd:string .
+
+schema:fiberContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of fiber."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Fiber Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:follows
+      rdf:type rdf:Property ;
+      rdfs:comment "The most generic uni-directional social relation."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Follows"@en ;
+      rdfs:range schema:Person .
+
+schema:founders
+      rdf:type rdf:Property ;
+      rdfs:comment "A person who founded this organization."@en ;
+      rdfs:domain schema:Organization ;
+      rdfs:isDefinedBy schema:Organization ;
+      rdfs:label "Founders"@en ;
+      rdfs:range schema:Person .
+
+schema:foundingDate
+      rdf:type rdf:Property ;
+      rdfs:comment "The date that this organization was founded."@en ;
+      rdfs:domain schema:Organization ;
+      rdfs:isDefinedBy schema:Organization ;
+      rdfs:label "Founding Date"@en ;
+      rdfs:range xsd:date .
+
+schema:gender
+      rdf:type rdf:Property ;
+      rdfs:comment "Gender of the person."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Gender"@en ;
+      rdfs:range xsd:string .
+
+schema:genre
+      rdf:type rdf:Property ;
+      rdfs:comment "Genre of the creative work"@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Genre"@en ;
+      rdfs:range xsd:string .
+
+schema:geo
+      rdf:type rdf:Property ;
+      rdfs:comment "The geo coordinates of the place."@en ;
+      rdfs:domain schema:Place ;
+      rdfs:isDefinedBy schema:Place ;
+      rdfs:label "Geo"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:GeoCoordinates schema:GeoShape)
+              ] .
+
+schema:givenName
+      rdf:type rdf:Property ;
+      rdfs:comment "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the Name property."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Given Name"@en ;
+      rdfs:range xsd:string .
+
+schema:headline
+      rdf:type rdf:Property ;
+      rdfs:comment "Headline of the article"@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Headline"@en ;
+      rdfs:range xsd:string .
+
+schema:height
+      rdf:type rdf:Property ;
+      rdfs:comment "The height of the media object."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Height"@en ;
+      rdfs:range schema:Distance .
+
+schema:highPrice
+      rdf:type rdf:Property ;
+      rdfs:comment "The highest price of all offers available."@en ;
+      rdfs:domain schema:AggregateOffer ;
+      rdfs:isDefinedBy schema:AggregateOffer ;
+      rdfs:label "High Price"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:decimal xsd:string)
+              ] .
+
+schema:hiringOrganization
+      rdf:type rdf:Property ;
+      rdfs:comment "Organization offering the job position."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Hiring Organization"@en ;
+      rdfs:range schema:Organization .
+
+schema:homeLocation
+      rdf:type rdf:Property ;
+      rdfs:comment "A contact location for a person's residence."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Home Location"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Place schema:ContactPoint)
+              ] .
+
+schema:honorificPrefix
+      rdf:type rdf:Property ;
+      rdfs:comment "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Honorific Prefix"@en ;
+      rdfs:range xsd:string .
+
+schema:honorificSuffix
+      rdf:type rdf:Property ;
+      rdfs:comment "An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Honorific Suffix"@en ;
+      rdfs:range xsd:string .
+
+schema:illustrator
+      rdf:type rdf:Property ;
+      rdfs:comment "The illustrator of the book."@en ;
+      rdfs:domain schema:Book ;
+      rdfs:isDefinedBy schema:Book ;
+      rdfs:label "Illustrator"@en ;
+      rdfs:range schema:Person .
+
+schema:image
+      rdf:type rdf:Property ;
+      rdfs:comment "URL of an image of the item."@en ;
+      rdfs:domain schema:Thing ;
+      rdfs:isDefinedBy schema:Thing ;
+      rdfs:label "Image"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:inAlbum
+      rdf:type rdf:Property ;
+      rdfs:comment "The album to which this recording belongs."@en ;
+      rdfs:domain schema:MusicRecording ;
+      rdfs:isDefinedBy schema:MusicRecording ;
+      rdfs:label "In Album"@en ;
+      rdfs:range schema:MusicAlbum .
+
+schema:inLanguage
+      rdf:type rdf:Property ;
+      rdfs:comment "The language of the content. please use one of the language codes from the IETF BCP 47 standard."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "In Language"@en ;
+      rdfs:range xsd:string .
+
+schema:inPlaylist
+      rdf:type rdf:Property ;
+      rdfs:comment "The playlist to which this recording belongs."@en ;
+      rdfs:domain schema:MusicRecording ;
+      rdfs:isDefinedBy schema:MusicRecording ;
+      rdfs:label "In Playlist"@en ;
+      rdfs:range schema:MusicPlaylist .
+
+schema:incentives
+      rdf:type rdf:Property ;
+      rdfs:comment "Description of bonus and commission compensation aspects of the job."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Incentives"@en ;
+      rdfs:range xsd:string .
+
+schema:industry
+      rdf:type rdf:Property ;
+      rdfs:comment "The industry associated with the job position."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Industry"@en ;
+      rdfs:range xsd:string .
+
+schema:ingredients
+      rdf:type rdf:Property ;
+      rdfs:comment "An ingredient used in the recipe."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Ingredients"@en ;
+      rdfs:range xsd:string .
+
+schema:interactionCount
+      rdf:type rdf:Property ;
+      rdfs:comment "A count of a specific user interactions with this item—for example, 20 UserLikes, 5 UserComments, or 300 UserDownloads. The user interaction type should be one of the sub types of UserInteraction."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:Place schema:Person schema:CreativeWork)
+              ] ;
+      rdfs:isDefinedBy schema:CreativeWork , schema:Person , schema:Place , schema:Organization ;
+      rdfs:label "Interaction Count"@en ;
+      rdfs:range xsd:string .
+
+schema:isFamilyFriendly
+      rdf:type rdf:Property ;
+      rdfs:comment "Indicates whether this content is family friendly."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Is Family Friendly"@en ;
+      rdfs:range xsd:boolean .
+
+schema:isPartOf
+      rdf:type rdf:Property ;
+      rdfs:comment "Indicates the collection or gallery to which the item belongs."@en ;
+      rdfs:domain schema:WebPage ;
+      rdfs:isDefinedBy schema:WebPage ;
+      rdfs:label "Is Part of"@en ;
+      rdfs:range schema:CollectionPage .
+
+schema:isbn
+      rdf:type rdf:Property ;
+      rdfs:comment "The ISBN of the book."@en ;
+      rdfs:domain schema:Book ;
+      rdfs:isDefinedBy schema:Book ;
+      rdfs:label "ISBN"@en ;
+      rdfs:range xsd:string .
+
+schema:itemCondition
+      rdf:type rdf:Property ;
+      rdfs:comment "The condition of the item for sale—for example New, Refurbished, Used, etc."@en ;
+      rdfs:domain schema:Offer ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Item Condition"@en ;
+      rdfs:range schema:OfferItemCondition .
+
+schema:itemListElement
+      rdf:type rdf:Property ;
+      rdfs:comment "A single list item."@en ;
+      rdfs:domain schema:ItemList ;
+      rdfs:isDefinedBy schema:ItemList ;
+      rdfs:label "Item List Element"@en ;
+      rdfs:range xsd:string .
+
+schema:itemListOrder
+      rdf:type rdf:Property ;
+      rdfs:comment "Type of ordering (e.g. Ascending, Descending, Unordered)."@en ;
+      rdfs:domain schema:ItemList ;
+      rdfs:isDefinedBy schema:ItemList ;
+      rdfs:label "Item List Order"@en ;
+      rdfs:range xsd:string .
+
+schema:itemOffered
+      rdf:type rdf:Property ;
+      rdfs:comment "The item being sold."@en ;
+      rdfs:domain schema:Offer ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Item Offered"@en ;
+      rdfs:range schema:Product .
+
+schema:itemReviewed
+      rdf:type rdf:Property ;
+      rdfs:comment "The item that is being reviewed/rated."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:AggregateRating schema:Review)
+              ] ;
+      rdfs:isDefinedBy schema:Review , schema:AggregateRating ;
+      rdfs:label "Item Reviewed"@en ;
+      rdfs:range schema:Thing .
+
+schema:jobLocation
+      rdf:type rdf:Property ;
+      rdfs:comment "A (typically single) geographic location associated with the job position."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Job Location"@en ;
+      rdfs:range schema:Place .
+
+schema:jobTitle
+      rdf:type rdf:Property ;
+      rdfs:comment "The job title of the person (for example, Financial Manager)."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Job Title"@en ;
+      rdfs:range xsd:string .
+
+schema:keywords
+      rdf:type rdf:Property ;
+      rdfs:comment "The keywords/tags used to describe this content."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Keywords"@en ;
+      rdfs:range xsd:string .
+
+schema:knows
+      rdf:type rdf:Property ;
+      rdfs:comment "The most generic bi-directional social/work relation."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Knows"@en ;
+      rdfs:range schema:Person .
+
+schema:latitude
+      rdf:type rdf:Property ;
+      rdfs:comment "The latitude of a location. For example 37.42242."@en ;
+      rdfs:domain schema:GeoCoordinates ;
+      rdfs:isDefinedBy schema:GeoCoordinates ;
+      rdfs:label "Latitude"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:decimal xsd:string)
+              ] .
+
+schema:line
+      rdf:type rdf:Property ;
+      rdfs:comment "A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space."@en ;
+      rdfs:domain schema:GeoShape ;
+      rdfs:isDefinedBy schema:GeoShape ;
+      rdfs:label "Line"@en ;
+      rdfs:range xsd:string .
+
+schema:location
+      rdf:type rdf:Property ;
+      rdfs:comment "The location of the event or organization."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:Event)
+              ] ;
+      rdfs:isDefinedBy schema:Event , schema:Organization ;
+      rdfs:label "Location"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:PostalAddress schema:Place)
+              ] .
+
+schema:longitude
+      rdf:type rdf:Property ;
+      rdfs:comment "The longitude of a location. For example -122.08585."@en ;
+      rdfs:domain schema:GeoCoordinates ;
+      rdfs:isDefinedBy schema:GeoCoordinates ;
+      rdfs:label "Longitude"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:decimal xsd:string)
+              ] .
+
+schema:lowPrice
+      rdf:type rdf:Property ;
+      rdfs:comment "The lowest price of all offers available."@en ;
+      rdfs:domain schema:AggregateOffer ;
+      rdfs:isDefinedBy schema:AggregateOffer ;
+      rdfs:label "Low Price"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:decimal xsd:string)
+              ] .
+
+schema:mainContentOfPage
+      rdf:type rdf:Property ;
+      rdfs:comment "Indicates if this web page element is the main subject of the page."@en ;
+      rdfs:domain schema:WebPage ;
+      rdfs:isDefinedBy schema:WebPage ;
+      rdfs:label "Main Content of Page"@en ;
+      rdfs:range schema:WebPageElement .
+
+schema:manufacturer
+      rdf:type rdf:Property ;
+      rdfs:comment "The manufacturer of the product."@en ;
+      rdfs:domain schema:Product ;
+      rdfs:isDefinedBy schema:Product ;
+      rdfs:label "Manufacturer"@en ;
+      rdfs:range schema:Organization .
+
+schema:maps
+      rdf:type rdf:Property ;
+      rdfs:comment "A URL to a map of the place."@en ;
+      rdfs:domain schema:Place ;
+      rdfs:isDefinedBy schema:Place ;
+      rdfs:label "Maps"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:memberOf
+      rdf:type rdf:Property ;
+      rdfs:comment "An organization to which the person belongs."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Member of"@en ;
+      rdfs:range schema:Organization .
+
+schema:members
+      rdf:type rdf:Property ;
+      rdfs:comment "A member of this organization."@en ;
+      rdfs:domain schema:Organization ;
+      rdfs:isDefinedBy schema:Organization ;
+      rdfs:label "Members"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:mentions
+      rdf:type rdf:Property ;
+      rdfs:comment "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Mentions"@en ;
+      rdfs:range schema:Thing .
+
+schema:menu
+      rdf:type rdf:Property ;
+      rdfs:comment "Either the actual menu or a URL of the menu."@en ;
+      rdfs:domain schema:FoodEstablishment ;
+      rdfs:isDefinedBy schema:FoodEstablishment ;
+      rdfs:label "Menu"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:string rdfs:Resource)
+              ] .
+
+schema:model
+      rdf:type rdf:Property ;
+      rdfs:comment "The model of the product."@en ;
+      rdfs:domain schema:Product ;
+      rdfs:isDefinedBy schema:Product ;
+      rdfs:label "Model"@en ;
+      rdfs:range xsd:string .
+
+schema:musicBy
+      rdf:type rdf:Property ;
+      rdfs:comment "The composer of the movie or TV soundtrack."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVEpisode schema:Movie schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:Movie , schema:TVEpisode ;
+      rdfs:label "Music by"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:MusicGroup)
+              ] .
+
+schema:musicGroupMember
+      rdf:type rdf:Property ;
+      rdfs:comment "A member of the music group—for example, John, Paul, George, or Ringo."@en ;
+      rdfs:domain schema:MusicGroup ;
+      rdfs:isDefinedBy schema:MusicGroup ;
+      rdfs:label "Music Group Member"@en ;
+      rdfs:range schema:Person .
+
+schema:name
+      rdf:type rdf:Property ;
+      rdfs:comment "The name of the item."@en ;
+      rdfs:domain schema:Thing ;
+      rdfs:isDefinedBy schema:Thing ;
+      rdfs:label "Name"@en ;
+      rdfs:range xsd:string .
+
+schema:nationality
+      rdf:type rdf:Property ;
+      rdfs:comment "Nationality of the person."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Nationality"@en ;
+      rdfs:range schema:Country .
+
+schema:numTracks
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of tracks in this album or playlist."@en ;
+      rdfs:domain schema:MusicPlaylist ;
+      rdfs:isDefinedBy schema:MusicPlaylist ;
+      rdfs:label "Num Tracks"@en ;
+      rdfs:range xsd:integer .
+
+schema:numberOfEpisodes
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of episodes in this season or series."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVSeason schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:TVSeason ;
+      rdfs:label "Number of Episodes"@en ;
+      rdfs:range xsd:decimal .
+
+schema:numberOfPages
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of pages in the book."@en ;
+      rdfs:domain schema:Book ;
+      rdfs:isDefinedBy schema:Book ;
+      rdfs:label "Number of Pages"@en ;
+      rdfs:range xsd:integer .
+
+schema:nutrition
+      rdf:type rdf:Property ;
+      rdfs:comment "Nutrition information about the recipe."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Nutrition"@en ;
+      rdfs:range schema:NutritionInformation .
+
+schema:occupationalCategory
+      rdf:type rdf:Property ;
+      rdfs:comment "Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Occupational Category"@en ;
+      rdfs:range xsd:string .
+
+schema:offerCount
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of offers for the product."@en ;
+      rdfs:domain schema:AggregateOffer ;
+      rdfs:isDefinedBy schema:AggregateOffer ;
+      rdfs:label "Offer Count"@en ;
+      rdfs:range xsd:integer .
+
+schema:offers
+      rdf:type rdf:Property ;
+      rdfs:comment "An offer to sell this item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Product schema:CreativeWork schema:Event)
+              ] ;
+      rdfs:isDefinedBy schema:Event , schema:CreativeWork , schema:Product ;
+      rdfs:label "Offers"@en ;
+      rdfs:range schema:Offer .
+
+schema:openingHours
+      rdf:type rdf:Property ;
+      rdfs:comment "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: <time itemprop=\"openingHours\" datetime=\"Tu,Th 16:00-20:00\">Tuesdays and Thursdays 4-8pm</time>. - If a business is open 7 days a week, then it can be specified as <time itemprop=\"openingHours\" datetime=\"Mo-Su\">Monday through Sunday, all day</time>."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:LocalBusiness schema:CivicStructure)
+              ] ;
+      rdfs:isDefinedBy schema:CivicStructure , schema:LocalBusiness ;
+      rdfs:label "Opening Hours"@en ;
+      rdfs:range schema:Duration .
+
+schema:parents
+      rdf:type rdf:Property ;
+      rdfs:comment "A parents of the person."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Parents"@en ;
+      rdfs:range schema:Person .
+
+schema:partOfSeason
+      rdf:type rdf:Property ;
+      rdfs:comment "The season to which this episode belongs."@en ;
+      rdfs:domain schema:TVEpisode ;
+      rdfs:isDefinedBy schema:TVEpisode ;
+      rdfs:label "Part of Season"@en ;
+      rdfs:range schema:TVSeason .
+
+schema:partOfTVSeries
+      rdf:type rdf:Property ;
+      rdfs:comment "The TV series to which this episode or season belongs."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVEpisode schema:TVSeason)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeason , schema:TVEpisode ;
+      rdfs:label "Part of TV Series"@en ;
+      rdfs:range schema:TVSeries .
+
+schema:paymentAccepted
+      rdf:type rdf:Property ;
+      rdfs:comment "Cash, credit card, etc."@en ;
+      rdfs:domain schema:LocalBusiness ;
+      rdfs:isDefinedBy schema:LocalBusiness ;
+      rdfs:label "Payment Accepted"@en ;
+      rdfs:range xsd:string .
+
+schema:performerIn
+      rdf:type rdf:Property ;
+      rdfs:comment "Event that this person is a performer or participant in."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Performer in"@en ;
+      rdfs:range schema:Event .
+
+schema:performers
+      rdf:type rdf:Property ;
+      rdfs:comment "The main performer or performers of the event—for example, a presenter, musician, or actor."@en ;
+      rdfs:domain schema:Event ;
+      rdfs:isDefinedBy schema:Event ;
+      rdfs:label "Performers"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:photos
+      rdf:type rdf:Property ;
+      rdfs:comment "Photographs of this place."@en ;
+      rdfs:domain schema:Place ;
+      rdfs:isDefinedBy schema:Place ;
+      rdfs:label "Photos"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Photograph schema:ImageObject)
+              ] .
+
+schema:playerType
+      rdf:type rdf:Property ;
+      rdfs:comment "Player type required—for example, Flash or Silverlight."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Player Type"@en ;
+      rdfs:range xsd:string .
+
+schema:polygon
+      rdf:type rdf:Property ;
+      rdfs:comment "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical."@en ;
+      rdfs:domain schema:GeoShape ;
+      rdfs:isDefinedBy schema:GeoShape ;
+      rdfs:label "Polygon"@en ;
+      rdfs:range xsd:string .
+
+schema:postOfficeBoxNumber
+      rdf:type rdf:Property ;
+      rdfs:comment "The post offce box number for PO box addresses."@en ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:isDefinedBy schema:PostalAddress ;
+      rdfs:label "Post Office Box Number"@en ;
+      rdfs:range xsd:string .
+
+schema:postalCode
+      rdf:type rdf:Property ;
+      rdfs:comment "The postal code. For example, 94043."@en ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:isDefinedBy schema:PostalAddress ;
+      rdfs:label "Postal Code"@en ;
+      rdfs:range xsd:string .
+
+schema:prepTime
+      rdf:type rdf:Property ;
+      rdfs:comment "The length of time it takes to prepare the recipe, in ISO 8601 duration format."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Prep Time"@en ;
+      rdfs:range schema:Duration .
+
+schema:price
+      rdf:type rdf:Property ;
+      rdfs:comment "The offer price of the product."@en ;
+      rdfs:domain schema:Offer ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Price"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:decimal xsd:string)
+              ] .
+
+schema:priceCurrency
+      rdf:type rdf:Property ;
+      rdfs:comment "The currency (in 3-letter ISO 4217 format) of the offer price."@en ;
+      rdfs:domain schema:Offer ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Price Currency"@en ;
+      rdfs:range xsd:string .
+
+schema:priceRange
+      rdf:type rdf:Property ;
+      rdfs:comment "The price range of the business, for example $$$."@en ;
+      rdfs:domain schema:LocalBusiness ;
+      rdfs:isDefinedBy schema:LocalBusiness ;
+      rdfs:label "Price Range"@en ;
+      rdfs:range xsd:string .
+
+schema:priceValidUntil
+      rdf:type rdf:Property ;
+      rdfs:comment "The date after which the price is no longer available."@en ;
+      rdfs:domain schema:Offer ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Price Valid Until"@en ;
+      rdfs:range xsd:date .
+
+schema:primaryImageOfPage
+      rdf:type rdf:Property ;
+      rdfs:comment "Indicates the main image on the page"@en ;
+      rdfs:domain schema:WebPage ;
+      rdfs:isDefinedBy schema:WebPage ;
+      rdfs:label "Primary Image of Page"@en ;
+      rdfs:range schema:ImageObject .
+
+schema:printColumn
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of the column in which the NewsArticle appears in the print edition."@en ;
+      rdfs:domain schema:NewsArticle ;
+      rdfs:isDefinedBy schema:NewsArticle ;
+      rdfs:label "Print Column"@en ;
+      rdfs:range xsd:string .
+
+schema:printEdition
+      rdf:type rdf:Property ;
+      rdfs:comment "The edition of the print product in which the NewsArticle appears."@en ;
+      rdfs:domain schema:NewsArticle ;
+      rdfs:isDefinedBy schema:NewsArticle ;
+      rdfs:label "Print Edition"@en ;
+      rdfs:range xsd:string .
+
+schema:printPage
+      rdf:type rdf:Property ;
+      rdfs:comment "If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18)."@en ;
+      rdfs:domain schema:NewsArticle ;
+      rdfs:isDefinedBy schema:NewsArticle ;
+      rdfs:label "Print Page"@en ;
+      rdfs:range xsd:string .
+
+schema:printSection
+      rdf:type rdf:Property ;
+      rdfs:comment "If this NewsArticle appears in print, this field indicates the print section in which the article appeared."@en ;
+      rdfs:domain schema:NewsArticle ;
+      rdfs:isDefinedBy schema:NewsArticle ;
+      rdfs:label "Print Section"@en ;
+      rdfs:range xsd:string .
+
+schema:producer
+      rdf:type rdf:Property ;
+      rdfs:comment "The producer of the movie, TV series, season, or episode, or video."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVEpisode schema:Movie schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:Movie , schema:TVEpisode ;
+      rdfs:label "Producer"@en ;
+      rdfs:range schema:Person .
+
+schema:productID
+      rdf:type rdf:Property ;
+      rdfs:comment "The product identifier, such as ISBN. For example: <meta itemprop='productID' content='isbn:123-456-789'/>."@en ;
+      rdfs:domain schema:Product ;
+      rdfs:isDefinedBy schema:Product ;
+      rdfs:label "Product ID"@en ;
+      rdfs:range xsd:string .
+
+schema:productionCompany
+      rdf:type rdf:Property ;
+      rdfs:comment "The production company or studio that made the movie, TV series, season, or episode, or video."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVEpisode schema:Movie schema:VideoObject schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:VideoObject , schema:Movie , schema:TVEpisode ;
+      rdfs:label "Production Company"@en ;
+      rdfs:range schema:Organization .
+
+schema:proteinContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of protein."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Protein Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:provider
+      rdf:type rdf:Property ;
+      rdfs:comment "Specifies the Person or Organization that distributed the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Provider"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Person schema:Organization)
+              ] .
+
+schema:publisher
+      rdf:type rdf:Property ;
+      rdfs:comment "The publisher of the creative work."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Publisher"@en ;
+      rdfs:range schema:Organization .
+
+schema:publishingPrinciples
+      rdf:type rdf:Property ;
+      rdfs:comment "Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Publishing Principles"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:qualifications
+      rdf:type rdf:Property ;
+      rdfs:comment "Specific qualifications required for this role."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Qualifications"@en ;
+      rdfs:range xsd:string .
+
+schema:ratingCount
+      rdf:type rdf:Property ;
+      rdfs:comment "The count of total number of ratings."@en ;
+      rdfs:domain schema:AggregateRating ;
+      rdfs:isDefinedBy schema:AggregateRating ;
+      rdfs:label "Rating Count"@en ;
+      rdfs:range xsd:decimal .
+
+schema:ratingValue
+      rdf:type rdf:Property ;
+      rdfs:comment "The rating for the content."@en ;
+      rdfs:domain schema:Rating ;
+      rdfs:isDefinedBy schema:Rating ;
+      rdfs:label "Rating Value"@en ;
+      rdfs:range xsd:string .
+
+schema:recipeCategory
+      rdf:type rdf:Property ;
+      rdfs:comment "The category of the recipe—for example, appetizer, entree, etc."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Recipe Category"@en ;
+      rdfs:range xsd:string .
+
+schema:recipeCuisine
+      rdf:type rdf:Property ;
+      rdfs:comment "The cuisine of the recipe (for example, French or Ethopian)."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Recipe Cuisine"@en ;
+      rdfs:range xsd:string .
+
+schema:recipeInstructions
+      rdf:type rdf:Property ;
+      rdfs:comment "The steps to make the dish."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Recipe Instructions"@en ;
+      rdfs:range xsd:string .
+
+schema:recipeYield
+      rdf:type rdf:Property ;
+      rdfs:comment "The quantity produced by the recipe (for example, number of people served, number of servings, etc)."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Recipe Yield"@en ;
+      rdfs:range xsd:string .
+
+schema:regionsAllowed
+      rdf:type rdf:Property ;
+      rdfs:comment "The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in ISO 3166 format."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Regions Allowed"@en ;
+      rdfs:range schema:Place .
+
+schema:relatedTo
+      rdf:type rdf:Property ;
+      rdfs:comment "The most generic familial relation."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Related to"@en ;
+      rdfs:range schema:Person .
+
+schema:replyToUrl
+      rdf:type rdf:Property ;
+      rdfs:comment "The URL at which a reply may be posted to the specified UserComment."@en ;
+      rdfs:domain schema:UserComments ;
+      rdfs:isDefinedBy schema:UserComments ;
+      rdfs:label "Reply to Url"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:representativeOfPage
+      rdf:type rdf:Property ;
+      rdfs:comment "Indicates whether this image is representative of the content of the page."@en ;
+      rdfs:domain schema:ImageObject ;
+      rdfs:isDefinedBy schema:ImageObject ;
+      rdfs:label "Representative of Page"@en ;
+      rdfs:range xsd:boolean .
+
+schema:requiresSubscription
+      rdf:type rdf:Property ;
+      rdfs:comment "Indicates if use of the media require a subscription  (either paid or free). Allowed values are yes or no."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Requires Subscription"@en ;
+      rdfs:range xsd:boolean .
+
+schema:responsibilities
+      rdf:type rdf:Property ;
+      rdfs:comment "Responsibilities associated with this role."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Responsibilities"@en ;
+      rdfs:range xsd:string .
+
+schema:reviewBody
+      rdf:type rdf:Property ;
+      rdfs:comment "The actual body of the review"@en ;
+      rdfs:domain schema:Review ;
+      rdfs:isDefinedBy schema:Review ;
+      rdfs:label "Review Body"@en ;
+      rdfs:range xsd:string .
+
+schema:reviewCount
+      rdf:type rdf:Property ;
+      rdfs:comment "The count of total number of reviews."@en ;
+      rdfs:domain schema:AggregateRating ;
+      rdfs:isDefinedBy schema:AggregateRating ;
+      rdfs:label "Review Count"@en ;
+      rdfs:range xsd:decimal .
+
+schema:reviewRating
+      rdf:type rdf:Property ;
+      rdfs:comment "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review. The aggregateRating property applies to the review itself, as a creative work."@en ;
+      rdfs:domain schema:Review ;
+      rdfs:isDefinedBy schema:Review ;
+      rdfs:label "Review Rating"@en ;
+      rdfs:range schema:Rating .
+
+schema:reviews
+      rdf:type rdf:Property ;
+      rdfs:comment "Review of the item."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:Product schema:CreativeWork schema:Place schema:Offer)
+              ] ;
+      rdfs:isDefinedBy schema:Offer , schema:Product , schema:Place , schema:Organization , schema:CreativeWork ;
+      rdfs:label "Reviews"@en ;
+      rdfs:range schema:Review .
+
+schema:salaryCurrency
+      rdf:type rdf:Property ;
+      rdfs:comment "The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217 used for the main salary information in this job posting."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Salary Currency"@en ;
+      rdfs:range xsd:string .
+
+schema:saturatedFatContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of saturated fat."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Saturated Fat Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:seasonNumber
+      rdf:type rdf:Property ;
+      rdfs:comment "The season number."@en ;
+      rdfs:domain schema:TVSeason ;
+      rdfs:isDefinedBy schema:TVSeason ;
+      rdfs:label "Season Number"@en ;
+      rdfs:range xsd:integer .
+
+schema:seasons
+      rdf:type rdf:Property ;
+      rdfs:comment "The seasons of the TV series."@en ;
+      rdfs:domain schema:TVSeries ;
+      rdfs:isDefinedBy schema:TVSeries ;
+      rdfs:label "Seasons"@en ;
+      rdfs:range schema:TVSeason .
+
+schema:seller
+      rdf:type rdf:Property ;
+      rdfs:comment "The seller of the product."@en ;
+      rdfs:domain schema:Offer ;
+      rdfs:isDefinedBy schema:Offer ;
+      rdfs:label "Seller"@en ;
+      rdfs:range schema:Organization .
+
+schema:servesCuisine
+      rdf:type rdf:Property ;
+      rdfs:comment "The cuisine of the restaurant."@en ;
+      rdfs:domain schema:FoodEstablishment ;
+      rdfs:isDefinedBy schema:FoodEstablishment ;
+      rdfs:label "Serves Cuisine"@en ;
+      rdfs:range xsd:string .
+
+schema:servingSize
+      rdf:type rdf:Property ;
+      rdfs:comment "The serving size, in terms of the number of volume or mass"@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Serving Size"@en ;
+      rdfs:range xsd:string .
+
+schema:siblings
+      rdf:type rdf:Property ;
+      rdfs:comment "A sibling of the person."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Siblings"@en ;
+      rdfs:range schema:Person .
+
+schema:significantLinks
+      rdf:type rdf:Property ;
+      rdfs:comment "The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most"@en ;
+      rdfs:domain schema:WebPage ;
+      rdfs:isDefinedBy schema:WebPage ;
+      rdfs:label "Significant Links"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:skills
+      rdf:type rdf:Property ;
+      rdfs:comment "Skills required to fulfill this role."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Skills"@en ;
+      rdfs:range xsd:string .
+
+schema:sodiumContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of milligrams of sodium."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Sodium Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:sourceOrganization
+      rdf:type rdf:Property ;
+      rdfs:comment "The Organization on whose behalf the creator was working."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Source Organization"@en ;
+      rdfs:range schema:Organization .
+
+schema:specialCommitments
+      rdf:type rdf:Property ;
+      rdfs:comment "Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Special Commitments"@en ;
+      rdfs:range xsd:string .
+
+schema:spouse
+      rdf:type rdf:Property ;
+      rdfs:comment "The person's spouse."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Spouse"@en ;
+      rdfs:range schema:Person .
+
+schema:startDate
+      rdf:type rdf:Property ;
+      rdfs:comment "The start date and time of the event (in ISO 8601 date format)."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVSeason schema:Event schema:TVSeries)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeries , schema:Event , schema:TVSeason ;
+      rdfs:label "Start Date"@en ;
+      rdfs:range xsd:date .
+
+schema:streetAddress
+      rdf:type rdf:Property ;
+      rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy."@en ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:isDefinedBy schema:PostalAddress ;
+      rdfs:label "Street Address"@en ;
+      rdfs:range xsd:string .
+
+schema:subEvents
+      rdf:type rdf:Property ;
+      rdfs:comment "Events that are a part of this event. For example, a conference event includes many presentations, each are subEvents of the conference."@en ;
+      rdfs:domain schema:Event ;
+      rdfs:isDefinedBy schema:Event ;
+      rdfs:label "Sub Events"@en ;
+      rdfs:range schema:Event .
+
+schema:sugarContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of sugar."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Sugar Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:superEvent
+      rdf:type rdf:Property ;
+      rdfs:comment "An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent."@en ;
+      rdfs:domain schema:Event ;
+      rdfs:isDefinedBy schema:Event ;
+      rdfs:label "Super Event"@en ;
+      rdfs:range schema:Event .
+
+schema:telephone
+      rdf:type rdf:Property ;
+      rdfs:comment "The telephone number."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Organization schema:ContactPoint schema:Place schema:Person)
+              ] ;
+      rdfs:isDefinedBy schema:Person , schema:Place , schema:ContactPoint , schema:Organization ;
+      rdfs:label "Telephone"@en ;
+      rdfs:range xsd:string .
+
+schema:thumbnail
+      rdf:type rdf:Property ;
+      rdfs:comment "Thumbnail image for an image or video."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:VideoObject schema:ImageObject)
+              ] ;
+      rdfs:isDefinedBy schema:ImageObject , schema:VideoObject ;
+      rdfs:label "Thumbnail"@en ;
+      rdfs:range schema:ImageObject .
+
+schema:thumbnailUrl
+      rdf:type rdf:Property ;
+      rdfs:comment "A thumbnail image relevant to the Thing."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Thumbnail Url"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:tickerSymbol
+      rdf:type rdf:Property ;
+      rdfs:comment "The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we reccommend using the controlled vocaulary of Market Identifier Codes (MIC) specified in ISO15022."@en ;
+      rdfs:domain schema:Corporation ;
+      rdfs:isDefinedBy schema:Corporation ;
+      rdfs:label "Ticker Symbol"@en ;
+      rdfs:range xsd:string .
+
+schema:title
+      rdf:type rdf:Property ;
+      rdfs:comment "The title of the job."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Title"@en ;
+      rdfs:range xsd:string .
+
+schema:totalTime
+      rdf:type rdf:Property ;
+      rdfs:comment "The total time it takes to prepare and cook the recipe, in ISO 8601 duration format."@en ;
+      rdfs:domain schema:Recipe ;
+      rdfs:isDefinedBy schema:Recipe ;
+      rdfs:label "Total Time"@en ;
+      rdfs:range schema:Duration .
+
+schema:tracks
+      rdf:type rdf:Property ;
+      rdfs:comment "A music recording (track)—usually a single song."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:MusicPlaylist schema:MusicGroup)
+              ] ;
+      rdfs:isDefinedBy schema:MusicGroup , schema:MusicPlaylist ;
+      rdfs:label "Tracks"@en ;
+      rdfs:range schema:MusicRecording .
+
+schema:trailer
+      rdf:type rdf:Property ;
+      rdfs:comment "The trailer of the movie or TV series, season, or episode."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:TVEpisode schema:Movie schema:TVSeries schema:TVSeason)
+              ] ;
+      rdfs:isDefinedBy schema:TVSeason , schema:TVSeries , schema:Movie , schema:TVEpisode ;
+      rdfs:label "Trailer"@en ;
+      rdfs:range schema:VideoObject .
+
+schema:transFatContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of trans fat."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Trans Fat Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:transcript
+      rdf:type rdf:Property ;
+      rdfs:comment "If this MediaObject is an AudioObject or VideoObject, the transcript of that object."@en ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:AudioObject schema:VideoObject)
+              ] ;
+      rdfs:isDefinedBy schema:VideoObject , schema:AudioObject ;
+      rdfs:label "Transcript"@en ;
+      rdfs:range xsd:string .
+
+schema:unsaturatedFatContent
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of grams of unsaturated fat."@en ;
+      rdfs:domain schema:NutritionInformation ;
+      rdfs:isDefinedBy schema:NutritionInformation ;
+      rdfs:label "Unsaturated Fat Content"@en ;
+      rdfs:range schema:Mass .
+
+schema:uploadDate
+      rdf:type rdf:Property ;
+      rdfs:comment "Date when this media object was uploaded to this site."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Upload Date"@en ;
+      rdfs:range xsd:date .
+
+schema:url
+      rdf:type rdf:Property ;
+      rdfs:comment "URL of the item."@en ;
+      rdfs:domain schema:Thing ;
+      rdfs:isDefinedBy schema:Thing ;
+      rdfs:label "URL"@en ;
+      rdfs:range rdfs:Resource .
+
+schema:version
+      rdf:type rdf:Property ;
+      rdfs:comment "The version of the CreativeWork embodied by a specified resource."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Version"@en ;
+      rdfs:range xsd:decimal .
+
+schema:video
+      rdf:type rdf:Property ;
+      rdfs:comment "An embedded video object."@en ;
+      rdfs:domain schema:CreativeWork ;
+      rdfs:isDefinedBy schema:CreativeWork ;
+      rdfs:label "Video"@en ;
+      rdfs:range schema:VideoObject .
+
+schema:videoFrameSize
+      rdf:type rdf:Property ;
+      rdfs:comment "The frame size of the video."@en ;
+      rdfs:domain schema:VideoObject ;
+      rdfs:isDefinedBy schema:VideoObject ;
+      rdfs:label "Video Frame Size"@en ;
+      rdfs:range xsd:string .
+
+schema:videoQuality
+      rdf:type rdf:Property ;
+      rdfs:comment "The quality of the video."@en ;
+      rdfs:domain schema:VideoObject ;
+      rdfs:isDefinedBy schema:VideoObject ;
+      rdfs:label "Video Quality"@en ;
+      rdfs:range xsd:string .
+
+schema:width
+      rdf:type rdf:Property ;
+      rdfs:comment "The width of the media object."@en ;
+      rdfs:domain schema:MediaObject ;
+      rdfs:isDefinedBy schema:MediaObject ;
+      rdfs:label "Width"@en ;
+      rdfs:range schema:Distance .
+
+schema:wordCount
+      rdf:type rdf:Property ;
+      rdfs:comment "The number of words in the text of the Article."@en ;
+      rdfs:domain schema:Article ;
+      rdfs:isDefinedBy schema:Article ;
+      rdfs:label "Word Count"@en ;
+      rdfs:range xsd:integer .
+
+schema:workHours
+      rdf:type rdf:Property ;
+      rdfs:comment "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm)."@en ;
+      rdfs:domain schema:JobPosting ;
+      rdfs:isDefinedBy schema:JobPosting ;
+      rdfs:label "Work Hours"@en ;
+      rdfs:range xsd:string .
+
+schema:workLocation
+      rdf:type rdf:Property ;
+      rdfs:comment "A contact location for a person's place of work."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Work Location"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (schema:Place schema:ContactPoint)
+              ] .
+
+schema:worksFor
+      rdf:type rdf:Property ;
+      rdfs:comment "Organizations that the person works for."@en ;
+      rdfs:domain schema:Person ;
+      rdfs:isDefinedBy schema:Person ;
+      rdfs:label "Works for"@en ;
+      rdfs:range schema:Organization .
+
+schema:worstRating
+      rdf:type rdf:Property ;
+      rdfs:comment "The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed."@en ;
+      rdfs:domain schema:Rating ;
+      rdfs:isDefinedBy schema:Rating ;
+      rdfs:label "Worst Rating"@en ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (xsd:decimal xsd:string)
+              ] .
+
+<http://schema.rdfs.org/all>
+      rdf:type owl:Ontology ;
+      rdfs:seeAlso <http://github.com/mhausenblas/schema-org-rdf> , schema: ;
+      dct:description "This is a conversion of the terms defined at schema.org to RDFS and OWL."@en ;
+      dct:hasFormat <http://schema.rdfs.org/all.rdf> , <http://schema.rdfs.org/all.nt> , <http://schema.rdfs.org/all.ttl> , <http://schema.rdfs.org/all.json> ;
+      dct:hasFormat
+              [ dct:hasPart <http://schema.rdfs.org/all-properties.csv> , <http://schema.rdfs.org/all-classes.csv>
+              ] ;
+      dct:license <http://schema.org/docs/terms.html> ;
+      dct:source schema: ;
+      dct:title "The schema.org terms in RDFS+OWL"@en ;
+      dct:valid "2012-02-07"^^xsd:date ;
+      owl:imports dct: , foaf: ;
+      foaf:page <http://schema.rdfs.org/> .

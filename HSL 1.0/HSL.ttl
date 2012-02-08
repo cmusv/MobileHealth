@@ -1,0 +1,64 @@
+# Saved by TopBraid on Tue Feb 07 18:32:05 PST 2012
+# baseURI: http://cmusv/HSL
+# imports: http://schema.rdfs.org/all
+
+@prefix :        <http://cmusv/HSL#> .
+@prefix hsl:     <http://cmusv/HSL/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cmusv/HSL>
+      rdf:type owl:Ontology ;
+      owl:imports <http://schema.rdfs.org/all> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+hsl:BPReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading .
+
+hsl:ECGReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading .
+
+hsl:GlucoseReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading .
+
+hsl:MedicalEvent
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://schema.org/Event> , owl:Thing .
+
+hsl:MedicalReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalEvent .
+
+hsl:Patient
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+hsl:Person
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing , <http://schema.org/Person> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:onProperty hsl:playsRoleOf ;
+                owl:someValuesFrom hsl:Technician
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:onProperty hsl:playsRoleOf ;
+                owl:someValuesFrom hsl:Patient
+              ] .
+
+hsl:PulseReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading .
+
+hsl:Technician
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+hsl:playsRoleOf
+      rdf:type owl:ObjectProperty .
