@@ -1,4 +1,4 @@
-# Saved by TopBraid on Tue Feb 07 18:32:05 PST 2012
+# Saved by TopBraid on Wed Feb 08 16:56:03 PST 2012
 # baseURI: http://cmusv/HSL
 # imports: http://schema.rdfs.org/all
 
@@ -14,6 +14,17 @@
       owl:imports <http://schema.rdfs.org/all> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
+:BPReading_1
+      rdf:type hsl:BPReading ;
+      hsl:ofPatient :Patient527 .
+
+:Patient527
+      rdf:type hsl:Patient .
+
+:SickGeorge
+      rdf:type hsl:Person ;
+      hsl:playsRoleOf :Patient527 .
+
 hsl:BPReading
       rdf:type owl:Class ;
       rdfs:subClassOf hsl:MedicalReading .
@@ -28,28 +39,43 @@ hsl:GlucoseReading
 
 hsl:MedicalEvent
       rdf:type owl:Class ;
-      rdfs:subClassOf <http://schema.org/Event> , owl:Thing .
+      rdfs:subClassOf owl:Thing , <http://schema.org/Event> .
 
 hsl:MedicalReading
       rdf:type owl:Class ;
-      rdfs:subClassOf hsl:MedicalEvent .
+      rdfs:subClassOf hsl:MedicalEvent ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:ofPatient
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom hsl:Patient ;
+                owl:onProperty hsl:ofPatient
+              ] .
 
 hsl:Patient
       rdf:type owl:Class ;
-      rdfs:subClassOf owl:Thing .
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom hsl:MedicalReading ;
+                owl:onProperty hsl:hasReadings
+              ] .
 
 hsl:Person
       rdf:type owl:Class ;
-      rdfs:subClassOf owl:Thing , <http://schema.org/Person> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:onProperty hsl:playsRoleOf ;
-                owl:someValuesFrom hsl:Technician
-              ] ;
+      rdfs:subClassOf <http://schema.org/Person> , owl:Thing ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:onProperty hsl:playsRoleOf ;
                 owl:someValuesFrom hsl:Patient
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:onProperty hsl:playsRoleOf ;
+                owl:someValuesFrom hsl:Technician
               ] .
 
 hsl:PulseReading
@@ -59,6 +85,13 @@ hsl:PulseReading
 hsl:Technician
       rdf:type owl:Class ;
       rdfs:subClassOf owl:Thing .
+
+hsl:hasReadings
+      rdf:type owl:ObjectProperty ;
+      owl:inverseOf hsl:ofPatient .
+
+hsl:ofPatient
+      rdf:type owl:ObjectProperty .
 
 hsl:playsRoleOf
       rdf:type owl:ObjectProperty .
