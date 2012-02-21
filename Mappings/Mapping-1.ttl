@@ -1,0 +1,88 @@
+# Saved by TopBraid on Mon Feb 20 20:14:14 PST 2012
+# baseURI: http://cmusv/Mapping-1
+# imports: http://topbraid.org/spin/spinmapl
+# imports: http://cmusv/FakeClasses
+# imports: http://cmusv/HSL
+# imports: http://spinrdf.org/spin
+
+@prefix :        <http://cmusv/Mapping-1#> .
+@prefix HSL:     <http://cmusv/HSL#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spinmap:  <http://spinrdf.org/spinmap#> .
+@prefix spinmapl:  <http://topbraid.org/spin/spinmapl#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cmusv/HSL/BPReading>
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context :BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        rdfs:label ;
+                spinmap:targetPredicate1
+                        rdfs:label
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context :BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://schema.org/endDate> ;
+                spinmap:targetPredicate1
+                        <http://cmusv/FakeClasses#ReadingDateTime>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context :BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://cmusv/HSL/readingID> ;
+                spinmap:targetPredicate1
+                        <http://cmusv/FakeClasses#readingID>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context :BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://cmusv/HSL/diastolicPressure> ;
+                spinmap:targetPredicate1
+                        <http://cmusv/FakeClasses#BP2>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context :BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://cmusv/HSL/systolicPressure> ;
+                spinmap:targetPredicate1
+                        <http://cmusv/FakeClasses#BP1>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context :BPReading-BloodPressureReading ;
+                spinmap:expression <http://cmusv/FakeClasses#BloodPressureReading> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] .
+
+<http://cmusv/Mapping-1>
+      rdf:type owl:Ontology ;
+      owl:imports <http://cmusv/FakeClasses> , <http://cmusv/HSL> , <http://topbraid.org/spin/spinmapl> , <http://spinrdf.org/spin> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+:BPReading-BloodPressureReading
+      rdf:type spinmap:Context ;
+      spinmap:sourceClass <http://cmusv/HSL/BPReading> ;
+      spinmap:target
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://cmusv/FakeClasses#readingID> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "fake11073:{?1}"^^xsd:string
+              ] ;
+      spinmap:targetClass <http://cmusv/FakeClasses#BloodPressureReading> .
