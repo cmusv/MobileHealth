@@ -1,0 +1,52 @@
+# Saved by TopBraid on Wed Feb 22 11:23:58 PST 2012
+# baseURI: http://cmusv/FakeClasses2
+
+@prefix :        <http://cmusv/FakeClasses2#> .
+@prefix fake11073:  <http://cmusv/FakeClasses2#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cmusv/FakeClasses2>
+      rdf:type owl:Ontology ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+fake11073:DiastolicReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:ReadingValue
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue 19230 ;
+                owl:onProperty fake11073:MeasurementCode
+              ] .
+
+fake11073:MeasurementCode
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+fake11073:ReadingDateTime
+      rdf:type owl:DatatypeProperty .
+
+fake11073:ReadingValue
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+fake11073:SystolicReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:ReadingValue
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue 19229 ;
+                owl:onProperty fake11073:MeasurementCode
+              ] .
