@@ -1,4 +1,4 @@
-# Saved by TopBraid on Mon Feb 20 20:10:17 PST 2012
+# Saved by TopBraid on Tue Feb 21 17:43:30 PST 2012
 # baseURI: http://cmusv/FakeClasses
 
 @prefix fake11073:  <http://cmusv/FakeClasses#> .
@@ -11,38 +11,48 @@
       rdf:type owl:Ontology ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
-fake11073:BP1
-      rdf:type owl:DatatypeProperty .
-
-fake11073:BP2
-      rdf:type owl:DatatypeProperty .
-
 fake11073:BloodPressureReading
       rdf:type owl:Class ;
+      rdfs:comment "A placeholder for the real 11073-compliant blood pressure reading object"^^xsd:string ;
       rdfs:subClassOf owl:Thing ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty fake11073:readingID
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty fake11073:BP2
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty fake11073:BP1
+                owl:hasValue "Cuff"^^xsd:string ;
+                owl:onProperty fake11073:sensorType
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty fake11073:ReadingDateTime
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:MDC_PRESS_CUFF_SYS
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:MDC_PRESS_CUFF_DIA
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:readingID
               ] .
+
+fake11073:MDC_PRESS_CUFF_DIA
+      rdf:type owl:DatatypeProperty .
+
+fake11073:MDC_PRESS_CUFF_SYS
+      rdf:type owl:DatatypeProperty .
 
 fake11073:ReadingDateTime
       rdf:type owl:DatatypeProperty .
 
 fake11073:readingID
       rdf:type owl:DatatypeProperty .
+
+fake11073:sensorType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
