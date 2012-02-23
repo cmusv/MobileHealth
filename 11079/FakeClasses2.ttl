@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Feb 22 11:23:58 PST 2012
+# Saved by TopBraid on Wed Feb 22 16:29:52 PST 2012
 # baseURI: http://cmusv/FakeClasses2
 
 @prefix :        <http://cmusv/FakeClasses2#> .
@@ -12,18 +12,42 @@
       rdf:type owl:Ontology ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
-fake11073:DiastolicReading
+fake11073:BloodPressureReading
       rdf:type owl:Class ;
       rdfs:subClassOf owl:Thing ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty fake11073:ReadingValue
+                owl:onProperty fake11073:hasDiastolic
               ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom fake11073:DiastolicReading ;
+                owl:onProperty fake11073:hasDiastolic
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:hasSystolic
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom fake11073:SystolicReading ;
+                owl:onProperty fake11073:hasSystolic
+              ] .
+
+fake11073:DiastolicReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:hasValue 19230 ;
                 owl:onProperty fake11073:MeasurementCode
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:ReadingValue
               ] .
 
 fake11073:MeasurementCode
@@ -42,11 +66,17 @@ fake11073:SystolicReading
       rdfs:subClassOf owl:Thing ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty fake11073:ReadingValue
+                owl:hasValue 19229 ;
+                owl:onProperty fake11073:MeasurementCode
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:hasValue 19229 ;
-                owl:onProperty fake11073:MeasurementCode
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:ReadingValue
               ] .
+
+fake11073:hasDiastolic
+      rdf:type owl:ObjectProperty .
+
+fake11073:hasSystolic
+      rdf:type owl:ObjectProperty .
