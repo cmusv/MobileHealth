@@ -1,0 +1,176 @@
+DIM name	Reference ID	Code	Derived from	OrigSeq	PHD MajSeq	PHD MinSeq	Note
+Device Interface	MDC_CC_DIF	513	Top	2			
+MibElement	MDC_CC_MIB_ELEM	1025	Top	3			
+Device Interface MibElement	MDC_CC_MIB_ELEM_DIF	1026	MibElement	4			
+General Communication Statistics MibElement	MDC_CC_MIB_ELEM_GEN_COMM_STATS	1027	MibElement	5			
+1073.3.1 Port Configuration MIB Element	MDC_CC_MIB_ELEM_1073_3_1_PORT_CFG	1028	MibElement	6			
+1073.3.1 Link Access MIB Element	MDC_CC_MIB_ELEM_1073_3_1_LINK_ACC	1029	MibElement	7			
+1073.3.1 Current Performance MIB Element	MDC_CC_MIB_ELEM_1073_3_1_PERF_CURR	1030	MibElement	8			
+1073.3.1 Physical Configuration MIB Element	MDC_CC_MIB_ELEM_1073_3_1_CONFIG_PHYS	1031	MibElement	9			
+1073.3.1 Fault Threshold MIB Element	MDC_CC_MIB_ELEM_1073_3_1_FAULT_THRES	1932	MibElement	10			
+1073.3.2 Configuration MIB Element	MDC_CC_MIB_ELEM_1073_3_2_CONFIG	1033	MibElement	11			
+Mib-Ext-Oid	MDC_CC_MIB_DATA_EXT_OID	2048	MibElement	12			
+Dif-Id	MDC_CC_MIB_DATA_DIF_ID	2049	Device Interface MibElement	13			
+Port-State	MDC_CC_MIB_DATA_DIF_PORT_ST	2050	Device Interface MibElement	14			
+Dif-Type	MDC_CC_MIB_DATA_DIF_TYPE	2051	Device Interface MibElement	15			
+Active-Profile	MDC_CC_MIB_DATA_PROFILE_ID	2052	Device Interface MibElement	16			
+Supported-Profiles	MDC_CC_MIB_DATA_SUPP_PROFILES	2053	Device Interface MibElement	17			
+MTU	MDC_CC_MIB_DATA_MTU	2054	Device Interface MibElement	18			
+Link-Speed	MDC_CC_MIB_DATA_LINK_SPEED	2055	Device Interface MibElement	19			
+Mib-Element-List	MDC_CC_MIB_DATA_MIB_ELEM_LIST	2056	Device Interface MibElement	20			
+Packets In	MDC_CC_MIB_DATA_PACK_IN	2057	General Communication Statistics MibElement	21			
+Packets Out	MDC_CC_MIB_DATA_PACK_OUT	2058	General Communication Statistics MibElement	22			
+Octets In	MDC_CC_MIB_DATA_OCT_IN	2059	General Communication Statistics MibElement	23			
+Octets Out	MDC_CC_MIB_DATA_OCT_OUT	2060	General Communication Statistics MibElement	24			
+Discarded-Packets-In	MDC_CC_MIB_DATA_DISC_PACK_IN	2061	General Communication Statistics MibElement	25			
+Discarded-Packets-Out	MDC_CC_MIB_DATA_DISC_PACK_OUT	2062	General Communication Statistics MibElement	26			
+Unknown-Protocol-Packets-In	MDC_CC_MIB_DATA_UNK_PROT_PACK_IN	2063	General Communication Statistics MibElement	27			
+Queue-Len-In	MDC_CC_MIB_DATA_QUEUE_LEN_IN	2064	General Communication Statistics MibElement	28			
+Queue-Len-Out	MDC_CC_MIB_DATA_QUEUE_LEN_OUT	2065	General Communication Statistics MibElement	29			
+Dif-Admin-Status	MDC_CC_MIB_DATA_DIF_STATE	2066	General Communication Statistics MibElement	30			
+Dif-Oper-Status	MDC_CC_MIB_DATA_CUR_DIF_STATE	2067	General Communication Statistics MibElement	31			
+Dif-Last-Change	MDC_CC_MIB_DATA_TIME_DIF_LAST_CHANGE	2068	General Communication Statistics MibElement	32			
+Errors-In	MDC_CC_MIB_DATA_ERRS_IN	2069	General Communication Statistics MibElement	33			
+Errors-Out	MDC_CC_MIB_DATA_ERRS_OUT	2070	General Communication Statistics MibElement	34			
+Generic-Mode	MDC_CC_MIB_DATA_COMM_MODE	2071	General Communication Statistics MibElement	35			
+Average Speed	MDC_CC_MIB_DATA_AVG_SPEED	2072	General Communication Statistics MibElement	36			
+Maximum Speed	MDC_CC_MIB_DATA_MAX_SPEED	2073	General Communication Statistics MibElement	37			
+Max-Tx-Length	MDC_CC_MIB_DATA_MAX_TX_LEN	2074	1073.3.1 Port Configuration MIB Element	38			
+Max-Rx-Length	MDC_CC_MIB_DATA_MAX_RX_LEN	2075	1073.3.1 Port Configuration MIB Element	39			
+Max-Polling-Period	MDC_CC_MIB_DATA_POLL_PERIOD	2076	1073.3.1 Port Configuration MIB Element	40			
+Total-Bit-Rate-Capacity	MDC_CC_MIB_DATA_TOT_BIT_RATE	2077	1073.3.1 Port Configuration MIB Element	41			
+Port-Id	MDC_CC_MIB_DATA_ID_PORT	2078	1073.3.1 Port Configuration MIB Element	42			
+Link-Access-Time	MDC_CC_MIB_DATA_LINK_TIME	2079	1073.3.1 Link Access MIB Element	43			
+Link-Access-Status	MDC_CC_MIB_DATA_LINK_STAT	2080	1073.3.1 Link Access MIB Element	44			
+Mgt-Access-Time	MDC_CC_MIB_DATA_MGM_TIME	2081	1073.3.1 Link Access MIB Element	45			
+Mgt-Access-Status	MDC_CC_MIB_DATA_MGM_STAT	2082	1073.3.1 Link Access MIB Element	46			
+Frames-Sent	MDC_CC_MIB_DATA_FRAMES_SENT	2083	1073.3.1 Current Performance MIB Element	47			
+Frames-Received	MDC_CC_MIB_DATA_FRAMES_RECV	2084	1073.3.1 Current Performance MIB Element	48			
+U-Frames-Sent	MDC_CC_MIB_DATA_U_FRAMES_SENT	2085	1073.3.1 Current Performance MIB Element	49			
+U-Frames-Received	MDC_CC_MIB_DATA_U_FRAMES_RECV	2086	1073.3.1 Current Performance MIB Element	50			
+UI-Frames-Sent	MDC_CC_MIB_DATA_UI_FRAMES_SENT	2087	1073.3.1 Current Performance MIB Element	51			
+UI-Frames-Received	MDC_CC_MIB_DATA_UI_FRAMES_RECV	2088	1073.3.1 Current Performance MIB Element	52			
+I-Frames-Sent	MDC_CC_MIB_DATA_I_FRAMES_SENT	2089	1073.3.1 Current Performance MIB Element	53			
+I-Frames-Received	MDC_CC_MIB_DATA_I_FRAMES_RECV	2090	1073.3.1 Current Performance MIB Element	54			
+Data-Bytes-Sent	MDC_CC_MIB_DATA_BYTES_SENT	2091	1073.3.1 Current Performance MIB Element	55			
+Data-Bytes-Received	MDC_CC_MIB_DATA_BYTES_RECV	2092	1073.3.1 Current Performance MIB Element	56			
+Int-Bytes-Sent	MDC_CC_MIB_DATA_INT_BYTES_SENT	2093	1073.3.1 Current Performance MIB Element	57			
+Int-Bytes-Received	MDC_CC_MIB_DATA_INT_BYTES_RECV	2094	1073.3.1 Current Performance MIB Element	58			
+Frames-Out-Aborted	MDC_CC_MIB_DATA_FRAMES_OUT_ABRT	2095	1073.3.1 Current Performance MIB Element	59			
+Phys-Capab	MDC_CC_MIB_DATA_PHYS_CAPAB	2096	1073.3.1 Physical Configuration MIB Element	60			
+Max-Current-Rating	MDC_CC_MIB_DATA_MAX_CURRENT_RATING	2097	1073.3.1 Physical Configuration MIB Element	61			
+Frames-Sent	MDC_CC_MIB_DATA_FRAMES_SENT_LIM	2098	1073.3.1 Fault Threshold MIB Element	62			
+Frames-Received	MDC_CC_MIB_DATA_FRAMES_RECV_LIM	2099	1073.3.1 Fault Threshold MIB Element	63			
+U-Frames-Sent	MDC_CC_MIB_DATA_U_FRAMES_SENT_LIM	2100	1073.3.1 Fault Threshold MIB Element	64			
+U-Frames-Received	MDC_CC_MIB_DATA_U_FRAMES_RECV_LIM	2101	1073.3.1 Fault Threshold MIB Element	65			
+UI-Frames-Sent	MDC_CC_MIB_DATA_UI_FRAMES_SENT_LIM	2102	1073.3.1 Fault Threshold MIB Element	66			
+UI-Frames-Received	MDC_CC_MIB_DATA_UI_FRAMES_RECV_LIM	2103	1073.3.1 Fault Threshold MIB Element	67			
+I-Frames-Sent	MDC_CC_MIB_DATA_I_FRAMES_SENT_LIM	2104	1073.3.1 Fault Threshold MIB Element	68			
+I-Frames-Received	MDC_CC_MIB_DATA_I_FRAMES_RECV_LIM	2105	1073.3.1 Fault Threshold MIB Element	69			
+Data-Bytes-Sent	MDC_CC_MIB_DATA_BYTES_SENT_LIM	2106	1073.3.1 Fault Threshold MIB Element	70			
+Data-Bytes-Received	MDC_CC_MIB_DATA_BYTES_RECV_LIM	2107	1073.3.1 Fault Threshold MIB Element	71			
+Int-Bytes-Sent	MDC_CC_MIB_DATA_INT_BYTES_SENT_LIM	2108	1073.3.1 Fault Threshold MIB Element	72			
+Int-Bytes-Received	MDC_CC_MIB_DATA_INT_BYTES_RECV_LIM	2109	1073.3.1 Fault Threshold MIB Element	73			
+Frames-Out-Aborted	MDC_CC_MIB_DATA_FRAMES_OUT_ABRT_LIM	2110	1073.3.1 Fault Threshold MIB Element	74			
+Baud-Rate	MDC_CC_MIB_DATA_BAUD_RATE	2111	1073.3.2 Configuration MIB Element	75			
+Maximum-Turn-Around Time	MDC_CC_MIB_DATA_MAX_TURN_AROUND_TIME	2112	1073.3.2 Configuration MIB Element	76			
+Data-Size	MDC_CC_MIB_DATA_DATA_SIZE	2113	1073.3.2 Configuration MIB Element	77			
+Window-Size	MDC_CC_MIB_DATA_WINDOW_SIZE	2114	1073.3.2 Configuration MIB Element	78			
+Additional-BOF	MDC_CC_MIB_DATA_ADDIT_BOF	2115	1073.3.2 Configuration MIB Element	79			
+Link disconnect time	MDC_CC_MIB_DATA_LINK_DISCON_TIME	2116	1073.3.2 Configuration MIB Element	80			
+Link threshold time	MDC_CC_MIB_DATA_LINK_THRSHLD_TIME	2117	1073.3.2 Configuration MIB Element	81			
+DIF-Port-Number	MDC_CC_MIB_DATA_DIF_PORT_NO	2318	1073.3.2 Configuration MIB Element	82			
+Poll-Profile-Support	MDC_POLL_PROFILE_SUPPORT	1	P.1073 Association User Information Field	83			
+Baseline-Profile-Support	MDC_BASELINE_PROFILE_SUPPORT	2	P.1073 Association User Information Field	84			
+Pat-Demog-Opt-Pack-Agt	MDC_PT_DEMOGR_OPTION_AGT	8194	P.1073 Association User Information Field	85			
+Pat-Demog-Opt-Pack-Mgr	MDC_PT_DEMOGR_OPTION_MGR	8193	P.1073 Association User Information Field	86			
+Rem-Cntrl-Opt-Pack-Agt	MDC_REM_CNTRL_OPTION_AGT	8196	P.1073 Association User Information Field	87			
+Rem-Cntrl-Opt-Pack-Mgr	MDC_REM_CNTRL_OPTION_MGR	8197	P.1073 Association User Information Field	88			
+MedDevSpec-Std-Support	MDC_MED_DEV_SPEC_STD_SUPPORT	257	MDS and derived objects	89			
+Mdib-Object-Support	MDC_MDIB_OBJ_SUPPORT	258	MDS and derived objects	90			
+	MDC_DEV_SPEC_PROFILE_HYDRA	4096		91	8	3	"Used in the WAN interface for Continua and maybe PCD eventually.  MDS::MDC_ATTR_SYS_TYPE
+Indicates a device that implements more than one -104xx specialization"
+	MDC_DEV_SPEC_PROFILE_PULS_OXIM	4100		92	8	4	Algorithm = 4096 + zz where zz is -104zz.
+	MDC_DEV_SPEC_PROFILE_MIN_ECG	4102		93	8	5	
+	MDC_DEV_SPEC_PROFILE_BP	4103		94	8	6	
+	MDC_DEV_SPEC_PROFILE_TEMP	4104		95	8	7	
+	MDC_DEV_SPEC_PROFILE_RESP_RATE	4109		96	8	8	
+	MDC_DEV_SPEC_PROFILE_SCALE	4111		97	8	9	
+	MDC_DEV_SPEC_PROFILE_GLUCOSE	4113		98	8	10	
+	MDC_DEV_SPEC_PROFILE_INR	4114		99	8	11	International normalized ratio
+	MDC_DEV_SPEC_PROFILE_INSULIN_PUMP	4115		100	8	12	
+	MDC_DEV_SPEC_PROFILE_INSULIN_PUMP	4115		101	8	13	Duplicates 20601
+	MDC_DEV_SPEC_PROFILE_BCA	4116		102	8	14	Body Composition Analyzer
+	MDC_DEV_SPEC_PROFILE_PEAK_FLOW	4117		103	8	15	
+	MDC_DEV_SPEC_PROFILE_PEFM	4117		104	8	16	
+	MDC_DEV_SPEC_PROFILE_HF_CARDIO	4137		105	8	17	Duplicates 20601
+	MDC_DEV_SPEC_PROFILE_HF_CARDIO	4137		106	8	18	
+	MDC_DEV_SPEC_PROFILE_HF_STRENGTH	4138		107	8	19	
+	MDC_DEV_SPEC_PROFILE_HF_STRENGTH	4138		108	8	20	Duplicates 20601
+	MDC_DEV_SPEC_PROFILE_AI_ACTIVITY_HUB	4167		109	8	21	
+	MDC_DEV_SPEC_PROFILE_AI_MED_MINDER	4168		110	8	22	
+	STARTING OF RESERVED RANGE	4196		111	8	23	The range from 4196 to 5119 is reserved for sub classifying devices within other specialziations (profiles).  For instance in the -10441 (Cardio) specialization the plan is to define step counters as a sub-type
+	MDC_DEV_SUB_SPEC_PROFILE_STEP_COUNTER	4200		112	8	24	4196 through 4211 used for -10441 (Cardio)
+	MDC_DEV_SUB_SPEC_PROFILE_FALL_SENSOR	4213		113	8	25	4212 through 4235 used for -10471 (Activity hub)
+	MDC_DEV_SUB_SPEC_PROFILE_PERS_SENSOR	4214		114	8	26	
+	MDC_DEV_SUB_SPEC_PROFILE_SMOKE_SENSOR	4215		115	8	27	
+	MDC_DEV_SUB_SPEC_PROFILE_CO_SENSOR	4216		116	8	28	
+	MDC_DEV_SUB_SPEC_PROFILE_WATER_SENSOR	4217		117	8	29	
+	MDC_DEV_SUB_SPEC_PROFILE_GAS_SENSOR	4218		118	8	30	
+	MDC_DEV_SUB_SPEC_PROFILE_MOTION_SENSOR	4219		119	8	31	
+	MDC_DEV_SUB_SPEC_PROFILE_PROPEXIT_SENSOR	4220		120	8	32	
+	MDC_DEV_SUB_SPEC_PROFILE_ENURESIS_SENSOR	4221		121	8	33	
+	MDC_DEV_SUB_SPEC_PROFILE_CONTACTCLOSURE_SENSOR	4222		122	8	34	
+	MDC_DEV_SUB_SPEC_PROFILE_USAGE_SENSOR	4223		123	8	35	
+	MDC_DEV_SUB_SPEC_PROFILE_SWITCH_SENSOR	4224		124	8	36	
+	MDC_DEV_SUB_SPEC_PROFILE_DOSAGE_SENSOR	4225		125	8	37	
+	MDC_DEV_SUB_SPEC_PROFILE_TEMP_SENSOR	4226		126	8	38	
+	MDC_DEV_SUB_SPEC_PROFILE_ECG 	4236		127	8	39	4236 through 4243 used for -10406 (Basic ECG)
+	MDC_DEV_SUB_SPEC_PROFILE_HR	4237		128	8	40	
+	END OF RESERVED RANGE	5119		129	8	41	The range from 4196 to 5119 is reserved for sub classifying devices within other specialziations (profiles).  For instance in the -10441 (Cardio) specialization the plan is to define step counters as a sub-type
+	MDC_INFRA_HARMONIZATION_CONTINUA			130	8	42	Continua-related Harmonization range start
+	MDC_ID_MODEL_NUMBER			131	8	43	"MDS::MDC_ATTR_ID_MODEL 
+Denotes model number sub-element"
+	MDC_ID_MODEL_MANUFACTURER			132	8	44	"MDS::MDC_ATTR_ID_MODEL 
+Denotes manufacturer number sub-element"
+	MDC_ID_PROD_SPEC_UNSPECIFIED			133	8	45	"MDS::MDC_ATTR_ID_PROD_SPECN 
+Denotes unspecified component id group"
+	MDC_ID_PROD_SPEC_SERIAL			134	8	46	"MDS::MDC_ATTR_ID_PROD_SPECN 
+Denotes serial-number component id group"
+	MDC_ID_PROD_SPEC_PART			135	8	47	"MDS::MDC_ATTR_ID_PROD_SPECN 
+Denotes part-number component id group"
+	MDC_ID_PROD_SPEC_HW			136	8	48	"MDS::MDC_ATTR_ID_PROD_SPECN 
+Denotes hw-revision component id group"
+	MDC_ID_PROD_SPEC_SW			137	8	49	"MDS::MDC_ATTR_ID_PROD_SPECN 
+Denotes sw-revision component id group"
+	MDC_ID_PROD_SPEC_FW			138	8	50	"MDS::MDC_ATTR_ID_PROD_SPECN 
+Denotes fw-revision component id group"
+	MDC_ID_PROD_SPEC_PROTOCOL_REV			139	8	51	"MDS::MDC_ATTR_ID_PROD_SPECN 
+Denotes protocol-revision component id group"
+	MDC_ID_PROD_SPEC_GMDN			140	8	52	"MDS::MDC_ATTR_ID_PROD_SPECN
+Denotes prod-spec-gmdn component id group"
+	MDC_MODALITY_AVERAGING_TIME			141	8	53	"10404: SPO2 or Pulse Rate Modality, an enumeration of
+150580^MDC_MODALITY_FAST^MDC or
+150584^MDC_MODALITY_SLOW^MDC or
+150588^MDC_MODALITY_SPOT^MDC
+Used to denote modality (ex. SPO2, pulse rate,)"
+	MDC_SA_SPECN_FLAGS			142	8	54	"RT-SA
+Sample Array Flags used to help downstream consumers display the Sa-Value waveform"
+	MDC_TIME_SYNC_NONE	7936		143	8	55	
+	MDC_TIME_SYNC_NTPV3	7937		144	8	56	
+	MDC_TIME_SYNC_NTPV4	7938		145	8	57	
+	MDC_TIME_SYNC_SNTPV4	7939		146	8	58	
+	MDC_TIME_SYNC_SNTPV4330	7940		147	8	59	
+	MDC_TIME_SYNC_BTV1	7941		148	8	60	
+	MDC_TIME_SYNC_RADIO	7942		149	8	61	Atomic Clock synchronization through RF
+	MDC_TIME_SYNC_HL7_NCK	7943		150	8	62	Synchronized via Health Level 7 NCK (network clock)
+	MDC_TIME_SYNC_CDMA	7944		151	8	63	CDMA mobile telecommunications system synchronization
+	MDC_TIME_SYNC_GSM	7945		152	8	64	GSM - Network Identity and Time Zone (NITZ) 
+	MDC_TIME_SYNC_EBWW	7946		153	8	65	"A manually set time, by ‘eyball and wristwatch’"
+	MDC_TIME_SYNC_USB_SOF	7947		154	8	66	"Synced to the the 1kHz USB ""start-of-frame"" clock"
+	MDC_REG_CERT_DATA_CONTINUA_VERSION	64512		155	8	67	"Continua specific (OEM) code - MDS::MDC_ATTR_REG_CERT_DATA_LIST
+Denotes Continua Version sub-element"
+	MDC_REG_CERT_DATA_CONTINUA_CERT_DEV_LIST 	64513		156	8	68	"Continua specific (OEM) code - MDS::MDC_ATTR_REG_CERT_DATA_LIST
+Denotes Continua Certification Device Class List sub-element"
+	MDC_REG_CERT_DATA_CONTINUA_REG_STATUS 	64514		157	8	69	"Continua specific (OEM) code - MDS::MDC_ATTR_REG_CERT_DATA_LIST
+Denotes Continua Regulation BitField sub-element"

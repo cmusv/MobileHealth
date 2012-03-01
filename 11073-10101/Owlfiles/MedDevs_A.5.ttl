@@ -1,0 +1,828 @@
+# Saved by TopBraid on Thu Mar 01 14:45:11 PST 2012
+# baseURI: http://www.cmusv.edu/11073-10101/MedDevs_A.5.1
+# imports: http://www.cmusv.edu/11073-10101/ClassDefinitions
+
+@prefix :        <http://www.cmusv.edu/11073-10101/ClassDefinitions#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+:AnalyzerConcentrationAirwayGastype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4108 ;
+      :commonterm "Multigas identifier"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the concentration of airway chemicals, e.g., CO2, O2, anesthetic agent."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_CONC_GAS_IDENT"^^xsd:string .
+
+:AnalyzerConcentrationMulti-Gastype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4112 ;
+      :commonterm "Multigas analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives airway gas parameters, e.g., EtCO2, iCO2, iO2."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_CONC_GAS_MULTI_PARAM"^^xsd:string .
+
+:AnalyzerConcentrationSatBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4104 ;
+      :commonterm "SpO2 monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives the % of arterial O2 and pulse rate parameters (blood flow)."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_SAT_O2"^^xsd:string .
+
+:AnalyzerConcentrationUrinetype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4116 ;
+      :commonterm "Urine chemistry analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives urine chemistry parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_URINE_CHEM"^^xsd:string .
+
+:AnalyzerElectricalPotentialBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4120 ;
+      :commonterm "EEG analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives brain activity parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_ELEC_POTL_BRAIN"^^xsd:string .
+
+:AnalyzerElectricalPotentialHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4124 ;
+      :commonterm "Heart activity analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives Heart/haemo activity parameters, e.g., cardiotach, arrhythmia monitor, ST analyzer, R-R."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_ELEC_POTL_HEART_ACTIV"^^xsd:string .
+
+:AnalyzerFlowAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4128 ;
+      :commonterm "Airway flow analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives airway flow parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_FLOW_AWAY"^^xsd:string .
+
+:AnalyzerFlowBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4132 ;
+      :commonterm "Heart output device"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives heart output from direct measurement of blood flow."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_CARD_OUTPUT"^^xsd:string .
+
+:AnalyzerFlowLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4136 ;
+      :commonterm "Lung flow analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives lung flow parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_FLOW_LUNG"^^xsd:string .
+
+:AnalyzerFlowUrinetype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4140 ;
+      :commonterm "Urine flow analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives urine flow rate."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_FLOW_URINE"^^xsd:string .
+
+:AnalyzerMulti-ParameterAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4144 ;
+      :commonterm "Spirometer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for analysis and derivation of airway parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_AWAY_MULTI_PARAM"^^xsd:string .
+
+:AnalyzerMulti-ParameterBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4148 ;
+      :commonterm "Blood chemistry analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for analysis and derivation of blood chemistry parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_BLD_CHEM_MULTI_PARAM"^^xsd:string .
+
+:AnalyzerMulti-ParameterLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4152 ;
+      :commonterm "Lung analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for analysis and derivation of Lung function parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_LUNG"^^xsd:string .
+
+:AnalyzerMulti-ParameterMuscletype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4156 ;
+      :commonterm "Muscle analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for analysis and derivation of muscle parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_MUSCL"^^xsd:string .
+
+:AnalyzerMulti-ParameterPhysiologictype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4160 ;
+      :commonterm "Patient analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that analyses and derives data from multiple or unspecified body systems."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_PT_PHYSIO"^^xsd:string .
+
+:AnalyzerMulti-ParameterSkintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4164 ;
+      :commonterm "Skin analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for analysis and derivation of skin-related parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_SKIN_MULTI_PARAM"^^xsd:string .
+
+:AnalyzerPressureAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4168 ;
+      :commonterm "Spirometry analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives airway parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_PRESS_AWAY"^^xsd:string .
+
+:AnalyzerPressureBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4172 ;
+      :commonterm "Blood pressure analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives blood pressure parameters, i.e., systolic, diastolic, mean."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_PRESS_BLD"^^xsd:string .
+
+:AnalyzerPressureBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4176 ;
+      :commonterm "Intracranial pressure analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives intracranial pressure parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_PRESS_BRAIN_INTRACRAN"^^xsd:string .
+
+:AnalyzerPressureLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4180 ;
+      :commonterm "Lung pressure analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives lung pressure parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_PRESS_LUNG"^^xsd:string .
+
+:AnalyzerRateLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4184 ;
+      :commonterm "Lung rate analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives the lung breathing rate."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_RESP_RATE"^^xsd:string .
+
+:AnalyzerResistanceLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4188 ;
+      :commonterm "Lung resistance analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives the resistance (compliance) of the lungs"^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_RES_LUNG"^^xsd:string .
+
+:AnalyzerTemperatureBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4192 ;
+      :commonterm "Heart output analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives Heart output parameters from blood temperature."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_TEMP_HEART_OUTPUT"^^xsd:string .
+
+:AnalyzerVolumeHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4196 ;
+      :commonterm "Heart volume analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the derivation of the size of the heart."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_VOL_HEART"^^xsd:string .
+
+:AnalyzerVolumeLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4200 ;
+      :commonterm "Lung volume analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives Lung volume parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY_VOL_LUNG"^^xsd:string .
+
+:Analyzertype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4100 ;
+      :commonterm "Generic analyzer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that analyzes acquired patient information."^^xsd:string ;
+      :referenceID "MDC_DEV_ANALY"^^xsd:string .
+
+:CalculatorMulti-ParameterHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4208 ;
+      :commonterm "Haemodynamics calculator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives haemodynamics parameters"^^xsd:string ;
+      :referenceID "MDC_DEV_CALC_HEMO"^^xsd:string .
+
+:CalculatorMulti-ParameterKidneytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4212 ;
+      :commonterm "Renal function calculator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives renal function parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_CALC_RENAL"^^xsd:string .
+
+:Calculatortype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4204 ;
+      :commonterm "Generic calculator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that creates derived parameters"^^xsd:string ;
+      :referenceID "MDC_DEV_CALC"^^xsd:string .
+
+:FilterConcentrationAirwayGastype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4220 ;
+      :commonterm "CO2 scrubber"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for removing components from the chemistry of delivered air."^^xsd:string ;
+      :referenceID "MDC_DEV_FILTER_CONC_AWAY"^^xsd:string .
+
+:FilterConcentrationtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4216 ;
+      :commonterm "Generic filter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that filters out one or more chemicals."^^xsd:string ;
+      :referenceID "MDC_DEV_FILTER_CONC"^^xsd:string .
+
+:GeneratorConcentrationAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4228 ;
+      :commonterm "Vaporizer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for adding components to the chemistry of delivered air."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN_CONC_AWAY"^^xsd:string .
+
+:GeneratorElectricalPotentialDefibHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4232 ;
+      :commonterm "Defibrillator (simple)"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled Heart electrical potential."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN_ELEC_POTL_HEART_DEFIB"^^xsd:string .
+
+:GeneratorElectricalPotentialMuscletype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4236 ;
+      :commonterm "Muscle generator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled electrical potential to the musculature."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN_ELEC_POTL_MUSCL"^^xsd:string .
+
+:GeneratorElectricalPotentialSkintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4240 ;
+      :commonterm "Skin generator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled electrical potential to the skin."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN_ELEC_POTL_SKIN"^^xsd:string .
+
+:GeneratorMulti-ParameterBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4244 ;
+      :commonterm "Evoked potential system"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that derives brain activity parameters via stimulation."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN_EVOK_POTL_BRAIN_MULTI_PARAM"^^xsd:string .
+
+:GeneratorRateHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4248 ;
+      :commonterm "Pacemaker"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for controlling the rate of Heart contractions."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN_RATE_HEART"^^xsd:string .
+
+:GeneratorTemperatureMuscletype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4252 ;
+      :commonterm "Diathermy device"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled temperature to the musculature."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN_TEMP_MUSCL"^^xsd:string .
+
+:Generatortype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4224 ;
+      :commonterm "Generic generator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that generates heat, electricity, etc."^^xsd:string ;
+      :referenceID "MDC_DEV_GEN"^^xsd:string .
+
+:MeterConcentrationSkinGastype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4264 ;
+      :commonterm "Transcutaneous gas meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the measurement of the level and concentration of gases in the tissue."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_CONC_SKIN_GAS"^^xsd:string .
+
+:MeterConcentrationUrinetype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4268 ;
+      :commonterm "Urine chemistry transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of urine chemistry."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_CONC_URINE"^^xsd:string .
+
+:MeterElectricalPotentialBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4272 ;
+      :commonterm "Electrobraingraph"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of brain electrical activity."^^xsd:string ;
+      :referenceID "MDC_DEV_EEG"^^xsd:string .
+
+:MeterElectricalPotentialHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4260 ;
+      :commonterm "ECG"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of heart electrical activity."^^xsd:string ;
+      :referenceID "MDC_DEV_ECG"^^xsd:string .
+
+:MeterElectricalPotentialMuscletype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4276 ;
+      :commonterm "Electromyograph"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of musculature electrical activity."^^xsd:string ;
+      :referenceID "MDC_DEV_EMG"^^xsd:string .
+
+:MeterFlowAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4280 ;
+      :commonterm "Pneumotacograph"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of air flow."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_FLOW_AWAY"^^xsd:string .
+
+:MeterFlowBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4284 ;
+      :commonterm "Blood flow meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of blood flow."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_FLOW_BLD"^^xsd:string .
+
+:MeterFlowHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4288 ;
+      :commonterm "Heart output transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of heart blood flow."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_FLOW_CARD"^^xsd:string .
+
+:MeterFlowLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4292 ;
+      :commonterm "Lung flow meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of lung air flow."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_FLOW_LUNG"^^xsd:string .
+
+:MeterFlowUrinetype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4296 ;
+      :commonterm "Urine output transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of urinary flow."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_FLOW_URINE"^^xsd:string .
+
+:MeterMulti-ParameterBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4308 ;
+      :commonterm "Blood chemistry meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level and concentration of chemicals, gases and electrolytes in the blood."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_BLD_CHEM"^^xsd:string .
+
+:MeterMulti-ParameterPhysiologictype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4300 ;
+      :descriptionDefinition
+              "Instrument that acquires data through direct measurement from multiple or unspecified body systems."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_PHYSIO_MULTI_PARAM"^^xsd:string .
+
+:MeterMulti-ParameterSkintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4304 ;
+      :commonterm "Skin transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for direct measurement of skin parameters"^^xsd:string ;
+      :referenceID "MDC_DEV_METER_SKIN_MULTI_PARAM"^^xsd:string .
+
+:MeterPressureAirwayGastype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4312 ;
+      :commonterm "Air pressure meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of delivered air pressure."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_PRESS_AIR"^^xsd:string .
+
+:MeterPressureBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4316 ;
+      :commonterm "Blood pressure strain gauge"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of blood pressure"^^xsd:string ;
+      :referenceID "MDC_DEV_METER_PRESS_BLD"^^xsd:string .
+
+:MeterPressureBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4320 ;
+      :commonterm "Intracranial pressure meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of cranial pressure."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_PRESS_INTRA_CRAN"^^xsd:string .
+
+:MeterPressureHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4324 ;
+      :commonterm "Heart pressure transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of heart blood pressures."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_PRESS_HEART"^^xsd:string .
+
+:MeterPressureLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4328 ;
+      :commonterm "Lung pressure meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of lung air pressure."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_PRESS_LUNG"^^xsd:string .
+
+:MeterResistanceAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4332 ;
+      :commonterm "Air resistance meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of airway resistance."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_RES_AIR"^^xsd:string .
+
+:MeterResistanceLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4336 ;
+      :commonterm "Lung resistance meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of lung resistance."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_RES_LUNG"^^xsd:string .
+
+:MeterResistanceMuscletype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4340 ;
+      :commonterm "Dynamometer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of muscle strength."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_STRENGTH_MUSCL"^^xsd:string .
+
+:MeterTemperatureAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4344 ;
+      :commonterm "Air temperature meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the measurement of the level of delivered air temperature."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP_AIR"^^xsd:string .
+
+:MeterTemperatureBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4348 ;
+      :commonterm "Catheter tip temp. probe"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the of the level of blood temperature."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP_BLD"^^xsd:string .
+
+:MeterTemperatureBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4352 ;
+      :commonterm "Brain temp. meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of brain temperature."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP_BRAIN"^^xsd:string .
+
+:MeterTemperatureHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4356 ;
+      :commonterm "Heart temp. transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of heart temperatures."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP_HEART"^^xsd:string .
+
+:MeterTemperatureLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4360 ;
+      :commonterm "Lung temperature meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of lung temperature."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP_LUNG"^^xsd:string .
+
+:MeterTemperaturePhysiologictype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4364 ;
+      :commonterm "Temperature probe"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that measures temperature from multiple or unspecified body systems."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP"^^xsd:string .
+
+:MeterTemperatureRenaltype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4368 ;
+      :commonterm "Renal temperature transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of renal temperature."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP_RENAL"^^xsd:string .
+
+:MeterTemperatureSkintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4372 ;
+      :commonterm "Skin temperature meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of skin temperature."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_TEMP_SKIN"^^xsd:string .
+
+:MeterVolumeAirwayGastype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4376 ;
+      :commonterm "Airway volume meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of delivered air volume."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_VOL_AIR"^^xsd:string .
+
+:MeterVolumeHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4380 ;
+      :commonterm "Heart volume transducer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the size of the heart."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_VOL_HEART"^^xsd:string .
+
+:MeterVolumeMuscletype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4384 ;
+      :commonterm "Muscle volume meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of the level of muscle bulk."^^xsd:string ;
+      :referenceID "MDC_DEV_METER_VOL_MUSCL"^^xsd:string .
+
+:Metertype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4256 ;
+      :commonterm "Generic meter"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement of physiological parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_METER"^^xsd:string .
+
+:MonitorConcentrationUrinetype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4392 ;
+      :commonterm "Urine chemistry monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement and analysis of urine chemistry."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_URINE_CHEM"^^xsd:string .
+
+:MonitorMulti-ParameterBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4396 ;
+      :commonterm "Blood chemistry monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for acquisition, analysis, and derivation of blood chemistry parameters"^^xsd:string ;
+      :referenceID "MDC_DEV_MON_BLD_CHEM_MULTI_PARAM"^^xsd:string .
+
+:MonitorMulti-ParameterBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4400 ;
+      :commonterm "Brain function monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that implements brain transduction and analysis."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_BRAIN_FUNC"^^xsd:string .
+
+:MonitorMulti-ParameterHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4404 ;
+      :commonterm "Haemodynamic monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for acquisition, analysis, and derivation of Heart parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_HEART_MULTI_PARAM"^^xsd:string .
+
+:MonitorMulti-ParameterLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4408 ;
+      :commonterm "Lung function monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for acquisition and analysis of Lung function parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_LUNG_FUNC"^^xsd:string .
+
+:MonitorMulti-ParameterMuscletype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4412 ;
+      :commonterm "Muscle monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that implements a combination of muscle transduction, analysis, and therapy."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_MUSCL"^^xsd:string .
+
+:MonitorMulti-ParameterPhysiologictype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4428 , 4416 ;
+      :commonterm "Patient monitoring system"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for direct measurement and analysis of multiple body system parameters"^^xsd:string , "Instrument that acquires and analyses patient data from multiple or unspecified body systems."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_PT_PHYSIO_MULTI_PARAM"^^xsd:string , "MDC_DEV_MON_PHYSIO_MULTI_PARAM"^^xsd:string .
+
+:MonitorMulti-ParameterRenaltype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4420 ;
+      :commonterm "Renal function monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for renal data acquisition and analysis."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_RENAL_FUNC_MULTI_PARAM"^^xsd:string .
+
+:MonitorMulti-ParameterSkintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4424 ;
+      :commonterm "Skin monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for direct measurement and analysis of skin-related parameters."^^xsd:string ;
+      :referenceID "MDC_DEV_MON_SKIN_MULTI_PARAM"^^xsd:string .
+
+:Monitortype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4388 ;
+      :commonterm "Generic monitor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for the direct measurement and analysis of patient information"^^xsd:string ;
+      :referenceID "MDC_DEV_MON"^^xsd:string .
+
+:PumpConcentrationOxyBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4436 ;
+      :commonterm "Heart/lung machine"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that implements blood transduction, analysis, and therapy."^^xsd:string ;
+      :referenceID "MDC_DEV_PUMP_HEART_LUNG"^^xsd:string .
+
+:PumpFlowHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4440 ;
+      :commonterm "Left ventricular assist device"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for modifying the flow of blood from the heart."^^xsd:string ;
+      :referenceID "MDC_DEV_PUMP_FLOW_HEART"^^xsd:string .
+
+:PumpPressureBloodIntra-Aortictype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4444 ;
+      :commonterm "Intra-aortic balloon pump"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for improving blood pressure."^^xsd:string ;
+      :referenceID "MDC_DEV_PUMP_PRESS_BLD_INTRAAORT"^^xsd:string .
+
+:PumpVolumeBloodInfusiontype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4448 ;
+      :commonterm "Infusor"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled volume of liquids to the blood."^^xsd:string ;
+      :referenceID "MDC_DEV_PUMP_INFUS"^^xsd:string .
+
+:Pumptype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4432 ;
+      :commonterm "Generic pump"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that delivers fluid to the patient."^^xsd:string ;
+      :referenceID "MDC_DEV_PUMP"^^xsd:string .
+
+:RegulatorFlowAirwayResptype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4456 ;
+      :commonterm "Ventilator (flow)"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled flow of airway gas. (i.e., respirator)"^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_FLOW_AWAY_VENT"^^xsd:string .
+
+:RegulatorMulti-ParameterBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4460 ;
+      :commonterm "Dialysis machine"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for modifying the chemistry of blood."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_BLD_CHEM"^^xsd:string .
+
+:RegulatorMulti-ParameterLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4464 ;
+      :commonterm "Patient ventilation system"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for data acquisition, analysis and therapy for the Lung system."^^xsd:string ;
+      :referenceID "MDC_DEV_SYS_PT_VENT"^^xsd:string .
+
+:RegulatorPressureLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4472 ;
+      :commonterm "Respirator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled flow/volume of airway gas."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_PRESS_LUNG"^^xsd:string .
+
+:RegulatorPressureNegativeLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4468 ;
+      :commonterm "Decompression chamber"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for sustaining the lungs in a controlled pressure."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_DECOMPRESS"^^xsd:string .
+
+:RegulatorRateLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4476 ;
+      :commonterm "Ventilator (rate)"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for controlling the rate of breathing."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_RATE_VENT"^^xsd:string .
+
+:RegulatorTemperatureBloodtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4480 ;
+      :commonterm "Blood warmer"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled temperature of blood."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_TEMP_BLD"^^xsd:string .
+
+:RegulatorTemperatureBodytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4484 ;
+      :commonterm "Heater, incubator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for modifying the temperature of the skin."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_TEMP_SKIN"^^xsd:string .
+
+:RegulatorVolumeAirwaytype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4488 ;
+      :commonterm "Ventilator (volume)"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for delivering a controlled volume of airway gas."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL_VOL_VENT"^^xsd:string .
+
+:Regulatortype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4452 ;
+      :commonterm "Generic regulator"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that controls specific aspects of a patient�s physiological function."^^xsd:string ;
+      :referenceID "MDC_DEV_REGUL"^^xsd:string .
+
+:SystemMulti-ParameterBraintype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4496 ;
+      :commonterm "Neurology system"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that implements brain transduction, analysis, and therapy."^^xsd:string ;
+      :referenceID "MDC_DEV_SYS_BRAIN_MULTI_PARAM"^^xsd:string .
+
+:SystemMulti-ParameterHearttype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4500 ;
+      :commonterm "Cardiology system"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument for Heart transduction, analysis, and therapy."^^xsd:string ;
+      :referenceID "MDC_DEV_SYS_CARD_MULTI_PARAM"^^xsd:string .
+
+:SystemMulti-ParameterLungtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4504 ;
+      :commonterm "Anesthesia system"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that implements a combination of transduction, analysis, and/or therapy on multiple body systems."^^xsd:string ;
+      :referenceID "MDC_DEV_SYS_ANESTH"^^xsd:string .
+
+:SystemMulti-ParameterPhysiologictype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4508 ;
+      :descriptionDefinition
+              "Instrument that acquires, analyses, and provides therapy from and to multiple or unspecified body systems"^^xsd:string ;
+      :referenceID "MDC_DEV_SYS_PHYSIO_MULTI_PARAM"^^xsd:string .
+
+:Systemtype
+      rdf:type <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      :code   4492 ;
+      :commonterm "Generic medical system"^^xsd:string ;
+      :descriptionDefinition
+              "Instrument that consists of multiple device modalities."^^xsd:string ;
+      :referenceID "MDC_DEV_SYS_MULTI_MODAL"^^xsd:string .
+
+<http://www.cmusv.edu/11073-10101/MedDevs_A.5.1>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.cmusv.edu/11073-10101/ClassDefinitions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .

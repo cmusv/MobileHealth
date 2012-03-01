@@ -1,0 +1,729 @@
+DIM name	Reference ID	Code	[DerivedFm]	OrigSeq	PHD MajSeq	PHD MinSeq	Note
+Top	MDC_MOC_TOP	70		2			
+Class	MDC_ATTR_CLASS	2491		3			
+Name-Binding	MDC_ATTR_NAME_BINDING	2510		4			
+Locale	MDC_ATTR_LOCALE	2600		5			
+Attribute-Update	MDC_NOTI_ATTR_UPDT	3330		6			
+VMO	MDC_MOC_VMO	1		7			
+VMD	MDC_MOC_VMO_VMD	2		8			
+Channel	MDC_MOC_VMO_CHAN	3		9			
+Metric	MDC_MOC_VMO_METRIC	4		10			
+Numeric	MDC_MOC_VMO_METRIC_NU	6		11			
+Sample Array	MDC_MOC_VMO_METRIC_SA	7		12			
+Real Time Sample Array	MDC_MOC_VMO_METRIC_SA_RT	9		13			
+Time Sample Array	MDC_MOC_VMO_METRIC_SA_T	10		14			
+Distribution Sample Array	MDC_MOC_VMO_METRIC_SA_D	8		15			
+Enumeration	MDC_MOC_VMO_METRIC_ENUM	5		16			
+PM-Store	MDC_MOC_VMO_PMSTORE	61		17			
+PM-Segment	MDC_MOC_PM_SEGMENT	62		18			
+Complex Metric	MDC_MOC_VMO_METRIC_CMPLX	79		19			
+Type	MDC_ATTR_ID_TYPE	2351		20			
+Handle *	MDC_ATTR_ID_HANDLE	2337		21			
+				22			
+				23			
+				24			
+				25			
+				26			
+				27			
+				28			
+				29			
+				30			
+				31			
+				32			
+				33			
+Label	MDC_ATTR_ID_LABEL_STRING	2343		34			
+Ext-Obj-Relations *	MDC_ATTR_EXT_OBJ_RELATION	2499		35			
+				36			
+Vmd-Status	MDC_ATTR_VMD_STAT	2466		37			
+Vmd-Model *	MDC_ATTR_ID_MODEL	2344		38			
+				39			
+Instance-Number *	MDC_ATTR_ID_INSTNO	2338		40			
+				41			
+				42			
+				43			
+Production-Specification *	MDC_ATTR_ID_PROD_SPECN	2349		44			
+				45			
+				46			
+Compatibility-Id *	MDC_ATTR_ID_COMPAT	2336		47			
+				48			
+Parameter-Group	MDC_ATTR_ID_PARAM_GRP	2346		49			
+				50			
+Position	MDC_ATTR_ID_POSN	2348		51			
+Operating-Hours	MDC_ATTR_TIME_PD_OP_HRS	2444		52			
+Operation-Cycles	MDC_ATTR_CYC_OP	2325		53			
+Measurement-Principle	MDC_ATTR_MSMT_PRINCIPLE	2560		54			
+				55			
+Channel-Id	MDC_ATTR_CHAN_ID	2318		56			
+Channel-Status	MDC_ATTR_CHAN_STAT	2320		57			
+Physical-Channel-Number	MDC_ATTR_CHAN_NUM_PHYS	2319		58			
+Logical-Channel-Number	MDC_ATTR_CHAN_NUM_LOGICAL	2606		59			
+Color	MDC_ATTR_COLOR	2321		60			
+				61			
+Metric-Specification	MDC_ATTR_METRIC_SPECN	2367		62			
+Max-Delay-Time	MDC_ATTR_DELAY_TIME_MAX	2583		63			
+Metric-Status	MDC_ATTR_METRIC_STAT	2368		64			
+Measurement-Status	MDC_ATTR_MSMT_STAT	2375		65			
+Metric-Id	MDC_ATTR_ID_TYPE_METRIC_STAT	2353		66			
+				67			
+Metric-Id-Ext	MDC_ATTR_ID_MSMT_EXT	2502		68			
+				69			
+Unit-Code *	MDC_ATTR_UNIT_CODE	2454		70			
+				71			
+				72			
+Unit-Label-String	MDC_ATTR_UNIT_LABEL_STRING	2457		73			
+Vmo-Source-List	MDC_ATTR_VMO_LIST_SRC	2467		74			
+Metric-Source-List	MDC_ATTR_METRIC_LIST_SRC	2366		75			
+Msmt-Site-List	MDC_ATTR_SITE_LIST_MSMT	2430		76			
+	MDC_ATTR_SITE_LIST_MSMT_EXT	2551		77			
+Body-Site-List	MDC_ATTR_SITE_LIST_BODY	2429		78			
+	MDC_ATTR_SITE_LIST_BODY_EXT	2550		79			
+Metric-Calibration	MDC_ATTR_METRIC_CALIB	2362		80			
+Measure-Mode	MDC_ATTR_MODE_MSMT	2373		81			
+Measure-Period	MDC_ATTR_TIME_PD_MSMT	2443		82			
+Averaging-Period	MDC_ATTR_TIME_PD_AVG	2535		83			
+Start-Time *	MDC_ATTR_TIME_START	2538		84			
+				85			
+				86			
+				87			
+Stop-Time *	MDC_ATTR_TIME_STOP	2539		88			
+				89			
+				90			
+				91			
+Metric-Info-Label-String	MDC_ATTR_METRIC_INFO_LABEL_STR	2365		92			
+Substance	MDC_ATTR_ID_SUBSTANCE	2542		93			
+Substance-Label-String	MDC_ATTR_ID_SUBSTANCE_LABEL_STRING	2508		94			
+Nu-Observed-Value	MDC_ATTR_NU_VAL_OBS	2384		95			
+Compound-Nu-Observed-Value	MDC_ATTR_NU_CMPD_VAL_OBS	2379		96			
+Absolute-Time-Stamp	MDC_ATTR_TIME_STAMP_ABS	2448		97			
+				98			
+				99			
+				100			
+Relative-Time-Stamp	MDC_ATTR_TIME_STAMP_REL	2449		101			
+				102			
+				103			
+				104			
+HiRes-Time-Stamp	MDC_ATTR_TIME_STAMP_REL_HI_RES	2537		105			
+				106			
+				107			
+				108			
+Nu-Measure-Range	MDC_ATTR_NU_RANGE_MSMT	2382		109			
+Nu-Physiological-Range	MDC_ATTR_NU_RANGE_PHYSIO	2383		110			
+Nu-Measure-Resolution	MDC_ATTR_NU_MSMT_RES	2381		111			
+Display-Resolution	MDC_ATTR_DISP_RES	2327		112			
+Accuracy	MDC_ATTR_NU_ACCUR_MSMT	2378		113			
+Sa-Observed-Value	MDC_ATTR_SA_VAL_OBS	2414		114			
+Compound-Sa-Observed-Value	MDC_ATTR_SA_CMPD_VAL_OBS	2407		115			
+Sa-Specification	MDC_ATTR_SA_SPECN	2413		116			
+Sa-Marker-List	MDC_ATTR_SA_MARKER_LIST_I8	2603		117			
+	MDC_ATTR_SA_MARKER_LIST_I16	2582		118			
+	MDC_ATTR_SA_MARKER_LIST_I32	2604		119			
+	MDC_ATTR_SA_FIXED_VAL_SPECN	2582		120			
+Dsa-Marker-List	MDC_ATTR_DSA_MARKER_LIST	2605		121			
+Compression	MDC_ATTR_COMPRES	2322		122			
+Scale-and-Range-Specification	MDC_ATTR_SCALE_SPECN_I8	2417		123			
+	MDC_ATTR_SCALE_SPECN_I16	2415		124			
+	MDC_ATTR_SCALE_SPECN_I32	2416		125			
+Sa-Physiological-Range	MDC_ATTR_SA_RANGE_PHYS_I8	2412		126			
+	MDC_ATTR_SA_RANGE_PHYS_I16	2410		127			
+	MDC_ATTR_SA_RANGE_PHYS_I32	2411		128			
+Visual-Grid	MDC_ATTR_GRID_VIS_I8	2332		129			
+	MDC_ATTR_GRID_VIS_I16	2330		130			
+	MDC_ATTR_GRID_VIS_I32	2331		131			
+Sa-Calibration-Data	MDC_ATTR_SA_CALIB_I8	2406		132			
+	MDC_ATTR_SA_CALIB_I16	2404		133			
+	MDC_ATTR_SA_CALIB_I32	2405		134			
+Filter-Specification	MDC_ATTR_FILTER_SPECN	2329		135			
+Filter-Label-String	MDC_ATTR_FILTER_LABEL_STRING	2626		136			
+Sa-Signal-Frequency	MDC_ATTR_SA_FREQ_SIG	2408		137			
+Sa-Measure-Resolution	MDC_ATTR_SA_MSMT_RES	2409		138			
+Sample-Period	MDC_ATTR_TIME_PD_SAMP	2445		139			
+				140			
+				141			
+Sweep-Speed	MDC_ATTR_SPD_SWEEP_DEFAULT	2431		142			
+				143			
+Tsa-Marker-List	MDC_ATTR_TSA_MARKER_LIST	2452		144			
+Distribution-Range-Specification	MDC_ATTR_RANGE_DISTRIB	2403		145			
+x-Unit-Code	MDC_ATTR_UNIT_CODE_X	2455		146			
+x-Unit-Label-String	MDC_ATTR_UNIT_LABEL_STRING_X	2458		147			
+Enum-Observed-Value	MDC_ATTR_VAL_ENUM_OBS	2462		148			
+Compound-Enum-Observed-Value	MDC_ATTR_VAL_ENUM_OBS_CMPD	2463		149			
+Enum-Measure-Range	MDC_ATTR_ENUM_RANGE_MSMT   	2561		150			
+Enum-Measure-Range-Bit-String	MDC_ATTR_ENUM_RANGE_MSMT_BIT_STRING	2568		151			
+Enum-Measure-Range-Labels	MDC_ATTR_ENUM_RANGE_MSMT_LABELS	2627		152			
+Enum-Additional-Data	MDC_ATTR_Enum_Add_Data	2498		153			
+Metric-Class	MDC_ATTR_METRIC_CLASS	2363		154			
+Store-Sample-Algorithm	MDC_ATTR_METRIC_STORE_SAMPLE_ALG	2371		155			
+Storage-Format	MDC_ATTR_METRIC_STORE_FORMAT	2370		156			
+Store-Capacity-Count	MDC_ATTR_METRIC_STORE_CAPAC_CNT	2369		157			
+Store-Usage-Count	MDC_ATTR_METRIC_STORE_USAGE_CNT	2372		158			
+Operational-State *	MDC_ATTR_OP_STAT	2387		159			
+				160			
+				161			
+Number-of-Segments	MDC_ATTR_NUM_SEG	2385		162			
+Vmo-Global-Reference	MDC_ATTR_VMO_REF_GLB	2469		163			
+Segment-Start-Abs-Time	MDC_ATTR_TIME_START_SEG	2450		164			
+Segment-End-Abs-Time	MDC_ATTR_TIME_END_SEG	2442		165			
+Segment-Usage-Count	MDC_ATTR_SEG_USAGE_CNT	2427		166			
+Segment-Data	MDC_ATTR_SEG_DATA_GEN	2424		167			
+	MDC_ATTR_SEG_DATA_NU_OPT	2425		168			
+	MDC_ATTR_SEG_DATA_RTSA_OPT	2426		169			
+Average-Reporting-Delay	MDC_ATTR_REPORTING_DELAY_AVG	2616		170			
+Sample-Time-Sync	MDC_ATTR_SAMPLE_TIME_SYNC	2617		171			
+HiRes-Sample-Time-Sync	MDC_ATTR_SAMPLE_TIME_SYNC_HIRES	2618		172			
+Cmplx-Metric-Info	MDC_attr_cmplx_info	2619		173			
+Cmplx-Observed-Value	MDC_attr_cmplx_val_obs	2620		174			
+Cmplx-Dyn-Attr	MDC_attr_cmplx_dyn_attr	2621		175			
+Cmplx-Static-Attr	MDC_attr_cmplx_static_attr	2622		176			
+Cmplx-Recursion-Depth	MDC_attr_cmplx_recursion_depth	2623		177			
+VMO Static Context Group *	MDC_ATTR_GRP_VMO_STATIC	2065		178			
+				179			
+				180			
+VMO Dynamic Context Group *	MDC_ATTR_GRP_VMO_DYN	2064		181			
+				182			
+				183			
+Relationship Attribute Group *	MDC_ATTR_GRP_RELATION	2072		184			
+				185			
+VMD Application Attribute Group	MDC_ATTR_GRP_VMD_APPL	2062		186			
+VMD Production Attribute Group	MDC_ATTR_GRP_VMD_PROD	2063		187			
+Metric Observed Value Group	MDC_ATTR_GRP_METRIC_VAL_OBS	2051		188			
+PM-Store Attribute Group	MDC_ATTR_GRP_PMSTORE	2054		189			
+Clear-Segments	MDC_ACT_SEG_CLR	3084		190			
+Get-Segments	MDC_ACT_SEG_GET	3085		191			
+Get-Segment-Info	MDC_ACT_SEG_GET_INFO	3086		192			
+Alert	MDC_MOC_VMO_AL	52		193			
+Alert Status	MDC_MOC_VMO_AL_STAT	53		194			
+Alert Monitor	MDC_MOC_VMO_AL_MON	54		195			
+Alert-Condition	MDC_ATTR_AL_COND	2476		196			
+Limit-Specification	MDC_ATTR_AL_LIMIT	2477		197			
+Vmo-Reference *	MDC_ATTR_VMO_REF	2468		198			
+				199			
+				200			
+Alert-Capab-List	MDC_ATTR_AL_STAT_AL_C_LIST	2312		201			
+Tech-Alert-List	MDC_ATTR_AL_STAT_T_AL_LIST	2315		202			
+Physio-Alert-List	MDC_ATTR_AL_STAT_P_AL_LIST	2314		203			
+Limit-Spec-List	MDC_ATTR_AL_LIMIT_SPEC_LIST	2305		204			
+				205			
+Device-Alert-Condition	MDC_ATTR_DEV_AL_COND	2326		206			
+Device-P-Alarm-List	MDC_ATTR_AL_MON_P_AL_LIST	2306		207			
+Device-T-Alarm-List	MDC_ATTR_AL_MON_T_AL_LIST	2308		208			
+Device-Sup-Alarm-List	MDC_ATTR_AL_MON_S_AL_LIST	2307		209			
+Suspension-Period	MDC_ATTR_TIME_PD_AL_SUSP	2446		210			
+VMO Static Context Group *	MDC_ATTR_GRP_VMO_STATIC	-2065		211			
+(see: VMO/				212			
+Medical Package)				213			
+VMO Dynamic Context Group *	MDC_ATTR_GRP_VMO_DYN	-2064		214			
+(see: VMO/				215			
+Medical Package)				216			
+Alert Group	MDC_ATTR_GRP_AL	2067		217			
+Alert Status Group	MDC_ATTR_GRP_AL_STAT	2050		218			
+Alert Monitor Group	MDC_ATTR_GRP_AL_MON	2049		219			
+VMS	MDC_MOC_VMS	32		220			
+MDS	MDC_MOC_VMS_MDS	33		221			
+Simple MDS	MDC_MOC_VMS_MDS_SIMP	37		222			
+Hydra MDS	MDC_MOC_VMS_MDS_HYD	36		223			
+Composite Single Bed MDS	MDC_MOC_VMS_MDS_COMPOS_SINGLE_BED	35		224			
+Composite Multiple Bed MDS	MDC_MOC_VMS_MDS_COMPOS_MULTI_BED	34		225			
+Log	MDC_MOC_LOG	38		226			
+Event Log	MDC_MOC_LOG_EVENT	72		227			
+Battery	MDC_MOC_BATT	41		228			
+Clock	MDC_MOC_CLOCK	78		229			
+Handle *	MDC_ATTR_ID_HANDLE	-2337		230			
+(see: VMO/				231			
+Medical Package)				232			
+				233			
+				234			
+				235			
+				236			
+				237			
+				238			
+				239			
+				240			
+				241			
+				242			
+System-Type	MDC_ATTR_SYS_TYPE	2438		243			
+System-Model *	MDC_ATTR_ID_MODEL	-2344		244			
+(see: VMD Model/				245			
+VMD/				246			
+Medical Package)				247			
+System-Id *	MDC_ATTR_SYS_ID	2436		248			
+				249			
+				250			
+Compatibility-Id *	MDC_ATTR_ID_COMPAT	-2336		251			
+(see: VMD/				252			
+Medical Package)				253			
+Nomenclature-Version	MDC_ATTR_NOM_VERS	2376		254			
+System-Capability	MDC_ATTR_SYS_CAPAB	2435		255			
+System-Specification	MDC_ATTR_SYS_SPECN	2437		256			
+Production-Specification *	MDC_ATTR_ID_PROD_SPECN	-2349		257			
+(see: VMD/				258			
+Medical Package)				259			
+Ext-Obj-Relations *	MDC_ATTR_EXT_OBJ_RELATION	-2499		260			
+(see: VMO/				261			
+Medical Package)				262			
+Mds-Status	MDC_ATTR_VMS_MDS_STAT	2471		263			
+Bed-Label	MDC_ATTR_ID_BED_LABEL	2334		264			
+Soft-Id	MDC_ATTR_ID_SOFT	2350		265			
+Operating-Mode	MDC_ATTR_MODE_OP	2374		266			
+Application-Area	MDC_ATTR_AREA_APPL	2317		267			
+Patient-Type *	MDC_ATTR_PT_TYPE	2402		268			
+				269			
+Date-and-Time	MDC_ATTR_TIME_ABS	2439		270			
+Relative-Time	MDC_ATTR_TIME_REL	2447		271			
+HiRes-Relative-Time	MDC_ATTR_TIME_REL_HI_RES	2536		272			
+Time Capabilities	MDC_ATTR_TIME_SUPPORT	2607		273			
+Time Status	MDC_ATTR_DATE_TIME_STATUS	2608		274			
+Date and Time in ISO Format	MDC_ATTR_TIME_ABS_ISO	2609		275			
+List of External (different format) Time Stamps	MDC_ATTR_TIME_STAMP_LIST_EXT	2610		276			
+Attribute for synchronization between Abs and Rel Times	MDC_ATTR_TIME_ABS_REL_SYNC	2611		277			
+Time Zone	MDC_ATTR_TIME_ZONE	2612		278			
+Info for daylight savings time transition	MDC_ATTR_TIME_DAYLIGHT_SAVINGS_TRANS	2613		279			
+Cumulative leap seconds	MDC_ATTR_CUM_LEAP_SECONDS	2614		280			
+Time stamp for next leap second	MDC_ATTR_NEXT_LEAP_SECOND	2615		281			
+Power-Status	MDC_ATTR_POWER_STAT	2389		282			
+Altitude	MDC_ATTR_ALTITUDE	2316		283			
+Battery-Level	MDC_ATTR_VAL_BATT_CHARGE	2460		284			
+(”charge”)				285			
+Remaining-Battery-Time *	MDC_ATTR_TIME_BATT_REMAIN	2440		286			
+				287			
+Line-Frequency	MDC_ATTR_LINE_FREQ	2357		288			
+Association-Invoke-Id	MDC_ATTR_ID_Assoc_NO	2333		289			
+Current-Log-Entries	MDC_ATTR_LOG_ENTRIES_CURR	2360		290			
+Max-Log-Entries	MDC_ATTR_LOG_ENTRIES_MAX	2361		291			
+Event-Log-Entry-List	MDC_ATTR_EVENT_LOG_ENTRY_LIST	2564		292			
+Event-Log-Info	MDC_ATTR_EVENT_LOG_INFO	2591		293			
+Log-Change-Count	MDC_ATTR_LOG_CHANGE_COUNT	2592		294			
+Battery-Status	MDC_ATTR_Batt_Stat	2484		295			
+Capacity-Remaining	MDC_ATTR_CAPAC_BATT_REMAIN	2488		296			
+Capacity-Full-Charge	MDC_ATTR_Capac_BATT_Full	2487		297			
+Capacity-Specified	MDC_ATTR_Capac_BATT_SpecN	2489		298			
+Voltage	MDC_ATTR_BATT_Voltage	2485		299			
+Voltage-Specified	MDC_ATTR_BATT_Voltage_SpecN	2486		300			
+Current	MDC_ATTR_BATT_Curr	2483		301			
+Battery-Temperature	MDC_ATTR_Temp_BATT	2534		302			
+Charge-Cycles	MDC_ATTR_BATT_Charge_Cycles	2482		303			
+System Identification Attribute Group	MDC_ATTR_GRP_SYS_ID	2059		304			
+System Application Attribute Group	MDC_ATTR_GRP_SYS_APPL	2058		305			
+System Production Attribute Group	MDC_ATTR_GRP_SYS_PROD	2060		306			
+Relationship Attribute Group *	MDC_ATTR_GRP_RELATION	-2072		307			
+(see: VMO/				308			
+Medical Package)				309			
+Clock Attribute Group	MDC_ATTR_GRP_CLOCK	2078		310			
+Battery Attribute Group	MDC_ATTR_GRP_Batt	2069		311			
+Mds-Set-Status	MDC_ACT_SET_MDS_STATE	3087		312			
+Clear-Log	MDC_ACT_CLR_LOG	3075		313			
+Get-Event-Log-Entries	MDC_ACT_GET_EVENT_LOG_ENTRIES	3092		314			
+Set-Time	MDC_ACT_SET_TIME	3095		315			
+Set-Time-Zone	MDC_ACT_SET_TIME_ZONE	3096		316			
+Set-Leap-Seconds	MDC_ACT_SET_LEAP_SECONDS	3097		317			
+Set-ISO-Time	MDC_ACT_SET_TIME_ISO	3098		318			
+System-Error	MDC_NOTI_SYS_ERR	3349		319			
+Mds-Create-Notification	MDC_NOTI_MDS_CREAT	3334		320			
+Mds-Attribute-Update	MDC_NOTI_MDS_ATTR_UPDT	3333		321			
+Date-Time Changed	MDC_NOTE_DATE_TIME_CHANGED	3355		322			
+SCO	MDC_MOC_CNTRL_SCO	43		323			
+Operation	MDC_MOC_CNTRL_OP	44		324			
+Select Item Operation	MDC_MOC_CNTRL_OP_SEL_IT	45		325			
+Set Value Operation	MDC_MOC_CNTRL_OP_SEL_VAL	47		326			
+Set String Operation	MDC_MOC_CNTRL_OP_SET_STRING	73		327			
+Toggle Flag Operation	MDC_MOC_CNTRL_OP_TOG	49		328			
+Activate Operation	MDC_MOC_CNTRL_OP_ACTIV	50		329			
+Limit Alert Operation	MDC_MOC_CNTRL_OP_LIM	51		330			
+Set Range Operation	MDC_MOC_CNTRL_OP_SET_RANGE	80		331			
+Sco-Capability	MDC_ATTR_SCO_CAPAB	2422		332			
+Sco-Help-Text-String	MDC_ATTR_SCO_Help_Text_String	2549		333			
+Vmo-Reference *	MDC_ATTR_VMO_REF	-2468		334			
+(see: Alert/				335			
+Alert subject)				336			
+Activity-Indicator	MDC_ATTR_INDIC_ACTIV	2355		337			
+Lock-State	MDC_ATTR_STAT_LOCK	2432		338			
+Invoke-Cookie	MDC_ATTR_ID_INVOK_COOKIE	2339		339			
+Instance-Number *	MDC_ATTR_ID_INSTNO	-2338		340			
+(see: VMD/				341			
+Medical Package)				342			
+				343			
+Operation-Spec	MDC_ATTR_OP_SPEC	2386		344			
+Operation-Text-String	MDC_ATTR_Op_Text_String	2514		345			
+Operation-Text-String-Dynamic	MDC_ATTR_OP_TEXT_STRING_DYN	2602		346			
+Operational-State *	MDC_ATTR_OP_STAT	-2387		347			
+(see: PM-Store/				348			
+Medical Package)				349			
+Selected-Item-Index	MDC_ATTR_INDEX_SEL	2354		350			
+Nom-Partition	MDC_ATTR_ID_NOM_PARTITION	2345		351			
+Select-List	MDC_ATTR_LIST_SEL	2358		352			
+Current-Value	MDC_ATTR_VAL_CURR	2461		353			
+Set-Value-Range	MDC_ATTR_VAL_RANGE	2464		354			
+				355			
+Step-Width	MDC_ATTR_VAL_STEP_WIDTH	2465		356			
+Unit-Code *	MDC_ATTR_UNIT_CODE	-2454		357			
+(see: Metric/				358			
+Medical Package)				359			
+Current-String	MDC_ATTR_STRING_CURR	2565		360			
+Set-String-Spec	MDC_ATTR_SET_STRING_SPEC	2567		361			
+Toggle-State	MDC_ATTR_STAT_OP_TOG	2433		362			
+Toggle-Label-Strings	MDC_ATTR_TOG_LABELS_STRING	2540		363			
+Alert-Op-Capability	MDC_ATTR_AL_OP_CAPAB	2309		364			
+Alert-Op-State	MDC_ATTR_AL_OP_STAT	2310		365			
+Limit Alert Operation	MDC_ATTR_LIMIT_CURR	2356		366			
+Alert-Op-Text-String	MDC_ATTR_AL_OP_TEXT	2311		367			
+Metric-Id	MDC_ATTR_ID_PHYSIO	2347		368			
+(”Physio ID”)				369			
+Current-Range	MDC_attr_range_curr	2624		370			
+Range-Op-Text	MDC_attr_range_op_text string	2625		371			
+VMO Static Context Group *	MDC_ATTR_GRP_VMO_STATIC	-2065		372			
+(see VMO/				373			
+Medical Package)				374			
+VMO Dynamic Context Group *	MDC_ATTR_GRP_VMO_DYN	-2064		375			
+(see VMO/				376			
+Medical Package)				377			
+Operation Static Context Group	MDC_ATTR_GRP_OP_STATIC_CTXT	2053		378			
+Operation Dynamic Context Group	MDC_ATTR_GRP_OP_DYN_CTXT	2052		379			
+SCO Transaction Group	MDC_ATTR_GRP_SCO_TRANSACTION	2057		380			
+				381			
+Operation-Invoke	MDC_ACT_SCO_OP_INVOK	3083		382			
+Get-Ctxt-Help	MDC_ACT_GET_CTXT_HELP	3077		383			
+Sco-Operating-Request	MDC_NOTI_SCO_OP_REQ	3347		384			
+Sco-Operation-Invoke-Error	MDC_NOTI_SCO_OP_INVOK_ERR	3346		385			
+Scanner	MDC_MOC_SCAN	16		386			
+Configurable Scanner	MDC_MOC_SCAN_CFG	17		387			
+Episodic Configurable Scanner	MDC_MOC_SCAN_CFG_EPI	18		388			
+Periodic Configurable Scanner	MDC_MOC_SCAN_CFG_PERI	19		389			
+Fast Periodic Configurable Scanner	MDC_MOC_SCAN_CFG_PERI_FAST	20		390			
+Unconfigurable Scanner	MDC_MOC_SCAN_UCFG	21		391			
+Context Scanner	MDC_MOC_SCAN_UCFG_CTXT	23		392			
+Alert Scanner	MDC_MOC_SCAN_UCFG_ALSTAT	22		393			
+Operating Scanner	MDC_MOC_SCAN_UCFG_OP	24		394			
+Discriminator	MDC_MOC_DISCRIM	66		395			
+Handle *	MDC_ATTR_ID_HANDLE	-2337		396			
+(see: VMO/				397			
+Medical Package)				398			
+				399			
+				400			
+				401			
+				402			
+				403			
+				404			
+				405			
+				406			
+				407			
+				408			
+Instance-Number *	MDC_ATTR_ID_INSTNO	-2338		409			
+(see: VMD/				410			
+Medical Package)				411			
+				412			
+Operational-State *	MDC_ATTR_OP_STAT	-2387		413			
+(see: PM-Store/				414			
+Medical Package)				415			
+Scan-List	MDC_ATTR_SCAN_LIST	2420		416			
+Confirm-Mode	MDC_ATTR_CONFIRM_MODE	2323		417			
+Confirm-Timeout	MDC_ATTR_CONFIRM_TIMEOUT	2324		418			
+				419			
+Transmit-Window	MDC_ATTR_TX_Wind	2453		420			
+				421			
+Scan-Config-Limit	MDC_ATTR_SCAN_CFG_LIMIT	2558		422			
+Scan-Extensibility	MDC_ATTR_SCAN_EXTEND	2419		423			
+Reporting-Interval	MDC_ATTR_SCAN_REP_PD	2421		424			
+				425			
+Context-Mode	MDC_ATTR_SCAN_CTXT_MODE	2418		426			
+Discriminator-Construct	MDC_ATTR_Discrim_Construct	2497		427			
+Scanner Attribute Group	MDC_ATTR_GRP_SCAN	2056		428			
+Discriminator Attribute Group	MDC_ATTR_GRP_DISCRIM	2070		429			
+Refresh-Episodic-Data	MDC_ACT_REFR_EPI_DATA	3080		430			
+Refresh-Context	MDC_ACT_REFR_CTXT	3079		431			
+Refresh-Operation-Context	MDC_ACT_REFR_OP_CTXT	3082		432			
+Refresh-Operation-Attributes	MDC_ACT_REFR_OP_ATTR	3081		433			
+Unbuf-Scan-Report	MDC_NOTI_UNBUF_SCAN_RPT	3350		434			
+Buf-Scan-Report	MDC_NOTI_BUF_SCAN_RPT	3331		435			
+Fast-Buf-Scan-Report	MDC_NOTI_FAST_BUF_SCAN_RPT	3332		436			
+Object-Create-Notification	MDC_NOTI_OBJ_CREAT	3336		437			
+Object-Delete-Notification	MDC_NOTI_OBJ_DEL	3338		438			
+				439			
+Alert-Scan-Report	MDC_NOTI_AL_STAT_SCAN_RPT	3329		440			
+Oper-Create-Notification	MDC_NOTI_OP_CREAT	3340		441			
+Oper-Delete-Notification	MDC_NOTI_OP_DEL	3341		442			
+Oper-Attribute-Update	MDC_NOTI_OP_ATTR_UPDT	3339		443			
+Communication Controller	MDC_MOC_CC	28		444			
+DCC [device communication controller]	MDC_MOC_DCC	76		445			
+BCC [bedside communication controller]	MDC_MOC_BCC	77		446			
+Handle *	MDC_ATTR_ID_HANDLE	-2337		447			
+(see: VMO/				448			
+Medical Package)				449			
+				450			
+				451			
+				452			
+				453			
+				454			
+				455			
+				456			
+				457			
+				458			
+				459			
+				460			
+Capability	MDC_ATTR_CC_CAPAB	2593		461			
+CC-Type	MDC_ATTR_CC_TYPE	2594		462			
+Number-Of-Difs	MDC_ATTR_CC_NUM_DIFS	2595		463			
+This-Connection-Dif-Index	MDC_ATTR_CC_THIS_DIF_INDEX	2596		464			
+Cc-Ext-Mgmt-Proto-Id	MDC_ATTR_CC_EXT_MNG_PROT	2597		465			
+Communication Controller Attribute Group	MDC_ATTR_GRP_CC	2077		466			
+Clear-Segments	MDC_ACT_GET_MIB_DATA	3093		467			
+Poll Clear-Segments	MDC_ACT_POLL_MDIB_DATA	3094		468			
+Multipatient Archive	MDC_MOC_ARCHIVE_MULTI_PT	63		469			
+Patient Archive	MDC_MOC_ARCHIVE_PT	64		470			
+Session Archive	MDC_MOC_ARCHIVE_SESSION	65		471			
+Physician	MDC_MOC_PHYSICIAN	67		472			
+Session Test	MDC_MOC_SESSION_TEST	69		473			
+Session Notes	MDC_MOC_SESSION_NOTES	68		474			
+Handle *	MDC_ATTR_ID_HANDLE	-2337		475			
+(see: VMO/				476			
+Medical Package)				477			
+				478			
+				479			
+				480			
+				481			
+				482			
+				483			
+				484			
+				485			
+				486			
+				487			
+System-Id *	MDC_ATTR_SYS_ID	-2436		488			
+(see. VMS/				489			
+System subject)				490			
+Location	MDC_ATTR_LOCATION	2509		491			
+Study-Name	MDC_ATTR_NAME_STUDY	2531		492			
+Version	MDC_ATTR_ARCHIVE_VERS	2480		493			
+System-Name	MDC_ATTR_NAME_SYS	2543		494			
+Processing-History	MDC_ATTR_PROC_HIST	2517		495			
+Protection	MDC_ATTR_PROTECTION	2519		496			
+				497			
+				498			
+				499			
+S-Archive-Id	MDC_ATTR_ID_SESS_ARCHIVE	2507		500			
+S-Archive-Name	MDC_ATTR_NAME_SESS_ARCHIVE	2513		501			
+S-Archive-Comments	MDC_ATTR_SESS_ARCHIVE_COMMENTS	2530		502			
+Start-Time *	MDC_ATTR_TIME_START	-2538		503			
+(see: Metric/				504			
+Medical Package)				505			
+				506			
+Stop-Time *	MDC_ATTR_TIME_STOP	-2539		507			
+(see: Metric/				508			
+Medical Package)				509			
+				510			
+Physician-Id	MDC_ATTR_ID_Physician	2503		511			
+Authorization-Level	MDC_ATTR_Auth_Level	2481		512			
+Name	MDC_ATTR_PHYSICIAN_NAME	2544		513			
+Given-Name	MDC_ATTR_PHYSICIAN_NAME_GIVEN	2546		514			
+Family-Name	MDC_ATTR_PHYSICIAN_NAME_FAMILY	2545		515			
+Middle-Name	MDC_ATTR_PHYSICIAN_NAME_MIDDLE	2547		516			
+Title-Name	MDC_ATTR_PHYSICIAN_NAME_TITLE	2548		517			
+St-Archive-Id	MDC_ATTR_ID_SESS_TEST_ARCHIVE	2506		518			
+St-Archive-Name	MDC_ATTR_NAME_SESS_TEST_ARCHIVE	2512		519			
+St-Archive-Comments	MDC_ATTR_SESS_TEST_ARCHIVE_COMMENTS	2529		520			
+Sn-Id	MDC_ATTR_ID_SESS_NOTES_ARCHIVE	2505		521			
+Sn-Name	MDC_ATTR_NAME_SESS_NOTES_ARCHIVE	2511		522			
+Sn-Comments	MDC_ATTR_SESS_NOTES_ARCHIVE_COMMENTS	2528		523			
+Findings	MDC_ATTR_Findings	2500		524			
+Diagnostic-Codes	MDC_ATTR_CODE_DIAGNOSTIC	2492		525			
+				526			
+Diagnosis-Description	MDC_ATTR_DESC_Diagnostic	2494		527			
+Procedure-Codes *	MDC_ATTR_Code_Procedure	2493		528			
+				529			
+Procedure-Description *	MDC_ATTR_DESC_PROCEDURE	2495		530			
+				531			
+Archival Attribute Group	MDC_ATTR_GRP_ARCHIVE	2068		532			
+				533			
+				534			
+				535			
+				536			
+Physician Attribute Group	MDC_ATTR_GRP_PHYSICIAN	2071		537			
+Patient Demographics	MDC_MOC_PT_DEMOG	42		538			
+Handle *	MDC_ATTR_ID_HANDLE	-2337		539			
+(see: VMO/				540			
+Medical Package)				541			
+				542			
+				543			
+				544			
+				545			
+				546			
+				547			
+				548			
+				549			
+				550			
+				551			
+Pat-Demo-State	MDC_ATTR_PT_DEMOG_ST	2391		552			
+Patient-Id	MDC_ATTR_PT_ID	2394		553			
+Name	MDC_ATTR_PT_NAME	2395		554			
+Given-Name	MDC_ATTR_PT_NAME_GIVEN	2397		555			
+Family-Name	MDC_ATTR_PT_NAME_FAMILY	2396		556			
+Middle-Name	MDC_ATTR_PT_NAME_MIDDLE	2399		557			
+Birth-Name	MDC_ATTR_PT_NAME_BIRTH	2398		558			
+Title-Name	MDC_ATTR_PT_NAME_TITLE	2400		559			
+Sex	MDC_ATTR_PT_SEX	2401		560			
+Race	MDC_ATTR_PT_Race	2526		561			
+Patient-Type *	MDC_ATTR_PT_TYPE	-2402		562			
+(see: MDS/				563			
+System subject)				564			
+Date-Of-Birth	MDC_ATTR_PT_DOB	2392		565			
+Patient-General-Info	MDC_ATTR_PT_GEN_INFO	2393		566			
+Patient-Age	MDC_ATTR_Pt_Age	2520		567			
+Gestational-Age	MDC_ATTR_Pt_Age_Gest	2521		568			
+Patient-Height	MDC_ATTR_Pt_Height	2524		569			
+Patient-Weight	MDC_ATTR_Pt_Weight	2527		570			
+Patient-Birth-Length	MDC_ATTR_Pt_Birth_Length	2522		571			
+Patient-Birth-Weight	MDC_ATTR_Pt_Birth_Weight	2523		572			
+Mother-Patient-Id	MDC_ATTR_ID_PT_Mother	2504		573			
+Mother-Name	MDC_ATTR_Pt_Name_Mother	2525		574			
+Patient-Head-Circumference	MDC_ATTR_CIRCUM_HEAD	2490		575			
+Patient-Bsa	MDC_ATTR_PT_BSA	2390		576			
+Bed-Id	MDC_ATTR_ID_BED	2501		577			
+Diagnostic-Info	MDC_ATTR_Diagnostic_Info	2496		578			
+Diagnostic-Codes	MDC_ATTR_CODE_DIAGNOSTIC	2492		579			
+				580			
+Admitting-Physician	MDC_ATTR_Physician_Admit	2515		581			
+Attending-Physician	MDC_ATTR_Physician_ATTEND	2516		582			
+Date-Of-Procedure	MDC_ATTR_Procedure_DATE	2518		583			
+Procedure-Codes *	MDC_ATTR_Code_Procedure	-2493		584			
+(see: Session Notes/				585			
+Archival subject)				586			
+Procedure-Description *	MDC_ATTR_DESC_Procedure	-2495		587			
+(see: Session Notes/				588			
+Archival subject)				589			
+Anesthetist	MDC_ATTR_Anaesthetist	2479		590			
+Surgeon	MDC_ATTR_Surgeon	2532		591			
+Patient-Lean-Body-Mass	MDC_ATTR_PT_LBM	2601		592			
+Patient Demographics Attribute Group	MDC_ATTR_GRP_PT_DEMOG	2055		593			
+Discharge-Patient	MDC_ACT_DISCH_PT	3076		594			
+Admit-Patient	MDC_ACT_ADMIT_PT	3074		595			
+Pre-Admit-Patient	MDC_ACT_PRE_ADMIT_PT	3078		596			
+Patient-Demographics-Modified	MDC_NOTI_PT_DEMOG_MOD	3342		597			
+Patient-Demographics-State-Change	MDC_NOTI_PT_DEMOG_ST_MOD	3343		598			
+	MDC_MOC_VMO_METRIC	4		599	1	3	
+	MDC_MOC_VMO_METRIC_ENUM	5		600	1	4	
+	MDC_MOC_VMO_METRIC_NU	6		601	1	5	
+	MDC_MOC_VMO_METRIC_SA_RT	9		602	1	6	
+	MDC_MOC_SCAN	16		603	1	7	
+	MDC_MOC_SCAN_CFG	17		604	1	8	
+	MDC_MOC_SCAN_CFG_EPI	18		605	1	9	
+	MDC_MOC_SCAN_CFG_PERI	19		606	1	10	
+	MDC_MOC_VMS_MDS_SIMP	37		607	1	11	
+	MDC_MOC_VMO_PMSTORE	61		608	1	12	
+	MDC_MOC_PM_SEGMENT	62		609	1	13	
+	MDC_ATTR_AL_OP_STAT	2310		610	1	14	
+	MDC_ATTR_CONFIRM_MODE	2323		611	1	15	
+	MDC_ATTR_CONFIRM_TIMEOUT	2324		612	1	16	
+	MDC_ATTR_ID_HANDLE	2337		613	1	17	
+	MDC_ATTR_ID_INSTNO	2338		614	1	18	
+	MDC_ATTR_ID_LABEL_STRING	2343		615	1	19	
+	MDC_ATTR_ID_MODEL	2344		616	1	20	
+	MDC_ATTR_ID_PHYSIO	2347		617	1	21	
+	MDC_ATTR_ID_PROD_SPECN	2349		618	1	22	
+	MDC_ATTR_ID_TYPE	2351		619	1	23	
+	MDC_ATTR_LIMIT_CURR	2356		620	1	24	
+	MDC_ATTR_METRIC_STORE_CAPAC_CNT	2369		621	1	25	
+	MDC_ATTR_METRIC_STORE_SAMPLE_ALG	2371		622	1	26	
+	MDC_ATTR_METRIC_STORE_USAGE_CNT	2372		623	1	27	
+	MDC_ATTR_MSMT_STAT	2375		624	1	28	
+	MDC_ATTR_NU_ACCUR_MSMT	2378		625	1	29	
+	MDC_ATTR_NU_CMPD_VAL_OBS	2379		626	1	30	
+	MDC_ATTR_NU_VAL_OBS	2384		627	1	31	
+	MDC_ATTR_NUM_SEG	2385		628	1	32	
+	MDC_ATTR_OP_STAT	2387		629	1	33	
+	MDC_ATTR_POWER_STAT	2389		630	1	34	
+	MDC_ATTR_SA_SPECN	2413		631	1	35	
+	MDC_ATTR_SCALE_SPECN_I16	2415		632	1	36	
+	MDC_ATTR_SCALE_SPECN_I32	2416		633	1	37	
+	MDC_ATTR_SCALE_SPECN_I8	2417		634	1	38	
+	MDC_ATTR_SCAN_REP_PD	2421		635	1	39	
+	MDC_ATTR_SEG_USAGE_CNT	2427		636	1	40	
+	MDC_ATTR_SYS_ID	2436		637	1	41	
+	MDC_ATTR_SYS_TYPE	2438		638	1	42	
+	MDC_ATTR_TIME_ABS	2439		639	1	43	
+	MDC_ATTR_TIME_BATT_REMAIN	2440		640	1	44	
+	MDC_ATTR_TIME_END_SEG	2442		641	1	45	
+	MDC_ATTR_TIME_PD_SAMP	2445		642	1	46	
+	MDC_ATTR_TIME_REL	2447		643	1	47	
+	MDC_ATTR_TIME_STAMP_ABS	2448		644	1	48	
+	MDC_ATTR_TIME_STAMP_REL	2449		645	1	49	
+	MDC_ATTR_TIME_START_SEG	2450		646	1	50	
+	MDC_ATTR_TX_WIND	2453		647	1	51	
+	MDC_ATTR_UNIT_CODE	2454		648	1	52	
+	MDC_ATTR_UNIT_LABEL_STRING	2457		649	1	53	
+	MDC_ATTR_VAL_BATT_CHARGE	2460		650	1	54	
+	MDC_ATTR_VAL_ENUM_OBS	2462		651	1	55	
+	MDC_ATTR_AL_COND	2476		652	1	56	
+	MDC_ATTR_AL_OP_TEXT_STRING	2478		653	1	57	
+	MDC_ATTR_TIME_REL_HI_RES	2536		654	1	58	
+	MDC_ATTR_TIME_STAMP_REL_HI_RES	2537		655	1	59	
+	MDC_ATTR_DEV_CONFIG_ID	2628		656	1	60	
+	MDC_ATTR_MDS_TIME_INFO	2629		657	1	61	
+	MDC_ATTR_METRIC_SPEC_SMALL	2630		658	1	62	
+	MDC_ATTR_SOURCE_HANDLE_REF	2631		659	1	63	
+	MDC_ATTR_SIMP_SA_OBS_VAL	2632		660	1	64	
+	MDC_ATTR_ENUM_OBS_VAL_SIMP_OID	2633		661	1	65	
+	MDC_ATTR_ENUM_OBS_VAL_SIMP_STR	2634		662	1	66	
+	MDC_ATTR_REG_CERT_DATA_LIST	2635		663	1	67	
+	MDC_ATTR_NU_VAL_OBS_BASIC	2636		664	1	68	
+	MDC_ATTR_PM_STORE_CAPAB	2637		665	1	69	
+	MDC_ATTR_PM_SEG_MAP	2638		666	1	70	
+	MDC_ATTR_PM_SEG_PERSON_ID	2639		667	1	71	
+	MDC_ATTR_SEG_STATS	2640		668	1	72	
+	MDC_ATTR_SEG_FIXED_DATA	2641		669	1	73	
+	MDC_ATTR_PM_SEG_ELEM_STAT_ATTR	2642		670	1	74	
+	MDC_ATTR_SCAN_HANDLE_ATTR_VAL_MAP	2643		671	1	75	
+	MDC_ATTR_SCAN_REP_PD_MIN	2644		672	1	76	
+	MDC_ATTR_ATTRIBUTE_VAL_MAP	2645		673	1	77	
+	MDC_ATTR_NU_VAL_OBS_SIMP	2646		674	1	78	
+	MDC_ATTR_PM_STORE_LABEL_STRING	2647		675	1	79	
+	MDC_ATTR_PM_SEG_LABEL_STRING	2648		676	1	80	
+	MDC_ATTR_TIME_PD_MSMT_ACTIVE	2649		677	1	81	
+	MDC_ATTR_SYS_TYPE_SPEC_LIST	2650		678	1	82	
+	MDC_ATTR_METRIC_ID_PART	2655		679	1	83	
+	MDC_ATTR_ENUM_OBS_VAL_PART	2656		680	1	84	
+	MDC_ATTR_SUPPLEMENTAL_TYPES	2657		681	1	85	
+	MDC_ATTR_TIME_ABS_ADJUST	2658		682	1	86	
+	MDC_ATTR_CLEAR_TIMEOUT	2659		683	1	87	
+	MDC_ATTR_TRANSFER_TIMEOUT	2660		684	1	88	
+	MDC_ATTR_ENUM_OBS_VAL_SIMP_BIT_STR	2661		685	1	89	
+	MDC_ATTR_ENUM_OBS_VAL_BASIC_BIT_STR	2662		686	1	90	
+	MDC_ATTR_METRIC_STRUCT_SMALL	2675		687	1	91	
+	MDC_ATTR_NU_CMPD_VAL_OBS_SIMP	2676		688	1	92	
+	MDC_ATTR_NU_CMPD_VAL_OBS_BASIC	2677		689	1	93	
+	MDC_ATTR_ID_PHYSIO_LIST	2678		690	1	94	
+	MDC_ATTR_SCAN_HANDLE_LIST	2679		691	1	95	
+	MDC_ATTR_CONTEXT_KEY	2680		692	1	96	
+	MDC_ATTR_INS_CONCENTRATION	2681		693	1	97	
+	MDC_ATTR_REG_CERT_DATA_AUTH_BODY	2682		694	1	98	
+	MDC_TIME_CAP_STATE	2683		695	1	99	
+	MDC_TIME_SYNC_PROTOCOL	2684		696	1	100	
+	MDC_TIME_SYNC_ACCURACY	2685		697	1	101	
+	MDC_ATTR_TIME_RES_ABS	2686		698	1	102	
+	MDC_ATTR_TIME_RES_REL	2687		699	1	103	
+	MDC_ATTR_TIME_RES_HI_REL	2688		700	1	104	
+	MDC_ATTR_TIME_BO	2689		701	1	105	
+	MDC_ATTR_TIME_STAMP_BO	2690		702	1	106	
+	MDC_ATTR_TIME_START_SEG_BO	2691		703	1	107	
+	MDC_ATTR_TIME_END_SEG_BO	2692		704	1	108	
+	MDC_ATTR_TICK_RES	2693		705	1	109	
+	MDC_ACT_SEG_CLR	3084		706	1	110	
+	MDC_ACT_SEG_GET_INFO	3085		707	1	111	
+	MDC_ACT_SET_TIME	3095		708	1	112	
+	MDC_ACT_DATA_REQUEST	3099		709	1	113	
+	MDC_ACT_SEG_TRIG_XFER	3100		710	1	114	
+	MDC_ACT_SET_BO_TIME	3101		711	1	115	
+	MDC_NOTI_CONFIG	3356		712	1	116	
+	MDC_NOTI_SCAN_REPORT_FIXED	3357		713	1	117	
+	MDC_NOTI_SCAN_REPORT_VAR	3358		714	1	118	
+	MDC_NOTI_SCAN_REPORT_MP_FIXED	3359		715	1	119	
+	MDC_NOTI_SCAN_REPORT_MP_VAR	3360		716	1	120	
+	MDC_NOTI_SEGMENT_DATA	3361		717	1	121	
+	MDC_NOTI_UNBUF_SCAN_REPORT_VAR	3362		718	1	122	
+	MDC_NOTI_UNBUF_SCAN_REPORT_FIXED	3363		719	1	123	
+	MDC_NOTI_UNBUF_SCAN_REPORT_GROUPED	3364		720	1	124	
+	MDC_NOTI_UNBUF_SCAN_REPORT_MP_VAR	3365		721	1	125	
+	MDC_NOTI_UNBUF_SCAN_REPORT_MP_FIXED	3366		722	1	126	
+	MDC_NOTI_UNBUF_SCAN_REPORT_MP_GROUPED	3367		723	1	127	
+	MDC_NOTI_BUF_SCAN_REPORT_VAR	3368		724	1	128	
+	MDC_NOTI_BUF_SCAN_REPORT_FIXED	3369		725	1	129	
+	MDC_NOTI_BUF_SCAN_REPORT_GROUPED	3370		726	1	130	
+	MDC_NOTI_BUF_SCAN_REPORT_MP_VAR	3371		727	1	131	
+	MDC_NOTI_BUF_SCAN_REPORT_MP_FIXED	3372		728	1	132	
+	MDC_NOTI_BUF_SCAN_REPORT_MP_GROUPED	3373		729	1	133	

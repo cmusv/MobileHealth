@@ -1,0 +1,169 @@
+# Saved by TopBraid on Thu Mar 01 14:10:10 PST 2012
+# baseURI: http://www.cmusv.edu/11073-10101/ClassDefinitions
+
+@prefix :        <http://www.cmusv.edu/11073-10101/ClassDefinitions#> .
+@prefix nom:     <http://www.cmusv.edu/11073-10101/ClassDefinitions#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions>
+      rdf:type owl:Ontology ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#Blood_A.8.5.8>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#Comm_A.4.1thru.A.4.8>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#DimDiscrim_A.6.1>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#DimUnits_A.6.3>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#ECG_Enums_A.8.2.3>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#ECG_Leads_A.7.1.1>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#ECG_Msmts_A.7.1.2>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#EventDev_A.10.3.2>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#EventPatt_A.10.2.1>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#FluidOut_A.8.6.9>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#GasCorr_A.8.4.7>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#Hemo_A.8.3.4>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#Misc_A.8.11.16>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#NeuroEnum_A.8.9.14>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#NeuroMsmt_A.8.8.13>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#NeuroStim_A.8.10.15>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#NomenExt_A.11.3.1>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#OO_A.3.1.1thru3.2.2.5>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+nom:Ptn_Fig1
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#PumpModeBITS_A.8.7.11>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#PumpStateBITS_A.8.7.11>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#Pump_A.8.7.10>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#Resp_A.8.4.5>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteBrain_A.9.6.5>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteEOG_A.9.5.4>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteHead_A.9.4.3>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteHeart_A.9.7.6>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteMisc_A.9.8.7>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteMusc_A.9.3.2>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteNerve_A.9.2.1>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#SiteQual_A.9.9.8>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+<http://www.cmusv.edu/11073-10101/ClassDefinitions#VentBITS_A.8.4.6>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+nom:code
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      rdfs:range xsd:integer .
+
+nom:commonterm
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      rdfs:range xsd:string .
+
+nom:descriptionDefinition
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      rdfs:range xsd:string .
+
+nom:note
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+nom:referenceID
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.cmusv.edu/11073-10101/ClassDefinitions#MedDevs_A.5.1> ;
+      rdfs:range xsd:string .

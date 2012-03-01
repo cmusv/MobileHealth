@@ -1,0 +1,90 @@
+# Saved by TopBraid on Thu Mar 01 11:49:22 PST 2012
+# baseURI: http://www.cmusv.edu/mobilehealth/11073
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://example.org/11073-10101.owl
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix :        <http://www.cmusv.edu/mobilehealth/11073#> .
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix mhs:     <http://www.cmusv.edu/mobilehealth/11073#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix p11073-10101:  <http://example.org/11073-10101.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/mobilehealth/11073>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://example.org/11073-10101.owl> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+mhs:BuildClasses
+      rdf:type sml:ApplyConstruct ;
+      sm:next mhs:ExportToRDFFile_1 ;
+      sm:nodeX 156 ;
+      sm:nodeY 262 ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object mhs:Measurement ;
+                            sp:predicate rdfs:subClassOf ;
+                            sp:subject _:b1
+                          ]) ;
+                sp:where ([ sp:object <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Sheet> ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b2
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type afn:localname ;
+                                      sp:arg1 _:b2
+                                    ] ;
+                            sp:variable _:b3
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 mhs:Measurement ;
+                                      sp:arg2 _:b3
+                                    ] ;
+                            sp:variable _:b1
+                          ])
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
+mhs:DefineProperties
+      rdf:type sml:ApplyConstruct ;
+      sm:nodeX 425 ;
+      sm:nodeY 259 ;
+      sml:replace "true"^^xsd:boolean .
+
+mhs:ExportToRDFFile_1
+      rdf:type sml:ExportToRDFFile ;
+      sm:nodeX 287 ;
+      sm:nodeY 436 ;
+      sml:baseURI "http://www.cmusv.edu/mobilehealth/11073-10101"^^xsd:string ;
+      sml:targetFilePath "/MobileHealth/11079/ConvertedData.ttl"^^xsd:string .
+
+mhs:ImportRDF11073-10101
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next mhs:DefineProperties , mhs:BuildClasses ;
+      sm:nodeX 98 ;
+      sm:nodeY 43 ;
+      sml:baseURI "http://www.cmusv.edu/mobilehealth/11073"^^xsd:string ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/MobileHealth/11079/IEEE11073-10101_2004_Tabular_Wiki1.rdf"^^xsd:string .
+
+mhs:Measurement
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+mhs:measurementProp
+      rdf:type owl:DatatypeProperty .
+
+_:b1  sp:varName "newclass"^^xsd:string .
+
+_:b3  sp:varName "sheetname"^^xsd:string .
+
+_:b2  sp:varName "sheet"^^xsd:string .

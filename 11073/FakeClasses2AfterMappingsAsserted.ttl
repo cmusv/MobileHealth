@@ -1,0 +1,211 @@
+# Saved by TopBraid on Wed Feb 22 16:47:17 PST 2012
+# baseURI: http://cmusv/FakeClasses2
+
+@prefix :        <http://cmusv/FakeClasses2#> .
+@prefix fake11073:  <http://cmusv/FakeClasses2#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cmusv/FakeClasses2>
+      rdf:type owl:Ontology ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+fake11073:BPReading-184765
+      rdf:type fake11073:BloodPressureReading ;
+      fake11073:hasDiastolic
+              fake11073:Diastolic-184765 ;
+      fake11073:hasSystolic
+              fake11073:Systolic-184765 .
+
+fake11073:BloodPressureReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:hasDiastolic
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom fake11073:DiastolicReading ;
+                owl:onProperty fake11073:hasDiastolic
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:hasSystolic
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom fake11073:SystolicReading ;
+                owl:onProperty fake11073:hasSystolic
+              ] .
+
+fake11073:Diastolic-184765
+      rdf:type fake11073:DiastolicReading ;
+      fake11073:MeasurementCode
+              19230 ;
+      fake11073:ReadingValue
+              89 .
+
+fake11073:DiastolicReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue 19230 ;
+                owl:onProperty fake11073:MeasurementCode
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:ReadingValue
+              ] .
+
+fake11073:MeasurementCode
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+fake11073:ReadingDateTime
+      rdf:type owl:DatatypeProperty .
+
+fake11073:ReadingValue
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+fake11073:Systolic-184765
+      rdf:type fake11073:SystolicReading ;
+      fake11073:MeasurementCode
+              19229 ;
+      fake11073:ReadingValue
+              110 .
+
+fake11073:SystolicReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue 19229 ;
+                owl:onProperty fake11073:MeasurementCode
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty fake11073:ReadingValue
+              ] .
+
+fake11073:hasDiastolic
+      rdf:type owl:ObjectProperty .
+
+fake11073:hasSystolic
+      rdf:type owl:ObjectProperty .
+
+<http://purl.org/dc/terms/Agent>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/AgentClass>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/BibliographicResource>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/Box>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/Frequency>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/ISO3166>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/ISO639-2>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/ISO639-3>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/LinguisticSystem>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/LocationPeriodOrJurisdiction>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/MediaTypeOrExtent>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/MethodOfAccrual>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/MethodOfInstruction>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/Period>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/PhysicalResource>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/Point>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/Policy>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/ProvenanceStatement>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/RFC1766>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/RFC3066>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/RFC4646>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/RFC5646>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/RightsStatement>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/Standard>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/URI>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://purl.org/dc/terms/W3CDTF>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://schema.org/Thing>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://spinrdf.org/spinmap#Context>
+      rdfs:subClassOf rdfs:Resource .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
+      rdfs:subClassOf owl:Thing .
+
+<http://www.w3.org/2004/02/skos/core#Collection>
+      rdfs:subClassOf owl:Thing .
+
+<http://www.w3.org/2004/02/skos/core#Concept>
+      rdfs:subClassOf owl:Thing .
+
+<http://www.w3.org/2004/02/skos/core#ConceptScheme>
+      rdfs:subClassOf owl:Thing .
+
+<http://xmlns.com/foaf/0.1/Agent>
+      rdfs:subClassOf owl:Thing .
+
+<http://xmlns.com/foaf/0.1/Document>
+      rdfs:subClassOf owl:Thing .
+
+<http://xmlns.com/foaf/0.1/Image>
+      rdfs:subClassOf owl:Thing .
+
+<http://xmlns.com/foaf/0.1/Project>
+      rdfs:subClassOf owl:Thing .

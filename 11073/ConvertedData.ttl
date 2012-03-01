@@ -1,0 +1,137 @@
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix :        <http://www.cmusv.edu/mobilehealth/11073#> .
+@prefix spra:    <http://spinrdf.org/spra#> .
+@prefix mhs:     <http://www.cmusv.edu/mobilehealth/11073#> .
+@prefix p11073-10101:  <http://example.org/11073-10101.owl#> .
+@prefix spr:     <http://spinrdf.org/spr#> .
+@prefix dim:     <http://www.steveray.com/11073-10101#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix arg:     <http://spinrdf.org/arg#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix json:    <http://topbraid.org/json#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix ss:      <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
+@prefix ui:      <http://uispin.org/ui#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix let:     <http://uispin.org/let#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sparqlmotionlib-tbc:  <http://topbraid.org/sparqlmotionlib-tbc#> .
+@prefix daml:    <http://www.daml.org/2001/03/daml+oil#> .
+@prefix composite:  <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix email:   <http://topbraid.org/email#> .
+@prefix letrs:   <http://uispin.org/letrs#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementEventDev_A.10.3.2>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementVentBITS_A.8.4.6>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementOO_A.3.1.1thru3.2.2.5>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementDimDiscrim_A.6.1>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteBrain_A.9.6.5>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteEOG_A.9.5.4>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementECG_Msmts_A.7.1.2>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteQual_A.9.9.8>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementMedDevs_A.5.1>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementBlood_A.8.5.8>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementPump_A.8.7.10>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteMusc_A.9.3.2>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementNeuroStim_A.8.10.15>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementECG_Enums_A.8.2.3>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementResp_A.8.4.5>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementPumpStateBITS_A.8.7.11>
+      rdfs:subClassOf mhs:Measurement .
+
+mhs:MeasurementSheet31
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteMisc_A.9.8.7>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementComm_A.4.1thru.A.4.8>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteHead_A.9.4.3>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementGasCorr_A.8.4.7>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementPumpModeBITS_A.8.7.11>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementDimUnits_A.6.3>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementEventPatt_A.10.2.1>
+      rdfs:subClassOf mhs:Measurement .
+
+mhs:MeasurementPtn_Fig1
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementNomenExt_A.11.3.1>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteNerve_A.9.2.1>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementNeuroEnum_A.8.9.14>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementMisc_A.8.11.16>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementECG_Leads_A.7.1.1>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073-10101>
+      a       owl:Ontology .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementFluidOut_A.8.6.9>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementNeuroMsmt_A.8.8.13>
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementHemo_A.8.3.4>
+      rdfs:subClassOf mhs:Measurement .
+
+mhs:MeasurementSheet3
+      rdfs:subClassOf mhs:Measurement .
+
+<http://www.cmusv.edu/mobilehealth/11073#MeasurementSiteHeart_A.9.7.6>
+      rdfs:subClassOf mhs:Measurement .

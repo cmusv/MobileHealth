@@ -1,0 +1,114 @@
+Systematic name	Common term	Description/Definition	Reference ID	Code	Note
+Analyzer					
+Analyzer |  |  | <type>	Generic analyzer	Instrument that analyzes acquired patient information.	MDC_DEV_ANALY	4100	
+Analyzer | Concentration [Sat] | Blood | <type>	SpO2 monitor	Instrument that derives the % of arterial O2 and pulse rate parameters (blood flow).	MDC_DEV_ANALY_SAT_O2	4104	
+Analyzer | Concentration | Airway [Gas] | <type>	Multigas identifier	"Instrument for the direct measurement of the concentration of airway chemicals, e.g., CO2, O2, anesthetic agent."	MDC_DEV_ANALY_CONC_GAS_IDENT	4108	
+Analyzer | Concentration | Multi-Gas | <type>	Multigas analyzer	"Instrument that derives airway gas parameters, e.g., EtCO2, iCO2, iO2."	MDC_DEV_ANALY_CONC_GAS_MULTI_PARAM	4112	
+Analyzer | Concentration | Urine | <type>	Urine chemistry analyzer	Instrument that derives urine chemistry parameters.	MDC_DEV_ANALY_URINE_CHEM	4116	
+Analyzer | ElectricalPotential | Brain | <type>	EEG analyzer	Instrument that derives brain activity parameters.	MDC_DEV_ANALY_ELEC_POTL_BRAIN	4120	
+Analyzer | ElectricalPotential | Heart | <type>	Heart activity analyzer	"Instrument that derives Heart/haemo activity parameters, e.g., cardiotach, arrhythmia monitor, ST analyzer, R-R."	MDC_DEV_ANALY_ELEC_POTL_HEART_ACTIV	4124	
+Analyzer | Flow | Airway | <type>	Airway flow analyzer	Instrument that derives airway flow parameters.	MDC_DEV_ANALY_FLOW_AWAY	4128	
+Analyzer | Flow | Blood | <type>	Heart output device	Instrument that derives heart output from direct measurement of blood flow.	MDC_DEV_ANALY_CARD_OUTPUT	4132	
+Analyzer | Flow | Lung | <type>	Lung flow analyzer	Instrument that derives lung flow parameters.	MDC_DEV_ANALY_FLOW_LUNG	4136	
+Analyzer | Flow | Urine | <type>	Urine flow analyzer	Instrument that derives urine flow rate.	MDC_DEV_ANALY_FLOW_URINE	4140	
+Analyzer | Multi-Parameter | Airway | <type>	Spirometer	Instrument for analysis and derivation of airway parameters.	MDC_DEV_ANALY_AWAY_MULTI_PARAM	4144	
+Analyzer | Multi-Parameter | Blood | <type>	Blood chemistry analyzer	Instrument for analysis and derivation of blood chemistry parameters.	MDC_DEV_ANALY_BLD_CHEM_MULTI_PARAM	4148	
+Analyzer | Multi-Parameter | Lung | <type>	Lung analyzer	Instrument for analysis and derivation of Lung function parameters.	MDC_DEV_ANALY_LUNG	4152	
+Analyzer | Multi-Parameter | Muscle | <type>	Muscle analyzer	Instrument for analysis and derivation of muscle parameters.	MDC_DEV_ANALY_MUSCL	4156	
+Analyzer | Multi-Parameter | Physiologic | <type>	Patient analyzer	Instrument that analyses and derives data from multiple or unspecified body systems.	MDC_DEV_ANALY_PT_PHYSIO	4160	
+Analyzer | Multi-Parameter | Skin | <type>	Skin analyzer	Instrument for analysis and derivation of skin-related parameters.	MDC_DEV_ANALY_SKIN_MULTI_PARAM	4164	
+Analyzer | Pressure | Airway | <type>	Spirometry analyzer	Instrument that derives airway parameters.	MDC_DEV_ANALY_PRESS_AWAY	4168	
+Analyzer | Pressure | Blood | <type>	Blood pressure analyzer	"Instrument that derives blood pressure parameters, i.e., systolic, diastolic, mean."	MDC_DEV_ANALY_PRESS_BLD	4172	
+Analyzer | Pressure | Brain | <type>	Intracranial pressure analyzer	Instrument that derives intracranial pressure parameters.	MDC_DEV_ANALY_PRESS_BRAIN_INTRACRAN	4176	
+Analyzer | Pressure | Lung | <type>	Lung pressure analyzer	Instrument that derives lung pressure parameters.	MDC_DEV_ANALY_PRESS_LUNG	4180	
+Analyzer | Rate | Lung | <type>	Lung rate analyzer	Instrument that derives the lung breathing rate.	MDC_DEV_ANALY_RESP_RATE	4184	
+Analyzer | Resistance | Lung | <type>	Lung resistance analyzer	Instrument that derives the resistance (compliance) of the lungs	MDC_DEV_ANALY_RES_LUNG	4188	
+Analyzer | Temperature | Blood | <type>	Heart output analyzer	Instrument that derives Heart output parameters from blood temperature.	MDC_DEV_ANALY_TEMP_HEART_OUTPUT	4192	
+Analyzer | Volume | Heart | <type>	Heart volume analyzer	Instrument for the derivation of the size of the heart.	MDC_DEV_ANALY_VOL_HEART	4196	
+Analyzer | Volume | Lung | <type>	Lung volume analyzer	Instrument that derives Lung volume parameters.	MDC_DEV_ANALY_VOL_LUNG	4200	
+Calculator					
+Calculator |  |  | <type>	Generic calculator	Instrument that creates derived parameters	MDC_DEV_CALC	4204	
+Calculator | Multi-Parameter | Heart | <type>	Haemodynamics calculator	Instrument that derives haemodynamics parameters	MDC_DEV_CALC_HEMO	4208	
+Calculator | Multi-Parameter | Kidney | <type>	Renal function calculator	Instrument that derives renal function parameters.	MDC_DEV_CALC_RENAL	4212	
+Filter (or Cleaner)					
+Filter | Concentration |  | <type>	Generic filter	Instrument that filters out one or more chemicals.	MDC_DEV_FILTER_CONC	4216	
+Filter | Concentration | Airway [Gas] | <type>	CO2 scrubber	Instrument for removing components from the chemistry of delivered air.	MDC_DEV_FILTER_CONC_AWAY	4220	
+Generator					
+Generator |  |  | <type>	Generic generator	"Instrument that generates heat, electricity, etc."	MDC_DEV_GEN	4224	
+Generator | Concentration | Airway | <type>	Vaporizer	Instrument for adding components to the chemistry of delivered air.	MDC_DEV_GEN_CONC_AWAY	4228	
+Generator | ElectricalPotential [Defib] | Heart | <type>	Defibrillator (simple)	Instrument for delivering a controlled Heart electrical potential.	MDC_DEV_GEN_ELEC_POTL_HEART_DEFIB	4232	
+Generator | ElectricalPotential | Muscle | <type>	Muscle generator	Instrument for delivering a controlled electrical potential to the musculature.	MDC_DEV_GEN_ELEC_POTL_MUSCL	4236	
+Generator | ElectricalPotential | Skin | <type>	Skin generator	Instrument for delivering a controlled electrical potential to the skin.	MDC_DEV_GEN_ELEC_POTL_SKIN	4240	
+Generator | Multi-Parameter | Brain | <type>	Evoked potential system	Instrument that derives brain activity parameters via stimulation.	MDC_DEV_GEN_EVOK_POTL_BRAIN_MULTI_PARAM	4244	
+Generator | Rate | Heart | <type>	Pacemaker	Instrument for controlling the rate of Heart contractions.	MDC_DEV_GEN_RATE_HEART	4248	
+Generator | Temperature | Muscle | <type>	Diathermy device	Instrument for delivering a controlled temperature to the musculature.	MDC_DEV_GEN_TEMP_MUSCL	4252	
+Meter					
+Meter |  |  | <type>	Generic meter	Instrument for the direct measurement of physiological parameters.	MDC_DEV_METER	4256	
+Meter [ ElectricalPotential | Heart | <type>	ECG	Instrument for the direct measurement of heart electrical activity.	MDC_DEV_ECG	4260	
+Meter | Concentration | Skin [Gas] | <type>	Transcutaneous gas meter	Instrument for the measurement of the level and concentration of gases in the tissue.	MDC_DEV_METER_CONC_SKIN_GAS	4264	
+Meter | Concentration | Urine | <type>	Urine chemistry transducer	Instrument for the direct measurement of urine chemistry.	MDC_DEV_METER_CONC_URINE	4268	
+Meter | ElectricalPotential | Brain | <type>	Electrobraingraph	Instrument for the direct measurement of the level of brain electrical activity.	MDC_DEV_EEG	4272	
+Meter | ElectricalPotential | Muscle | <type>	Electromyograph	Instrument for the direct measurement of musculature electrical activity.	MDC_DEV_EMG	4276	
+Meter | Flow | Airway | <type>	Pneumotacograph	Instrument for the direct measurement of the level of air flow.	MDC_DEV_METER_FLOW_AWAY	4280	
+Meter | Flow | Blood | <type>	Blood flow meter	Instrument for the direct measurement of the level of blood flow.	MDC_DEV_METER_FLOW_BLD	4284	
+Meter | Flow | Heart | <type>	Heart output transducer	Instrument for the direct measurement of the level of heart blood flow.	MDC_DEV_METER_FLOW_CARD	4288	
+Meter | Flow | Lung | <type>	Lung flow meter	Instrument for the direct measurement of the level of lung air flow.	MDC_DEV_METER_FLOW_LUNG	4292	
+Meter | Flow | Urine | <type>	Urine output transducer	Instrument for the direct measurement of the level of urinary flow.	MDC_DEV_METER_FLOW_URINE	4296	
+Meter | Multi-Parameter | Physiologic | <type>		Instrument that acquires data through direct measurement from multiple or unspecified body systems.	MDC_DEV_METER_PHYSIO_MULTI_PARAM	4300	
+Meter | Multi-Parameter | Skin | <type>	Skin transducer	Instrument for direct measurement of skin parameters	MDC_DEV_METER_SKIN_MULTI_PARAM	4304	
+Meter | Multi-Parameter | Blood | <type>	Blood chemistry meter	"Instrument for the direct measurement of the level and concentration of chemicals, gases and electrolytes in the blood."	MDC_DEV_METER_BLD_CHEM	4308	
+Meter | Pressure | Airway [Gas] | <type>	Air pressure meter	Instrument for the direct measurement of the level of delivered air pressure.	MDC_DEV_METER_PRESS_AIR	4312	
+Meter | Pressure | Blood | <type>	Blood pressure strain gauge	Instrument for the direct measurement of the level of blood pressure	MDC_DEV_METER_PRESS_BLD	4316	
+Meter | Pressure | Brain | <type>	Intracranial pressure meter	Instrument for the direct measurement of the level of cranial pressure.	MDC_DEV_METER_PRESS_INTRA_CRAN	4320	
+Meter | Pressure | Heart | <type>	Heart pressure transducer	Instrument for the direct measurement of the level of heart blood pressures.	MDC_DEV_METER_PRESS_HEART	4324	
+Meter | Pressure | Lung | <type>	Lung pressure meter	Instrument for the direct measurement of the level of lung air pressure.	MDC_DEV_METER_PRESS_LUNG	4328	
+Meter | Resistance | Airway | <type>	Air resistance meter	Instrument for the direct measurement of the level of airway resistance.	MDC_DEV_METER_RES_AIR	4332	
+Meter | Resistance | Lung | <type>	Lung resistance meter	Instrument for the direct measurement of the level of lung resistance.	MDC_DEV_METER_RES_LUNG	4336	
+Meter | Resistance | Muscle | <type>	Dynamometer	Instrument for the direct measurement of the level of muscle strength.	MDC_DEV_METER_STRENGTH_MUSCL	4340	
+Meter | Temperature | Airway | <type>	Air temperature meter	Instrument for the measurement of the level of delivered air temperature.	MDC_DEV_METER_TEMP_AIR	4344	
+Meter | Temperature | Blood | <type>	Catheter tip temp. probe	Instrument for the direct measurement of the of the level of blood temperature.	MDC_DEV_METER_TEMP_BLD	4348	
+Meter | Temperature | Brain | <type>	Brain temp. meter	Instrument for the direct measurement of the level of brain temperature.	MDC_DEV_METER_TEMP_BRAIN	4352	
+Meter | Temperature | Heart | <type>	Heart temp. transducer	Instrument for the direct measurement of the level of heart temperatures.	MDC_DEV_METER_TEMP_HEART	4356	
+Meter | Temperature | Lung | <type>	Lung temperature meter	Instrument for the direct measurement of the level of lung temperature.	MDC_DEV_METER_TEMP_LUNG	4360	
+Meter | Temperature | Physiologic | <type>	Temperature probe	Instrument that measures temperature from multiple or unspecified body systems.	MDC_DEV_METER_TEMP	4364	
+Meter | Temperature | Renal | <type>	Renal temperature transducer	Instrument for the direct measurement of the level of renal temperature.	MDC_DEV_METER_TEMP_RENAL	4368	
+Meter | Temperature | Skin | <type>	Skin temperature meter	Instrument for the direct measurement of the level of skin temperature.	MDC_DEV_METER_TEMP_SKIN	4372	
+Meter | Volume | Airway [Gas] | <type>	Airway volume meter	Instrument for the direct measurement of the level of delivered air volume.	MDC_DEV_METER_VOL_AIR	4376	
+Meter | Volume | Heart | <type>	Heart volume transducer	Instrument for the direct measurement of the size of the heart.	MDC_DEV_METER_VOL_HEART	4380	
+Meter | Volume | Muscle | <type>	Muscle volume meter	Instrument for the direct measurement of the level of muscle bulk.	MDC_DEV_METER_VOL_MUSCL	4384	
+Monitor					
+Monitor |  |  | <type>	Generic monitor	Instrument for the direct measurement and analysis of patient information	MDC_DEV_MON	4388	
+Monitor | Concentration | Urine | <type>	Urine chemistry monitor	Instrument for the direct measurement and analysis of urine chemistry.	MDC_DEV_MON_URINE_CHEM	4392	
+Monitor | Multi-Parameter | Blood | <type>	Blood chemistry monitor	"Instrument for acquisition, analysis, and derivation of blood chemistry parameters"	MDC_DEV_MON_BLD_CHEM_MULTI_PARAM	4396	
+Monitor | Multi-Parameter | Brain | <type>	Brain function monitor	Instrument that implements brain transduction and analysis.	MDC_DEV_MON_BRAIN_FUNC	4400	
+Monitor | Multi-Parameter | Heart | <type>	Haemodynamic monitor	"Instrument for acquisition, analysis, and derivation of Heart parameters."	MDC_DEV_MON_HEART_MULTI_PARAM	4404	
+Monitor | Multi-Parameter | Lung | <type>	Lung function monitor	Instrument for acquisition and analysis of Lung function parameters.	MDC_DEV_MON_LUNG_FUNC	4408	
+Monitor | Multi-Parameter | Muscle | <type>	Muscle monitor	"Instrument that implements a combination of muscle transduction, analysis, and therapy."	MDC_DEV_MON_MUSCL	4412	
+Monitor | Multi-Parameter | Physiologic | <type>	Patient monitoring system	Instrument for direct measurement and analysis of multiple body system parameters	MDC_DEV_MON_PT_PHYSIO_MULTI_PARAM	4416	
+Monitor | Multi-Parameter | Renal | <type>	Renal function monitor	Instrument for renal data acquisition and analysis.	MDC_DEV_MON_RENAL_FUNC_MULTI_PARAM	4420	
+Monitor | Multi-Parameter | Skin | <type>	Skin monitor	Instrument for direct measurement and analysis of skin-related parameters.	MDC_DEV_MON_SKIN_MULTI_PARAM	4424	
+Monitor | Multi-Parameter | Physiologic | <type>		Instrument that acquires and analyses patient data from multiple or unspecified body systems.	MDC_DEV_MON_PHYSIO_MULTI_PARAM	4428	
+Pump					
+Pump |  |  | <type>	Generic pump	Instrument that delivers fluid to the patient.	MDC_DEV_PUMP	4432	
+Pump | Concentration [Oxy] | Blood | <type>	Heart/lung machine	"Instrument that implements blood transduction, analysis, and therapy."	MDC_DEV_PUMP_HEART_LUNG	4436	
+Pump | Flow | Heart | <type>	Left ventricular assist device	Instrument for modifying the flow of blood from the heart.	MDC_DEV_PUMP_FLOW_HEART	4440	
+Pump | Pressure | Blood [Intra-Aortic] | <type>	Intra-aortic balloon pump	Instrument for improving blood pressure.	MDC_DEV_PUMP_PRESS_BLD_INTRAAORT	4444	
+Pump | Volume | Blood [Infusion] | <type>	Infusor	Instrument for delivering a controlled volume of liquids to the blood.	MDC_DEV_PUMP_INFUS	4448	
+Regulator					
+Regulator |  |  | <type>	Generic regulator	Instrument that controls specific aspects of a patient’s physiological function.	MDC_DEV_REGUL	4452	
+"Regulator | Flow | Airway, Resp | <type>"	Ventilator (flow)	"Instrument for delivering a controlled flow of airway gas. (i.e., respirator)"	MDC_DEV_REGUL_FLOW_AWAY_VENT	4456	
+Regulator | Multi-Parameter | Blood | <type>	Dialysis machine	Instrument for modifying the chemistry of blood.	MDC_DEV_REGUL_BLD_CHEM	4460	
+Regulator | Multi-Parameter | Lung | <type>	Patient ventilation system	"Instrument for data acquisition, analysis and therapy for the Lung system."	MDC_DEV_SYS_PT_VENT	4464	
+Regulator | Pressure [Negative] | Lung | <type>	Decompression chamber	Instrument for sustaining the lungs in a controlled pressure.	MDC_DEV_REGUL_DECOMPRESS	4468	
+Regulator | Pressure | Lung | <type>	Respirator	Instrument for delivering a controlled flow/volume of airway gas.	MDC_DEV_REGUL_PRESS_LUNG	4472	
+Regulator | Rate | Lung | <type>	Ventilator (rate)	Instrument for controlling the rate of breathing.	MDC_DEV_REGUL_RATE_VENT	4476	
+Regulator | Temperature | Blood | <type>	Blood warmer	Instrument for delivering a controlled temperature of blood.	MDC_DEV_REGUL_TEMP_BLD	4480	
+Regulator | Temperature | Body | <type>	"Heater, incubator"	Instrument for modifying the temperature of the skin.	MDC_DEV_REGUL_TEMP_SKIN	4484	
+Regulator | Volume | Airway | <type>	Ventilator (volume)	Instrument for delivering a controlled volume of airway gas.	MDC_DEV_REGUL_VOL_VENT	4488	
+System					
+System |  |  | <type>	Generic medical system	Instrument that consists of multiple device modalities.	MDC_DEV_SYS_MULTI_MODAL	4492	
+System | Multi-Parameter | Brain | <type>	Neurology system	"Instrument that implements brain transduction, analysis, and therapy."	MDC_DEV_SYS_BRAIN_MULTI_PARAM	4496	
+System | Multi-Parameter | Heart | <type>	Cardiology system	"Instrument for Heart transduction, analysis, and therapy."	MDC_DEV_SYS_CARD_MULTI_PARAM	4500	
+System | Multi-Parameter | Lung | <type>	Anesthesia system	"Instrument that implements a combination of transduction, analysis, and/or therapy on multiple body systems."	MDC_DEV_SYS_ANESTH	4504	
+System | Multi-Parameter | Physiologic | <type>		"Instrument that acquires, analyses, and provides therapy from and to multiple or unspecified body systems"	MDC_DEV_SYS_PHYSIO_MULTI_PARAM	4508	
+					

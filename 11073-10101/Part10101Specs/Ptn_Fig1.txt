@@ -1,0 +1,26 @@
+Partition	Name	Value	Spec#	Version	Notes	Seq	MajorSeq	MinorSeq	IsIn10101?	Note
+Global Value	MDC_PART_UNSPEC	0	20601	8	Unspecified	2	0	1	Yes	
+Global Value	MDC_PART_OBJ	1	20601	2008	Object Infrastr.	3	1	1	Yes	
+Global Value	MDC_PART_OBJ	1	10441	2008	Duplicates 20601	4	1	2	Yes	
+Global Value	MDC_PART_SCADA	2	20601	2008	SCADA (Physio IDs)	5	2	1	Yes	
+Global Value	MDC_PART_SCADA	2	10441	2008	Duplicates 20601	6	2	2	Yes	
+Global Value	MDC_PART_EVT	3	20601		Alert/Events	7	3	1	Yes	
+Global Value	MDC_PART_DIM	4	20601	2008	Dimensions	8	4	1	Yes	
+Global Value	MDC_PART_DIM	4	10441	2008	Duplicates 20601	9	4	2	Yes	
+Global Value	MDC_PART_VATTR	5	20601		Virtual Attributes	10	5	1	Yes	
+Global Value	MDC_PART_PGRP	6	20601		Param Group ID	11	6	1	Yes	
+Global Value	MDC_PART_SITES	7	10442	2008	Body Site Locations	12	7	1	Yes	
+Global Value	MDC_PART_INFRA	8	20601	2008	Infrastructure	13	8	1	Yes	
+Global Value	MDC_PART_INFRA	8	10441	2008	Duplicates 20601	14	8	2	Yes	
+Global Value	MDC_PART_FEF	9	20601		File Exchange Format	15	9	1	Yes	"Block is defined, not Ptn #"
+Global Value	MDC_PART_ECG_EXTN	10	20601		electrocardiogram extensions	16	10	1	No	aECG
+Global Value	MDC_PART_IDCO_EXTN	11	20601		implantable cardiac device observation extensions	17	11	1	No	IDCO
+Global Value	MDC_PART_PHD_DM	128	20601	2008		18	128	1	No	PHD
+Global Value	MDC_PART_PHD_HF	129	10442	2008	Duplicates 20601	19	129	1	No	PHD
+Global Value	MDC_PART_PHD_HF	129	20601	2008		20	129	2	No	PHD
+Global Value	MDC_PART_PHD_HF	129	10441	2008	Duplicates 20601	21	129	3	No	PHD
+Global Value	MDC_PART_PHD_AI	130	20601	2008		22	130	1	No	PHD
+Global Value	MDC_PART_RET_CODE	255	20601	2008		23	255	1	No	PHD
+Global Value	MDC_PART_EXT_NOM	256	20601	2008		24	256	1	Yes	
+Global Value	MDC_PART_EXT_NOM	256	10441	2008	Duplicates 20601	25	256	2	Yes	
+Global Value	MDC_PART_PVT	1024	20601a	2010		26	1024	1	Yes	
