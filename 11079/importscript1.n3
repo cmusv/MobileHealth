@@ -1,0 +1,34 @@
+# Saved by TopBraid on Wed Feb 29 22:37:37 PST 2012
+# baseURI: http://www.cmusv.edu/mobilehealth/11073
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://example.org/11073-10101.owl
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix :        <http://www.cmusv.edu/mobilehealth/11073#> .
+@prefix mhs:     <http://www.cmusv.edu/mobilehealth/11073#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix p11073-10101:  <http://example.org/11073-10101.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/mobilehealth/11073>
+      rdf:type owl:Ontology ;
+      owl:imports <http://example.org/11073-10101.owl> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+mhs:ConstructClasses
+      rdf:type sml:ApplyConstruct ;
+      sm:nodeX 511 ;
+      sm:nodeY 260 .
+
+mhs:ImportRDF11073-10101
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next mhs:ConstructClasses ;
+      sml:baseURI "http://www.cmusv.edu/mobilehealth/11073"^^xsd:string ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/MobileHealth/11079/IEEE11073-10101_2004_Tabular_Wiki1.rdf"^^xsd:string .

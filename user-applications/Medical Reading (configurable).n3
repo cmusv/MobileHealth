@@ -1,0 +1,1329 @@
+# Saved by TopBraid on Tue Feb 28 14:22:05 PST 2012
+# baseURI: http://server.topbraid.org/dynamic/medical_configurable
+# imports: http://server.topbraidlive.org/dynamic/server
+
+@prefix :        <http://cmusv/HSL#> .
+@prefix TBE:     <http://server.topbraid.org/dynamic/medical_configurable#> .
+@prefix composite:  <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix daml:    <http://www.daml.org/2001/03/daml+oil#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcam:    <http://purl.org/dc/dcam/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix ensemble:  <http://server.topbraidlive.org/2008/ensemble#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix forms:   <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix hsl:     <http://cmusv/HSL/> .
+@prefix inference:  <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix live:    <http://server.topbraidlive.org/2008/live#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix server:  <http://server.topbraidlive.org/dynamic/server#> .
+@prefix skin:    <http://server.topbraidlive.org/dynamic/skin#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix sparqlMotion:  <http://server.topbraidlive.org/dynamic/sparqlMotion#> .
+@prefix tbcgeo:  <http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#> .
+@prefix utils:   <http://server.topbraidlive.org/dynamic/utils#> .
+@prefix visual:  <http://topbraid.org/visual#> .
+@prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wot:     <http://xmlns.com/wot/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://server.topbraid.org/dynamic/configurable>
+      ensemble:version "3.3.0"^^xsd:string .
+
+<http://server.topbraid.org/dynamic/medical_configurable>
+      rdf:type owl:Ontology ;
+      ensemble:version "3.3.0"^^xsd:string ;
+      owl:imports <http://server.topbraidlive.org/dynamic/server> .
+
+TBE:Drag_from_Grid
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Drag from Grid" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Drag_from_Tree
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Drag from Tree" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Form_Click
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Form Click" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Grid_Click
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Grid Click" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Map_Click
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Map Click" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Select_Node_in_Viz
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Select Node in Viz" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Submit_Query_from_SPARQL_Editor
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Submit Query from SPARQL Editor" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Submit_Query_from_Viz
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Submit Query from Viz" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Submit_Search_from_Search_Form
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Submit Search from Search Form" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Top_AutoComplete_Select
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Top AutoComplete Select" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:Tree_Click
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Tree Click" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:showAllGridClick
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "'Show All' Grid Click" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:showAllObject
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Show All Object" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:showAllProperty
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Show All Property" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+TBE:showAllSubject
+      rdf:type ensemble:UsersInterestMetaClass ;
+      rdfs:label "Show All Subject" ;
+      ensemble:hasConfigurationRoot
+              ensemble:eventsConfigRoot .
+
+ensemble:componentsConfigSubRoot
+      rdfs:label "Components" ;
+      ensemble:hasComponent
+              _:b1 , _:b2 , _:b3 , _:b4 , _:b5 , _:b6 , _:b7 ;
+      ensemble:hasComponent
+              [] ;
+      ensemble:hasConfigurationRoot
+              ensemble:ConfigurationRoot ;
+      ensemble:sortIndex "2"^^xsd:int .
+
+ensemble:configurationAllEvents
+      rdf:type <http://www.topbraidlive.com/2009/07/tblEventButton#EventButtonComponent> ;
+      rdfs:comment """A button which is enabled/disabled depending on whether the given node be deleted from the config tree.
+System internal: cannot be used except for the config popup.""" ;
+      rdfs:label "Config Delete Button" ;
+      ensemble:closable "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#buttonLabel>
+              "Display All"^^xsd:string ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#isEnabled>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#onClick>
+              ensemble:allEventsClick ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#selectedResource>
+              owl:Thing .
+
+ensemble:configurationApplicationPage
+      rdf:type <http://www.topbraidlive.org/2009/08/page#TBEComponentPage> ;
+      rdfs:label "Components and Layout" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasSplitBox
+              [ rdf:type ensemble:SplitBox ;
+                rdfs:label "Config Comp Page Top Level Split Box" ;
+                ensemble:dividerMillionths
+                        "392857"^^xsd:int ;
+                ensemble:isHorizontal
+                        "true"^^xsd:boolean ;
+                ensemble:left
+                        [ rdf:type ensemble:SplitBox ;
+                          rdfs:label "Config Comp Page Left Split Box" ;
+                          ensemble:bottom
+                                  [ rdf:type ensemble:StackedView ;
+                                    rdfs:label "Config Comp Page Left Bottom Stacked View" ;
+                                    ensemble:hasStack (ensemble:configurationTree) ;
+                                    ensemble:selectedTab
+                                            ensemble:configurationTree ;
+                                    ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                            "false"^^xsd:boolean
+                                  ] ;
+                          ensemble:dividerMillionths
+                                  "58252"^^xsd:int ;
+                          ensemble:isHorizontal
+                                  "false"^^xsd:boolean ;
+                          ensemble:top
+                                  [ rdf:type ensemble:StackedView ;
+                                    rdfs:label "Config Comp Page Left Top Stacked View" ;
+                                    ensemble:hasStack (ensemble:configurationDelete) ;
+                                    ensemble:selectedTab
+                                            ensemble:configurationDelete ;
+                                    ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                            "false"^^xsd:boolean
+                                  ] ;
+                          <http://www.topbraidlive.org/2008/11/tbe-ex#dividerDraggerHidden>
+                                  "true"^^xsd:boolean
+                        ] ;
+                ensemble:right
+                        [ rdf:type ensemble:StackedView ;
+                          rdfs:label "Config Comp Page Right Stacked View" ;
+                          ensemble:hasStack (ensemble:configurationForm) ;
+                          ensemble:selectedTab
+                                  ensemble:configurationForm ;
+                          ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                          <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                  "false"^^xsd:boolean
+                        ]
+              ] ;
+      ensemble:showMe ensemble:controlGridClick , ensemble:viewGridClick ;
+      ensemble:sortIndex "0"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#pageHeight>
+              "0"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#pageIndex>
+              "0"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#pageIsVisible>
+              ensemble:componentPageVisible .
+
+ensemble:configurationControlsGrid
+      rdf:type <http://www.topbraidlive.org/2008/11/tblGrid#GridComponent> ;
+      rdfs:comment "A component for a set of results.  The results can be either the results of a query, or all resources filling the triple match where 'Grid Property' is the predicate and 'Grid Resource' is the subject or object (depending on the setting of 'Use resource as object of triple match?')." ;
+      rdfs:label "Posting Components" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:showMe ensemble:allEventsClick ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#allowRearrangeColumns>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#copySelections>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#create>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#delete>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#loadAll>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#refreshResults>
+              ensemble:allEventsClick , ensemble:eventPageVisible ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#showLoadedCount>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#sparql>
+              "PREFIX ensemble: <http://server.topbraidlive.org/2008/ensemble#> SELECT DISTINCT ?Event ?Component ?Component_Type ?Control WHERE { 	?Component ?Control ?Event . 	?Event a ensemble:UsersInterestMetaClass . 	?Control rdfs:subPropertyOf ?abstractProperty . 	FILTER (?abstractProperty = ensemble:abstractControlProperty || ?abstractProperty = ensemble:abstractDragProperty) . 	?Component a ?Component_Type . }"^^xsd:string ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#useDisplayedResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+ensemble:configurationControlsInfo
+      rdf:type <http://www.topbraidlive.com/2009/07/tblInfoBox#InfoBoxComponent> ;
+      rdfs:label "Controls Info" ;
+      ensemble:showMe ensemble:allEventsClick ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#fontSize>
+              "13"^^xsd:float ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#info>
+              "Below is a list of all type of events posted by any component along with each component that posts the event type, the type of the component and the component's corresponding post attribute."^^xsd:string .
+
+ensemble:configurationDelete
+      rdf:type <http://www.topbraidlive.org/2009/07/tblEventButton#ConfigDeleteButtonComponent> ;
+      rdfs:comment """A button which is enabled/disabled depending on whether the given node be deleted from the config tree.
+System internal: cannot be used except for the config popup.""" ;
+      rdfs:label "Config Delete Button" ;
+      ensemble:closable "false"^^xsd:boolean ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:configurationApplicationPage ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#componentResource>
+              _:b8 ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#configButtonLabel>
+              "Delete"^^xsd:string ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#configButtonUpdate>
+              ensemble:treeClickEvent ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#configIsEnabled>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#onDelete>
+              ensemble:componentDeleted .
+
+ensemble:configurationEventDelete
+      rdf:type <http://www.topbraidlive.org/2009/07/tblEventButton#ConfigEventDeleteButtonComponent> ;
+      rdfs:comment """A button which is enabled/disabled depending on whether the given node be deleted from the config event tree.
+System internal: cannot be used except for the config popup.""" ;
+      rdfs:label "Config Delete Button" ;
+      ensemble:closable "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#configEventButtonLabel>
+              "Delete"^^xsd:string ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#configEventButtonUpdate>
+              ensemble:eventTreeClick , ensemble:configEventRelay ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#configEventIsEnabled>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#deleteEventDisable>
+              ensemble:allEventsClick ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#onEventDelete>
+              ensemble:eventDelete .
+
+ensemble:configurationEventPage
+      rdf:type <http://www.topbraidlive.org/2009/08/page#TBEComponentPage> ;
+      rdfs:label "Event Wiring" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasSplitBox
+              [ rdf:type ensemble:SplitBox ;
+                rdfs:label "Config Event Page Top Split Box" ;
+                ensemble:dividerMillionths
+                        "205040"^^xsd:int ;
+                ensemble:isHorizontal
+                        "true"^^xsd:boolean ;
+                ensemble:left
+                        [ rdf:type ensemble:SplitBox ;
+                          rdfs:label "Config Event Page Left Split Box" ;
+                          ensemble:bottom
+                                  [ rdf:type ensemble:StackedView ;
+                                    rdfs:label "Config Event Page Left Bottom Stacked View" ;
+                                    ensemble:hasStack (ensemble:configurationEventTree) ;
+                                    ensemble:selectedTab
+                                            ensemble:configurationEventTree ;
+                                    ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                            "false"^^xsd:boolean
+                                  ] ;
+                          ensemble:dividerMillionths
+                                  "132686"^^xsd:int ;
+                          ensemble:isHorizontal
+                                  "false"^^xsd:boolean ;
+                          ensemble:top
+                                  [ rdf:type ensemble:SplitBox ;
+                                    rdfs:label "Config Event Page Left Top Split Box" ;
+                                    ensemble:bottom
+                                            [ rdf:type ensemble:StackedView ;
+                                              rdfs:label "Config Event Page Left Top Bottom Stacked View" ;
+                                              ensemble:hasStack (ensemble:configurationEventDelete) ;
+                                              ensemble:selectedTab
+                                                      ensemble:configurationEventDelete ;
+                                              ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                              <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                                      "false"^^xsd:boolean
+                                            ] ;
+                                    ensemble:dividerMillionths
+                                            "455696"^^xsd:int ;
+                                    ensemble:isHorizontal
+                                            "false"^^xsd:boolean ;
+                                    ensemble:top
+                                            [ rdf:type ensemble:StackedView ;
+                                              rdfs:label "Config Event Page Left Top Top Stacked View" ;
+                                              ensemble:hasStack (ensemble:configurationAllEvents) ;
+                                              ensemble:selectedTab
+                                                      ensemble:configurationAllEvents ;
+                                              ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                              <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                                      "false"^^xsd:boolean
+                                            ] ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#dividerDraggerHidden>
+                                            "true"^^xsd:boolean
+                                  ] ;
+                          <http://www.topbraidlive.org/2008/11/tbe-ex#dividerDraggerHidden>
+                                  "true"^^xsd:boolean
+                        ] ;
+                ensemble:right
+                        [ rdf:type ensemble:SplitBox ;
+                          rdfs:label "Config Event Page Right Split Box" ;
+                          ensemble:bottom
+                                  [ rdf:type ensemble:SplitBox ;
+                                    rdfs:label "Config Event Page Right Bottom Split Box" ;
+                                    ensemble:bottom
+                                            [ rdf:type ensemble:StackedView ;
+                                              rdfs:label "Config Event Page Right Bottom Bottom Stacked View" ;
+                                              ensemble:hasStack (ensemble:configurationPostingGrid ensemble:configurationControlsGrid) ;
+                                              ensemble:selectedTab
+                                                      ensemble:configurationPostingGrid ;
+                                              ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                              <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                                      "false"^^xsd:boolean
+                                            ] ;
+                                    ensemble:dividerMillionths
+                                            "250000"^^xsd:int ;
+                                    ensemble:isHorizontal
+                                            "false"^^xsd:boolean ;
+                                    ensemble:top
+                                            [ rdf:type ensemble:StackedView ;
+                                              rdfs:label "Config Event Page Right Bottom Top Stacked View" ;
+                                              ensemble:hasStack (ensemble:configurationPostingInfo ensemble:configurationControlsInfo) ;
+                                              ensemble:selectedTab
+                                                      ensemble:configurationPostingInfo ;
+                                              ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                              <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                                      "false"^^xsd:boolean
+                                            ] ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#dividerDraggerHidden>
+                                            "true"^^xsd:boolean
+                                  ] ;
+                          ensemble:dividerMillionths
+                                  "500000"^^xsd:int ;
+                          ensemble:isHorizontal
+                                  "false"^^xsd:boolean ;
+                          ensemble:top
+                                  [ rdf:type ensemble:SplitBox ;
+                                    rdfs:label "Config Event Page Right Top Split Box" ;
+                                    ensemble:bottom
+                                            [ rdf:type ensemble:StackedView ;
+                                              rdfs:label "Config Event Page Right Top Bottom Stacked View" ;
+                                              ensemble:hasStack (ensemble:configurationListeningGrid ensemble:configurationViewsGrid) ;
+                                              ensemble:selectedTab
+                                                      ensemble:configurationListeningGrid ;
+                                              ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                              <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                                      "false"^^xsd:boolean
+                                            ] ;
+                                    ensemble:dividerMillionths
+                                            "250000"^^xsd:int ;
+                                    ensemble:isHorizontal
+                                            "false"^^xsd:boolean ;
+                                    ensemble:top
+                                            [ rdf:type ensemble:StackedView ;
+                                              rdfs:label "Config Event Page Right Top Top Stacked View" ;
+                                              ensemble:hasStack (ensemble:configurationListeningInfo ensemble:configurationViewsInfo) ;
+                                              ensemble:selectedTab
+                                                      ensemble:configurationListeningInfo ;
+                                              ensemble:styleName "configurationPopupDragTab"^^xsd:string ;
+                                              <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                                      "false"^^xsd:boolean
+                                            ] ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#dividerDraggerHidden>
+                                            "true"^^xsd:boolean
+                                  ]
+                        ]
+              ] ;
+      ensemble:showMe ensemble:configEventRelay ;
+      ensemble:sortIndex "1"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#pageHeight>
+              "0"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#pageIndex>
+              "1"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#pageIsVisible>
+              ensemble:eventPageVisible .
+
+ensemble:configurationEventRelay
+      rdf:type <http://www.topbraidlive.org/2009/02/Relay#FilterRelay> ;
+      rdfs:comment "A relay that accepts events that match a pattern." ;
+      rdfs:label "SPARQL Rule" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      <http://www.topbraidlive.org/2009/02/AbstractRelay#listen>
+              ensemble:componentPageVisible , ensemble:configFormClick ;
+      <http://www.topbraidlive.org/2009/02/AbstractRelay#relay>
+              ensemble:configEventRelay ;
+      <http://www.topbraidlive.org/2009/02/Relay#pattern>
+              "PREFIX ensemble: <http://server.topbraidlive.org/2008/ensemble#> SELECT ?out WHERE {     ?in a ?type .  LET ( ?out := ?in) .  FILTER (?type = <http://server.topbraidlive.org/2008/ensemble#UsersInterestMetaClass> ) . }"^^xsd:string ;
+      <http://www.topbraidlive.org/2009/02/Relay#variableName>
+              "in"^^xsd:string .
+
+ensemble:configurationEventTree
+      rdf:type <http://www.topbraidlive.com/2008/11/tblTree#TreeComponent> ;
+      rdfs:comment "A component for displaying a hierarchical structure of resources." ;
+      rdfs:label "Events" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      <http://www.topbraidlive.com/2008/11/tblTree#addChildToSelected>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.com/2008/11/tblTree#addSiblingToSelected>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.com/2008/11/tblTree#deleteSelected>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#defaultExpand>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#displaySearchField>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#hightlightNode>
+              ensemble:allEventsClick , ensemble:configEventRelay ;
+      <http://www.topbraidlive.org/2008/11/tblTree#onClick>
+              ensemble:eventTreeClick ;
+      <http://www.topbraidlive.org/2008/11/tblTree#reverseCounts>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#showTreeRoot>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#sortProperty>
+              rdfs:label ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeCountProperty>
+              ensemble:hasComponent ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeProperty>
+              ensemble:hasConfigurationRoot ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeRoot>
+              ensemble:eventsConfigRoot ;
+      <http://www.topbraidlive.org/2008/11/tblTree#useTreePropertyLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#useTreeRootLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+ensemble:configurationForm
+      rdf:type <http://www.topbraidlive.org/2008/11/forms#FormComponent> ;
+      rdfs:comment "A form describing a resource." ;
+      rdfs:label "" ;
+      ensemble:clone "false"^^xsd:boolean ;
+      ensemble:closable "false"^^xsd:boolean ;
+      ensemble:config "false"^^xsd:boolean ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:configurationApplicationPage ;
+      <http://www.topbraidlive.org/2008/11/forms#backward>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#checkConstraints>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#clearForm>
+              ensemble:componentDeleted ;
+      <http://www.topbraidlive.org/2008/11/forms#displayedResource>
+              _:b8 ;
+      <http://www.topbraidlive.org/2008/11/forms#forward>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#linkClick>
+              ensemble:configFormClick ;
+      <http://www.topbraidlive.org/2008/11/forms#maxValuesForWidget>
+              "10"^^xsd:int ;
+      <http://www.topbraidlive.org/2008/11/forms#updateView>
+              ensemble:relayedEvent ;
+      <http://www.topbraidlive.org/2008/11/forms#useDisplayedResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#widgetMode>
+              ensemble:ReviewMode ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+ensemble:configurationListeningGrid
+      rdf:type <http://www.topbraidlive.org/2008/11/tblGrid#GridComponent> ;
+      rdfs:comment "A component for a set of results.  The results can be either the results of a query, or all resources filling the triple match where 'Grid Property' is the predicate and 'Grid Resource' is the subject or object (depending on the setting of 'Use resource as object of triple match?')." ;
+      rdfs:label "Listening Components" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:showMe ensemble:configEventRelay , ensemble:eventTreeClick ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#allowRearrangeColumns>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#bindTemplateVariable>
+              ensemble:configEventRelay , ensemble:eventTreeClick ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#copySelections>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#create>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#delete>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#loadAll>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#refreshResults>
+              ensemble:eventDelete , ensemble:componentPageVisible ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#rowClick>
+              ensemble:viewGridClick ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#showLoadedCount>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#sparqlTemplate>
+              "PREFIX ensemble: <http://server.topbraidlive.org/2008/ensemble#> SELECT DISTINCT ?Component ?Component_Type ?Listener WHERE {      ?Component ?Listener ?this .   ?Listener rdfs:subPropertyOf ?abstractProperty . FILTER (?abstractProperty = ensemble:abstractViewProperty || ?abstractProperty = ensemble:abstractDropProperty) .  ?Component a ?Component_Type .  } "^^xsd:string ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#templateBinding>
+              owl:Thing ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#useDisplayedResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+ensemble:configurationListeningInfo
+      rdf:type <http://www.topbraidlive.com/2009/07/tblInfoBox#InfoBoxComponent> ;
+      rdfs:label "Listening Info" ;
+      ensemble:showMe ensemble:configEventRelay , ensemble:eventTreeClick ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#fontSize>
+              "13"^^xsd:float ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#info>
+              "Below is a list of components that listen to the selected type of event, along with the type of the component and the component's corresponding listen attribute."^^xsd:string .
+
+ensemble:configurationPopup
+      rdf:type ensemble:TBPageNavigator ;
+      rdfs:label "Pages" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasPage ensemble:configurationApplicationPage , ensemble:configurationEventPage ;
+      ensemble:selectedPage
+              ensemble:configurationApplicationPage ;
+      ensemble:startPage ensemble:configurationApplicationPage ;
+      <http://www.topbraidlive.org/2009/08/tbePage#visibleNavigator>
+              "true"^^xsd:boolean .
+
+ensemble:configurationPostingGrid
+      rdf:type <http://www.topbraidlive.org/2008/11/tblGrid#GridComponent> ;
+      rdfs:comment "A component for a set of results.  The results can be either the results of a query, or all resources filling the triple match where 'Grid Property' is the predicate and 'Grid Resource' is the subject or object (depending on the setting of 'Use resource as object of triple match?')." ;
+      rdfs:label "Posting Components" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:showMe ensemble:eventTreeClick , ensemble:configEventRelay ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#allowRearrangeColumns>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#bindTemplateVariable>
+              ensemble:eventTreeClick , ensemble:configEventRelay ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#copySelections>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#create>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#delete>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#loadAll>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#refreshResults>
+              ensemble:componentPageVisible , ensemble:eventDelete ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#rowClick>
+              ensemble:controlGridClick ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#showLoadedCount>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#sparqlTemplate>
+              "PREFIX ensemble: <http://server.topbraidlive.org/2008/ensemble#> SELECT DISTINCT ?Component ?Component_Type ?Control  WHERE {      ?Component ?Control ?this .   ?Control rdfs:subPropertyOf ?abstractProperty . FILTER (?abstractProperty = ensemble:abstractControlProperty || ?abstractProperty = ensemble:abstractDragProperty) . ?Component a ?Component_Type . }"^^xsd:string ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#templateBinding>
+              owl:Thing ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#useDisplayedResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+ensemble:configurationPostingInfo
+      rdf:type <http://www.topbraidlive.com/2009/07/tblInfoBox#InfoBoxComponent> ;
+      rdfs:label "Posting Info" ;
+      ensemble:showMe ensemble:configEventRelay , ensemble:eventTreeClick ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#fontSize>
+              "13"^^xsd:float ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#info>
+              "Below is a list of components that post to the selected type of event, along with the type of the component and the component's corresponding post attribute."^^xsd:string .
+
+ensemble:configurationRelay
+      rdf:type <http://www.topbraidlive.org/2009/02/Relay#ConfigRelay> ;
+      rdfs:comment """
+			Does special magic to the config form, before relaying the event.
+			System internal: cannot be used except for the config popup.
+		""" ;
+      rdfs:label "Config Relay" ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:config "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      <http://www.topbraidlive.org/2009/02/AbstractRelay#listen>
+              ensemble:viewGridClick , ensemble:controlGridClick , ensemble:treeClickEvent ;
+      <http://www.topbraidlive.org/2009/02/AbstractRelay#relay>
+              ensemble:relayedEvent .
+
+ensemble:configurationTree
+      rdf:type <http://www.topbraidlive.com/2008/11/tblTree#TreeComponent> ;
+      rdfs:comment "A component for displaying a hierarchical structure of resources." ;
+      rdfs:label "" ;
+      ensemble:clone "false"^^xsd:boolean ;
+      ensemble:closable "false"^^xsd:boolean ;
+      ensemble:config "false"^^xsd:boolean ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:configurationApplicationPage ;
+      ensemble:styleName "configurationTree"^^xsd:string ;
+      <http://www.topbraidlive.com/2008/11/tblTree#addChildToSelected>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.com/2008/11/tblTree#addSiblingToSelected>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.com/2008/11/tblTree#deleteSelected>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#defaultExpand>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#displaySearchField>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#hightlightNode>
+              ensemble:controlGridClick , ensemble:viewGridClick ;
+      <http://www.topbraidlive.org/2008/11/tblTree#onClick>
+              ensemble:treeClickEvent ;
+      <http://www.topbraidlive.org/2008/11/tblTree#reverseCounts>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#showInReverse>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#showTreeRoot>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#sortProperty>
+              ensemble:sortIndex ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeCountProperty>
+              rdf:type ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeProperty>
+              ensemble:hasConfigurationRoot ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeRoot>
+              ensemble:ConfigurationRoot ;
+      <http://www.topbraidlive.org/2008/11/tblTree#useTreePropertyLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#useTreeRootLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#selectedResource>
+              _:b8 ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+ensemble:configurationViewsGrid
+      rdf:type <http://www.topbraidlive.org/2008/11/tblGrid#GridComponent> ;
+      rdfs:comment "A component for a set of results.  The results can be either the results of a query, or all resources filling the triple match where 'Grid Property' is the predicate and 'Grid Resource' is the subject or object (depending on the setting of 'Use resource as object of triple match?')." ;
+      rdfs:label "Posting Components" ;
+      ensemble:dataGraph <http://server.topbraid.org/dynamic/configurable?user=usera600e5f0-3d79-4817-b12f-326dcd3a395f&data=http://cmusv/HSL> ;
+      ensemble:showMe ensemble:allEventsClick ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#allowRearrangeColumns>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#copySelections>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#create>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#delete>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#loadAll>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#refreshResults>
+              ensemble:allEventsClick , ensemble:eventPageVisible ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#showLoadedCount>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#sparql>
+              "PREFIX ensemble: <http://server.topbraidlive.org/2008/ensemble#> SELECT DISTINCT ?Event ?Component ?Component_Type ?Listener WHERE { 	?Component ?Listener ?Event . 	?Event a ensemble:UsersInterestMetaClass . 	?Listener rdfs:subPropertyOf ?abstractProperty . 	FILTER (?abstractProperty = ensemble:abstractViewProperty || ?abstractProperty = ensemble:abstractDropProperty) . 	?Component a ?Component_Type . }"^^xsd:string ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#useDisplayedResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+ensemble:configurationViewsInfo
+      rdf:type <http://www.topbraidlive.com/2009/07/tblInfoBox#InfoBoxComponent> ;
+      rdfs:label "View Info" ;
+      ensemble:showMe ensemble:allEventsClick ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#fontSize>
+              "13"^^xsd:float ;
+      <http://www.topbraidlive.org/2009/07/tblInfoBox#info>
+              "Below is a list of all type of events listened to by any component along with each component that listens to the event type, the type of the component and the component's corresponding listen attribute."^^xsd:string .
+
+ensemble:eventsConfigRoot
+      rdfs:label "Events" ;
+      ensemble:sortIndex "0"^^xsd:int .
+
+ensemble:invisibleTBE
+      rdf:type <http://www.topbraidlive.org/2008/11/tbe-ex#InvisibleTBEComponent> ;
+      rdfs:comment "This component represents the whole application, and does not participate in the drag-tab.  This default application is ready to serve basic functionality for any ontology." ;
+      rdfs:label "Default Application"^^xsd:string ;
+      ensemble:addComponentButton
+              "true"^^xsd:boolean ;
+      ensemble:clone "false"^^xsd:boolean ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:config "true"^^xsd:boolean ;
+      ensemble:config2 "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:ConfigurationRoot ;
+      ensemble:sortIndex "1"^^xsd:int ;
+      <http://www.topbraidlive.org/2008/11/tbe#configInference>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe#configurable>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#applicationLogo>
+              "empty"^^xsd:string ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#backgroundColor>
+              "0xFFFFFF"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#compBorderColor>
+              "0x666666"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#componentBackgroundColor>
+              "0xFFFFFF"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#displaySearchField>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#draggableDividers>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#draggableTabs>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#focusColor>
+              "0x53A6DA"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#fontColor2>
+              "0x666666"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#fontColorLiterals>
+              "0x333333"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#fontColorPrimary>
+              "0x333333"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#fontColorResources>
+              "0x0000ff"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#fontColorTitlePopup>
+              "0xFFFFFF"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#headerBackColor>
+              "0xFFFFFF"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#headerStripColor>
+              "0xFFFFFF"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#minFontSize>
+              "11"^^xsd:string ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#multiPagedApplication>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#navigationMatchType>
+              owl:Thing ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#panelBackColor>
+              "0x53A6DA"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#popupBackColor>
+              "0xcccccc"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#saveConfigButton>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#saveDataButton>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#sectionHeaderColor>
+              "0xeeeeee"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#select>
+              TBE:Top_AutoComplete_Select ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#selectedTabColor>
+              "0xFFFFFF"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#selectedTabFontColor>
+              "0x000000"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#showCustomizableButton>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#showLogo>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#tabRoundness>
+              "3"^^xsd:string ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#unselectedTabColor>
+              "0xFFFFFF"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#unselectedTabFontColor>
+              "0x666666"^^ensemble:color ;
+      <http://www.topbraidlive.org/2008/11/tbe-ex#useEmbed>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "true"^^xsd:boolean .
+
+ensemble:popupsConfigSubRoot
+      rdfs:label "Pop Up Windows" ;
+      ensemble:hasConfigurationRoot
+              ensemble:ConfigurationRoot ;
+      ensemble:sortIndex "4"^^xsd:int .
+
+ensemble:routingConfigSubRoot
+      rdfs:label "Event Rules" ;
+      ensemble:hasConfigurationRoot
+              ensemble:ConfigurationRoot ;
+      ensemble:sortIndex "3"^^xsd:int .
+
+<http://server.topbraidlive.org/dynamic/applications/testApp#theTestApp>
+      rdf:type ensemble:Application ;
+      ensemble:hasInvisibleStack
+              [ rdf:type ensemble:StackedView ;
+                ensemble:hasStack (ensemble:configurationRelay ensemble:configurationEventRelay utils:showAllPopup)
+              ] ;
+      ensemble:hasSplitBox
+              [ rdf:type ensemble:SplitBox ;
+                ensemble:dividerMillionths
+                        "432773"^^xsd:int ;
+                ensemble:isHorizontal
+                        "true"^^xsd:boolean ;
+                ensemble:left
+                        [ rdf:type ensemble:SplitBox ;
+                          ensemble:bottom
+                                  [ rdf:type ensemble:StackedView ;
+                                    ensemble:hasStack (_:b2 _:b7 _:b1) ;
+                                    ensemble:selectedTab
+                                            _:b2 ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                            "false"^^xsd:boolean
+                                  ] ;
+                          ensemble:dividerMillionths
+                                  "268292"^^xsd:int ;
+                          ensemble:isHorizontal
+                                  "false"^^xsd:boolean ;
+                          ensemble:top
+                                  [ rdf:type ensemble:StackedView ;
+                                    ensemble:hasStack (_:b3) ;
+                                    ensemble:selectedTab
+                                            _:b3 ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                            "false"^^xsd:boolean
+                                  ]
+                        ] ;
+                ensemble:right
+                        [ rdf:type ensemble:SplitBox ;
+                          ensemble:bottom
+                                  [ rdf:type ensemble:StackedView ;
+                                    ensemble:hasStack (_:b6 _:b4 _:b5) ;
+                                    ensemble:selectedTab
+                                            _:b4 ;
+                                    <http://www.topbraidlive.org/2008/11/tbe-ex#tabless>
+                                            "false"^^xsd:boolean
+                                  ] ;
+                          ensemble:dividerMillionths
+                                  "500000"^^xsd:int ;
+                          ensemble:isHorizontal
+                                  "false"^^xsd:boolean ;
+                          ensemble:top
+                                  [ rdf:type ensemble:StackedView ;
+                                    ensemble:hasStack (_:b8) ;
+                                    ensemble:selectedTab
+                                            _:b8
+                                  ]
+                        ]
+              ] ;
+      ensemble:hasTBE ensemble:invisibleTBE ;
+      live:worksWith <http://cmusv/HSL> .
+
+sparqlMotion:smRelay
+      rdf:type <http://www.topbraidlive.org/2009/02/Relay#ConfigRelay> ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:config "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/02/AbstractRelay#listen>
+              sparqlMotion:smPopupOpened ;
+      <http://www.topbraidlive.org/2009/02/AbstractRelay#relay>
+              sparqlMotion:smResource .
+
+sparqlMotion:sparqlMotionEventButton
+      rdf:type <http://www.topbraidlive.com/2009/07/tblEventButton#EventButtonComponent> ;
+      rdfs:label "" ;
+      ensemble:clone "false"^^xsd:boolean ;
+      ensemble:closable "false"^^xsd:boolean ;
+      ensemble:config "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#buttonLabel>
+              "Submit"^^xsd:string ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#disable>
+              sparqlMotion:smFormIncomplete ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#enable>
+              sparqlMotion:smFormComplete ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#isEnabled>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#onClick>
+              sparqlMotion:smSubmit ;
+      <http://www.topbraidlive.org/2009/07/tblEventButton#update>
+              sparqlMotion:smPopupOpened .
+
+sparqlMotion:sparqlMotionForm
+      rdf:type <http://www.topbraidlive.org/2008/11/forms#SMFormComponent> ;
+      rdfs:label "" ;
+      ensemble:clone "false"^^xsd:boolean ;
+      ensemble:closable "false"^^xsd:boolean ;
+      ensemble:config "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#backward>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#checkConstraints>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#editingValues>
+              sparqlMotion:smEditingValues ;
+      <http://www.topbraidlive.org/2008/11/forms#forward>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#invalidForm>
+              sparqlMotion:smConstraintsViolated ;
+      <http://www.topbraidlive.org/2008/11/forms#maxValuesForWidget>
+              "-1"^^xsd:int ;
+      <http://www.topbraidlive.org/2008/11/forms#updateView>
+              sparqlMotion:smPopupOpened ;
+      <http://www.topbraidlive.org/2008/11/forms#useDisplayedResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#validForm>
+              sparqlMotion:smConstraintsSatisfied ;
+      <http://www.topbraidlive.org/2008/11/forms#valuesCommitted>
+              sparqlMotion:smValuesCommitted ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "false"^^xsd:boolean .
+
+sparqlMotion:sparqlMotionPopup
+      rdf:type <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#SMPopUp> ;
+      rdfs:label "SPARQLMotion Player" ;
+      ensemble:clone "false"^^xsd:boolean ;
+      ensemble:closable "false"^^xsd:boolean ;
+      ensemble:config "false"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      <http://www.topbraidlive.org/2009/08/tbePage#closePopup>
+              sparqlMotion:smComplete ;
+      <http://www.topbraidlive.org/2009/08/tbePage#defaultHeight>
+              "365"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#defaultWidth>
+              "660"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#openPopUp>
+              sparqlMotion:openSMPopup ;
+      <http://www.topbraidlive.org/2009/08/tbePage#popUpOpened>
+              sparqlMotion:smPopupOpened ;
+      <http://www.topbraidlive.org/2009/08/tbePage#showCloseButton>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#allValuesCommitted>
+              sparqlMotion:smValuesCommitted ;
+      <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#constraintsSatisified>
+              sparqlMotion:smConstraintsSatisfied ;
+      <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#constraintsViolated>
+              sparqlMotion:smConstraintsViolated ;
+      <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#formComplete>
+              sparqlMotion:smFormComplete ;
+      <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#formIncomplete>
+              sparqlMotion:smFormIncomplete ;
+      <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#inputComplete>
+              sparqlMotion:smSubmit ;
+      <http://www.topbraidlive.org/2009/08/tbeSparqlMotion#valuesBeingEdited>
+              sparqlMotion:smEditingValues .
+
+sparqlMotion:sparqlMotionPopupContents
+      rdf:type ensemble:SplitBox ;
+      ensemble:bottom
+              [ rdf:type ensemble:StackedView ;
+                ensemble:hasStack (sparqlMotion:sparqlMotionEventButton) ;
+                ensemble:selectedTab
+                        sparqlMotion:sparqlMotionEventButton ;
+                ensemble:styleName "configurationPopupDragTab"^^xsd:string
+              ] ;
+      ensemble:dividerMillionths
+              "705040"^^xsd:int ;
+      ensemble:isHorizontal
+              "false"^^xsd:boolean ;
+      ensemble:top sparqlMotion:topStack .
+
+sparqlMotion:topStack
+      rdf:type ensemble:StackedView ;
+      ensemble:hasStack () ;
+      ensemble:styleName "configurationPopupDragTab"^^xsd:string .
+
+<http://server.topbraidlive.org/dynamic/utils>
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+utils:showAllGrid
+      rdf:type <http://www.topbraidlive.org/2008/11/tblGrid#GridComponent> ;
+      rdfs:label "'Show All' Grid" ;
+      ensemble:hasConfigurationRoot
+              utils:showAllPage ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#copySelections>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#create>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#delete>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#loadAll>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#rowClick>
+              TBE:showAllGridClick ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#showLoadedCount>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#updateProperty>
+              TBE:showAllProperty ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#updateRoot>
+              TBE:showAllObject ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#updateSubject>
+              TBE:showAllSubject ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "true"^^xsd:boolean .
+
+utils:showAllPage
+      rdf:type <http://www.topbraidlive.org/2009/08/page#TBEComponentPage> ;
+      rdfs:label "Show All Page" ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:hasComponent
+              utils:showAllGrid ;
+      ensemble:hasConfigurationRoot
+              utils:showAllPopup ;
+      ensemble:hasStack
+              [ rdf:type ensemble:StackedView ;
+                ensemble:hasStack (utils:showAllGrid) ;
+                ensemble:selectedTab
+                        utils:showAllGrid
+              ] .
+
+utils:showAllPopup
+      rdf:type <http://www.topbraidlive.org/2009/08/page#TBEPopUp> ;
+      rdfs:label "'Show All' Popup" ;
+      ensemble:closable "false"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:popupsConfigSubRoot ;
+      ensemble:hasPageNavigator
+              [ rdf:type ensemble:TBPageNavigator ;
+                rdfs:label "Show All Popup Navigator"^^xsd:string ;
+                ensemble:closable "true"^^xsd:boolean ;
+                ensemble:hasPage utils:showAllPage ;
+                <http://www.topbraidlive.org/2009/08/tbePage#visibleNavigator>
+                        "false"^^xsd:boolean
+              ] ;
+      <http://www.topbraidlive.org/2009/08/page#canAddTo>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/08/page#draggableTabs>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/08/page#visiblePopUpNavigator>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/08/tbePage#defaultHeight>
+              "365"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#defaultWidth>
+              "460"^^xsd:int ;
+      <http://www.topbraidlive.org/2009/08/tbePage#openPopUp>
+              TBE:showAllProperty ;
+      <http://www.topbraidlive.org/2009/08/tbePage#showCloseButton>
+              "true"^^xsd:boolean .
+
+_:b8  rdf:type <http://www.topbraidlive.org/2008/11/forms#EntryFormComponent> ;
+      rdfs:label "Blood Pressure Entry Form" ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.org/2008/11/forms#entryFormDefinitionClass>
+              hsl:BPReading ;
+      <http://www.topbraidlive.org/2008/11/forms#useDisplayedEntryResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#validateBeforeSubmit>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "true"^^xsd:boolean .
+
+_:b4  rdf:type <http://www.topbraidlive.org/2008/11/forms#FormComponent> ;
+      rdfs:comment "A form describing a resource." ;
+      rdfs:label "BPReading_1"^^xsd:string ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.org/2008/11/forms#backward>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#checkConstraints>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#displayedResource>
+              :BPReading_1 ;
+      <http://www.topbraidlive.org/2008/11/forms#forward>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#linkClick>
+              TBE:Form_Click ;
+      <http://www.topbraidlive.org/2008/11/forms#maxValuesForWidget>
+              "10"^^xsd:int ;
+      <http://www.topbraidlive.org/2008/11/forms#showAllInitialized>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#showAllObjectPost>
+              TBE:showAllObject ;
+      <http://www.topbraidlive.org/2008/11/forms#showAllPredicatePost>
+              TBE:showAllProperty ;
+      <http://www.topbraidlive.org/2008/11/forms#showAllSubjectPost>
+              TBE:showAllSubject ;
+      <http://www.topbraidlive.org/2008/11/forms#updateView>
+              TBE:Select_Node_in_Viz , TBE:Map_Click , TBE:Grid_Click , TBE:Top_AutoComplete_Select , TBE:Form_Click ;
+      <http://www.topbraidlive.org/2008/11/forms#useDisplayedResourceLabel>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#widgetMode>
+              ensemble:ReviewMode ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "true"^^xsd:boolean .
+
+_:b6  rdf:type <http://www.topbraidlive.org/2008/11/tblGrid#GridComponent> ;
+      rdfs:comment "A component for a set of results.  The results can be either the results of a query, or all resources filling the triple match where 'Grid Property' is the predicate and 'Grid Resource' is the subject or object (depending on the setting of 'Use resource as object of triple match?')." ;
+      rdfs:label "Results"^^xsd:string ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#allowRearrangeColumns>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#copySelections>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#create>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#delete>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#gridDrag>
+              TBE:Drag_from_Grid ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#gridObject>
+              hsl:PulseReading ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#gridProperty>
+              rdf:type ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#loadAll>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#rowClick>
+              TBE:Grid_Click ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#showLoadedCount>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#updateRoot>
+              TBE:Tree_Click ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#useDisplayedResourceLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#viewQueryResults>
+              TBE:Submit_Query_from_Viz , TBE:Submit_Search_from_Search_Form ;
+      <http://www.topbraidlive.org/2008/11/tblGrid#viewSparqlResults>
+              TBE:Submit_Query_from_SPARQL_Editor ;
+      <http://www.topbraidlive.org/2009/01/tblSM#selectedResource>
+              hsl:Technician ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "true"^^xsd:boolean .
+
+_:b3  rdf:type <http://www.topbraidlive.com/2008/11/tblTree#TreeComponent> ;
+      rdfs:comment "A component for displaying a hierarchical structure of resources." ;
+      rdfs:label "Select Class To Begin" ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.com/2008/11/tblTree#addChildToSelected>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.com/2008/11/tblTree#addSiblingToSelected>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.com/2008/11/tblTree#deleteSelected>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#defaultExpand>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#displaySearchField>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#onClick>
+              TBE:Tree_Click ;
+      <http://www.topbraidlive.org/2008/11/tblTree#reverseCounts>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#showInReverse>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#showTreeRoot>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#sortProperty>
+              rdfs:label ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeCountProperty>
+              rdf:type ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeDrag>
+              TBE:Drag_from_Tree ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeProperty>
+              rdfs:subClassOf ;
+      <http://www.topbraidlive.org/2008/11/tblTree#treeRoot>
+              owl:Thing ;
+      <http://www.topbraidlive.org/2008/11/tblTree#useTreePropertyLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblTree#useTreeRootLabel>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/tblSM#selectedResource>
+              hsl:PulseReading ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "true"^^xsd:boolean .
+
+_:b2  rdf:type <http://www.topbraidlive.org/2008/11/forms#SearchFormComponent> ;
+      rdfs:comment """
+			A form describing a resource.
+		""" ;
+      rdfs:label "Search PulseReading"^^xsd:string ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.org/2008/11/forms#allowOptionalValues>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#expandableSearch>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#includeResourceId>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#loadQuery>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#resetSearchFields>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#saveQuery>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#searchButtonClick>
+              TBE:Submit_Search_from_Search_Form ;
+      <http://www.topbraidlive.org/2008/11/forms#searchClass>
+              hsl:PulseReading ;
+      <http://www.topbraidlive.org/2008/11/forms#subClassEntailment>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#subPropertyEntailment>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#useSearchTypeLabel>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/forms#viewSearchForm>
+              TBE:Tree_Click .
+
+_:b1  rdf:type <http://www.topbraidlive.org/2009/04/sparqleditor#SparqlEditor> ;
+      rdfs:comment "Text based editing of SPARQL queries" ;
+      rdfs:label "SPARQL Editor" ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.org/2009/04/sparqleditor#loadQuery>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/04/sparqleditor#onArbitraryQueryRequest>
+              TBE:Submit_Query_from_SPARQL_Editor ;
+      <http://www.topbraidlive.org/2009/04/sparqleditor#queryArbitraryFromSpin>
+              TBE:Submit_Query_from_Viz , TBE:Submit_Search_from_Search_Form ;
+      <http://www.topbraidlive.org/2009/04/sparqleditor#saveQuery>
+              "true"^^xsd:boolean .
+
+_:b7  rdf:type <http://www.topbraidlive.org/2009/01/visualization#VisualizationComponent> ;
+      rdfs:comment "2D Visualization of portions of graphs" ;
+      rdfs:label "Graph Editor and Query" ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.org/2009/01/tblSM#smScriptsButton>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/visualization#allowEditColors>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/visualization#allowEditQueries>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/visualization#onNodeRequest>
+              TBE:Select_Node_in_Viz ;
+      <http://www.topbraidlive.org/2009/01/visualization#onQueryRequest>
+              TBE:Submit_Query_from_Viz ;
+      <http://www.topbraidlive.org/2009/01/visualization#subClassEntailment>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/visualization#subPropertyEntailment>
+              "false"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2009/01/visualization#vizDrop>
+              TBE:Drag_from_Grid , TBE:Drag_from_Tree ;
+      <http://www.topbraidlive.org/visualization#hasEdgeColorCoding>
+              [ <http://www.topbraidlive.org/visualization#hasColor>
+                        "4294940979" ;
+                <http://www.topbraidlive.org/visualization#hasResource>
+                        rdfs:subPropertyOf
+              ] ;
+      <http://www.topbraidlive.org/visualization#hasEdgeColorCoding>
+              [ <http://www.topbraidlive.org/visualization#hasColor>
+                        "4278190335" ;
+                <http://www.topbraidlive.org/visualization#hasResource>
+                        rdf:type
+              ] ;
+      <http://www.topbraidlive.org/visualization#hasEdgeColorCoding>
+              [ <http://www.topbraidlive.org/visualization#hasColor>
+                        "4294940979" ;
+                <http://www.topbraidlive.org/visualization#hasResource>
+                        rdfs:label
+              ] ;
+      <http://www.topbraidlive.org/visualization#hasEdgeColorCoding>
+              [ <http://www.topbraidlive.org/visualization#hasColor>
+                        "4294940979" ;
+                <http://www.topbraidlive.org/visualization#hasResource>
+                        rdfs:subClassOf
+              ] .
+
+_:b5  rdf:type <http://www.topbraidlive.org/2008/11/tblGeo#YahooMapComponent> ;
+      rdfs:comment "A Yahoo Map used to plot resources (locations thereof)." ;
+      rdfs:label "Yahoo Map" ;
+      ensemble:closable "true"^^xsd:boolean ;
+      ensemble:graphForData
+              ensemble:dataOnly ;
+      ensemble:hasConfigurationRoot
+              ensemble:componentsConfigSubRoot ;
+      <http://www.topbraidlive.org/2008/11/tblGeo#displaySelectedMarkerInfo>
+              "true"^^xsd:boolean ;
+      <http://www.topbraidlive.org/2008/11/tblGeo#mapResource>
+              TBE:Grid_Click ;
+      <http://www.topbraidlive.org/2008/11/tblGeo#mappedResource>
+              hsl:Technician ;
+      <http://www.topbraidlive.org/2008/11/tblGeo#markerClick>
+              TBE:Map_Click ;
+      <http://www.topbraidlive.org/2008/11/tblGeo#yahooMapId>
+              "Xg_nVozV34FE7rSC4h7v4.QKEpnCe7FA8MKTVqOAPLt.I2vLo8pD.d7UymWY0vcpSE8VDQ--"^^xsd:string .
