@@ -1,0 +1,121 @@
+# Saved by TopBraid on Sun Mar 04 10:53:44 PST 2012
+# baseURI: http://www.cmusv.edu/MobileHealth/1.0/11073/10101/Importscript3
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+# imports: http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl
+
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
+@prefix mhs:     <http://www.cmusv.edu/MobileHealth/1.0/11073/10101/Importscript3#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/MobileHealth/1.0/11073/10101/Importscript3>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+mhs:AddProperties
+      rdf:type sml:ApplyConstruct .
+
+mhs:BuildClasses
+      rdf:type sml:ApplyConstruct ;
+      sm:next mhs:AddProperties ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                rdfs:comment "Build classes and properties, and links from spreadsheet (works)"^^xsd:string ;
+                sp:templates ([ sp:object owl:Class ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b1
+                          ] [ sp:object mhs:Measurement ;
+                            sp:predicate rdfs:subClassOf ;
+                            sp:subject _:b1
+                          ] [ sp:object _:b1 ;
+                            sp:predicate owl:sameAs ;
+                            sp:subject _:b2
+                          ] [ sp:object owl:DatatypeProperty ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b3
+                          ] [ sp:object mhs:DataProperty ;
+                            sp:predicate rdfs:subPropertyOf ;
+                            sp:subject _:b3
+                          ] [ sp:object xsd:string ;
+                            sp:predicate rdfs:range ;
+                            sp:subject _:b3
+                          ]) ;
+                sp:where ([ sp:object <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Sheet> ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b2
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type afn:localname ;
+                                      sp:arg1 _:b2
+                                    ] ;
+                            sp:variable _:b4
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 mhs:Measurement ;
+                                      sp:arg2 _:b4
+                                    ] ;
+                            sp:variable _:b1
+                          ] [ sp:object _:b5 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cell> ;
+                            sp:subject _:b2
+                          ] [ sp:object 0 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#row> ;
+                            sp:subject _:b5
+                          ] [ sp:object _:b6 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cellContents> ;
+                            sp:subject _:b5
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:lowerCamelCase ;
+                                      sp:arg1 _:b6
+                                    ] ;
+                            sp:variable _:b7
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 mhs:Measurement ;
+                                      sp:arg2 _:b7
+                                    ] ;
+                            sp:variable _:b3
+                          ])
+              ] .
+
+mhs:DataProperty
+      rdf:type owl:DatatypeProperty .
+
+mhs:ImportSpreadsheet
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next mhs:BuildClasses ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/11073/10101/2004Tables"^^xsd:string ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/MobileHealth/1.0/11073/10101/2004Tables.rdf"^^xsd:string .
+
+mhs:Measurement
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+_:b3  sp:varName "newproperty"^^xsd:string .
+
+_:b7  sp:varName "propname"^^xsd:string .
+
+_:b6  sp:varName "lookcontents"^^xsd:string .
+
+_:b5  sp:varName "referenceidcell"^^xsd:string .
+
+_:b1  sp:varName "newclass"^^xsd:string .
+
+_:b4  sp:varName "sheetname"^^xsd:string .
+
+_:b2  sp:varName "sheet"^^xsd:string .
