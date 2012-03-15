@@ -1,0 +1,159 @@
+# Saved by TopBraid on Thu Mar 15 16:37:46 PDT 2012
+# baseURI: http://cmusv/1.0/11073-Subset/Subset1.0
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix subset:  <http://cmusv/1.0/11073-Subset/Subset1.0#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cmusv/1.0/11073-Subset/Subset1.0>
+      rdf:type owl:Ontology ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+subset:BloodPressure
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:hasHandle
+              ] .
+
+subset:MdsObject
+      rdf:type owl:Class ;
+      rdfs:subClassOf subset:BloodPressure ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue subset:SystemTypeSpecList ;
+                owl:onProperty subset:hasSystemTypeSpecList
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue 0 ;
+                owl:onProperty subset:hasHandle
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue subset:SystemModel ;
+                owl:onProperty subset:hasSystemModel
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:hasSystemId
+              ] .
+
+subset:SystemModel
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:hasModel
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:hasManufacturer
+              ] .
+
+subset:SystemTypeSpecList
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:hasSystemTypeSpecParam2
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:hasSystemTypeSpecParam1
+              ] .
+
+subset:SystemTypeSpecListBP
+      rdf:type subset:SystemTypeSpecList ;
+      subset:hasSystemTypeSpecParam1
+              4103 ;
+      subset:hasSystemTypeSpecParam2
+              1 .
+
+subset:SystolicDiastolicMAP
+      rdf:type owl:Class ;
+      rdfs:subClassOf subset:BloodPressure ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom
+                        [ rdf:type owl:Class ;
+                          owl:unionOf (xsd:integer xsd:string)
+                        ] ;
+                owl:onProperty subset:hasType
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue 1 ;
+                owl:onProperty subset:hasHandle
+              ] .
+
+subset:Type
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+subset:hasAttributeValueMap
+      rdf:type owl:ObjectProperty .
+
+subset:hasCode
+      rdf:type owl:DatatypeProperty .
+
+subset:hasDevConfigurationId
+      rdf:type owl:DatatypeProperty .
+
+subset:hasHandle
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+subset:hasManufacturer
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+subset:hasMetricIdList
+      rdf:type owl:ObjectProperty .
+
+subset:hasMetricSpecSmall
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+subset:hasMetricStructureSmall
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+subset:hasModel
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+subset:hasSystemId
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+subset:hasSystemModel
+      rdf:type owl:ObjectProperty .
+
+subset:hasSystemTypeSpecList
+      rdf:type owl:ObjectProperty .
+
+subset:hasSystemTypeSpecParam1
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+subset:hasSystemTypeSpecParam2
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+subset:hasType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+subset:hasUnitCode
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
