@@ -1,0 +1,276 @@
+# Saved by TopBraid on Wed Mar 21 08:57:32 PDT 2012
+# baseURI: http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Importscript3
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+# imports: http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions
+# imports: http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions
+# imports: http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl
+
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
+@prefix import:  <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Importscript3#> .
+@prefix mhs:     <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#> .
+@prefix myfun:   <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix tops:    <http://www.topbraid.org/tops#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+mhs:dataProperty
+      rdf:type owl:DatatypeProperty .
+
+<http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Importscript3>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> , <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+import:AddImports
+      rdf:type sml:ApplyConstruct ;
+      sm:next import:ExportToRDFFile_2 ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions> ;
+                            sp:predicate owl:imports ;
+                            sp:subject <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Output>
+                          ]) ;
+                sp:where ()
+              ] .
+
+import:AddProperties
+      rdf:type sml:ApplyConstruct ;
+      sm:next import:AddImports ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                rdfs:comment "Build new instances of the classes"^^xsd:string ;
+                sp:templates ([ sp:object _:b1 ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b2
+                          ] [ sp:object _:b3 ;
+                            sp:predicate _:b4 ;
+                            sp:subject _:b2
+                          ]) ;
+                sp:where ([ sp:object <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Sheet> ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b5
+                          ] [ sp:object _:b1 ;
+                            sp:predicate owl:sameAs ;
+                            sp:subject _:b5
+                          ] [ sp:object _:b6 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cell> ;
+                            sp:subject _:b5
+                          ] [ sp:object _:b3 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cellContents> ;
+                            sp:subject _:b6
+                          ] [ sp:object _:b7 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#row> ;
+                            sp:subject _:b6
+                          ] [ sp:object _:b4 ;
+                            sp:predicate myfun:GetMagicProp ;
+                            sp:subject _:b6
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 [ rdf:type afn:localname ;
+                                                sp:arg1 _:b5
+                                              ]
+                                    ] ;
+                            sp:variable _:b8
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 _:b8 ;
+                                      sp:arg2 "-" ;
+                                      sp:arg3 [ rdf:type xsd:string ;
+                                                sp:arg1 _:b7
+                                              ]
+                                    ] ;
+                            sp:variable _:b9
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 mhs:Measurement ;
+                                      sp:arg2 _:b9
+                                    ] ;
+                            sp:variable _:b2
+                          ])
+              ] ;
+      sml:replace "false"^^xsd:boolean .
+
+import:ApplyTopSPIN_1
+      rdf:type sml:ApplyTopSPIN ;
+      sm:nodeX 104 ;
+      sm:nodeY 203 ;
+      sml:predicate spin:rule .
+
+import:BuildClasses
+      rdf:type sml:ApplyConstruct ;
+      sm:next import:ImportClassDefinitions , import:AddProperties ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                rdfs:comment "Build classes and properties, and links from spreadsheet (works)"^^xsd:string ;
+                sp:templates ([ sp:object owl:Class ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b10
+                          ] [ sp:object mhs:Measurement ;
+                            sp:predicate rdfs:subClassOf ;
+                            sp:subject _:b10
+                          ] [ sp:object _:b10 ;
+                            sp:predicate owl:sameAs ;
+                            sp:subject _:b11
+                          ] [ sp:object owl:DatatypeProperty ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b12
+                          ] [ sp:object mhs:dataProperty ;
+                            sp:predicate rdfs:subPropertyOf ;
+                            sp:subject _:b12
+                          ] [ sp:object xsd:string ;
+                            sp:predicate rdfs:range ;
+                            sp:subject _:b12
+                          ] [ sp:object _:b13 ;
+                            sp:predicate rdfs:subClassOf ;
+                            sp:subject _:b10
+                          ] [ sp:object owl:Restriction ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b13
+                          ] [ sp:object _:b12 ;
+                            sp:predicate owl:onProperty ;
+                            sp:subject _:b13
+                          ] [ sp:object 1 ;
+                            sp:predicate owl:cardinality ;
+                            sp:subject _:b13
+                          ]) ;
+                sp:where ([ sp:object <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Sheet> ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b11
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 [ rdf:type afn:localname ;
+                                                sp:arg1 _:b11
+                                              ]
+                                    ] ;
+                            sp:variable _:b14
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 mhs:Measurement ;
+                                      sp:arg2 _:b14
+                                    ] ;
+                            sp:variable _:b10
+                          ] [ sp:object _:b15 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cell> ;
+                            sp:subject _:b11
+                          ] [ sp:object 0 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#row> ;
+                            sp:subject _:b15
+                          ] [ sp:object _:b16 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cellContents> ;
+                            sp:subject _:b15
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 _:b16
+                                    ] ;
+                            sp:variable _:b17
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:replaceAll ;
+                                      sp:arg1 _:b17 ;
+                                      sp:arg2 "[#?/()\\[\\]]" ;
+                                      sp:arg3 "_"
+                                    ] ;
+                            sp:variable _:b18
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 mhs:dataProperty ;
+                                      sp:arg2 _:b18
+                                    ] ;
+                            sp:variable _:b12
+                          ])
+              ] ;
+      sml:replace "false"^^xsd:boolean .
+
+import:ExportToRDFFile_1
+      rdf:type sml:ExportToRDFFile ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Test"^^xsd:string ;
+      sml:targetFilePath "/MobileHealth/2.0/11073/10101/Test.rdf"^^xsd:string .
+
+import:ExportToRDFFile_2
+      rdf:type sml:ExportToRDFFile ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Output"^^xsd:string ;
+      sml:targetFilePath "/MobileHealth/2.0/11073/10101/Output.rdf"^^xsd:string .
+
+import:ImportClassDefinitions
+      rdf:type sml:ApplyConstruct ;
+      sm:next import:ExportToRDFFile_1 ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions> ;
+                            sp:predicate owl:imports ;
+                            sp:subject <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Test>
+                          ]) ;
+                sp:where ()
+              ] .
+
+import:ImportRDFFromWorkspace_1
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:nodeX 41 ;
+      sm:nodeY 65 ;
+      sml:ignoreImports "false"^^xsd:boolean .
+
+import:ImportSpreadsheet
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next import:BuildClasses ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput"^^xsd:string ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/MobileHealth/2.0/11073/10101/TestInput.rdf"^^xsd:string .
+
+_:b1  sp:varName "class"^^xsd:string .
+
+_:b2  sp:varName "newinstance"^^xsd:string .
+
+_:b3  sp:varName "contents"^^xsd:string .
+
+_:b4  sp:varName "existingProp"^^xsd:string .
+
+_:b5  sp:varName "sheet"^^xsd:string .
+
+_:b6  sp:varName "cell"^^xsd:string .
+
+_:b7  sp:varName "row"^^xsd:string .
+
+_:b8  sp:varName "sheetname"^^xsd:string .
+
+_:b9  sp:varName "newname"^^xsd:string .
+
+_:b10
+      sp:varName "newclass"^^xsd:string .
+
+_:b11
+      sp:varName "sheet"^^xsd:string .
+
+_:b12
+      sp:varName "newproperty"^^xsd:string .
+
+_:b14
+      sp:varName "sheetname"^^xsd:string .
+
+_:b15
+      sp:varName "referenceidcell"^^xsd:string .
+
+_:b16
+      sp:varName "lookcontents"^^xsd:string .
+
+_:b17
+      sp:varName "propname"^^xsd:string .
+
+_:b18
+      sp:varName "cleanpropname"^^xsd:string .
