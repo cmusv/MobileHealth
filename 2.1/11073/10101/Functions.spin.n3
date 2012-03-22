@@ -1,0 +1,107 @@
+# Saved by TopBraid on Wed Mar 21 18:26:14 PDT 2012
+# baseURI: http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Functions
+# imports: http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Importscript3
+# imports: http://spinrdf.org/spin
+# imports: http://www.cmusv.edu/MobileHealth/2.1/11073/10101/ClassDefinitions
+
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
+@prefix myfun:   <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Functions#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Functions>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Importscript3> , <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/ClassDefinitions> , <http://spinrdf.org/spin> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+myfun:GetMagicProp
+      rdf:type spin:MagicProperty ;
+      rdfs:subClassOf <http://spinrdf.org/spr#MagicProperties> ;
+      spin:body
+              [ rdf:type sp:Select ;
+                rdfs:comment "Build a SPIN function to look up the class corresponding to the column of a particular cell"^^xsd:string ;
+                sp:distinct "true"^^xsd:boolean ;
+                sp:resultVariables (_:b1) ;
+                sp:where ([ sp:object spin:_arg1 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cell> ;
+                            sp:subject _:b2
+                          ] [ sp:object _:b3 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cell> ;
+                            sp:subject _:b2
+                          ] [ sp:object _:b4 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#column> ;
+                            sp:subject spin:_arg1
+                          ] [ sp:object _:b4 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#column> ;
+                            sp:subject _:b3
+                          ] [ sp:object 0 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#row> ;
+                            sp:subject _:b3
+                          ] [ sp:object _:b5 ;
+                            sp:predicate <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cellContents> ;
+                            sp:subject _:b3
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 "dataProperty" ;
+                                                sp:arg2 _:b5
+                                              ]
+                                    ] ;
+                            sp:variable _:b6
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:replaceAll ;
+                                      sp:arg1 _:b6 ;
+                                      sp:arg2 "[#?/()\\[\\]]" ;
+                                      sp:arg3 "_"
+                                    ] ;
+                            sp:variable _:b7
+                          ] [ sp:object <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/ClassDefinitions#dataProperty> ;
+                            sp:predicate rdfs:subPropertyOf ;
+                            sp:subject _:b1
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:lower-case ;
+                                      sp:arg1 [ rdf:type afn:localname ;
+                                                sp:arg1 _:b1
+                                              ]
+                                    ] ;
+                            sp:variable _:b8
+                          ] [ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type fn:matches ;
+                                      sp:arg1 [ rdf:type fn:lower-case ;
+                                                sp:arg1 _:b7
+                                              ] ;
+                                      sp:arg2 _:b8
+                                    ]
+                          ])
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:predicate sp:arg1
+              ] .
+
+_:b8  sp:varName "existingName"^^xsd:string .
+
+_:b1  sp:varName "existingProp"^^xsd:string .
+
+_:b7  sp:varName "cleanpropname"^^xsd:string .
+
+_:b6  sp:varName "epropname"^^xsd:string .
+
+_:b5  sp:varName "propname"^^xsd:string .
+
+_:b4  sp:varName "col"^^xsd:string .
+
+_:b3  sp:varName "cell"^^xsd:string .
+
+_:b2  sp:varName "sheet"^^xsd:string .
