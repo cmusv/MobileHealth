@@ -1,9 +1,8 @@
-# Saved by TopBraid on Wed Mar 21 08:57:32 PDT 2012
+# Saved by TopBraid on Wed Mar 21 18:05:27 PDT 2012
 # baseURI: http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Importscript3
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 # imports: http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions
-# imports: http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions
 # imports: http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl
 
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
@@ -28,7 +27,7 @@ mhs:dataProperty
 
 <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Importscript3>
       rdf:type owl:Ontology ;
-      owl:imports <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> , <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions> ;
+      owl:imports <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 import:AddImports
@@ -233,44 +232,44 @@ import:ImportSpreadsheet
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/MobileHealth/2.0/11073/10101/TestInput.rdf"^^xsd:string .
 
-_:b1  sp:varName "class"^^xsd:string .
-
 _:b2  sp:varName "newinstance"^^xsd:string .
-
-_:b3  sp:varName "contents"^^xsd:string .
-
-_:b4  sp:varName "existingProp"^^xsd:string .
-
-_:b5  sp:varName "sheet"^^xsd:string .
-
-_:b6  sp:varName "cell"^^xsd:string .
-
-_:b7  sp:varName "row"^^xsd:string .
-
-_:b8  sp:varName "sheetname"^^xsd:string .
 
 _:b9  sp:varName "newname"^^xsd:string .
 
-_:b10
-      sp:varName "newclass"^^xsd:string .
+_:b8  sp:varName "sheetname"^^xsd:string .
 
-_:b11
-      sp:varName "sheet"^^xsd:string .
+_:b4  sp:varName "existingProp"^^xsd:string .
 
-_:b12
-      sp:varName "newproperty"^^xsd:string .
+_:b7  sp:varName "row"^^xsd:string .
 
-_:b14
-      sp:varName "sheetname"^^xsd:string .
+_:b3  sp:varName "contents"^^xsd:string .
 
-_:b15
-      sp:varName "referenceidcell"^^xsd:string .
+_:b6  sp:varName "cell"^^xsd:string .
 
-_:b16
-      sp:varName "lookcontents"^^xsd:string .
+_:b1  sp:varName "class"^^xsd:string .
+
+_:b5  sp:varName "sheet"^^xsd:string .
+
+_:b18
+      sp:varName "cleanpropname"^^xsd:string .
 
 _:b17
       sp:varName "propname"^^xsd:string .
 
-_:b18
-      sp:varName "cleanpropname"^^xsd:string .
+_:b16
+      sp:varName "lookcontents"^^xsd:string .
+
+_:b15
+      sp:varName "referenceidcell"^^xsd:string .
+
+_:b14
+      sp:varName "sheetname"^^xsd:string .
+
+_:b12
+      sp:varName "newproperty"^^xsd:string .
+
+_:b11
+      sp:varName "sheet"^^xsd:string .
+
+_:b10
+      sp:varName "newclass"^^xsd:string .

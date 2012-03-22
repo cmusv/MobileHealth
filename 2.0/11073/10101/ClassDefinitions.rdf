@@ -13,7 +13,7 @@
   <owl:Class rdf:ID="Measurement">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </owl:Class>
-  <owl:ObjectProperty rdf:ID="dataProperty"/>
+  <owl:DatatypeProperty rdf:ID="dataProperty"/>
 </rdf:RDF>
 
 <!-- Created with TopBraid -->

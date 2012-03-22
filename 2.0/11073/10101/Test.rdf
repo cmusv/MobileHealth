@@ -6,8 +6,7 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:ss="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:j.0="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#"
-  xml:base="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Output" > 
+  xml:base="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Test" > 
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-C-17">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</ss:column>
@@ -60,21 +59,12 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimensions</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyReferenceID"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-E-19">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="">
-    <owl:imports rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-G-22">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -112,20 +102,6 @@
     <rdfs:domain rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Sheet"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-15">
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_ECG_EXTN</j.0:dataPropertyName>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</j.0:dataPropertySeq>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electrocardiogram extensions</j.0:dataPropertyNote>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</j.0:dataPropertyValue>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aECG</j.0:dataPropertyNote>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electrocardiogram extensions</j.0:dataPropertyNotes>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-H-23">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -269,31 +245,12 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyNote"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-A-22">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-14">
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</j.0:dataPropertySeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</j.0:dataPropertyValue>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_FEF</j.0:dataPropertyName>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File Exchange Format</j.0:dataPropertyNotes>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File Exchange Format</j.0:dataPropertyNote>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Block is defined, not Ptn #</j.0:dataPropertyNote>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-H-22">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -336,11 +293,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyMajorSeq"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-J-12">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ss:column>
@@ -368,11 +320,6 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyNote"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-C-19">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -415,11 +362,6 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spec#</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertySystematicName"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-D-24">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -466,6 +408,11 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systematic name</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyName"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-J-4">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ss:column>
@@ -501,19 +448,9 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-13">
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNote>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_INFRA</j.0:dataPropertyName>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</j.0:dataPropertyValue>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10441</j.0:dataPropertySpec_>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNotes>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</j.0:dataPropertySeq>
+  <rdf:Description rdf:about="">
+    <owl:imports rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyIsIn10101_">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -537,17 +474,17 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyDescription_Definition"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-J-25">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyCommonTerm"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#cellType">
     <rdfs:domain rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
@@ -587,25 +524,6 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body Site Locations</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-11">
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_SITES</j.0:dataPropertyName>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body Site Locations</j.0:dataPropertyNote>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</j.0:dataPropertyValue>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</j.0:dataPropertySeq>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body Site Locations</j.0:dataPropertyNotes>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10442</j.0:dataPropertySpec_>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyPHDMinSeq"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-D-25">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -684,20 +602,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-12">
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</j.0:dataPropertySeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrastructure</j.0:dataPropertyNote>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrastructure</j.0:dataPropertyNotes>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_INFRA</j.0:dataPropertyName>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</j.0:dataPropertyValue>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-D-26">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</ss:column>
@@ -737,17 +641,17 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyOrigSeq"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-B-19">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_HF</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyNote"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Workbook">
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Workbook"/>
@@ -799,11 +703,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_EXT_NOM</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyName"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-H-7">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</ss:column>
@@ -832,31 +731,8 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyCommonTerm"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyIsIn10101_"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-19">
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</j.0:dataPropertyNote>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129</j.0:dataPropertyValue>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMinorSeq>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</j.0:dataPropertySeq>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_HF</j.0:dataPropertyName>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129</j.0:dataPropertyMajorSeq>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#column">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -865,28 +741,18 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementRespA.8.4.5">
-    <rdfs:subClassOf rdf:nodeID="A11"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="A6"/>
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
     <rdfs:subClassOf rdf:nodeID="A4"/>
-    <rdfs:subClassOf rdf:nodeID="A0"/>
-    <rdfs:subClassOf rdf:nodeID="A9"/>
     <rdfs:subClassOf rdf:nodeID="A5"/>
     <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#Measurement"/>
-    <rdfs:subClassOf rdf:nodeID="A3"/>
-    <rdfs:subClassOf rdf:nodeID="A12"/>
+    <rdfs:subClassOf rdf:nodeID="A6"/>
     <rdfs:subClassOf rdf:nodeID="A7"/>
-    <rdfs:subClassOf rdf:nodeID="A13"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertySpec_"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyPHDMajSeq"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-I-18">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -894,6 +760,11 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyAcronym"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-D-13">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -958,36 +829,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-18">
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNotes>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNote>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</j.0:dataPropertySeq>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10442</j.0:dataPropertySpec_>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129</j.0:dataPropertyValue>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</j.0:dataPropertyNote>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_HF</j.0:dataPropertyName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-0">
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notes</j.0:dataPropertyNotes>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IsIn10101?</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value</j.0:dataPropertyValue>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spec#</j.0:dataPropertySpec_>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partition</j.0:dataPropertyPartition>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name</j.0:dataPropertyName>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notes</j.0:dataPropertyNote>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seq</j.0:dataPropertySeq>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MinorSeq</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MajorSeq</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note</j.0:dataPropertyNote>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version</j.0:dataPropertyVersion>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-J-16">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ss:column>
@@ -1018,20 +859,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subPropertyOf rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-1">
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</j.0:dataPropertyNotes>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_UNSPEC</j.0:dataPropertyName>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</j.0:dataPropertyValue>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</j.0:dataPropertyNote>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</j.0:dataPropertyVersion>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertySeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-J-9">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1106,35 +933,12 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10441</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyNotes"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-17">
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</j.0:dataPropertyNote>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</j.0:dataPropertySeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">128</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">128</j.0:dataPropertyValue>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_DM</j.0:dataPropertyName>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-A-26">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyAcronym"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-G-18">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -1185,20 +989,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-2">
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyValue>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object Infrastr.</j.0:dataPropertyNotes>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_OBJ</j.0:dataPropertyName>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</j.0:dataPropertySeq>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object Infrastr.</j.0:dataPropertyNote>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-I-16">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</ss:column>
@@ -1219,6 +1009,11 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electrocardiogram extensions</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyDescription_Definition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-A-2">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1248,25 +1043,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">implantable cardiac device observation extensions</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertySeq"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-16">
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</j.0:dataPropertySeq>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">implantable cardiac device observation extensions</j.0:dataPropertyNotes>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</j.0:dataPropertyValue>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">implantable cardiac device observation extensions</j.0:dataPropertyNote>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_IDCO_EXTN</j.0:dataPropertyName>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</j.0:dataPropertyMajorSeq>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDCO</j.0:dataPropertyNote>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-A-25">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</ss:column>
@@ -1287,11 +1063,6 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyCode"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-J-18">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1321,17 +1092,17 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyReferenceID"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-G-8">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyVersion"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-A-19">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1426,19 +1197,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_HF</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-6">
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</j.0:dataPropertySeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alert/Events</j.0:dataPropertyNote>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alert/Events</j.0:dataPropertyNotes>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</j.0:dataPropertyValue>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_EVT</j.0:dataPropertyName>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Resp_A.8.4.5-Cell-J-1">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ss:column>
@@ -1452,6 +1210,11 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyMinorSeq"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Resp_A.8.4.5-Cell-H-1">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1507,11 +1270,6 @@
     <rdfs:subPropertyOf rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyMinorSeq"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-H-9">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</ss:column>
@@ -1561,37 +1319,15 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">256</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyMajorSeq"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyCommonTerm">
     <rdfs:subPropertyOf rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-5">
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyValue>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10441</j.0:dataPropertySpec_>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</j.0:dataPropertySeq>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_SCADA</j.0:dataPropertyName>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNotes>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNote>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMinorSeq>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementRespA.8.4.5-0">
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementRespA.8.4.5"/>
-    <j.0:dataPropertyPHDMinSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD MinSeq</j.0:dataPropertyPHDMinSeq>
-    <j.0:dataPropertyReferenceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference ID</j.0:dataPropertyReferenceID>
-    <j.0:dataPropertyOrigSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OrigSeq</j.0:dataPropertyOrigSeq>
-    <j.0:dataPropertySystematicName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systematic name</j.0:dataPropertySystematicName>
-    <j.0:dataPropertyDescription_Definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description/Definition</j.0:dataPropertyDescription_Definition>
-    <j.0:dataPropertyCommonTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common term</j.0:dataPropertyCommonTerm>
-    <j.0:dataPropertyAcronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acronym</j.0:dataPropertyAcronym>
-    <j.0:dataPropertyPHDMajSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD MajSeq</j.0:dataPropertyPHDMajSeq>
-    <j.0:dataPropertyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Code</j.0:dataPropertyCode>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note</j.0:dataPropertyNote>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-E-9">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -1691,16 +1427,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementRespA.8.4.5-1">
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementRespA.8.4.5"/>
-    <j.0:dataPropertySystematicName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compliance |  | Alveoli | LungStructure</j.0:dataPropertySystematicName>
-    <j.0:dataPropertyAcronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C TH+L</j.0:dataPropertyAcronym>
-    <j.0:dataPropertyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20616</j.0:dataPropertyCode>
-    <j.0:dataPropertyOrigSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyOrigSeq>
-    <j.0:dataPropertyCommonTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compliance of respiratory system</j.0:dataPropertyCommonTerm>
-    <j.0:dataPropertyDescription_Definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change of tidal volume per unit change of airway pressure</j.0:dataPropertyDescription_Definition>
-    <j.0:dataPropertyReferenceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_COMPL_LUNG</j.0:dataPropertyReferenceID>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-I-24">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</ss:column>
@@ -1714,6 +1440,11 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20616</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyCode"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-H-26">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -1742,20 +1473,6 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_AI</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-4">
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SCADA (Physio IDs)</j.0:dataPropertyNotes>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_SCADA</j.0:dataPropertyName>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</j.0:dataPropertySeq>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyValue>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SCADA (Physio IDs)</j.0:dataPropertyNote>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-F-2">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1886,16 +1603,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementRespA.8.4.5-2">
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementRespA.8.4.5"/>
-    <j.0:dataPropertySystematicName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compliance | Dynamic | Alveoli, Pleura | LungStructure</j.0:dataPropertySystematicName>
-    <j.0:dataPropertyCommonTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thoracic compliance</j.0:dataPropertyCommonTerm>
-    <j.0:dataPropertyAcronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C TH</j.0:dataPropertyAcronym>
-    <j.0:dataPropertyOrigSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</j.0:dataPropertyOrigSeq>
-    <j.0:dataPropertyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20620</j.0:dataPropertyCode>
-    <j.0:dataPropertyDescription_Definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change of tidal volume per unit change of transthoracic pressure</j.0:dataPropertyDescription_Definition>
-    <j.0:dataPropertyReferenceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_COMPL_LUNG_DYN</j.0:dataPropertyReferenceID>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-C-26">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</ss:column>
@@ -1910,26 +1617,17 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-3">
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyValue>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10441</j.0:dataPropertySpec_>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNote>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_OBJ</j.0:dataPropertyName>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</j.0:dataPropertySeq>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNotes>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Resp_A.8.4.5-Cell-G-1">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OrigSeq</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyVersion"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-B-23">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1949,11 +1647,6 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subPropertyOf rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyValue"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-F-1">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -2004,6 +1697,11 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">130</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyOrigSeq"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-C-12">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</ss:column>
@@ -2043,20 +1741,6 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_VATTR</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-24">
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNotes>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10441</j.0:dataPropertySpec_>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_EXT_NOM</j.0:dataPropertyName>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">256</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNote>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</j.0:dataPropertySeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">256</j.0:dataPropertyValue>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMinorSeq>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-G-4">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</ss:column>
@@ -2078,18 +1762,15 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-21">
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_AI</j.0:dataPropertyName>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">130</j.0:dataPropertyValue>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</j.0:dataPropertyNote>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22</j.0:dataPropertySeq>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">130</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyIsIn10101_"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyValue"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-I-22">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -2171,6 +1852,11 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subPropertyOf rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyPHDMajSeq"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-C-13">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</ss:column>
@@ -2191,30 +1877,6 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-25">
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PVT</j.0:dataPropertyName>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</j.0:dataPropertyVersion>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</j.0:dataPropertySeq>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1024</j.0:dataPropertyMajorSeq>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1024</j.0:dataPropertyValue>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601a</j.0:dataPropertySpec_>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-23">
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">256</j.0:dataPropertyValue>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</j.0:dataPropertySeq>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_EXT_NOM</j.0:dataPropertyName>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">256</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-J-22">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -2237,31 +1899,15 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PGRP</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-22">
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</j.0:dataPropertySeq>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_RET_CODE</j.0:dataPropertyName>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">255</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">255</j.0:dataPropertyValue>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</j.0:dataPropertyNote>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyPartition"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-9">
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_VATTR</j.0:dataPropertyName>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virtual Attributes</j.0:dataPropertyNotes>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</j.0:dataPropertySeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virtual Attributes</j.0:dataPropertyNote>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</j.0:dataPropertyValue>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</j.0:dataPropertyMajorSeq>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertySpec_"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyVersion">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -2408,18 +2054,23 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1">
     <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#Measurement"/>
-    <rdfs:subClassOf rdf:nodeID="A18"/>
-    <rdfs:subClassOf rdf:nodeID="A19"/>
     <rdfs:subClassOf rdf:nodeID="A16"/>
-    <rdfs:subClassOf rdf:nodeID="A20"/>
-    <rdfs:subClassOf rdf:nodeID="A8"/>
-    <rdfs:subClassOf rdf:nodeID="A10"/>
-    <rdfs:subClassOf rdf:nodeID="A2"/>
-    <rdfs:subClassOf rdf:nodeID="A1"/>
-    <rdfs:subClassOf rdf:nodeID="A17"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A18"/>
+    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:nodeID="A19"/>
     <rdfs:subClassOf rdf:nodeID="A14"/>
+    <rdfs:subClassOf rdf:nodeID="A12"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
     <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdfs:subClassOf rdf:nodeID="A20"/>
+    <rdfs:subClassOf rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertySystematicName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-E-13">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -2427,6 +2078,11 @@
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyNote"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-D-21">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -2452,11 +2108,6 @@
   <rdf:Description rdf:about="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Workbook">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyPartition"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-I-20">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</ss:column>
@@ -2464,26 +2115,17 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyNotes"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-I-10">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-8">
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNotes>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNote>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_DIM</j.0:dataPropertyName>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10441</j.0:dataPropertySpec_>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</j.0:dataPropertyValue>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</j.0:dataPropertySeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Resp_A.8.4.5-Cell-E-2">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -2576,6 +2218,11 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertyPHDMinSeq"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-E-12">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</ss:column>
@@ -2623,54 +2270,17 @@
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-20">
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</j.0:dataPropertySeq>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10441</j.0:dataPropertySpec_>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129</j.0:dataPropertyValue>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNote>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PHD_HF</j.0:dataPropertyName>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicates 20601</j.0:dataPropertyNotes>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</j.0:dataPropertyNote>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</j.0:dataPropertyIsIn10101_>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-7">
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</j.0:dataPropertyValue>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_DIM</j.0:dataPropertyName>
-    <j.0:dataPropertyVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</j.0:dataPropertyVersion>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</j.0:dataPropertySeq>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimensions</j.0:dataPropertyNotes>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimensions</j.0:dataPropertyNote>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1-10">
-    <j.0:dataPropertySeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</j.0:dataPropertySeq>
-    <j.0:dataPropertyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Param Group ID</j.0:dataPropertyNote>
-    <j.0:dataPropertySpec_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20601</j.0:dataPropertySpec_>
-    <j.0:dataPropertyNotes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Param Group ID</j.0:dataPropertyNotes>
-    <j.0:dataPropertyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MDC_PART_PGRP</j.0:dataPropertyName>
-    <j.0:dataPropertyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</j.0:dataPropertyValue>
-    <j.0:dataPropertyPartition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Value</j.0:dataPropertyPartition>
-    <rdf:type rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#MeasurementPtnFig1"/>
-    <j.0:dataPropertyMajorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</j.0:dataPropertyMajorSeq>
-    <j.0:dataPropertyIsIn10101_ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</j.0:dataPropertyIsIn10101_>
-    <j.0:dataPropertyMinorSeq rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:dataPropertyMinorSeq>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Ptn_Fig1-Cell-I-11">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     <ss:column rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</ss:column>
     <ss:row rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</ss:row>
     <ss:cellContents rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ss:cellContents>
     <rdf:type rdf:resource="http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl#Cell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/ClassDefinitions#dataPropertySeq"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput#Resp_A.8.4.5-Cell-E-1">
     <ss:cellType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
