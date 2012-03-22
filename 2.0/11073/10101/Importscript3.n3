@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Mar 21 18:05:27 PDT 2012
+# Saved by TopBraid on Wed Mar 21 18:36:52 PDT 2012
 # baseURI: http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Importscript3
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
@@ -27,7 +27,7 @@ mhs:dataProperty
 
 <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Importscript3>
       rdf:type owl:Ontology ;
-      owl:imports <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> ;
+      owl:imports <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://www.cmusv.edu/MobileHealth/2.0/11073/10101/Functions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 import:AddImports
@@ -110,7 +110,7 @@ import:ApplyTopSPIN_1
 
 import:BuildClasses
       rdf:type sml:ApplyConstruct ;
-      sm:next import:ImportClassDefinitions , import:AddProperties ;
+      sm:next import:AddProperties , import:ImportClassDefinitions ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
                 rdfs:comment "Build classes and properties, and links from spreadsheet (works)"^^xsd:string ;
@@ -228,48 +228,48 @@ import:ImportRDFFromWorkspace_1
 import:ImportSpreadsheet
       rdf:type sml:ImportRDFFromWorkspace ;
       sm:next import:BuildClasses ;
-      sml:baseURI "http://www.cmusv.edu/MobileHealth/2.0/11073/10101/TestInput"^^xsd:string ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/2.0/11073/10101/2004Tables"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
-      sml:sourceFilePath "/MobileHealth/2.0/11073/10101/TestInput.rdf"^^xsd:string .
-
-_:b2  sp:varName "newinstance"^^xsd:string .
-
-_:b9  sp:varName "newname"^^xsd:string .
-
-_:b8  sp:varName "sheetname"^^xsd:string .
-
-_:b4  sp:varName "existingProp"^^xsd:string .
-
-_:b7  sp:varName "row"^^xsd:string .
-
-_:b3  sp:varName "contents"^^xsd:string .
-
-_:b6  sp:varName "cell"^^xsd:string .
+      sml:sourceFilePath "/MobileHealth/2.0/11073/10101/2004Tables.rdf"^^xsd:string .
 
 _:b1  sp:varName "class"^^xsd:string .
 
+_:b2  sp:varName "newinstance"^^xsd:string .
+
+_:b3  sp:varName "contents"^^xsd:string .
+
+_:b4  sp:varName "existingProp"^^xsd:string .
+
 _:b5  sp:varName "sheet"^^xsd:string .
 
-_:b18
-      sp:varName "cleanpropname"^^xsd:string .
+_:b6  sp:varName "cell"^^xsd:string .
 
-_:b17
-      sp:varName "propname"^^xsd:string .
+_:b7  sp:varName "row"^^xsd:string .
 
-_:b16
-      sp:varName "lookcontents"^^xsd:string .
+_:b8  sp:varName "sheetname"^^xsd:string .
 
-_:b15
-      sp:varName "referenceidcell"^^xsd:string .
+_:b9  sp:varName "newname"^^xsd:string .
 
-_:b14
-      sp:varName "sheetname"^^xsd:string .
-
-_:b12
-      sp:varName "newproperty"^^xsd:string .
+_:b10
+      sp:varName "newclass"^^xsd:string .
 
 _:b11
       sp:varName "sheet"^^xsd:string .
 
-_:b10
-      sp:varName "newclass"^^xsd:string .
+_:b12
+      sp:varName "newproperty"^^xsd:string .
+
+_:b14
+      sp:varName "sheetname"^^xsd:string .
+
+_:b15
+      sp:varName "referenceidcell"^^xsd:string .
+
+_:b16
+      sp:varName "lookcontents"^^xsd:string .
+
+_:b17
+      sp:varName "propname"^^xsd:string .
+
+_:b18
+      sp:varName "cleanpropname"^^xsd:string .
