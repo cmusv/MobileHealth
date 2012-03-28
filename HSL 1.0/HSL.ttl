@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Mar 28 01:13:42 PDT 2012
+# Saved by TopBraid on Wed Mar 28 15:14:58 PDT 2012
 # baseURI: http://cmusv/HSL
 # imports: http://schema.rdfs.org/all
 
@@ -19,6 +19,8 @@
       rdf:type hsl:BPReading ;
       hsl:diastolicPressure
               89 ;
+      hsl:meanArterialPressure
+              "100"^^xsd:string ;
       hsl:ofPatient :Patient527 ;
       hsl:readingID "184765"^^xsd:string ;
       hsl:systolicPressure
@@ -38,12 +40,7 @@ hsl:BPReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:meanArterialPressure
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:systolicPressure
+                owl:onProperty hsl:units
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -53,7 +50,17 @@ hsl:BPReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:heartRate
+                owl:onProperty hsl:meanArterialPressure
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:pulseRate
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:systolicPressure
               ] .
 
 hsl:ECGReading
@@ -71,25 +78,38 @@ hsl:GlucoseReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:units
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty hsl:bloodGlucoseLevel
               ] .
 
+hsl:GlucoseReading_1
+      rdf:type hsl:GlucoseReading ;
+      hsl:bloodGlucoseLevel
+              110 ;
+      hsl:ofPatient :Patient527 ;
+      hsl:units "mg/dl"^^xsd:string ;
+      schema:endDate "2012-03-30"^^xsd:date .
+
 hsl:MedicalEvent
       rdf:type owl:Class ;
-      rdfs:subClassOf owl:Thing , schema:Event .
+      rdfs:subClassOf schema:Event , owl:Thing .
 
 hsl:MedicalReading
       rdf:type owl:Class ;
       rdfs:subClassOf hsl:MedicalEvent ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:readingID
+                owl:allValuesFrom xsd:date ;
+                owl:onProperty schema:endDate
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:ofPatient
+                owl:onProperty schema:endDate
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -99,31 +119,31 @@ hsl:MedicalReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty schema:endDate
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:date ;
-                owl:onProperty schema:endDate
-              ] .
-
-hsl:Patient
-      rdf:type hsl:PersonRoles , hsl:Person , owl:Class ;
-      rdfs:subClassOf owl:Thing ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom hsl:MedicalReading ;
-                owl:onProperty hsl:hasReading
+                owl:onProperty hsl:ofPatient
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:readingID
+              ] .
+
+hsl:Patient
+      rdf:type owl:Class , hsl:Person , hsl:PersonRoles ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty hsl:patientId
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom hsl:MedicalReading ;
+                owl:onProperty hsl:hasReading
               ] .
 
 hsl:Person
       rdf:type owl:Class ;
-      rdfs:subClassOf schema:Person , owl:Thing ;
+      rdfs:subClassOf owl:Thing , schema:Person ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom
@@ -144,11 +164,29 @@ hsl:PulseReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:heartRate
+                owl:onProperty hsl:units
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:spO2
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:pulseRate
               ] .
 
+hsl:PulseReading_1
+      rdf:type hsl:PulseReading ;
+      hsl:ofPatient :Patient527 ;
+      hsl:pulseRate 80 ;
+      hsl:spO2 "0.90"^^xsd:float ;
+      hsl:units "bpm"^^xsd:string ;
+      schema:endDate "2012-03-30"^^xsd:date .
+
 hsl:Technician
-      rdf:type hsl:PersonRoles , hsl:Person , owl:Class ;
+      rdf:type owl:Class , hsl:Person , hsl:PersonRoles ;
       rdfs:subClassOf owl:Thing ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -156,9 +194,79 @@ hsl:Technician
                 owl:onProperty hsl:carriesOutReading
               ] .
 
+hsl:TemperatureReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:units
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:bodyTemperature
+              ] .
+
+hsl:TemperatureReading_1
+      rdf:type hsl:TemperatureReading ;
+      hsl:bodyTemperature "96.5"^^xsd:float ;
+      hsl:ofPatient :Patient527 ;
+      hsl:units "Farhenheit"^^xsd:string ;
+      schema:endDate "2012-03-30"^^xsd:date .
+
+hsl:WeightScaleReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "3"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:units
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:bodyWeight
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:bodyMassIndex
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:bodyHeight
+              ] .
+
+hsl:WeightScaleReading_1
+      rdf:type hsl:WeightScaleReading ;
+      hsl:bodyHeight "70"^^xsd:float ;
+      hsl:bodyMassIndex "25.1"^^xsd:float ;
+      hsl:bodyWeight "68.1"^^xsd:float ;
+      hsl:ofPatient :Patient527 ;
+      hsl:units "kg"^^xsd:string , "kg/m^2"^^xsd:string , "in"^^xsd:string ;
+      schema:endDate "2012-03-30"^^xsd:date .
+
 hsl:bloodGlucoseLevel
       rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:integer .
+
+hsl:bodyHeight
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:bodyMassIndex
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:bodyTemperature
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:bodyWeight
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
 
 hsl:carriesOutReading
       rdf:type owl:ObjectProperty ;
@@ -171,10 +279,6 @@ hsl:diastolicPressure
 hsl:hasReading
       rdf:type owl:ObjectProperty ;
       owl:inverseOf hsl:ofPatient .
-
-hsl:heartRate
-      rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:integer .
 
 hsl:meanArterialPressure
       rdf:type owl:DatatypeProperty .
@@ -192,9 +296,21 @@ hsl:performedBy
 hsl:playsRoleOf
       rdf:type owl:ObjectProperty .
 
+hsl:pulseRate
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
 hsl:readingID
       rdf:type owl:DatatypeProperty .
+
+hsl:spO2
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
 
 hsl:systolicPressure
       rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:integer .
+
+hsl:units
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .

@@ -1,10 +1,12 @@
-# Saved by TopBraid on Wed Mar 28 13:04:15 PDT 2012
+# Saved by TopBraid on Wed Mar 28 13:25:52 PDT 2012
 # baseURI: http://cmusv/1.0/11073-Subset/Subset1.0
 # imports: http://www.cmusv.edu/MobileHealth/1.0/11073/10101/Output2
 
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
 @prefix subset:  <http://cmusv/1.0/11073-Subset/Subset1.0#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
@@ -80,6 +82,16 @@ subset:BloodPressureReading
               [ rdf:type owl:Restriction ;
                 owl:hasValue <http://www.cmusv.edu/MobileHealth/1.0/11073/10101/Importscript3#MeasurementOOA.3.1.1thru3.2.2.5-688> ;
                 owl:onProperty subset:hasAttributeValueMap
+              ] ;
+      spin:constructor
+              [ rdf:type spl:InferDefaultValue ;
+                spl:defaultValue <http://www.cmusv.edu/MobileHealth/1.0/11073/10101/Importscript3#MeasurementOOA.3.1.1thru3.2.2.5-688> ;
+                spl:predicate subset:hasAttributeValueMap
+              ] ;
+      spin:constructor
+              [ rdf:type spl:InferDefaultValue ;
+                spl:defaultValue <http://www.cmusv.edu/MobileHealth/1.0/11073/10101/Importscript3#MeasurementOOA.3.1.1thru3.2.2.5-96> ;
+                spl:predicate subset:hasAttributeValueMap
               ] .
 
 subset:BodyHeightReading
