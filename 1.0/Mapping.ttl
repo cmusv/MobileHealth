@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Mar 21 13:39:06 PDT 2012
+# Saved by TopBraid on Wed Mar 28 09:53:21 PDT 2012
 # baseURI: http://www.cmusv.edu/MobileHealth/1.0/Mapping
 # imports: http://topbraid.org/spin/spinmapl
 # imports: http://cmusv/HSL
@@ -23,7 +23,7 @@
                 spinmap:context Mapping:BPReading-BloodPressureReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        <http://cmusv/HSL/diastolicPressure> ;
+                        <http://cmusv/HSL/meanArterialPressure> ;
                 spinmap:targetPredicate1
                         <http://cmusv/1.0/11073-Subset/Subset1.0#ReadingValue>
               ] ;
@@ -37,6 +37,15 @@
                         <http://cmusv/1.0/11073-Subset/Subset1.0#ReadingValue>
               ] ;
       spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://cmusv/HSL/diastolicPressure> ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#ReadingValue>
+              ] ;
+      spinmap:rule
               [ rdf:type spinmap:Mapping-0-1 ;
                 spinmap:context Mapping:BPReading-BloodPressureReading ;
                 spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#BloodPressureReading> ;
@@ -46,7 +55,7 @@
 
 <http://www.cmusv.edu/MobileHealth/1.0/Mapping>
       rdf:type owl:Ontology ;
-      owl:imports <http://cmusv/HSL> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://topbraid.org/spin/spinmapl> , <http://spinrdf.org/spin> ;
+      owl:imports <http://spinrdf.org/spin> , <http://topbraid.org/spin/spinmapl> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://cmusv/HSL> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 Mapping:BPReading-BloodPressureReading
