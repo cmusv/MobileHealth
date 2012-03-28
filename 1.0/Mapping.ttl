@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Mar 21 13:39:06 PDT 2012
+# Saved by TopBraid on Wed Mar 28 15:16:25 PDT 2012
 # baseURI: http://www.cmusv.edu/MobileHealth/1.0/Mapping
 # imports: http://topbraid.org/spin/spinmapl
 # imports: http://cmusv/HSL
@@ -7,9 +7,11 @@
 
 @prefix HSL:     <http://cmusv/HSL#> .
 @prefix Mapping:  <http://www.cmusv.edu/MobileHealth/1.0/Mapping#> .
+@prefix hsl:     <http://cmusv/HSL/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
 @prefix sp:      <http://spinrdf.org/sp#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix spinmap:  <http://spinrdf.org/spinmap#> .
@@ -17,24 +19,69 @@
 @prefix spl:     <http://spinrdf.org/spl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://cmusv/HSL/BPReading>
+<http://cmusv/1.0/11073-Subset/Subset1.0#SpO2Reading>
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
+              ] .
+
+<http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:dateTime .
+
+<http://cmusv/1.0/11073-Subset/Subset1.0#unitValue>
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+HSL:BPReading_1
+      hsl:units "mmhg"^^xsd:string .
+
+hsl:BPReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:BPReading-BloodPressureReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        <http://cmusv/HSL/diastolicPressure> ;
+                        schema:endDate ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#ReadingValue>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:BPReading-BloodPressureReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        <http://cmusv/HSL/systolicPressure> ;
+                        hsl:units ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#ReadingValue>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#unitValue>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:systolicPressure ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#readingValue>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:meanArterialPressure ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#readingValue>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:diastolicPressure ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#readingValue>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-0-1 ;
@@ -44,6 +91,38 @@
                         rdf:type
               ] .
 
+hsl:TemperatureReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading .
+
+hsl:WeightScaleReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading .
+
+hsl:bodyHeight
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:bodyMassIndex
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:bodyTemperature
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:bodyWeight
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:spO2
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:float .
+
+hsl:units
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
 <http://www.cmusv.edu/MobileHealth/1.0/Mapping>
       rdf:type owl:Ontology ;
       owl:imports <http://cmusv/HSL> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://topbraid.org/spin/spinmapl> , <http://spinrdf.org/spin> ;
@@ -51,10 +130,10 @@
 
 Mapping:BPReading-BloodPressureReading
       rdf:type spinmap:Context ;
-      spinmap:sourceClass <http://cmusv/HSL/BPReading> ;
+      spinmap:sourceClass hsl:BPReading ;
       spinmap:target
               [ rdf:type spinmapl:buildURI1 ;
-                sp:arg1 <http://cmusv/HSL/readingID> ;
+                sp:arg1 hsl:readingID ;
                 spinmap:source spinmap:_source ;
                 spinmapl:template "subset:{?1}"^^xsd:string
               ] ;
