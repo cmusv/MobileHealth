@@ -1,4 +1,4 @@
-# Saved by TopBraid on Thu Mar 22 17:31:51 PDT 2012
+# Saved by TopBraid on Fri Mar 30 08:47:18 PDT 2012
 # baseURI: http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Importscript3
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
@@ -27,7 +27,7 @@ mhs:dataProperty
 
 <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Importscript3>
       rdf:type owl:Ontology ;
-      owl:imports <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Functions> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> ;
+      owl:imports <http://www.topbraidcomposer.org/owl/2006/08/spreadsheets.owl> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Functions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 import:AddImports
@@ -37,7 +37,7 @@ import:AddImports
               [ rdf:type sp:Construct ;
                 sp:templates ([ sp:object <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/ClassDefinitions> ;
                             sp:predicate owl:imports ;
-                            sp:subject <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Output>
+                            sp:subject <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101>
                           ]) ;
                 sp:where ()
               ] .
@@ -115,7 +115,7 @@ import:ApplyTopSPIN_1
 
 import:BuildClasses
       rdf:type sml:ApplyConstruct ;
-      sm:next import:RemoveExternalRefs , import:ImportClassDefinitions , import:AddProperties ;
+      sm:next import:AddProperties , import:ImportClassDefinitions , import:RemoveExternalRefs ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
                 rdfs:comment "Build classes and properties, and links from spreadsheet (works)"^^xsd:string ;
@@ -209,8 +209,8 @@ import:ExportToRDFFile_1
 
 import:ExportToRDFFile_2
       rdf:type sml:ExportToRDFFile ;
-      sml:baseURI "http://www.cmusv.edu/MobileHealth/2.1/11073/10101/Output"^^xsd:string ;
-      sml:targetFilePath "/MobileHealth/2.1/11073/10101/Output.rdf"^^xsd:string .
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101"^^xsd:string ;
+      sml:targetFilePath "/MobileHealth/2.1/11073/10101/11073-10101.rdf"^^xsd:string .
 
 import:ImportClassDefinitions
       rdf:type sml:ApplyConstruct ;
@@ -233,7 +233,7 @@ import:ImportRDFFromWorkspace_1
 
 import:ImportSpreadsheet
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next import:AddProperties , import:ImportClassDefinitions , import:BuildClasses ;
+      sm:next import:BuildClasses , import:ImportClassDefinitions , import:AddProperties ;
       sml:baseURI "http://www.cmusv.edu/MobileHealth/2.1/11073/10101/2004Tables"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/MobileHealth/2.1/11073/10101/2004Tables.rdf"^^xsd:string .
@@ -252,6 +252,12 @@ import:RemoveExternalRefs
                             sp:subject _:b20
                           ])
               ] .
+
+_:b20
+      sp:varName "s"^^xsd:string .
+
+_:b19
+      sp:varName "o"^^xsd:string .
 
 _:b18
       sp:varName "cleanpropname"^^xsd:string .
@@ -294,9 +300,3 @@ _:b3  sp:varName "contents"^^xsd:string .
 _:b2  sp:varName "newinstance"^^xsd:string .
 
 _:b1  sp:varName "class"^^xsd:string .
-
-_:b20
-      sp:varName "s"^^xsd:string .
-
-_:b19
-      sp:varName "o"^^xsd:string .
