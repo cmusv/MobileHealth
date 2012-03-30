@@ -1,0 +1,3474 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ra="file:///MobileHealth/1.0/11073/10201/raw_associations#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:tables="http://topbraid.org/tables#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="file:///MobileHealth/1.0/11073/10201/raw_associations">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://topbraid.org/tables"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="raw_associations">
+    <rdfs:label>raw_associations</rdfs:label>
+    <tables:sheetIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</tables:sheetIndex>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:ID="bDecoration">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>B_decoration</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8</tables:columnIndex>
+    <rdfs:domain rdf:resource="#raw_associations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="aMultiplicity">
+    <rdfs:domain rdf:resource="#raw_associations"/>
+    <rdfs:label>A_multiplicity</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >5</tables:columnIndex>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="bRoleName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>B_roleName</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >7</tables:columnIndex>
+    <rdfs:domain rdf:resource="#raw_associations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="aDecoration">
+    <rdfs:domain rdf:resource="#raw_associations"/>
+    <rdfs:label>A_decoration</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</tables:columnIndex>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="assocId">
+    <rdfs:domain rdf:resource="#raw_associations"/>
+    <rdfs:label>assoc_id</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</tables:columnIndex>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="aClassifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>A_classifier</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</tables:columnIndex>
+    <rdfs:domain rdf:resource="#raw_associations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="aRoleName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>A_roleName</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</tables:columnIndex>
+    <rdfs:domain rdf:resource="#raw_associations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="bClassifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>B_classifier</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</tables:columnIndex>
+    <rdfs:domain rdf:resource="#raw_associations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="direction">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>direction</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</tables:columnIndex>
+    <rdfs:domain rdf:resource="#raw_associations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="bMultiplicity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>B_multiplicity</rdfs:label>
+    <tables:columnIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</tables:columnIndex>
+    <rdfs:domain rdf:resource="#raw_associations"/>
+  </owl:DatatypeProperty>
+  <ra:raw_associations rdf:ID="Row-99">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Demographics</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >99</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient::Patient Demographics</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630528193_963476_4132</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-71">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325972864604_226094_4621</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sa-Marker-List</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >71</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MarkerListSaVal</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-122">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert Monitor</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >122</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert Monitor</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325624105040_952092_2268</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-112">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Operation</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325626812975_673817_2934</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >112</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Service-and-Control</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Operation</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Service-and-Control</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-91">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >91</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Multipatient Archive</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Multipatient Archive</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Archive</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Patient Archive</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630060596_346133_3808</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-66">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325621679619_534984_1574</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:aClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >66</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-85">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::ProdSpecEntry</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325647826338_701908_5796</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Production-Specification</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >85</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-45">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Averaging-Period</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >45</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricMeasure</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325949333450_377941_2828</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-15">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >15</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient::Patient Demographics</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Demographics</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630528193_963476_4132</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-104">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630317119_147672_4003</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Ancillary</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >104</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ancillary</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-132">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute_Group</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >132</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Attribute_Group</ra:bRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325641952999_866237_5348</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >group_elements</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-35">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325964829708_171004_3847</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EnumMsmtRangeLabel</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >35</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumVal</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumMsmtRangeLabel</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-7">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325645098211_697086_5534</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >attribute-value</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AVA-Type</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >7</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Object</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::AVA-Type</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-52">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325650441673_904545_6166</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MetricSpec</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricStructure</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >structure</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >52</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricSpec</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-25">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325957803524_723965_3416</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >attributes</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::AVA-Type</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CmplxObsElem</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxObsElem</ra:aClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >25</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-98">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Notes</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Notes</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630134385_577777_3884</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >98</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-53">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Numeric</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Numeric</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325952311559_881267_3020</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Compound-Nu-Observed-Value</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >53</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::NuObsValue</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-70">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >70</tables:rowIndex>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325971973184_361612_4516</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sa-Calibration-Data</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SACalData</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-123">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >123</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625659878_84730_2497</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-90">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Patient Archive</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >90</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Archive</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Multipatient Archive</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630060596_346133_3808</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Multipatient Archive</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-113">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Service-and-Control</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >113</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Service-and-Control</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325626722265_731421_2870</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-67">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325989187641_732624_4839</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RealTime-SA</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >67</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sweep-Speed</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricMeasure</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::RealTime-SA</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-102">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625659878_84730_2497</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >102</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-133">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >133</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Attribute_Group</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute_Group</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325641819957_545406_5327</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:bDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-103">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630123934_305547_3871</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >103</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-14">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Extended Services::Scanner</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >14</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325628875897_205856_3202</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Scanner</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-44">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Segment</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >44</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Segment</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997605967_704060_2064</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-84">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Service-and-Control</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Service-and-Control</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >84</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325626722265_731421_2870</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-114">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >114</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Service-and-Control</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325626753698_723576_2891</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Service-and-Control</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-6">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325640947862_37715_5276</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >relation-attributes</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ExtObjRelationEntry</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::AVA-Type</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtObjRelationEntry</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-24">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CmplxMetricInfo</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxMetricInfo</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cm-elem-info-list</ra:bRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325955796630_75856_3225</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >24</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxElemInfo</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-34">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MarkerEntryIndex</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dsa-Marker-List</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Distribution-SA</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325991035369_966890_5065</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Distribution-SA</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >34</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-124">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >124</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::Log</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Log</ra:bRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625763907_394518_2561</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-119">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >119</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1322056016085_317600_2121</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-54">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Display-Resolution</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >54</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::DispResolution</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Numeric</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Numeric</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325952410302_136479_3027</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-97">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630123934_305547_3871</ra:assocId>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >97</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-64">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997504626_268274_2028</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >64</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-87">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ext-Obj-Relations</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >87</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMO</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMO</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325643771761_89840_5418</ra:assocId>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtObjRelationEntry</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-110">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..Infinity</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >110</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Interface</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Mib Element</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629884859_4659_3624</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mib Element</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Device Interface</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-130">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >130</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Demographics</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient::Patient Demographics</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630546103_183125_4158</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-47">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >47</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric-Calibration</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricCalEntry</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325897760879_828883_2495</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-106">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Communication Controller</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629428275_322807_3468</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication Controller</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >106</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-13">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMO</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Handle</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >13</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMO</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Handle</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1322144617761_476580_2236</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-33">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >33</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Distribution-Range-Specification</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Distribution-SA</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::DsaRangeSpec</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Distribution-SA</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325990576922_970591_5005</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-27">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxStaticAttrElem</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >attributes</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >27</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::AVA-Type</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CmplxStaticAttrElem</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325960255975_419956_3717</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-139">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325641819957_545406_5327</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute_Group</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >139</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Attribute_Group</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-5">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >5</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::AlertStatus</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AlertStatus</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325624094331_753584_2255</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-125">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625794439_306080_2602</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Battery</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::Battery</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >125</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-50">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtNomenRef</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325949637898_698404_2852</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Substance</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >50</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-3">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325624105040_952092_2268</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert Monitor</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert Monitor</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-55">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Numeric</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Numeric</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nu-Measure-Range</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::AbsoluteRange</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >55</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325953159454_135669_3075</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-65">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Segment</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Segment</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997658976_545481_2077</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >65</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-86">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SystemModel</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >86</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD-Model</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325647040668_894495_5666</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-111">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Mib Element</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..Infinity</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mib Element</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Interface</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Device Interface</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629884859_4659_3624</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >111</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-46">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricMeasure</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Measure-Period</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >46</tables:rowIndex>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325949347940_838326_2833</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-12">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::GLB-HANDLE</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Handle</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GLB-HANDLE</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >handle</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325896560071_635516_2413</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-131">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Attribute</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325638269729_823530_4988</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >131</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-105">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::BCC</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629560666_547266_3568</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Interface</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >105</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BCC</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Device Interface</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-32">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Complex Metric</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxStaticAttrElem</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325959911232_344254_3659</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >32</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Cmplx-Static-Attr</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Complex Metric</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-26">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CmplxObsValue</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cm-obs-elem-list</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >26</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325957627203_992007_3373</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxObsValue</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxObsElem</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-96">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Physician</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630108398_387571_3850</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Physician</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >96</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-126">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::Clock</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625825602_117123_2643</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >126</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clock</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-51">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >51</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Vmo-Source-List</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VmoSourceEntry</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325896391992_168029_2382</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-4">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AlertStatus</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325623740820_286679_2191</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::AlertStatus</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-61">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Segment</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Segment</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >61</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1326044722811_918789_5742</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Segment-Data</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SegData</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-127">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325626753698_723576_2891</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >127</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Service-and-Control</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Service-and-Control</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-21">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >21</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325623247404_890661_2170</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-41">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Enum-Observed-Value</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325968700521_343005_4234</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Enumeration</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Enumeration</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumObsValue</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >41</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-137">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325639287410_243911_5121</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >137</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Notification</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Notification</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-56">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >56</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::NuObsValue</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325951635127_189476_2940</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nu-Observed-Value</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Numeric</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Numeric</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-39">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Enumeration</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325967819881_996364_4148</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Enumeration</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumObsValue</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >39</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Compund-Enum-Observed-Value</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-11">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::AVA-Type</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtObjRelationEntry</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >relation-attributes</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ExtObjRelationEntry</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325640947862_37715_5276</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >11</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-2">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325624087075_255882_2242</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-49">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >49</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric-Specification</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325650674639_515990_6205</ra:assocId>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricSpec</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-117">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >117</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clock</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625825602_117123_2643</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::Clock</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-75">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325971251774_551646_4403</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >75</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Scale-and-Range-Specification</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::ScaleRangeSpec</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-76">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SaGridEntry</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >76</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325971605037_120818_4470</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Visual-Grid</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-95">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Archive</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >95</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:aClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630089632_555576_3829</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Patient Archive</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-31">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Complex Metric</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325957247975_319439_3295</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Cmplx-Observed-Value</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxObsValue</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Complex Metric</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >31</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-19">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997308111_86926_1957</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >19</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-29">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Complex Metric</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxDynAttr</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Cmplx-Dyn-Attr</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >29</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Complex Metric</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325958820866_759984_3523</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-81">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >81</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1322056016085_317600_2121</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-108">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629550833_257443_3555</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Device Interface</ra:aClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >108</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Interface</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DCC</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::DCC</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-38">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325966630940_628772_4116</ra:assocId>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Object</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >38</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumRecordOo</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >record-data</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EnumRecordOo</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-20">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >20</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997504626_268274_2028</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-60">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1326043282464_349710_5693</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric-Id-Ext</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Segment</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtNomenRef</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Segment</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >60</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-128">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325628875897_205856_3202</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Scanner</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Extended Services::Scanner</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >128</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-40">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >40</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Enum-Mesure-Range-Labels</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumMsmtRangeLabel</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Enumeration</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325964378929_888502_3810</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Enumeration</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-138">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:aDecoration>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Behavior</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >138</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325639332377_878475_5162</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Behavior</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-30">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Complex Metric</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Complex Metric</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Cmplx-Metric-Info</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325955656171_973077_3186</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >30</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxMetricInfo</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-118">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625763907_394518_2561</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Log</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::Log</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >118</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-48">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric-Id-Ext</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >48</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtNomenRef</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325895493227_412111_2280</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-57">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nu-Physiological-Range</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >57</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Numeric</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::AbsoluteRange</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325953323399_106578_3111</ra:assocId>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Numeric</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-10">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMO</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtObjRelationEntry</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMO</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ext-Obj-Relations</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325643771761_89840_5418</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >10</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-74">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SaSignalFrequency</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >74</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325974641714_190608_4751</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sa-Signal-Frequency</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-1">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325623781770_130638_2204</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</tables:rowIndex>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-77">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325989859944_150829_4937</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >77</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MetricMeasure</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sweep-Speed</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Time-SA</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Time-SA</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-94">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630108398_387571_3850</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Physician</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >94</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Physician</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-18">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997289511_542921_1944</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >18</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-28">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..Infinity</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997326192_914263_1970</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >28</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Complex Metric</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Complex Metric</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-107">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >107</tables:rowIndex>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Device Interface</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Interface</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::DCC</ra:aClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DCC</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629550833_257443_3555</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-80">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997475306_589226_2007</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >80</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-129">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Communication Controller</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication Controller</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629428275_322807_3468</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >129</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-23">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >attributes</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >23</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CmplxDynAttrElem</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325959341830_763732_3616</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxDynAttrElem</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::AVA-Type</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-63">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:aClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997475306_589226_2007</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >63</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-8">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ancillary</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630317119_147672_4003</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Ancillary</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-68">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Compound-Sa-Observed-Value</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SaObsValue</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325969267310_895387_4330</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >68</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-37">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumRecordMetric</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Object</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EnumRecordMetric</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325966767447_851602_4124</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >37</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >record-data</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-0">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325623247404_890661_2170</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</tables:rowIndex>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-73">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325971449280_164049_4426</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sa-Physiological-Range</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::ScaleRangeSpec</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >73</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-115">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Service-and-Control</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Operation</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Control::Service-and-Control</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Operation</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >115</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325626812975_673817_2934</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-58">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997605967_704060_2064</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Segment</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >58</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Segment</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-120">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325624087075_255882_2242</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >120</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-17">
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >17</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient::Patient Demographics</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630546103_183125_4158</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Demographics</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-93">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Patient Archive</ra:aClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Archive</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630542031_641219_4145</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Demographics</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >93</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient::Patient Demographics</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-101">
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325621679619_534984_1574</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session-Test</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >101</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session-Test</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:bClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-78">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::MarkerEntryRelTim</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Time-SA</ra:aRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Tsa-Marker-List</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Time-SA</ra:aClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >78</tables:rowIndex>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325989616085_482992_4916</ra:assocId>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-88">
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMO</ra:aClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1322144617761_476580_2236</ra:assocId>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Handle</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Handle</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >88</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMO</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-134">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >group_elements</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325641952999_866237_5348</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >134</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute_Group</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Attribute_Group</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-43">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Complex Metric</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Complex Metric</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >43</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997326192_914263_1970</ra:assocId>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..Infinity</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-83">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >83</tables:rowIndex>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325623781770_130638_2204</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::Alert</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert</ra:bRoleName>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-140">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325639287410_243911_5121</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Notification</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Notification</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >140</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-136">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >136</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Attribute</ra:bClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325638269729_823530_4988</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Attribute</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-69">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325973669504_482409_4645</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Filter-Specification</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >69</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SaFilterEntry</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-9">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::Object</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325645456873_247593_5565</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::ExtNomenRef</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >nomenclature-code</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ExtNomenRef</ra:aRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-22">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CmplxDynAttr</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cm-dyn-elem-list</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325959028047_375889_3562</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >22</tables:rowIndex>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxDynAttr</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::CmplxDynAttrElem</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-36">
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumObsValue</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::EnumVal</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EnumObsValue</ra:aRoleName>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value</ra:bRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325968353086_595883_4208</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >36</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-62">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Segment</ra:aRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >62</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Segment</ra:aClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Vmo-Global-Reference</ra:bRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1326043643906_55315_5712</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::GLB-HANDLE</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-116">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325625794439_306080_2602</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Battery</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::Battery</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >116</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-72">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::SaObsValue</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >72</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Sample Array</ra:aClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sample Array</ra:aRoleName>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325969251035_148822_4292</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sa-Observed-Value</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-121">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::AlertStatus</ra:bClassifier>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AlertStatus</ra:bRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >System::MDS</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325624094331_753584_2255</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDS</ra:aRoleName>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >121</tables:rowIndex>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-59">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Store</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::PM-Segment</ra:aClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997658976_545481_2077</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >59</tables:rowIndex>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Segment</ra:aRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PM-Store</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-79">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >79</tables:rowIndex>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:bClassifier>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997289511_542921_1944</ra:assocId>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-100">
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:bRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >100</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:bClassifier>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Notes</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630134385_577777_3884</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Notes</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-92">
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Session Archive</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630089632_555576_3829</ra:assocId>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Archive</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Patient Archive</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:bMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >92</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Session Archive</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-109">
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::BCC</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Interface</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Communication::Device Interface</ra:aClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >109</tables:rowIndex>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325629560666_547266_3568</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BCC</ra:bRoleName>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-89">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:aMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VmoSourceEntry</ra:aClassifier>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >glb-handle</ra:bRoleName>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VmoSourceEntry</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >89</tables:rowIndex>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unclear::GLB-HANDLE</ra:bClassifier>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >toward_B</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325896577978_676155_2429</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-82">
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AlertStatus</ra:bRoleName>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alert::AlertStatus</ra:bClassifier>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >82</tables:rowIndex>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VMD</ra:aRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::VMD</ra:aClassifier>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325623740820_286679_2191</ra:assocId>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-42">
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Channel</ra:bRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Channel</ra:bClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >aggregation</ra:bDecoration>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metric</ra:aRoleName>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >42</tables:rowIndex>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1321997308111_86926_1957</ra:assocId>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical::Metric</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-16">
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Demographics</ra:aRoleName>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archival::Patient Archive</ra:bClassifier>
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:aMultiplicity>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..1</ra:bMultiplicity>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:bDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325630542031_641219_4145</ra:assocId>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >16</tables:rowIndex>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient Archive</ra:bRoleName>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patient::Patient Demographics</ra:aClassifier>
+  </ra:raw_associations>
+  <ra:raw_associations rdf:ID="Row-135">
+    <ra:aMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0..Infinity</ra:aMultiplicity>
+    <tables:rowIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >135</tables:rowIndex>
+    <ra:bMultiplicity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1..1</ra:bMultiplicity>
+    <ra:bClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Class</ra:bClassifier>
+    <ra:aRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Behavior</ra:aRoleName>
+    <ra:direction rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bidirectional</ra:direction>
+    <ra:bRoleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class</ra:bRoleName>
+    <ra:aDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >none</ra:aDecoration>
+    <ra:assocId rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >_16_9_f2e0365_1325639332377_878475_5162</ra:assocId>
+    <ra:aClassifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Meta::Behavior</ra:aClassifier>
+    <ra:bDecoration rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >composition</ra:bDecoration>
+  </ra:raw_associations>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

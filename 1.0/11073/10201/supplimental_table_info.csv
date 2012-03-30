@@ -1,0 +1,60 @@
+class_name,section,package_name,is_abstract,has_attributes,has_groups
+Activate_Operation,7.6.7,Control,false,false,true
+Alert,7.4.1,Alert,false,true,true
+Alert_Monitor,7.4.3,Alert,false,true,true
+Alert_Scanner,7.7.8,Extended Services,false,true,false
+Alert_Status,7.4.2,Alert,false,true,true
+BCC,7.8.3,Communication,false,false,false
+Battery,7.5.9,System,false,true,true
+CfgScanner,7.7.2,Extended Services,true,true,true
+Channel,7.3.3,Medical,false,true,true
+Clock,7.5.10,System,false,true,true
+Communication_Controller,7.8.1,Communication,true,true,true
+Complex_Metric,7.3.11,Medical,false,true,true
+Composite_Multiple_Bed_MDS,7.5.6,System,false,false,false
+Composite_Single_Bed_MDS,7.5.5,System,false,false,false
+Context_Scanner,7.7.7,Extended Services,false,true,false
+DCC,7.8.2,Communication,false,false,false
+Device_Interface,7.8.4,Communication,false,false,false
+Device_Interface_MibElement,7.8.6,Communication,false,true,false
+Distribution_Sample_Array,7.3.9,Medical,false,true,true
+Enumeration,7.3.10,Medical,false,true,true
+EpiCfgScanner,7.7.3,Extended Services,false,false,false
+Event_Log,7.5.8,System,false,true,false
+FastPeriCfgScanner,7.7.5,Extended Services,false,false,false
+General_Communication_Statistics_MibElement,7.8.7,Communication,false,true,false
+Hydra_MDS,7.5.4,System,false,false,false
+Limit_Alert_Operation,7.6.8,Control,false,true,true
+Log,7.5.7,System,true,true,false
+MDS,7.5.2,System,true,true,true
+Metric,7.3.4,Medical,true,true,true
+MibElement,7.8.5,Communication,true,true,false
+Multipatient_Archive,7.9.1,Archival,false,true,true
+Numeric,7.3.5,Medical,false,true,true
+Operating_Scanner,7.7.9,Extended Services,false,false,false
+Operation,7.6.2,Control,true,true,true
+PM-Segment,7.3.13,Medical,false,true,false
+PM-Store,7.3.12,Medical,false,true,true
+Patient_Archive,7.9.2,Archival,false,true,true
+Patient_Demographics,7.10.1,Patient,false,true,true
+PeriCfgScanner,7.7.4,Extended Services,true,true,true
+Physician,7.9.4,Archival,false,true,true
+Real_Time_Sample_Array,7.3.7,Medical,false,true,true
+SCO,7.6.1,Control,false,true,true
+Sample_Array,7.3.6,Medical,true,true,true
+Scanner,7.7.1,Extended Services,true,true,true
+Select_Item_Operation,7.6.3,Control,false,true,true
+Session_Archive,7.9.3,Archival,false,true,true
+Session_Notes,7.9.6,Archival,false,true,true
+Session_Test,7.9.5,Archival,false,true,true
+Set_Range_Operation,7.6.9,Control,false,true,true
+Set_String_Operation,7.6.5,Control,false,true,true
+Set_Value_Operation,7.6.4,Control,false,true,true
+Simple_MDS,7.5.3,System,false,false,false
+Time_Sample_Array,7.3.8,Medical,false,true,true
+Toggle_Flag_Operation,7.6.6,Control,false,true,true
+Top,7.2,BEFORE_FIRST_PKG,true,true,false
+UcfgScanner,7.7.6,Extended Services,true,true,true
+VMD,7.3.2,Medical,true,true,true
+VMO,7.3.1,Medical,true,true,true
+VMS,7.5.1,System,true,true,true

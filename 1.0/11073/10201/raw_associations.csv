@@ -1,0 +1,142 @@
+assoc_id,direction,A_classifier,A_roleName,A_decoration,A_multiplicity,B_classifier,B_roleName,B_decoration,B_multiplicity
+_16_9_f2e0365_1325623247404_890661_2170,bidirectional,Alert::Alert,Alert,none,0..Infinity,Medical::Channel,Channel,aggregation,0..1
+_16_9_f2e0365_1325623781770_130638_2204,bidirectional,Alert::Alert,Alert,none,0..Infinity,Medical::VMD,VMD,aggregation,0..1
+_16_9_f2e0365_1325624087075_255882_2242,bidirectional,Alert::Alert,Alert,none,0..Infinity,System::MDS,MDS,aggregation,0..1
+_16_9_f2e0365_1325624105040_952092_2268,bidirectional,Alert::Alert Monitor,Alert Monitor,none,0..1,System::MDS,MDS,aggregation,1..1
+_16_9_f2e0365_1325623740820_286679_2191,bidirectional,Alert::AlertStatus,AlertStatus,none,1..1,Medical::VMD,VMD,aggregation,0..1
+_16_9_f2e0365_1325624094331_753584_2255,bidirectional,Alert::AlertStatus,AlertStatus,none,0..1,System::MDS,MDS,aggregation,0..1
+_16_9_f2e0365_1325640947862_37715_5276,bidirectional,Unclear::AVA-Type,relation-attributes,none,0..Infinity,Unclear::ExtObjRelationEntry,ExtObjRelationEntry,composition,1..1
+_16_9_f2e0365_1325645098211_697086_5534,toward_B,Unclear::AVA-Type,AVA-Type,composition,1..1,Unclear::Object,attribute-value,none,1..1
+_16_9_f2e0365_1325630317119_147672_4003,bidirectional,Unclear::Ancillary,Ancillary,none,0..Infinity,Archival::Session-Test,Session-Test,none,0..Infinity
+_16_9_f2e0365_1325645456873_247593_5565,toward_B,Unclear::ExtNomenRef,ExtNomenRef,composition,1..1,Unclear::Object,nomenclature-code,none,1..1
+_16_9_f2e0365_1325643771761_89840_5418,bidirectional,Unclear::ExtObjRelationEntry,Ext-Obj-Relations,none,0..Infinity,Medical::VMO,VMO,none,1..1
+_16_9_f2e0365_1325640947862_37715_5276,bidirectional,Unclear::ExtObjRelationEntry,ExtObjRelationEntry,composition,1..1,Unclear::AVA-Type,relation-attributes,none,0..Infinity
+_16_9_f2e0365_1325896560071_635516_2413,toward_B,Unclear::GLB-HANDLE,GLB-HANDLE,none,1..1,Unclear::Handle,handle,none,1..1
+_16_9_f2e0365_1322144617761_476580_2236,bidirectional,Unclear::Handle,Handle,none,1..1,Medical::VMO,VMO,none,1..1
+_16_9_f2e0365_1325628875897_205856_3202,bidirectional,Extended Services::Scanner,Scanner,none,0..Infinity,System::MDS,MDS,aggregation,1..1
+_16_9_f2e0365_1325630528193_963476_4132,bidirectional,Patient::Patient Demographics,Patient Demographics,none,0..1,Archival::Session Archive,Session Archive,none,0..1
+_16_9_f2e0365_1325630542031_641219_4145,bidirectional,Patient::Patient Demographics,Patient Demographics,none,0..1,Archival::Patient Archive,Patient Archive,none,0..1
+_16_9_f2e0365_1325630546103_183125_4158,bidirectional,Patient::Patient Demographics,Patient Demographics,none,0..1,System::MDS,MDS,none,0..1
+_16_9_f2e0365_1321997289511_542921_1944,bidirectional,Medical::Channel,Channel,none,0..Infinity,Medical::VMD,VMD,aggregation,1..1
+_16_9_f2e0365_1321997308111_86926_1957,bidirectional,Medical::Channel,Channel,aggregation,1..1,Medical::Metric,Metric,none,0..Infinity
+_16_9_f2e0365_1321997504626_268274_2028,bidirectional,Medical::Channel,Channel,aggregation,0..1,Medical::PM-Store,PM-Store,none,0..Infinity
+_16_9_f2e0365_1325623247404_890661_2170,bidirectional,Medical::Channel,Channel,aggregation,0..1,Alert::Alert,Alert,none,0..Infinity
+_16_9_f2e0365_1325959028047_375889_3562,toward_B,Medical::CmplxDynAttr,CmplxDynAttr,none,1..1,Medical::CmplxDynAttrElem,cm-dyn-elem-list,none,0..Infinity
+_16_9_f2e0365_1325959341830_763732_3616,toward_B,Medical::CmplxDynAttrElem,CmplxDynAttrElem,none,1..1,Unclear::AVA-Type,attributes,none,0..Infinity
+_16_9_f2e0365_1325955796630_75856_3225,toward_B,Medical::CmplxMetricInfo,CmplxMetricInfo,none,1..1,Medical::CmplxElemInfo,cm-elem-info-list,none,0..Infinity
+_16_9_f2e0365_1325957803524_723965_3416,toward_B,Medical::CmplxObsElem,CmplxObsElem,none,1..1,Unclear::AVA-Type,attributes,none,0..Infinity
+_16_9_f2e0365_1325957627203_992007_3373,toward_B,Medical::CmplxObsValue,CmplxObsValue,none,1..1,Medical::CmplxObsElem,cm-obs-elem-list,none,0..Infinity
+_16_9_f2e0365_1325960255975_419956_3717,toward_B,Medical::CmplxStaticAttrElem,CmplxStaticAttrElem,none,1..1,Unclear::AVA-Type,attributes,none,0..Infinity
+_16_9_f2e0365_1321997326192_914263_1970,bidirectional,Medical::Complex Metric,Complex Metric,none,0..Infinity,Medical::Metric,Metric,none,1..Infinity
+_16_9_f2e0365_1325958820866_759984_3523,toward_B,Medical::Complex Metric,Complex Metric,none,1..1,Medical::CmplxDynAttr,Cmplx-Dyn-Attr,none,0..1
+_16_9_f2e0365_1325955656171_973077_3186,toward_B,Medical::Complex Metric,Complex Metric,none,1..1,Medical::CmplxMetricInfo,Cmplx-Metric-Info,none,1..1
+_16_9_f2e0365_1325957247975_319439_3295,toward_B,Medical::Complex Metric,Complex Metric,none,1..1,Medical::CmplxObsValue,Cmplx-Observed-Value,none,1..1
+_16_9_f2e0365_1325959911232_344254_3659,toward_B,Medical::Complex Metric,Complex Metric,none,1..1,Medical::CmplxStaticAttrElem,Cmplx-Static-Attr,none,0..Infinity
+_16_9_f2e0365_1325990576922_970591_5005,toward_B,Medical::Distribution-SA,Distribution-SA,none,1..1,Medical::DsaRangeSpec,Distribution-Range-Specification,none,1..1
+_16_9_f2e0365_1325991035369_966890_5065,toward_B,Medical::Distribution-SA,Distribution-SA,none,1..1,Medical::MarkerEntryIndex,Dsa-Marker-List,none,0..Infinity
+_16_9_f2e0365_1325964829708_171004_3847,toward_B,Medical::EnumMsmtRangeLabel,EnumMsmtRangeLabel,none,1..1,Medical::EnumVal,value,none,1..1
+_16_9_f2e0365_1325968353086_595883_4208,toward_B,Medical::EnumObsValue,EnumObsValue,none,1..1,Medical::EnumVal,value,none,1..1
+_16_9_f2e0365_1325966767447_851602_4124,toward_B,Medical::EnumRecordMetric,EnumRecordMetric,none,1..1,Unclear::Object,record-data,none,1..1
+_16_9_f2e0365_1325966630940_628772_4116,toward_B,Medical::EnumRecordOo,EnumRecordOo,none,1..1,Unclear::Object,record-data,none,1..1
+_16_9_f2e0365_1325967819881_996364_4148,toward_B,Medical::Enumeration,Enumeration,none,1..1,Medical::EnumObsValue,Compund-Enum-Observed-Value,none,0..Infinity
+_16_9_f2e0365_1325964378929_888502_3810,toward_B,Medical::Enumeration,Enumeration,none,1..1,Medical::EnumMsmtRangeLabel,Enum-Mesure-Range-Labels,none,0..Infinity
+_16_9_f2e0365_1325968700521_343005_4234,toward_B,Medical::Enumeration,Enumeration,none,1..1,Medical::EnumObsValue,Enum-Observed-Value,none,0..1
+_16_9_f2e0365_1321997308111_86926_1957,bidirectional,Medical::Metric,Metric,none,0..Infinity,Medical::Channel,Channel,aggregation,1..1
+_16_9_f2e0365_1321997326192_914263_1970,bidirectional,Medical::Metric,Metric,none,1..Infinity,Medical::Complex Metric,Complex Metric,none,0..Infinity
+_16_9_f2e0365_1321997605967_704060_2064,bidirectional,Medical::Metric,Metric,none,0..Infinity,Medical::PM-Segment,PM-Segment,none,0..Infinity
+_16_9_f2e0365_1325949333450_377941_2828,toward_B,Medical::Metric,Metric,none,1..1,Medical::MetricMeasure,Averaging-Period,none,0..Infinity
+_16_9_f2e0365_1325949347940_838326_2833,toward_B,Medical::Metric,Metric,none,1..1,Medical::MetricMeasure,Measure-Period,none,0..Infinity
+_16_9_f2e0365_1325897760879_828883_2495,toward_B,Medical::Metric,Metric,none,1..1,Medical::MetricCalEntry,Metric-Calibration,none,0..1
+_16_9_f2e0365_1325895493227_412111_2280,toward_B,Medical::Metric,Metric,none,1..1,Unclear::ExtNomenRef,Metric-Id-Ext,none,0..1
+_16_9_f2e0365_1325650674639_515990_6205,toward_B,Medical::Metric,Metric,none,1..1,Medical::MetricSpec,Metric-Specification,none,1..1
+_16_9_f2e0365_1325949637898_698404_2852,toward_B,Medical::Metric,Metric,none,1..1,Unclear::ExtNomenRef,Substance,none,0..1
+_16_9_f2e0365_1325896391992_168029_2382,toward_B,Medical::Metric,Metric,none,1..1,Medical::VmoSourceEntry,Vmo-Source-List,none,0..Infinity
+_16_9_f2e0365_1325650441673_904545_6166,toward_B,Medical::MetricSpec,MetricSpec,none,1..1,Medical::MetricStructure,structure,none,1..1
+_16_9_f2e0365_1325952311559_881267_3020,toward_B,Medical::Numeric,Numeric,none,1..1,Medical::NuObsValue,Compound-Nu-Observed-Value,none,0..Infinity
+_16_9_f2e0365_1325952410302_136479_3027,toward_B,Medical::Numeric,Numeric,none,1..1,Medical::DispResolution,Display-Resolution,none,0..1
+_16_9_f2e0365_1325953159454_135669_3075,toward_B,Medical::Numeric,Numeric,none,1..1,Medical::AbsoluteRange,Nu-Measure-Range,none,0..1
+_16_9_f2e0365_1325951635127_189476_2940,toward_B,Medical::Numeric,Numeric,none,1..1,Medical::NuObsValue,Nu-Observed-Value,none,0..1
+_16_9_f2e0365_1325953323399_106578_3111,toward_B,Medical::Numeric,Numeric,none,1..1,Medical::AbsoluteRange,Nu-Physiological-Range,none,0..1
+_16_9_f2e0365_1321997605967_704060_2064,bidirectional,Medical::PM-Segment,PM-Segment,none,0..Infinity,Medical::Metric,Metric,none,0..Infinity
+_16_9_f2e0365_1321997658976_545481_2077,bidirectional,Medical::PM-Segment,PM-Segment,none,0..Infinity,Medical::PM-Store,PM-Store,aggregation,1..1
+_16_9_f2e0365_1326043282464_349710_5693,toward_B,Medical::PM-Segment,PM-Segment,none,1..1,Unclear::ExtNomenRef,Metric-Id-Ext,none,0..1
+_16_9_f2e0365_1326044722811_918789_5742,toward_B,Medical::PM-Segment,PM-Segment,none,1..1,Medical::SegData,Segment-Data,none,1..Infinity
+_16_9_f2e0365_1326043643906_55315_5712,toward_B,Medical::PM-Segment,PM-Segment,none,1..1,Unclear::GLB-HANDLE,Vmo-Global-Reference,none,0..1
+_16_9_f2e0365_1321997475306_589226_2007,bidirectional,Medical::PM-Store,PM-Store,none,0..Infinity,Medical::VMD,VMD,aggregation,0..1
+_16_9_f2e0365_1321997504626_268274_2028,bidirectional,Medical::PM-Store,PM-Store,none,0..Infinity,Medical::Channel,Channel,aggregation,0..1
+_16_9_f2e0365_1321997658976_545481_2077,bidirectional,Medical::PM-Store,PM-Store,aggregation,1..1,Medical::PM-Segment,PM-Segment,none,0..Infinity
+_16_9_f2e0365_1325621679619_534984_1574,bidirectional,Medical::PM-Store,PM-Store,none,0..Infinity,Archival::Session-Test,Session-Test,aggregation,0..1
+_16_9_f2e0365_1325989187641_732624_4839,toward_B,Medical::RealTime-SA,RealTime-SA,none,1..1,Medical::MetricMeasure,Sweep-Speed,none,0..1
+_16_9_f2e0365_1325969267310_895387_4330,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::SaObsValue,Compound-Sa-Observed-Value,none,0..Infinity
+_16_9_f2e0365_1325973669504_482409_4645,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::SaFilterEntry,Filter-Specification,none,0..Infinity
+_16_9_f2e0365_1325971973184_361612_4516,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::SACalData,Sa-Calibration-Data,none,0..1
+_16_9_f2e0365_1325972864604_226094_4621,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::MarkerListSaVal,Sa-Marker-List,none,0..Infinity
+_16_9_f2e0365_1325969251035_148822_4292,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::SaObsValue,Sa-Observed-Value,none,0..1
+_16_9_f2e0365_1325971449280_164049_4426,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::ScaleRangeSpec,Sa-Physiological-Range,none,0..1
+_16_9_f2e0365_1325974641714_190608_4751,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::SaSignalFrequency,Sa-Signal-Frequency,none,0..1
+_16_9_f2e0365_1325971251774_551646_4403,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::ScaleRangeSpec,Scale-and-Range-Specification,none,1..1
+_16_9_f2e0365_1325971605037_120818_4470,toward_B,Medical::Sample Array,Sample Array,none,1..1,Medical::SaGridEntry,Visual-Grid,none,0..Infinity
+_16_9_f2e0365_1325989859944_150829_4937,toward_B,Medical::Time-SA,Time-SA,none,1..1,Medical::MetricMeasure,Sweep-Speed,none,1..1
+_16_9_f2e0365_1325989616085_482992_4916,toward_B,Medical::Time-SA,Time-SA,none,1..1,Medical::MarkerEntryRelTim,Tsa-Marker-List,none,0..Infinity
+_16_9_f2e0365_1321997289511_542921_1944,bidirectional,Medical::VMD,VMD,aggregation,1..1,Medical::Channel,Channel,none,0..Infinity
+_16_9_f2e0365_1321997475306_589226_2007,bidirectional,Medical::VMD,VMD,aggregation,0..1,Medical::PM-Store,PM-Store,none,0..Infinity
+_16_9_f2e0365_1322056016085_317600_2121,bidirectional,Medical::VMD,VMD,none,0..Infinity,System::MDS,MDS,aggregation,1..1
+_16_9_f2e0365_1325623740820_286679_2191,bidirectional,Medical::VMD,VMD,aggregation,0..1,Alert::AlertStatus,AlertStatus,none,1..1
+_16_9_f2e0365_1325623781770_130638_2204,bidirectional,Medical::VMD,VMD,aggregation,0..1,Alert::Alert,Alert,none,0..Infinity
+_16_9_f2e0365_1325626722265_731421_2870,bidirectional,Medical::VMD,VMD,aggregation,0..1,Control::Service-and-Control,Service-and-Control,none,0..Infinity
+_16_9_f2e0365_1325647826338_701908_5796,toward_B,Medical::VMD,VMD,none,1..1,Medical::ProdSpecEntry,Production-Specification,none,0..1
+_16_9_f2e0365_1325647040668_894495_5666,toward_B,Medical::VMD,VMD,none,1..1,Medical::SystemModel,VMD-Model,none,0..1
+_16_9_f2e0365_1325643771761_89840_5418,bidirectional,Medical::VMO,VMO,none,1..1,Unclear::ExtObjRelationEntry,Ext-Obj-Relations,none,0..Infinity
+_16_9_f2e0365_1322144617761_476580_2236,bidirectional,Medical::VMO,VMO,none,1..1,Unclear::Handle,Handle,none,1..1
+_16_9_f2e0365_1325896577978_676155_2429,toward_B,Medical::VmoSourceEntry,VmoSourceEntry,none,1..1,Unclear::GLB-HANDLE,glb-handle,none,1..1
+_16_9_f2e0365_1325630060596_346133_3808,bidirectional,Archival::Multipatient Archive,Multipatient Archive,aggregation,0..1,Archival::Patient Archive,Patient Archive,none,0..Infinity
+_16_9_f2e0365_1325630060596_346133_3808,bidirectional,Archival::Patient Archive,Patient Archive,none,0..Infinity,Archival::Multipatient Archive,Multipatient Archive,aggregation,0..1
+_16_9_f2e0365_1325630089632_555576_3829,bidirectional,Archival::Patient Archive,Patient Archive,aggregation,1..1,Archival::Session Archive,Session Archive,none,0..Infinity
+_16_9_f2e0365_1325630542031_641219_4145,bidirectional,Archival::Patient Archive,Patient Archive,none,0..1,Patient::Patient Demographics,Patient Demographics,none,0..1
+_16_9_f2e0365_1325630108398_387571_3850,bidirectional,Archival::Physician,Physician,none,0..Infinity,Archival::Session Archive,Session Archive,none,0..Infinity
+_16_9_f2e0365_1325630089632_555576_3829,bidirectional,Archival::Session Archive,Session Archive,none,0..Infinity,Archival::Patient Archive,Patient Archive,aggregation,1..1
+_16_9_f2e0365_1325630108398_387571_3850,bidirectional,Archival::Session Archive,Session Archive,none,0..Infinity,Archival::Physician,Physician,none,0..Infinity
+_16_9_f2e0365_1325630123934_305547_3871,bidirectional,Archival::Session Archive,Session Archive,aggregation,1..1,Archival::Session-Test,Session-Test,none,0..Infinity
+_16_9_f2e0365_1325630134385_577777_3884,bidirectional,Archival::Session Archive,Session Archive,aggregation,1..1,Archival::Session Notes,Session Notes,none,0..Infinity
+_16_9_f2e0365_1325630528193_963476_4132,bidirectional,Archival::Session Archive,Session Archive,none,0..1,Patient::Patient Demographics,Patient Demographics,none,0..1
+_16_9_f2e0365_1325630134385_577777_3884,bidirectional,Archival::Session Notes,Session Notes,none,0..Infinity,Archival::Session Archive,Session Archive,aggregation,1..1
+_16_9_f2e0365_1325621679619_534984_1574,bidirectional,Archival::Session-Test,Session-Test,aggregation,0..1,Medical::PM-Store,PM-Store,none,0..Infinity
+_16_9_f2e0365_1325625659878_84730_2497,bidirectional,Archival::Session-Test,Session-Test,none,0..Infinity,System::MDS,MDS,none,0..Infinity
+_16_9_f2e0365_1325630123934_305547_3871,bidirectional,Archival::Session-Test,Session-Test,none,0..Infinity,Archival::Session Archive,Session Archive,aggregation,1..1
+_16_9_f2e0365_1325630317119_147672_4003,bidirectional,Archival::Session-Test,Session-Test,none,0..Infinity,Unclear::Ancillary,Ancillary,none,0..Infinity
+_16_9_f2e0365_1325629560666_547266_3568,bidirectional,Communication::BCC,BCC,aggregation,1..1,Communication::Device Interface,Device Interface,none,1..1
+_16_9_f2e0365_1325629428275_322807_3468,bidirectional,Communication::Communication Controller,Communication Controller,none,0..Infinity,System::MDS,MDS,aggregation,1..1
+_16_9_f2e0365_1325629550833_257443_3555,bidirectional,Communication::DCC,DCC,aggregation,1..1,Communication::Device Interface,Device Interface,none,1..1
+_16_9_f2e0365_1325629550833_257443_3555,bidirectional,Communication::Device Interface,Device Interface,none,1..1,Communication::DCC,DCC,aggregation,1..1
+_16_9_f2e0365_1325629560666_547266_3568,bidirectional,Communication::Device Interface,Device Interface,none,1..1,Communication::BCC,BCC,aggregation,1..1
+_16_9_f2e0365_1325629884859_4659_3624,bidirectional,Communication::Device Interface,Device Interface,aggregation,1..1,Communication::Mib Element,Mib Element,none,1..Infinity
+_16_9_f2e0365_1325629884859_4659_3624,bidirectional,Communication::Mib Element,Mib Element,none,1..Infinity,Communication::Device Interface,Device Interface,aggregation,1..1
+_16_9_f2e0365_1325626812975_673817_2934,bidirectional,Control::Operation,Operation,none,0..Infinity,Control::Service-and-Control,Service-and-Control,aggregation,1..1
+_16_9_f2e0365_1325626722265_731421_2870,bidirectional,Control::Service-and-Control,Service-and-Control,none,0..Infinity,Medical::VMD,VMD,aggregation,0..1
+_16_9_f2e0365_1325626753698_723576_2891,bidirectional,Control::Service-and-Control,Service-and-Control,none,0..Infinity,System::MDS,MDS,aggregation,0..1
+_16_9_f2e0365_1325626812975_673817_2934,bidirectional,Control::Service-and-Control,Service-and-Control,aggregation,1..1,Control::Operation,Operation,none,0..Infinity
+_16_9_f2e0365_1325625794439_306080_2602,bidirectional,System::Battery,Battery,none,0..Infinity,System::MDS,MDS,aggregation,1..1
+_16_9_f2e0365_1325625825602_117123_2643,bidirectional,System::Clock,Clock,none,0..1,System::MDS,MDS,aggregation,1..1
+_16_9_f2e0365_1325625763907_394518_2561,bidirectional,System::Log,Log,none,0..Infinity,System::MDS,MDS,aggregation,1..1
+_16_9_f2e0365_1322056016085_317600_2121,bidirectional,System::MDS,MDS,aggregation,1..1,Medical::VMD,VMD,none,0..Infinity
+_16_9_f2e0365_1325624087075_255882_2242,bidirectional,System::MDS,MDS,aggregation,0..1,Alert::Alert,Alert,none,0..Infinity
+_16_9_f2e0365_1325624094331_753584_2255,bidirectional,System::MDS,MDS,aggregation,0..1,Alert::AlertStatus,AlertStatus,none,0..1
+_16_9_f2e0365_1325624105040_952092_2268,bidirectional,System::MDS,MDS,aggregation,1..1,Alert::Alert Monitor,Alert Monitor,none,0..1
+_16_9_f2e0365_1325625659878_84730_2497,bidirectional,System::MDS,MDS,none,0..Infinity,Archival::Session-Test,Session-Test,none,0..Infinity
+_16_9_f2e0365_1325625763907_394518_2561,bidirectional,System::MDS,MDS,aggregation,1..1,System::Log,Log,none,0..Infinity
+_16_9_f2e0365_1325625794439_306080_2602,bidirectional,System::MDS,MDS,aggregation,1..1,System::Battery,Battery,none,0..Infinity
+_16_9_f2e0365_1325625825602_117123_2643,bidirectional,System::MDS,MDS,aggregation,1..1,System::Clock,Clock,none,0..1
+_16_9_f2e0365_1325626753698_723576_2891,bidirectional,System::MDS,MDS,aggregation,0..1,Control::Service-and-Control,Service-and-Control,none,0..Infinity
+_16_9_f2e0365_1325628875897_205856_3202,bidirectional,System::MDS,MDS,aggregation,1..1,Extended Services::Scanner,Scanner,none,0..Infinity
+_16_9_f2e0365_1325629428275_322807_3468,bidirectional,System::MDS,MDS,aggregation,1..1,Communication::Communication Controller,Communication Controller,none,0..Infinity
+_16_9_f2e0365_1325630546103_183125_4158,bidirectional,System::MDS,MDS,none,0..1,Patient::Patient Demographics,Patient Demographics,none,0..1
+_16_9_f2e0365_1325638269729_823530_4988,bidirectional,Meta::Attribute,Attribute,none,0..Infinity,Meta::Class,Class,none,1..1
+_16_9_f2e0365_1325641952999_866237_5348,bidirectional,Meta::Attribute,group_elements,none,0..Infinity,Meta::Attribute_Group,Attribute_Group,none,0..Infinity
+_16_9_f2e0365_1325641819957_545406_5327,bidirectional,Meta::Attribute_Group,Attribute_Group,none,0..Infinity,Meta::Class,Class,composition,1..1
+_16_9_f2e0365_1325641952999_866237_5348,bidirectional,Meta::Attribute_Group,Attribute_Group,none,0..Infinity,Meta::Attribute,group_elements,none,0..Infinity
+_16_9_f2e0365_1325639332377_878475_5162,bidirectional,Meta::Behavior,Behavior,none,0..Infinity,Meta::Class,Class,composition,1..1
+_16_9_f2e0365_1325638269729_823530_4988,bidirectional,Meta::Class,Class,none,1..1,Meta::Attribute,Attribute,none,0..Infinity
+_16_9_f2e0365_1325639287410_243911_5121,bidirectional,Meta::Class,Class,composition,1..1,Meta::Notification,Notification,none,0..Infinity
+_16_9_f2e0365_1325639332377_878475_5162,bidirectional,Meta::Class,Class,composition,1..1,Meta::Behavior,Behavior,none,0..Infinity
+_16_9_f2e0365_1325641819957_545406_5327,bidirectional,Meta::Class,Class,composition,1..1,Meta::Attribute_Group,Attribute_Group,none,0..Infinity
+_16_9_f2e0365_1325639287410_243911_5121,bidirectional,Meta::Notification,Notification,none,0..Infinity,Meta::Class,Class,composition,1..1
