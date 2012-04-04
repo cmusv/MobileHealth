@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Apr 04 12:39:12 PDT 2012
+# Saved by TopBraid on Wed Apr 04 13:47:48 PDT 2012
 # baseURI: http://cmusv/1.0/11073-Subset/Subset1.0
 # imports: http://topbraid.org/spin/owlrl-all
 # imports: http://spinrdf.org/sp
@@ -76,11 +76,6 @@ subset:BloodPressureReading
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementDimUnitsA.6.3-148> ;
-                owl:onProperty subset:hasUnitCode
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
                 owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-152> ;
                 owl:onProperty subset:hasMetricIdList
               ] ;
@@ -106,18 +101,22 @@ subset:BloodPressureReading
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;
+                spl:defaultValue 1 ;
+                spl:predicate subset:handle
+              ] ;
+      spin:constructor
+              [ rdf:type spl:InferDefaultValue ;
                 spl:defaultValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementOOA.3.1.1thru3.2.2.5-96> ;
                 spl:predicate subset:hasAttributeValueMap
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;
-                spl:defaultValue 0 ;
-                spl:predicate subset:handle
+                spl:defaultValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementOOA.3.1.1thru3.2.2.5-688> ;
+                spl:predicate subset:hasAttributeValueMap
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;
-                spl:defaultValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementOOA.3.1.1thru3.2.2.5-688> ;
-                spl:predicate subset:hasAttributeValueMap
+                spl:predicate subset:hasUnitCode
               ] .
 
 subset:BodyHeightReading
