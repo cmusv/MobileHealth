@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+    xmlns:ra="file:///MobileHealth/1.0/11073/10201/raw_associations#"
+    xmlns:letrs="http://uispin.org/letrs#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dim="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#"
+    xmlns:email="http://topbraid.org/email#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.hpl.hp.com/ARQ/function#"
+    xmlns:spin="http://spinrdf.org/spin#"
+    xmlns:smf="http://topbraid.org/sparqlmotionfunctions#"
+    xmlns:sparqlmotionlib-tbc="http://topbraid.org/sparqlmotionlib-tbc#"
+    xmlns:spif="http://spinrdf.org/spif#"
+    xmlns:arg="http://spinrdf.org/arg#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:sml="http://topbraid.org/sparqlmotionlib#"
+    xmlns:composite="http://www.topbraid.org/2007/05/composite.owl#"
+    xmlns:sm="http://topbraid.org/sparqlmotion#"
+    xmlns:tables="http://topbraid.org/tables#"
+    xmlns:ui="http://uispin.org/ui#"
+    xmlns:import="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Import#"
+    xmlns:spra="http://spinrdf.org/spra#"
+    xmlns:sp="http://spinrdf.org/sp#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:spr="http://spinrdf.org/spr#"
+    xmlns:let="http://uispin.org/let#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:spl="http://spinrdf.org/spl#"
+  xml:base="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Test2" > 
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMSegment">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleGLBHANDLE"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleExtNomenRef"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetric"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMStore"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSegData"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleClock">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierSystem"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVmoSourceEntry">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleGLBHANDLE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMD">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleChannel"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlert"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleServiceAndControl"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlertStatus"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMStore"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSystemModel"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleProdSpecEntry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDCC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierCommunication"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDeviceInterface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAVAType">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierUnclear"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleExtObjRelationEntry"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMStore">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMSegment"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionTest"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleChannel"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlert">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierAlert"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleChannel"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxDynAttr">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxDynAttrElem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDistributionSA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDsaRangeSpec"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMarkerEntryIndex"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlertStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierAlert"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMD"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumObsValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumVal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxObsValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxObsElem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleExtNomenRef">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierUnclear"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionNotes">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierArchival"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionArchive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleBCC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierCommunication"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDeviceInterface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleTimeSA">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetricMeasure"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMarkerEntryRelTim"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleBehavior">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMeta"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMibElement">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierCommunication"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDeviceInterface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierSystem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMD"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionTest"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientDemographics"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleScanner"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlertMonitor"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleBattery"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleClock"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleLog"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCommunicationController"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlertStatus"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleServiceAndControl"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleChannel">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlert"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMD"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetric"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMStore"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierAlert">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleBattery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierSystem"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumeration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumMsmtRangeLabel"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumObsValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionTest">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierArchival"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMStore"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionArchive"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAncillary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAttributeGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMeta"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleClass"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumRecordOo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleGLBHANDLE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierUnclear"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleHandle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleLog">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierSystem"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetricMeasure"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleExtNomenRef"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleComplexMetric"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePMSegment"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVmoSourceEntry"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleChannel"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetricSpec"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetricCalEntry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxObsElem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAVAType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleServiceAndControl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierControl"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMD"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleOperation"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxStaticAttrElem">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAVAType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDeviceInterface">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierCommunication"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDCC"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMibElement"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleBCC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePhysician">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierArchival"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionArchive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxDynAttrElem">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAVAType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMeta">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierControl">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleNotification">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMeta"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumMsmtRangeLabel">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumVal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientArchive">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierArchival"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionArchive"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientDemographics"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMultipatientArchive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleHandle">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierUnclear"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMO"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleComplexMetric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxStaticAttrElem"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxDynAttr"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxObsValue"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxMetricInfo"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientDemographics">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierPatient"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientArchive"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionArchive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAlertMonitor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierAlert"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleEnumRecordMetric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierCommunication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionArchive">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierArchival"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePhysician"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientArchive"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionNotes"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientDemographics"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionTest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleExtObjRelationEntry"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleHandle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierControl"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleServiceAndControl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierPatient">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleRealTimeSA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetricMeasure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCommunicationController">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierCommunication"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleNumeric">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAbsoluteRange"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleNuObsValue"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleDispResolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAncillary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierUnclear"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSessionTest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <owl:imports rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSampleArray">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSaGridEntry"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSaObsValue"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSACalData"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleScaleRangeSpec"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMarkerListSaVal"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSaFilterEntry"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleSaSignalFrequency"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierUnclear">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleScanner">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierExtendedServices"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierArchival">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetricSpec">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMetricStructure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAttribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMeta"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleClass"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAttributeGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxMetricInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMedical"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleCmplxElemInfo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierMeta"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAttributeGroup"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleNotification"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleBehavior"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleExtObjRelationEntry">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierUnclear"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleAVAType"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleVMO"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RoleMultipatientArchive">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierArchival"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dim:assoc rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#RolePatientArchive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#ClassifierExtendedServices">
+    <rdfs:subClassOf rdf:resource="http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#Classifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
