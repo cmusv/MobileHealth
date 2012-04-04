@@ -1,41 +1,238 @@
-# Saved by TopBraid on Thu Mar 29 12:40:14 PDT 2012
+# Saved by TopBraid on Mon Apr 02 17:53:45 PDT 2012
 # baseURI: http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Import
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: file:///MobileHealth/1.0/11073/10201/raw_associations
+# imports: http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 
-@prefix Import:  <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Import#> .
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix dim:     <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses#> .
+@prefix import:  <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Import#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
 @prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
 @prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Import>
       rdf:type owl:Ontology ;
-      owl:imports <file:///MobileHealth/1.0/11073/10201/raw_associations> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:imports <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <file:///MobileHealth/1.0/11073/10201/raw_associations> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
-Import:BuildClasses
+import:AddImports
       rdf:type sml:ApplyConstruct ;
-      sm:nodeX 243 ;
-      sm:nodeY 307 .
+      sm:next import:Test2 , import:TestExport ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/DIMClasses> ;
+                            sp:predicate owl:imports ;
+                            sp:subject <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/AssocOntology>
+                          ]) ;
+                sp:where ()
+              ] .
 
-Import:ImportRawAssociations
+import:BuildAssociations
+      rdf:type sml:ApplyConstruct ;
+      sm:next import:Test2 ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object _:b1 ;
+                            sp:predicate dim:assoc ;
+                            sp:subject _:b2
+                          ]) ;
+                sp:where ([ sp:object <file:///MobileHealth/1.0/11073/10201/raw_associations#raw_associations> ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b3
+                          ] [ sp:object _:b4 ;
+                            sp:predicate <file:///MobileHealth/1.0/11073/10201/raw_associations#aClassifier> ;
+                            sp:subject _:b3
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:indexOf ;
+                                      sp:arg1 _:b4 ;
+                                      sp:arg2 "::"
+                                    ] ;
+                            sp:variable _:b5
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 [ rdf:type afn:substr ;
+                                                sp:arg1 _:b4 ;
+                                                sp:arg2 [ rdf:type sp:add ;
+                                                          sp:arg1 _:b5 ;
+                                                          sp:arg2 2
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable _:b6
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 dim:Role ;
+                                      sp:arg2 _:b6
+                                    ] ;
+                            sp:variable _:b2
+                          ] [ sp:object _:b7 ;
+                            sp:predicate <file:///MobileHealth/1.0/11073/10201/raw_associations#bClassifier> ;
+                            sp:subject _:b3
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:indexOf ;
+                                      sp:arg1 _:b7 ;
+                                      sp:arg2 "::"
+                                    ] ;
+                            sp:variable _:b8
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 [ rdf:type afn:substr ;
+                                                sp:arg1 _:b7 ;
+                                                sp:arg2 [ rdf:type sp:add ;
+                                                          sp:arg1 _:b8 ;
+                                                          sp:arg2 2
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable _:b9
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 dim:Role ;
+                                      sp:arg2 _:b9
+                                    ] ;
+                            sp:variable _:b1
+                          ])
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
+import:BuildClasses
+      rdf:type sml:ApplyConstruct ;
+      sm:next import:BuildAssociations , import:Test2 ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object owl:Class ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b10
+                          ] [ sp:object dim:Classifier ;
+                            sp:predicate rdfs:subClassOf ;
+                            sp:subject _:b10
+                          ] [ sp:object owl:Class ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b11
+                          ] [ sp:object _:b10 ;
+                            sp:predicate rdfs:subClassOf ;
+                            sp:subject _:b11
+                          ]) ;
+                sp:where ([ sp:object <file:///MobileHealth/1.0/11073/10201/raw_associations#raw_associations> ;
+                            sp:predicate rdf:type ;
+                            sp:subject _:b12
+                          ] [ sp:object _:b13 ;
+                            sp:predicate <file:///MobileHealth/1.0/11073/10201/raw_associations#aClassifier> ;
+                            sp:subject _:b12
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:indexOf ;
+                                      sp:arg1 _:b13 ;
+                                      sp:arg2 "::"
+                                    ] ;
+                            sp:variable _:b14
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 [ rdf:type afn:substr ;
+                                                sp:arg1 _:b13 ;
+                                                sp:arg2 0 ;
+                                                sp:arg3 _:b14
+                                              ]
+                                    ] ;
+                            sp:variable _:b15
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:camelCase ;
+                                      sp:arg1 [ rdf:type afn:substr ;
+                                                sp:arg1 _:b13 ;
+                                                sp:arg2 [ rdf:type sp:add ;
+                                                          sp:arg1 _:b14 ;
+                                                          sp:arg2 2
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable _:b16
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 dim:Classifier ;
+                                      sp:arg2 _:b15
+                                    ] ;
+                            sp:variable _:b10
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:deriveURI ;
+                                      sp:arg1 dim:Role ;
+                                      sp:arg2 _:b16
+                                    ] ;
+                            sp:variable _:b11
+                          ])
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
+import:ImportRawAssociations
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next Import:BuildClasses , Import:TestExport ;
-      sm:nodeX 225 ;
-      sm:nodeY 56 ;
+      sm:next import:TestExport , import:BuildClasses , import:BuildAssociations ;
       sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Import"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/MobileHealth/1.0/11073/10201/raw_associations.rdf"^^xsd:string .
 
-Import:TestExport
+import:Test2
       rdf:type sml:ExportToRDFFile ;
-      sm:nodeX 510 ;
-      sm:nodeY 282 ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/11073/10201/AssocOntology"^^xsd:string ;
+      sml:targetFilePath "/MobileHealth/1.0/11073/10201/AssocOntology.rdf"^^xsd:string .
+
+import:TestExport
+      rdf:type sml:ExportToRDFFile ;
       sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Test1"^^xsd:string ;
       sml:targetFilePath "/MobileHealth/1.0/11073/10201/Test1.rdf"^^xsd:string .
+
+_:b16
+      sp:varName "role"^^xsd:string .
+
+_:b15
+      sp:varName "sc"^^xsd:string .
+
+_:b14
+      sp:varName "trim"^^xsd:string .
+
+_:b13
+      sp:varName "name"^^xsd:string .
+
+_:b12
+      sp:varName "row"^^xsd:string .
+
+_:b11
+      sp:varName "roleclass"^^xsd:string .
+
+_:b10
+      sp:varName "scclass"^^xsd:string .
+
+_:b9  sp:varName "brole"^^xsd:string .
+
+_:b8  sp:varName "btrim"^^xsd:string .
+
+_:b7  sp:varName "bname"^^xsd:string .
+
+_:b6  sp:varName "arole"^^xsd:string .
+
+_:b5  sp:varName "atrim"^^xsd:string .
+
+_:b4  sp:varName "aname"^^xsd:string .
+
+_:b3  sp:varName "row"^^xsd:string .
+
+_:b2  sp:varName "aroleclass"^^xsd:string .
+
+_:b1  sp:varName "broleclass"^^xsd:string .
