@@ -1,0 +1,43 @@
+# Saved by TopBraid on Thu Apr 19 07:50:15 PDT 2012
+# baseURI: http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Export
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix Export:  <http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Export#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/MobileHealth/1.0/11073/10201/Export>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+Export:CreateSpreadsheet
+      rdf:type sml:CreateSpreadsheet ;
+      sm:next Export:ExportToTextFile ;
+      sm:outputVariable "text" ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object owl:Class ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
+Export:ExportToTextFile
+      rdf:type sml:ExportToTextFile ;
+      sml:targetFilePath "/MobileHealth/2.1/11073/10101/11073-101012.text"^^xsd:string .
+
+Export:ImportRDF
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next Export:CreateSpreadsheet ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/MobileHealth/2.1/11073/10101/11073-10101.rdf"^^xsd:string .

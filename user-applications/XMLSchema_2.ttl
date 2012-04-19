@@ -1,0 +1,1682 @@
+@prefix :        <http://www.obj-sys.com/v1.0/XMLSchema/2#> .
+@prefix dtype:   <http://www.linkedmodel.org/schema/dtype#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vaem:    <http://www.linkedmodel.org/schema/vaem#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dc6:     <http://purl.org/dc/elements/1.1/> .
+@prefix dc5:     <http://purl.org/dc/elements/1.1/> .
+@prefix dc4:     <http://purl.org/dc/elements/1.1/> .
+@prefix dc3:     <http://purl.org/dc/elements/1.1/> .
+@prefix dc2:     <http://purl.org/dc/elements/1.1/> .
+@prefix skos3:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc1:     <http://purl.org/dc/elements/1.1/> .
+@prefix skos2:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skos1:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skos7:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos6:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skos5:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skos4:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc9:     <http://purl.org/dc/elements/1.1/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix skos9:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc8:     <http://purl.org/dc/elements/1.1/> .
+@prefix skos8:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc7:     <http://purl.org/dc/elements/1.1/> .
+
+:hasPresentation-context-id
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has presentation-context-id"^^xsd:string ;
+      skos8:prefLabel "has presentation-context-id"^^xsd:string .
+
+:Anon_1
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 1"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 1"^^xsd:string .
+
+:Anon_17
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 17"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 17"^^xsd:string .
+
+:hasFixed
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has fixed"^^xsd:string ;
+      skos8:prefLabel "has fixed"^^xsd:string .
+
+:UTF8StringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "UTF8String datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      skos8:prefLabel "UTF8String datatype"^^xsd:string .
+
+:Open
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Open"^^xsd:string ;
+      skos8:prefLabel "Open"^^xsd:string .
+
+:hasContext-negotiation
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has context-negotiation"^^xsd:string ;
+      skos8:prefLabel "has context-negotiation"^^xsd:string .
+
+:Anon_27
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 27"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 27"^^xsd:string .
+
+:REAL
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "REAL"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_9 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasPLUS-INFINITY
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasPLUS-INFINITY
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_10 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasMINUS-INFINITY
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasMINUS-INFINITY
+              ] ;
+      skos8:prefLabel "REAL"^^xsd:string .
+
+:Anon_2
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 2"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 2"^^xsd:string .
+
+:BMPStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "BMPString datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      skos8:prefLabel "BMPString datatype"^^xsd:string .
+
+:Anon_18
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 18"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 18"^^xsd:string .
+
+:EXTERNAL
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "EXTERNAL"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasIndirect-reference
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasDirect-reference
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasDirect-reference
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasData-value-descriptor
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_3 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasEncoding
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasEncoding
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectDescriptor ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasData-value-descriptor
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasIndirect-reference
+              ] ;
+      skos8:prefLabel "EXTERNAL"^^xsd:string .
+
+:GeneralStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "General string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      skos8:prefLabel "General string datatype"^^xsd:string .
+
+:EnumInfo
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Enum info"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_5 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasEnumItem
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasEnumItem
+              ] ;
+      skos8:prefLabel "Enum info"^^xsd:string .
+
+:GraphicString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Graphic string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :GraphicStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Graphic string"^^xsd:string .
+
+:GeneralString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "General string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :GeneralStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "General string"^^xsd:string .
+
+:ISO646StringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "ISO646String datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:token ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "[A-Za-z0-9 !\"#$%&'\\(\\)\\*\\+,\\-\\./:;<=>\\?@\\[\\\\\\]\\^_`]{0,}"^^xsd:token
+                          ])
+              ] ;
+      skos8:prefLabel "ISO646String datatype"^^xsd:string .
+
+:Anon_28
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 28"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 28"^^xsd:string .
+
+:OctetStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Octet string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:string ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:string ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "[0-9a-fA-F]{0,}"^^xsd:string
+                          ])
+              ] ;
+      skos8:prefLabel "Octet string datatype"^^xsd:string .
+
+:hasTransfer-syntax
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has transfer-syntax"^^xsd:string ;
+      skos8:prefLabel "has transfer-syntax"^^xsd:string .
+
+:UniversalStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Universal string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      skos8:prefLabel "Universal string datatype"^^xsd:string .
+
+:Anon_19
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 19"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 19"^^xsd:string .
+
+:INTEGER
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "INTEGER"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :INTEGERDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "INTEGER"^^xsd:string .
+
+:RelativeOIDDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Relative OIDDatatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:token ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "\\d+(\\.\\d+)*"^^xsd:token
+                          ])
+              ] ;
+      skos8:prefLabel "Relative OIDDatatype"^^xsd:string .
+
+:Anon_25
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 25"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 25"^^xsd:string .
+
+:hasArbitrary
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has arbitrary"^^xsd:string ;
+      skos8:prefLabel "has arbitrary"^^xsd:string .
+
+:hasNamedBit
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has named bit"^^xsd:string ;
+      skos8:prefLabel "has named bit"^^xsd:string .
+
+:UTF8String
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "UTF8String"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :UTF8StringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "UTF8String"^^xsd:string .
+
+:hasEncoding
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has encoding"^^xsd:string ;
+      skos8:prefLabel "has encoding"^^xsd:string .
+
+:base
+      a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "base"^^xsd:string ;
+      skos8:prefLabel "base"^^xsd:string .
+
+skos8:definition
+      a       <http://www.w3.org/2002/07/owl#AnnotationProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "definition"^^xsd:string ;
+      skos8:prefLabel "definition"^^xsd:string .
+
+:exponent
+      a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "exponent"^^xsd:string ;
+      skos8:prefLabel "exponent"^^xsd:string .
+
+:Anon_26
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 26"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 26"^^xsd:string .
+
+:NULL
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "NULL"^^xsd:string ;
+      skos8:prefLabel "NULL"^^xsd:string .
+
+:Anon_13
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 13"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 13"^^xsd:string .
+
+:ObjectIdentifier
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Object identifier"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifierDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Object identifier"^^xsd:string .
+
+:value
+      a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "value"^^xsd:string ;
+      skos8:prefLabel "value"^^xsd:string .
+
+:VisibleStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Visible string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :ISO646StringDatatype ;
+      skos8:prefLabel "Visible string datatype"^^xsd:string .
+
+:hasMINUS-INFINITY
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has MINUS-INFINITY"^^xsd:string ;
+      skos8:prefLabel "has MINUS-INFINITY"^^xsd:string .
+
+:VisibleString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Visible string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :ISO646String ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :VisibleStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Visible string"^^xsd:string .
+
+:Anon_14
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 14"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 14"^^xsd:string .
+
+:VideotexString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Videotex string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :VideotexStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Videotex string"^^xsd:string .
+
+xsd:string
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "string"^^xsd:string ;
+      skos8:prefLabel "string"^^xsd:string .
+
+:ISO646String
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "ISO646String"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ISO646StringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "ISO646String"^^xsd:string .
+
+:hasSyntaxes
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has syntaxes"^^xsd:string ;
+      skos8:prefLabel "has syntaxes"^^xsd:string .
+
+:PrintableString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Printable string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :PrintableStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Printable string"^^xsd:string .
+
+:TeletexString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Teletex string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :T61String ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :TeletexStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Teletex string"^^xsd:string .
+
+:hasPLUS-INFINITY
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has PLUS-INFINITY"^^xsd:string ;
+      skos8:prefLabel "has PLUS-INFINITY"^^xsd:string .
+
+:mantissa
+      a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "mantissa"^^xsd:string ;
+      skos8:prefLabel "mantissa"^^xsd:string .
+
+:Anon_15
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 15"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 15"^^xsd:string .
+
+xsd:token
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "token"^^xsd:string ;
+      skos8:prefLabel "token"^^xsd:string .
+
+:hasDirect-reference
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has direct-reference"^^xsd:string ;
+      skos8:prefLabel "has direct-reference"^^xsd:string .
+
+:hasTransfer
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has transfer"^^xsd:string ;
+      skos8:prefLabel "has transfer"^^xsd:string .
+
+:NamedBitInfo
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Named bit info"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasNamedBit
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_4 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasNamedBit
+              ] ;
+      skos8:prefLabel "Named bit info"^^xsd:string .
+
+:Anon_16
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 16"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 16"^^xsd:string .
+
+:RealAssociated
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Real associated"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :base
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:integer ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :exponent
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:integer ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :base
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:integer ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :mantissa
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :mantissa
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :exponent
+              ] ;
+      skos8:prefLabel "Real associated"^^xsd:string .
+
+:GraphicStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Graphic string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      skos8:prefLabel "Graphic string datatype"^^xsd:string .
+
+:hasIndirect-reference
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has indirect-reference"^^xsd:string ;
+      skos8:prefLabel "has indirect-reference"^^xsd:string .
+
+:hasData-value-descriptor
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has data-value-descriptor"^^xsd:string ;
+      skos8:prefLabel "has data-value-descriptor"^^xsd:string .
+
+:IA5StringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "IA5String datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      skos8:prefLabel "IA5String datatype"^^xsd:string .
+
+:T61String
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "T61String"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :T61StringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "T61String"^^xsd:string .
+
+<http://www.obj-sys.com/v1.0/XMLSchema/2>
+      a       <http://www.w3.org/2002/07/owl#Ontology> ;
+      <http://www.w3.org/2002/07/owl#imports>
+              <http://www.linkedmodel.org/schema/dtype> , <http://www.linkedmodel.org/schema/vaem> ;
+      <http://www.w3.org/2002/07/owl#versionInfo>
+              "Created with TopBraid Composer from the XML Schema http://www.obj-sys.com/v1.0/XMLSchema/2"^^xsd:string .
+
+:BooleanGroup
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Boolean group"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_13 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_12 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_17 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_23 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_18 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_1 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_19 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_2 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_22 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_26 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_28 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_21 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_27 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_14 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_25 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_20 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_24 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_11 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_16 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFalse
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_15 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTrue
+              ] ;
+      skos8:prefLabel "Boolean group"^^xsd:string .
+
+:IA5String
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "IA5String"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :IA5StringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "IA5String"^^xsd:string .
+
+:BitString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Bit string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :BitStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Bit string"^^xsd:string .
+
+:Anon_9
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 9"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 9"^^xsd:string .
+
+xsd:hexBinary
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "hex binary"^^xsd:string ;
+      skos8:prefLabel "hex binary"^^xsd:string .
+
+:T61StringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "T61String datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:token ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "[A-Za-z0-9 !\"%&'\\(\\)\\*\\+,\\-\\./:;<=>\\?@\\[\\]_]*"^^xsd:token
+                          ])
+              ] ;
+      skos8:prefLabel "T61String datatype"^^xsd:string .
+
+:RelativeOID
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Relative OID"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :RelativeOIDDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Relative OID"^^xsd:string .
+
+:Anon_22
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 22"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 22"^^xsd:string .
+
+:Anon_12
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 12"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 12"^^xsd:string .
+
+:BMPString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "BMPString"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :BMPStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "BMPString"^^xsd:string .
+
+:Anon
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon"^^xsd:string ;
+      skos8:definition "Abstract superclass for all anonymous types encountered in transforming the XSD schema."^^xsd:string ;
+      skos8:prefLabel "Anon"^^xsd:string .
+
+:NumericStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Numeric string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:token ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "[0-9 ]{0,}"^^xsd:token
+                          ])
+              ] ;
+      skos8:prefLabel "Numeric string datatype"^^xsd:string .
+
+:Anon_21
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 21"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 21"^^xsd:string .
+
+:hasEnumItem
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has enum item"^^xsd:string ;
+      skos8:prefLabel "has enum item"^^xsd:string .
+
+:EmbeddedPDV
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Embedded PDV"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :data-value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:hexBinary ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :data-value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_6 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasIdentification
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasIdentification
+              ] ;
+      skos8:prefLabel "Embedded PDV"^^xsd:string .
+
+:Anon_11
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 11"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 11"^^xsd:string .
+
+:hasFalse
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has false"^^xsd:string ;
+      skos8:prefLabel "has false"^^xsd:string .
+
+:ObjectIdentifierDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Object identifier datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:token ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "[0-2](\\.[1-3]?[0-9]?(\\.\\d+)*)?"^^xsd:token
+                          ])
+              ] ;
+      skos8:prefLabel "Object identifier datatype"^^xsd:string .
+
+:PrintableStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Printable string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:token ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "[A-Za-z0-9 '\\(\\)\\+\\-\\.\\?,:=]{0,}"^^xsd:token
+                          ])
+              ] ;
+      skos8:prefLabel "Printable string datatype"^^xsd:string .
+
+:hasTrue
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has true"^^xsd:string ;
+      skos8:prefLabel "has true"^^xsd:string .
+
+:Anon_7
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 7"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasAbstract
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasAbstract
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTransfer
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTransfer
+              ] ;
+      skos8:prefLabel "Anon 7"^^xsd:string .
+
+:Anon_24
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 24"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 24"^^xsd:string .
+
+:Anon_10
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 10"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 10"^^xsd:string .
+
+:Anon_8
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 8"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :INTEGER ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasPresentation-context-id
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasPresentation-context-id
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTransfer-syntax
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#cardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTransfer-syntax
+              ] ;
+      skos8:prefLabel "Anon 8"^^xsd:string .
+
+:NumericString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Numeric string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :NumericStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Numeric string"^^xsd:string .
+
+:octet-aligned
+      a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "octet-aligned"^^xsd:string ;
+      skos8:prefLabel "octet-aligned"^^xsd:string .
+
+:Anon_23
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 23"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 23"^^xsd:string .
+
+:OctetString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Octet string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :OctetStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Octet string"^^xsd:string .
+
+xsd:integer
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "integer"^^xsd:string ;
+      skos8:prefLabel "integer"^^xsd:string .
+
+:UniversalString
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Universal string"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :UniversalStringDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Universal string"^^xsd:string .
+
+:BitStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Bit string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:string ;
+      <http://www.w3.org/2002/07/owl#equivalentClass>
+              [ a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+                <http://www.w3.org/2002/07/owl#onDatatype>
+                        xsd:string ;
+                <http://www.w3.org/2002/07/owl#withRestrictions>
+                        ([ xsd:pattern "[0-1]{0,}"^^xsd:string
+                          ])
+              ] ;
+      skos8:prefLabel "Bit string datatype"^^xsd:string .
+
+:Anon_5
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 5"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:integer ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:string ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :name
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :name
+              ] ;
+      skos8:prefLabel "Anon 5"^^xsd:string .
+
+skos8:prefLabel
+      a       <http://www.w3.org/2002/07/owl#AnnotationProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "pref label"^^xsd:string .
+
+:hasSyntax
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has syntax"^^xsd:string ;
+      skos8:prefLabel "has syntax"^^xsd:string .
+
+:hasAbstract
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has abstract"^^xsd:string ;
+      skos8:prefLabel "has abstract"^^xsd:string .
+
+:name
+      a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "name"^^xsd:string ;
+      skos8:prefLabel "name"^^xsd:string .
+
+:Anon_6
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 6"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTransfer-syntax
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasPresentation-context-id
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasContext-negotiation
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFixed
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasSyntaxes
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_8 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasContext-negotiation
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :NULL ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasFixed
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :Anon_7 ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasSyntaxes
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasTransfer-syntax
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasSyntax
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasSyntax
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :INTEGER ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasPresentation-context-id
+              ] ;
+      skos8:prefLabel "Anon 6"^^xsd:string .
+
+:hasSingle-ASN1-type
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has single-ASN1-type"^^xsd:string ;
+      skos8:prefLabel "has single-ASN1-type"^^xsd:string .
+
+:ObjectDescriptorDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Object descriptor datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:string ;
+      skos8:prefLabel "Object descriptor datatype"^^xsd:string .
+
+:VideotexStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Videotex string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:token ;
+      skos8:prefLabel "Videotex string datatype"^^xsd:string .
+
+:BOOLEAN
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "BOOLEAN"^^xsd:string ;
+      skos8:prefLabel "BOOLEAN"^^xsd:string .
+
+:Anon_20
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 20"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      skos8:prefLabel "Anon 20"^^xsd:string .
+
+:Anon_3
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 3"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :octet-aligned
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:hexBinary ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :octet-aligned
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasArbitrary
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :BitString ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasArbitrary
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectIdentifier ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasSingle-ASN1-type
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :hasSingle-ASN1-type
+              ] ;
+      skos8:prefLabel "Anon 3"^^xsd:string .
+
+:hasIdentification
+      a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "has identification"^^xsd:string ;
+      skos8:prefLabel "has identification"^^xsd:string .
+
+:data-value
+      a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "data-value"^^xsd:string ;
+      skos8:prefLabel "data-value"^^xsd:string .
+
+:ObjectDescriptor
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Object descriptor"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        :ObjectDescriptorDatatype ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        dtype:value
+              ] ;
+      skos8:prefLabel "Object descriptor"^^xsd:string .
+
+:INTEGERDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "INTEGERDatatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              xsd:integer ;
+      skos8:prefLabel "INTEGERDatatype"^^xsd:string .
+
+:TeletexStringDatatype
+      a       <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Teletex string datatype"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :T61StringDatatype ;
+      skos8:prefLabel "Teletex string datatype"^^xsd:string .
+
+:Anon_4
+      a       <http://www.w3.org/2002/07/owl#Class> ;
+      <http://www.w3.org/2000/01/rdf-schema#label>
+              "Anon 4"^^xsd:string ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              :Anon ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:string ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :name
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :value
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#maxCardinality>
+                        "1"^^xsd:int ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :name
+              ] ;
+      <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+              [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                <http://www.w3.org/2002/07/owl#allValuesFrom>
+                        xsd:integer ;
+                <http://www.w3.org/2002/07/owl#onProperty>
+                        :value
+              ] ;
+      skos8:prefLabel "Anon 4"^^xsd:string .
