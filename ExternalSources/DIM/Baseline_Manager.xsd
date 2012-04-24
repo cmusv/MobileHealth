@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns="http://www.nist.gov/x73DIM" targetNamespace="http://www.nist.gov/x73DIM" elementFormDefault="qualified">
+	<xsd:include schemaLocation="MOC_Defs.xsd"/>
+	<xsd:element name="Baseline">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="Event_Log" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Event_LogTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Alert_Status" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Alert_StatusTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Alert" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="AlertTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Context_Scanner" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Context_ScannerGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="EpiCfgScanner" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="EpiCfgScannerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="FastPeriCfgScanner" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="FastPeriCfgScannerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="PeriCfgScanner" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="PeriCfgScannerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Operating_Scanner" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:group ref="Operating_ScannerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Patient_Demographics" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Patient_DemographicsTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="SCO" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="SCOType_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Activate_Operation" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Activate_OperationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Limit_Alert_Operation" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Limit_Alert_OperationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Select_Item_Operation" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Select_Item_OperationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Set_Range_Operation" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Set_Range_OperationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Set_String_Operation" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Set_String_OperationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Set_Value_Operation" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Set_Value_OperationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Toggle_Flag_Operation" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Toggle_Flag_OperationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="PM-Store" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="PM-StoreTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="PM-Segment" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="PM-SegmentTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Device_Interface" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Device_Interface_ObjectTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Complex_Metric" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Complex_MetricTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Real_Time_Sample_Array" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Real_Time_Sample_ArrayTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Multipatient_Archive" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Multipatient_Archive_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Patient_Archive" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Patient_ArchiveType_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Session_Archive" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Session_ArchiveType_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Physician" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="PhysicianTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Session_Notes" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Session_NotesTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Session_Test" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Session_TestType_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Simple_MDS" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Simple_MDS_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Composite_Single_Bed_MDS" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Composite_Single_Bed_MDSType_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Hydra_MDS" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Hydra_MDS_Type_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="VMD" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="VMDType_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Channel" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Channel_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Numeric" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="NumericTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Time_Sample_Array" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Time_Sample_ArrayTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Distribution_Sample_Array" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Distribution_Sample_ArrayTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Enumeration" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="EnumerationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Alert_Monitor" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Alert_MonitorTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Battery" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="BatteryTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Bedside_Communication_Controller" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Bedside_Communication_ControllerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Alert_Scanner" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Alert_ScannerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Clock" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="ClockTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Device_Communication_Controller" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Device_Communication_ControllerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="External-MOC" minOccurs="0"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
