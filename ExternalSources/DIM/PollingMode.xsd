@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns="http://www.nist.gov/x73DIM" targetNamespace="http://www.nist.gov/x73DIM" elementFormDefault="qualified">
+	<xsd:include schemaLocation="MOC_Defs.xsd"/>
+	<xsd:element name="Polling_Mode">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<sch:pattern name="testOccurences">
+					<sch:rule context="Polling_Mode">
+						<sch:assert test="AND(count(Simple_MDS)=0, count(Hydra_MDS)=0 )">Simple_MDS or Hydra_MDS should be implemented</sch:assert>
+						<sch:assert test="count(Simple_MDS) &lt;2"> Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+						<sch:assert test="count(Hydra_MDS)&lt;2">Hydra_MDS should appear at most once( 0 or 1)</sch:assert>
+						<sch:assert test="count(Battery)&lt;2">Battery should appear at most once( 0 or 1)</sch:assert>
+						<sch:assert test="count(Clock)&lt;2">Clock should appear at most once( 0 or 1)</sch:assert>
+						<sch:assert test="OR(count(Hydra_MDS)=0, count(Simple_MDS)=0)">Hydra_MDS  or Simple_MDS should be implemented</sch:assert>
+					</sch:rule>
+				</sch:pattern>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="Simple_MDS">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Simple_MDS_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Hydra_MDS">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Hydra_MDS_Type_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="VMD">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="VMDType_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Channel">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Channel_Grp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Numeric">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="NumericTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Time_Sample_Array">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Time_Sample_ArrayTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Distribution_Sample_Array">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Distribution_Sample_ArrayTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Enumeration">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="EnumerationTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Alert_Monitor">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Alert_MonitorTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Battery">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="BatteryTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Bedside_Communication_Controller">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Bedside_Communication_ControllerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Device_Communication_Controller">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Device_Communication_ControllerTypeGrp"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="External-MOC"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

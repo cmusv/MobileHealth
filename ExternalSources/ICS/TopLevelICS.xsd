@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TopLevelICS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="InterfaceType" type="InterfaceType"/>
+				<xs:element name="Row" type="RowType" minOccurs="7" maxOccurs="7"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	<xs:complexType name="RowType">
+			<xs:sequence>
+				<xs:element name="Series" type="xs:string"/>
+				<xs:element name="Protocol_Standard" type="xs:string"/>
+				<xs:element name="All_Mandatory" type="xs:string"/>
+				<xs:element name="Any_Options" type="xs:string"/>
+				<xs:element name="Any_Extensions" type="xs:string"/>
+			</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InterfaceType">
+			<xs:sequence>
+				<xs:element name="Roles" type="xs:string"/>
+				<xs:element name="Specialization" type="xs:string"/>
+				<xs:element name="Transport" type="xs:string"/>
+				<xs:element name="Power_Supplied" type="xs:string"/>
+			</xs:sequence>
+	</xs:complexType>
+</xs:schema>

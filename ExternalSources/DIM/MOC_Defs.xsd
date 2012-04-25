@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by John Garguilo (NIST) -->
+<!--<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:val="http://www.nist.gov/values" xmlns:dtp="http://www.nist.gov/data_types">-->
+<xsd:schema xmlns="http://www.nist.gov/x73DIM" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nist.gov/x73DIM" elementFormDefault="qualified">
+	<xsd:include schemaLocation="DIM_Values.xsd"/>
+	<xsd:include schemaLocation="MOC_Attr_Behav_Notif.xsd"/>
+	<xsd:simpleType name="MocServiceSupportedType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="CREATE"/>
+			<xsd:enumeration value="DELETE"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AvailabeMocServiceSupportedType">
+		<xsd:list itemType="MocServiceSupportedType"/>
+	</xsd:simpleType>
+	<xsd:group name="MOC_Information">
+		<xsd:annotation>
+			<xsd:documentation>General group defining common information for all MOC elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="MOC_TYPE_TERM_CODE" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MOC_TYPE_ID" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MOC_RESTRICTIONS" type="xsd:string"/>
+			<xsd:element name="MOC_APPLICATION_GUIDANCE" type="xsd:string"/>
+			<xsd:element name="MOC_SERVICES_SUPPORTED" type="AvailabeMocServiceSupportedType"/>
+			<xsd:element name="MOC_COMMENT" type="xsd:string"/>
+			<xsd:element ref="External-MOC" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:element name="External-MOC">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="OBJECT_NAME">
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:string">
+								<xsd:attribute name="Label" type="xsd:string"/>
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="OBJECT_ID" type="xsd:string"/>
+				<xsd:element name="TERM_CODE" type="xsd:string"/>
+				<xsd:group ref="MOC_Information"/>
+				<xsd:element name="Reference" type="xsd:string"/>
+				<xsd:element name="Attribute_Info">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="External-Attribute" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Notification_Info">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="External-Notification"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Behaviour_Info">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="External-Behaviour"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:group name="Simple_MDS_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Simple_MDS_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Simple_MDS_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Simple_MDS_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Simple_MDS_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="MDS_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Behaviour_Info" type="MDS_Behaviour_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="MDS_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Multipatient_ArchiveType_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Multipatient_Archive_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Multipatient_Archive_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Multipatient_Archive_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Multipatient_Archive_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Multipatient_Archive_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Multipatient_Archive_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Session_TestType_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Session_Test_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Session_Test_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Session_Test_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Session_Test_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Session_Test_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="Session_Test_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Composite_Single_Bed_MDSType_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Composite_Single_Bed_MDS_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Composite_Single_Bed_MDS_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Composite_Single_Bed_MDS_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Composite_Single_Bed_MDS_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="MDS_Attribute_InfoType" minOccurs="0"/>
+			<xsd:element name="Behaviour_Info" type="MDS_Behaviour_InfoType" minOccurs="0"/>
+			<xsd:element name="Notification_Info" type="MDS_Notification_InfoType" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Session_ArchiveType_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Session_Archive_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Session_Archive_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Session_Archive_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Session_Archive_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Session_Archive_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="Session_Archive_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Hydra_MDS_Type_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Hydra_MDS_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Hydra_MDS_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Hydra_MDS_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Hydra_MDS_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="MDS_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Behaviour_Info" type="MDS_Behaviour_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="MDS_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Patient_ArchiveType_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Patient_Archive_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Patient_Archive_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Patient_Archive_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Patient_Archive_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Patient_Archive_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="Patient_Archive_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="SCOType_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="SCO_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="SCO_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="SCO_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="SCO_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="SCO_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Behaviour_Info" type="SCO_Behaviour_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="SCO_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="VMDType_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="VMD_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="VMD_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="VMD_Term_Code_Type"/>
+			<xsd:element name="Reference" type="VMD_Reference_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Attribute_Info" type="VMD_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="VMD_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Channel_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Channel_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Channel_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Channel_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Channel_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Channel_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="Channel_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<!-- MOC definitions including attributes, behaviour, notification definition as well as containment relationship -->
+	<xsd:group name="Activate_OperationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Activate_Operation object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Activate_Operation_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Activate_Operation_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Activate_Operation_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Activate_Operation_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Activate_Operation_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Activate_Operation_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="AlertTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Alert object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Alert_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Alert_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Alert_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Alert_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Alert_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Alert_Notification_InfoType" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Alert_MonitorTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Alert_Monitor object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Alert_Monitor_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Alert_Monitor_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Alert_Monitor_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Alert_Monitor_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Alert_Monitor_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Alert_Monitor_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Alert_ScannerTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Alert_Scanner object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Alert_Scanner_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Alert_Scanner_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Alert_Scanner_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Alert_Scanner_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Alert_Scanner_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Alert_Scanner_Notification_InfoType" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Alert_StatusTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Alert_Status object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Alert_Status_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Alert_Status_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Alert_Status_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Alert_Status_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Alert_Status_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Alert_Status_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="BatteryTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Battery object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Battery_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Battery_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Battery_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Battery_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Battery_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="Battery_Notification_InfoType">
+							<xsd:all>
+								<xsd:element name="Attribute-Update" type="Attribute-Update_Type"/>
+								<xsd:element ref="Private-Notification" minOccurs="0"/>
+							</xsd:all>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Bedside_Communication_ControllerTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the BCC object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Bedside_Communication_Controller_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Bedside_Communication_Controller_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Bedside_Communication_Controller_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Bedside_Communication_Controller_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Bedside_Communication_Controller_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Behaviour_Info" type="Bedside_Communication_Controller_Behaviour_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="Bedside_Communication_Controller_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="ClockTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Clock object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Clock_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Clock_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Clock_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Clock_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Clock_Attribute_InfoType"/>
+			<xsd:element name="Behaviour_Info" type="Clock_Behaviour_InfoType"/>
+			<xsd:element name="Notification_Info" type="Clock_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Complex_MetricTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Complex_Metric object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Complex_Metric_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Complex_Metric_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Complex_Metric_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Complex_Metric_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Complex_Metric_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Complex_Metric_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Device_Communication_ControllerTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the DCC object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Device_Communication_Controller_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Device_Communication_Controller_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Device_Communication_Controller_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Device_Communication_Controller_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Device_Communication_Controller_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Behaviour_Info" type="Device_Communication_Controller_Behaviour_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="Device_Communication_Controller_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Device_Interface_ObjectTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Device_Interface object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Device_Interface_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Device_Interface_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Device_Interface_Object_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Device_Interface_Object_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Device_Interface_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Device_Interface_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Device_Interface_MibElement_ObjectTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Device_Interface_MibElement object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Device_Interface_MibElement_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Device_Interface_MibElement_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Device_Interface_MibElement_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Device_Interface_MibElement_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Device_Interface_MibElement_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Device_Interface_MibElement_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Distribution_Sample_ArrayTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Distribution_Sample_Array object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Distribution_Sample_Array_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Distribution_Sample_Array_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Distribution_Sample_Array_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Distribution_Sample_Array_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Distribution_Sample_Array_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Distribution_Sample_Array_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="EnumerationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Enumeration object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Enumeration_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Enumeration_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Enumeration_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Enumeration_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Enumeration_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="Enumeration_Notification_InfoType">
+							<xsd:all>
+								<xsd:element name="Attribute-Update" type="Attribute-Update_Type"/>
+								<xsd:element ref="Private-Notification" minOccurs="0"/>
+							</xsd:all>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="EpiCfgScannerTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the EpiCfgScanner object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="EpiCfgScanner_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="EpiCfgScanner_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="EpiCfgScanner_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="EpiCfgScanner_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="EpiCfgScanner_Attribute_InfoType"/>
+			<xsd:element name="Behaviour_Info" type="EpiCfgScanner_Behaviour_InfoType" minOccurs="0"/>
+			<xsd:element name="Notification_Info" type="EpiCfgScanner_Notification_InfoType" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Event_LogTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Event_Log object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Event_Log_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Event_Log_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Event_Log_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Event_Log_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Event_Log_Attribute_InfoType"/>
+			<xsd:element name="Behaviour_Info" type="Event_Log_Behaviour_InfoType"/>
+			<xsd:element name="Notification_Info" type="Event_Log_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="FastPeriCfgScannerTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the FastPeriCfgScanner object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="FastPeriCfgScanner_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="FastPeriCfgScanner_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="FastPeriCfgScanner_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="FastPeriCfgScanner_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="PeriCfgScanner_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="FastPeriCfgScanner_Notification_InfoType" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Limit_Alert_OperationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Limit_Alert_Operation object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Limit_Alert_Operation_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Limit_Alert_Operation_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Limit_Alert_Operation_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Limit_Alert_Operation_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Limit_Alert_Operation_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="Limit_Alert_Operation_Notification_InfoType">
+							<xsd:all>
+								<xsd:element name="Attribute-Update" type="Attribute-Update_Type"/>
+								<xsd:element ref="Private-Notification" minOccurs="0"/>
+							</xsd:all>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Multipatient_Archive_Grp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Multipatient_Archive_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Multipatient_Archive_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Multipatient_Archive_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Multipatient_Archive_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Multipatient_Archive_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Multipatient_Archive_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="NumericTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Numeric object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Numeric_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Numeric_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Numeric_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Numeric_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Numeric_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Numeric_Notification_InfoType"/>
+			<xsd:element name="Units">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Unit" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="DIM" type="xsd:string"/>
+									<xsd:element name="UOM_MDC" type="xsd:string"/>
+									<xsd:element name="UOM_UCUM" type="xsd:string"/>
+									<xsd:element name="TERM_CODE" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Operating_ScannerTypeGrp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Operating_Scanner_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Operating_Scanner_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Operating_Scanner_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Operating_Scanner_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Operating_Scanner_Attribute_InfoType"/>
+			<xsd:element name="Behaviour_Info" type="Operating_Scanner_Behaviour_InfoType" minOccurs="0"/>
+			<xsd:element name="Notification_Info" type="Operating_Scanner_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="PM-SegmentTypeGrp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="PM-Segment_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="PM-Segment_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="PM-Segment_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="PM-Segment_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="PM-Segment_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="PM-Segment_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="PM-StoreTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the PM-Store object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="PM-Store_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="PM-Store_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="PM-Store_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="PM-Store_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="PM-Store_Attribute_InfoType" maxOccurs="unbounded"/>
+			<xsd:element name="Behaviour_Info" type="PM-Store_Behaviour_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Notification_Info" type="PM-Store_Notification_InfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Patient_DemographicsTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Patient_Demographics object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Patient_Demographics_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Patient_Demographics_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Patient_Demographics_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Patient_Demographics_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Patient_Demographics_Attribute_InfoType"/>
+			<xsd:element name="Behaviour_Info" type="Patient_Demographics_Behaviour_InfoType"/>
+			<xsd:element name="Notification_Info" type="Patient_Demographics_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="PeriCfgScannerTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the PeriCfgScanner.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="PeriCfgScanner_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="PeriCfgScanner_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="PeriCfgScanner_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="PeriCfgScanner_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="PeriCfgScanner_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="PeriCfgScanner_Notification_InfoType" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="PhysicianTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Physician object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Physician_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Physician_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Physician_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Physician_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Physician_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Physician_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Real_Time_Sample_ArrayTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Real_Time_Sample_Array object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Real_Time_Sample_Array_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Real_Time_Sample_Array_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Real_Time_Sample_Array_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Real_Time_Sample_Array_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Real_Time_Sample_Array_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Real_Time_Sample_Array_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Select_Item_OperationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Select_Item_Operation object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Select_Item_Operation_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Select_Item_Operation_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Select_Item_Operation_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Select_Item_Operation_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Select_Item_Operation_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Select_Item_Operation_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Set_Range_OperationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Set_Range_Operation  object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Set_Range_Operation_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Set_Range_Operation_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Set_Range_Operation_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Set_Range_Operation_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Set_Range_Operation_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Set_Range_Operation_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Set_String_OperationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Set_String_Operation  object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Set_String_Operation_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Set_String_Operation_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Set_String_Operation_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Set_String_Operation_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Set_String_Operation_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Set_String_Operation_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Set_Value_OperationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Set_Value_Operation  object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Set_Value_Operation_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Set_Value_Operation_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Set_Value_Operation_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Set_Value_Operation_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Set_Value_Operation_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Set_Value_Operation_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Context_ScannerGrp">
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Context_Scanner_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Context_Scanner_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Context_Scanner_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Context_Scanner_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Context_Scanner_Attribute_InfoType"/>
+			<xsd:element name="Behaviour_Info" type="Context_Scanner_Behaviour_InfoType" minOccurs="0"/>
+			<xsd:element name="Notification_Info" type="Context_Scanner_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Time_Sample_ArrayTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Time_Sample_Array  object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Time_Sample_Array_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Time_Sample_Array_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Time_Sample_Array_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Time_Sample_Array_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Time_Sample_Array_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Time_Sample_Array_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Toggle_Flag_OperationTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines theToggle_Flag_Operation  object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Toggle_Flag_Operation_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Toggle_Flag_Operation_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Toggle_Flag_Operation_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Toggle_Flag_Operation_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Toggle_Flag_Operation_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Toggle_Flag_Operation_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="Session_NotesTypeGrp">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Session_Notes object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="OBJECT_NAME">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="Session_Notes_Object_Name_Type">
+							<xsd:attribute name="Label" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OBJECT_ID" type="Session_Notes_Object_Id_Type"/>
+			<xsd:element name="TERM_CODE" type="Session_Notes_Term_Code_Type"/>
+			<xsd:group ref="MOC_Information"/>
+			<xsd:element name="Reference" type="Session_Notes_Reference_Type"/>
+			<xsd:element name="Attribute_Info" type="Session_Notes_Attribute_InfoType"/>
+			<xsd:element name="Notification_Info" type="Session_Notes_Notification_InfoType"/>
+		</xsd:choice>
+	</xsd:group>
+</xsd:schema>

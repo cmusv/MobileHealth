@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by John Garguilo (NIST) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Sandra I. Martinez (XML Core WG) -->
+<xsd:schema xmlns="http://www.nist.gov/x73DIM" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nist.gov/x73DIM" elementFormDefault="qualified">
+	<!--<xsd:import namespace="http://www.nist.gov/values" schemaLocation="DIM_Values.xsd"/>-->
+	<xsd:include schemaLocation="MOC_Defs.xsd"/>
+    <xsd:element name="Composite_Single_Bed_MDS" type="Composite_Single_Bed_MDSType"/>
+	<xsd:element name="DIM">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<sch:ns uri="http://www.nist.gov/x73DIM" prefix="dim"/>
+				<sch:pattern name="testOccurences">
+					<sch:rule context="dim:DIM">
+						<sch:assert test="count(dim:Simple_MDS)&lt;2">Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+						<sch:assert test="count(dim:Hydra_MDS)&lt;2">Hydra_MDS should appear at most once( 0 or 1)</sch:assert>
+						<sch:assert test="count(dim:Composite_Single_Bed_MDS)&lt;2">Composite_Single_Bed_MDS should appear at most once( 0 or 1)							</sch:assert>
+					</sch:rule>
+				</sch:pattern>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="Multipatient_Archive" type="Multipatient_ArchiveType" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:appinfo>
+							<xsd:documentation>This complex type defines Multipatient_Archive attribute information.</xsd:documentation>
+							<sch:pattern name="testOccurences">
+								<sch:rule context="dim:Patient_Archive">
+									<sch:assert test="count(dim:Patient_Demographics)&lt;2">Patient_Demographics in Patient Archive should appear at most once( 0 or 1)</sch:assert>
+								</sch:rule>
+							</sch:pattern>
+							<sch:pattern name="testOccurences">
+								<sch:rule context="//dim:Simple_MDS | //dim:Hydra_MDS | //dim:Composite_Single_Bed_MDS |//dim:Alert |//dim:Alert_Monitor |//dim:Alert_Scanner | //dim:Alert_Status | //dim:Battery | //dim:Bedside_Communication_Controller| //dim:Clock| //dim:Context_Scanner| //dim:Device_Communication_Controller| //dim:EpiCfgScanner| //dim:Event_Log| //dim:FastPeriCfgScanner| //dim:Operating_Scanner| //dim:PatientDemographics| //dim:PeriCfgScanner| //dim:SCO | //dim:VMD| //dim:MultiPatient_Archive| //dim:Patient_Archive| //dim:Channel| //dim:PM_Store| //dim:Complex_Metric| //dim:Distribution_Simple_Array| //dim:Enumeration| //dim:Numeric| //dim:Real_Time_Sample_Array| //dim:Time_Sample_Array| //dim:PM_Segment| //dim:Activate_Operation| //dim:Limit_Alert_Operation| //dim:Select_Item_Operation| //dim:Set_Item_Operation| //dim:Set_Range_Operation| //dim:Set_String_Operation| //dim:Set_Value_Operation| //dim:Toggle_Flag_Operation| //dim:Device_interface| //dim:Session_Archive| //dim:Physician| //dim:Session_Notes| //dim:Session_Test">
+									<sch:assert test="count(dim:OBJECT_NAME)=1">OBJECT_NAME  in <sch:name/>,  must appear one time</sch:assert>
+									<sch:assert test="count(dim:OBJECT_ID)=1">OBJECT_id  in <sch:name/>,  must appear one time</sch:assert>
+									<sch:assert test="count(dim:TERM_CODE)=1">TERM_CODE  in <sch:name/>, must appear one time</sch:assert>
+									<sch:assert test="count(dim:MOC_TYPE_TERM_CODE)&lt;2">MOC_TYPE_TERM_CODE  in <sch:name/>,  should appear at most once( 0 or 1</sch:assert>
+									<sch:assert test="count(dim:MOC_TYPE_ID)&lt;2">MOC_TYPE  in <sch:name/>, should appear at most once( 0 or 1</sch:assert>
+									<sch:assert test="count(dim:Reference)=1">Reference  in <sch:name/>, must appear one time</sch:assert>
+									<sch:assert test="count(dim:MOC_RESTRICTIONS)=1">MOC_RESTRICTIONS  in <sch:name/>, must appear one time</sch:assert>
+									<sch:assert test="count(dim:MOC_APPLICATION_GUIDANCE)=1">MOC_APPLICATION_GUIDANCE  in <sch:name/>,  must appear one time</sch:assert>
+									<sch:assert test="count(dim:MOC_COMMENT)=1">MOC_APPLICATION_GUIDANCE  in <sch:name/>, must appear one time</sch:assert>
+									<sch:assert test="count(dim:Attribute_Info)&lt;2">Attribute_Info  in <sch:name/>, must appear one time</sch:assert>
+									<sch:assert test="count(dim:Notification_Info)&lt;2">Notification_Info  in <sch:name/>, must appear one time</sch:assert>
+									<sch:assert test="count(dim:Behaviour_Info)&lt;2">Behaviour_Info  in <sch:name/>, must appear one time</sch:assert>
+								</sch:rule>
+							</sch:pattern>
+						</xsd:appinfo>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Simple_MDS" type="Simple_MDS_Type">
+					<xsd:annotation>
+						<xsd:appinfo>
+							<sch:pattern name="testOccurences">
+								<sch:rule context="dim:Simple_MDS">
+									<sch:assert test="count(dim:VMD)&lt;2">VMD  in Simple_MDS should appear at most once( 0 or 1) in Simple_MDS</sch:assert>
+									<sch:assert test="count(dim:Clock)&lt;2">Clock  in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+									<sch:assert test="count(dim:Patient_Demographics)&lt;2">Patient_Demographics in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+								</sch:rule>
+							</sch:pattern>
+						</xsd:appinfo>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Hydra_MDS" type="Hydra_MDS_Type">
+					<xsd:annotation>
+						<xsd:appinfo>
+							<sch:pattern name="testOccurences">
+								<sch:rule context="dim:Hydra_MDS">
+									<sch:assert test="count(dim:Clock)&lt;2">Clock  in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+									<sch:assert test="count(dim:Patient_Demographics)&lt;2">Patient_Demographics in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+								</sch:rule>
+							</sch:pattern>
+						</xsd:appinfo>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="Composite_Single_Bed_MDS"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="Distribution_Sample_ArrayType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Distribution_Sample_ArrayTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="EnumerationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="EnumerationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="NumericType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="NumericTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Real_Time_Sample_ArrayType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Real_Time_Sample_ArrayTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Time_Sample_ArrayType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Time_Sample_ArrayTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="ChannelType">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Channel object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Channel_Grp"/>
+			<xsd:element name="Alert" type="AlertType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Complex_Metric" type="Complex_MetricType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Distribution_Sample_Array" type="Distribution_Sample_ArrayType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Enumeration" type="EnumerationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Numeric" type="NumericType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="PM-Store" type="PM-StoreType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Real_Time_Sample_Array" type="Real_Time_Sample_ArrayType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Time_Sample_Array" type="Time_Sample_ArrayType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Composite_Single_Bed_MDSType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Composite_Single_Bed_MDSType_Grp"/>
+			<xsd:element name="Simple_MDS" type="Simple_MDS_Type" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:appinfo>
+						<sch:pattern name="testOccurences">
+							<sch:rule context="dim:Simple_MDS">
+								<sch:assert test="count(dim:VMD)&lt;2">VMD  in Simple_MDS should appear at most once( 0 or 1) in Simple_MDS</sch:assert>
+								<sch:assert test="count(dim:Clock)&lt;2">Clock  in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+								<sch:assert test="count(dim:Patient_Demographics)&lt;2">Patient_Demographics in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+							</sch:rule>
+						</sch:pattern>
+					</xsd:appinfo>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Hydra_MDS" type="Hydra_MDS_Type" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:appinfo>
+						<sch:pattern name="testOccurences">
+							<sch:rule context="dim:Hydra_MDS">
+								<sch:assert test="count(dim:Clock)&lt;2">Clock  in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+								<sch:assert test="count(dim:Patient_Demographics)&lt;2">Patient_Demographics in Simple_MDS should appear at most once( 0 or 1)</sch:assert>
+							</sch:rule>
+						</sch:pattern>
+					</xsd:appinfo>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Composite_Single_Bed_MDS" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Complex_MetricType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Complex_MetricTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Multipatient_ArchiveType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Multipatient_ArchiveType_Grp"/>
+			<xsd:element name="Patient_Archive" type="Patient_ArchiveType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Patient_ArchiveType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Patient_ArchiveType_Grp"/>
+			<xsd:element name="Patient_Demographics" minOccurs="0"/>
+			<xsd:element name="Session_Archive" type="Session_ArchiveType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:appinfo>
+						<sch:pattern name="testOccurences">
+							<sch:rule context="dim:Session_Archive">
+								<sch:assert test="count(dim:Patient_Demographics)&lt;2">Patient_Demographics in Patient Archive should appear at most once( 0 or 1)</sch:assert>
+							</sch:rule>
+						</sch:pattern>
+					</xsd:appinfo>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="SCOType">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the SCO object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="SCOType_Grp"/>
+			<xsd:element name="Activate_Operation" type="Activate_OperationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Limit_Alert_Operation" type="Limit_Alert_OperationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Select_Item_Operation" type="Select_Item_OperationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Set_Range_Operation" type="Set_Range_OperationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Set_String_Operation" type="Set_String_OperationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Set_Value_Operation" type="Set_Value_OperationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Toggle_Flag_Operation" type="Toggle_Flag_OperationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Session_ArchiveType">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Session_Archive object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Session_ArchiveType_Grp"/>
+			<xsd:element name="Patient_Demographics" type="Patient_DemographicsType" minOccurs="0"/>
+			<xsd:element name="Physician" type="PhysicianType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Session_Notes" type="Session_NotesType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Session_Test" type="Session_TestType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Select_Item_OperationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Select_Item_OperationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Set_Range_OperationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Set_Range_OperationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Set_Value_OperationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Set_Value_OperationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Toggle_Flag_OperationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Toggle_Flag_OperationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Set_String_OperationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Set_String_OperationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Activate_OperationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Activate_OperationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Limit_Alert_OperationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Limit_Alert_OperationTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Session_NotesType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Session_NotesTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="PhysicianType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="PhysicianTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Session_TestType">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Session_Test object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Session_TestType_Grp"/>
+			<xsd:element name="PM-Store" type="PM-StoreType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Simple_MDS_Type">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Simple_MDS object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Simple_MDS_Grp"/>
+			<xsd:element name="Alert" type="AlertType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Alert_Monitor" type="Alert_MonitorType" minOccurs="0"/>
+			<xsd:element name="Alert_Scanner" type="Alert_ScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Alert_Status" type="Alert_StatusType" minOccurs="0"/>
+			<xsd:element name="Battery" type="BatteryType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Bedside_Communication_Controller" type="Bedside_Communication_ControllerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Clock" type="ClockType" minOccurs="0"/>
+			<xsd:element name="Context_Scanner" type="Context_ScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Device_Communication_Controller" type="Device_Communication_ControllerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="EpiCfgScanner" type="EpiCfgScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Event_Log" type="Event_LogType" minOccurs="0"/>
+			<xsd:element name="FastPeriCfgScanner" type="FastPeriCfgScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Operating_Scanner" type="Operating_ScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Patient_Demographics" type="Patient_DemographicsType" minOccurs="0"/>
+			<xsd:element name="PeriCfgScanner" type="PeriCfgScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="SCO" type="SCOType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="VMD" type="VMDType" minOccurs="0"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Device_Communication_ControllerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Device_Communication_ControllerTypeGrp"/>
+			<xsd:element name="Device_Interface" type="Device_Interface_ObjectType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Bedside_Communication_ControllerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Bedside_Communication_ControllerTypeGrp"/>
+			<xsd:element name="Device_Interface" type="Device_Interface_ObjectType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Device_Interface_ObjectType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Device_Interface_ObjectTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="PM-SegmentType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="PM-SegmentTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="PM-StoreType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="PM-StoreTypeGrp"/>
+			<xsd:element name="PM-Segment" type="PM-SegmentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Patient_DemographicsType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Patient_DemographicsTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Context_ScannerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Context_ScannerGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="AlertType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="AlertTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Alert_MonitorType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Alert_MonitorTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Alert_ScannerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Alert_ScannerTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Alert_StatusType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Alert_StatusTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="BatteryType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="BatteryTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="ClockType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="ClockTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="EpiCfgScannerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="EpiCfgScannerTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Event_LogType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Event_LogTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="FastPeriCfgScannerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="FastPeriCfgScannerTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Operating_ScannerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Operating_ScannerTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="PeriCfgScannerType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="PeriCfgScannerTypeGrp"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Hydra_MDS_Type">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the Hydra_MDS object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="Hydra_MDS_Type_Grp"/>
+			<xsd:element name="Alert" type="AlertType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Alert_Monitor" type="Alert_MonitorType" minOccurs="0"/>
+			<xsd:element name="Alert_Scanner" type="Alert_ScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Alert_Status" type="Alert_StatusType" minOccurs="0"/>
+			<xsd:element name="Battery" type="BatteryType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Bedside_Communication_Controller" type="Bedside_Communication_ControllerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Clock" type="ClockType" minOccurs="0"/>
+			<xsd:element name="Context_Scanner" type="Context_ScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Device_Communication_Controller" type="Device_Communication_ControllerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="EpiCfgScanner" type="EpiCfgScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Event_Log" type="Event_LogType" minOccurs="0"/>
+			<xsd:element name="FastPeriCfgScanner" type="FastPeriCfgScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Operating_Scanner" type="Operating_ScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Patient_Demographics" type="Patient_DemographicsType" minOccurs="0"/>
+			<xsd:element name="PeriCfgScanner" type="PeriCfgScannerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="SCO" type="SCOType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="VMD" type="VMDType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="VMDType">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the VMD object including its containment tree.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:group ref="VMDType_Grp"/>
+			<xsd:element name="Alert" type="AlertType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Alert_Status" type="Alert_StatusType" minOccurs="0"/>
+			<xsd:element name="Channel" type="ChannelType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="PM-Store" type="PM-StoreType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="SCO" type="SCOType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:schema>
