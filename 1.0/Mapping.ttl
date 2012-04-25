@@ -1,4 +1,4 @@
-# Saved by TopBraid on Tue Apr 24 21:22:38 PDT 2012
+# Saved by TopBraid on Wed Apr 25 13:05:44 PDT 2012
 # baseURI: http://www.cmusv.edu/MobileHealth/1.0/Mapping
 # imports: http://topbraid.org/spin/spinmapl
 # imports: http://cmusv/HSL
@@ -134,12 +134,24 @@ hsl:GlucoseReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:GlucoseReading-GlucoseReading ;
-                spinmap:expression spin:_arg1 ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "mg/dl"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_MILLI_G_PER_D" ;
+                          sp:arg3 ""
+                        ] ;
                 spinmap:sourcePredicate1
                         hsl:units ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#unitValue>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
               ] .
+
+hsl:GlucoseReading_2
+      rdf:type hsl:GlucoseReading ;
+      hsl:units "in"^^xsd:string .
 
 hsl:PulseReading
       spinmap:rule
@@ -260,11 +272,19 @@ hsl:WeightScaleReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:WeightScaleReading-BodyHeightReading ;
-                spinmap:expression spin:_arg1 ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "in"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_INCH" ;
+                          sp:arg3 ""
+                        ] ;
                 spinmap:sourcePredicate1
-                        hsl:units ;
+                        hsl:heightUnits ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#unitValue>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -278,11 +298,36 @@ hsl:WeightScaleReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:WeightScaleReading-BodyMassIndexReading ;
-                spinmap:expression spin:_arg1 ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "kg/m^2"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_KG_PER_M_SQ" ;
+                          sp:arg3 ""
+                        ] ;
                 spinmap:sourcePredicate1
-                        hsl:units ;
+                        hsl:bodyMassIndexUnits ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#unitValue>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:WeightScaleReading-BodyHeightReading ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "cm"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_CENTI_M" ;
+                          sp:arg3 ""
+                        ] ;
+                spinmap:sourcePredicate1
+                        hsl:heightUnits ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -292,15 +337,6 @@ hsl:WeightScaleReading
                         hsl:bodyMassIndex ;
                 spinmap:targetPredicate1
                         <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:WeightScaleReading-BodyWeightReading ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        hsl:units ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#unitValue>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
