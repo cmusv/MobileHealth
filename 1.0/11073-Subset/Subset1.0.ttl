@@ -1,4 +1,4 @@
-# Saved by TopBraid on Tue Apr 24 21:16:29 PDT 2012
+# Saved by TopBraid on Fri Apr 27 12:41:37 PDT 2012
 # baseURI: http://cmusv/1.0/11073-Subset/Subset1.0
 # imports: http://schema.rdfs.org/all
 # imports: http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101
@@ -45,11 +45,6 @@ subset:BloodPressureReading
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty subset:diastolicBP
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:unitValue
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -177,18 +172,8 @@ subset:BodyHeightReading
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:unitValue
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
                 owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
                 owl:onProperty subset:hasAttributeValueMap
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementCode
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;
@@ -218,16 +203,6 @@ subset:BodyMassIndexReading
               [ rdf:type owl:Restriction ;
                 owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementMiscA.8.11.16-36> ;
                 owl:onProperty subset:hasType
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementCode
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:unitValue
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -265,11 +240,6 @@ subset:BodyWeightReading
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementCode
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
                 owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementDimUnitsA.6.3-270> ;
                 owl:onProperty subset:hasUnitCode
               ] ;
@@ -297,11 +267,6 @@ subset:BodyWeightReading
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty subset:timeValue
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:unitValue
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -396,12 +361,12 @@ subset:GlucoseReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:unitValue
+                owl:onProperty subset:hasUnitCode
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementCode
+                owl:onProperty subset:handle
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -417,11 +382,6 @@ subset:GlucoseReading
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty subset:measurementValue
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementDimUnitsA.6.3-277> ;
-                owl:onProperty subset:hasUnitCode
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -607,11 +567,6 @@ subset:PulseRateReadingOximeter
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementCode
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementDimUnitsA.6.3-98> ;
                 owl:onProperty subset:hasUnitCode
               ] ;
       rdfs:subClassOf
@@ -628,11 +583,6 @@ subset:PulseRateReadingOximeter
               [ rdf:type owl:Restriction ;
                 owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-148> ;
                 owl:onProperty subset:hasType
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:unitValue
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;
@@ -671,7 +621,7 @@ subset:SpO2Reading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementCode
+                owl:onProperty subset:hasUnitCode
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -687,11 +637,6 @@ subset:SpO2Reading
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty subset:timeValue
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementDimUnitsA.6.3-6> ;
-                owl:onProperty subset:hasUnitCode
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;
@@ -782,8 +727,18 @@ subset:TemperatureReading
       rdfs:subClassOf owl:Thing ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-155> ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:handle
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty subset:hasType
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty subset:metricSpecSmall
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -793,27 +748,17 @@ subset:TemperatureReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:timeValue
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:unitValue
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:hasValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementDimUnitsA.6.3-187> ;
                 owl:onProperty subset:hasUnitCode
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementValue
+                owl:onProperty subset:timeValue
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty subset:measurementCode
+                owl:onProperty subset:measurementValue
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -832,8 +777,8 @@ subset:TemperatureReading
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;
-                spl:defaultValue <http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-155> ;
-                spl:predicate subset:hasType
+                spl:defaultValue "mss-avail-stored-data"^^xsd:string ;
+                spl:predicate subset:metricSpecSmall
               ] ;
       spin:constructor
               [ rdf:type spl:InferDefaultValue ;

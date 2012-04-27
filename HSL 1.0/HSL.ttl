@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Apr 25 12:00:05 PDT 2012
+# Saved by TopBraid on Fri Apr 27 12:47:28 PDT 2012
 # baseURI: http://cmusv/HSL
 # imports: http://schema.rdfs.org/all
 
@@ -25,6 +25,7 @@
       hsl:readingID "184765"^^xsd:string ;
       hsl:systolicPressure
               110 ;
+      hsl:units "mmhg"^^xsd:string ;
       schema:endDate "2012-02-20"^^xsd:date .
 
 :Patient527
@@ -191,7 +192,12 @@ hsl:PulseReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:pulseRate
+                owl:onProperty hsl:spO2Units
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty hsl:pulseUnits
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -201,15 +207,16 @@ hsl:PulseReading
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty hsl:units
+                owl:onProperty hsl:pulseRate
               ] .
 
 hsl:PulseReading_1
       rdf:type hsl:PulseReading ;
       hsl:ofPatient :Patient527 ;
       hsl:pulseRate 80 ;
+      hsl:pulseUnits "bpm"^^xsd:string ;
       hsl:spO2 "0.90"^^xsd:float ;
-      hsl:units "bpm"^^xsd:string ;
+      hsl:spO2Units "%"^^xsd:string ;
       schema:endDate "2012-03-30"^^xsd:date .
 
 hsl:Technician
@@ -244,9 +251,10 @@ hsl:TemperatureReading_1
       rdf:type hsl:TemperatureReading ;
       hsl:bodyTemperature "96.5"^^xsd:float ;
       hsl:ofPatient :Patient527 ;
+      hsl:readingID "12345"^^xsd:string ;
       hsl:temperatureOption
               "ear"^^xsd:string ;
-      hsl:units "Farhenheit"^^xsd:string ;
+      hsl:units "F"^^xsd:string ;
       schema:endDate "2012-03-30"^^xsd:date .
 
 hsl:WeightScaleReading
@@ -285,14 +293,14 @@ hsl:WeightScaleReading
 
 hsl:WeightScaleReading_1
       rdf:type hsl:WeightScaleReading ;
-      hsl:bodyHeight "70"^^xsd:float ;
+      hsl:bodyHeight "110"^^xsd:float ;
       hsl:bodyMassIndex "25.1"^^xsd:float ;
       hsl:bodyMassIndexUnits
               "kg/m^2"^^xsd:string ;
       hsl:bodyWeight "68.1"^^xsd:float ;
-      hsl:heightUnits "in"^^xsd:string ;
+      hsl:heightUnits "cm"^^xsd:string ;
       hsl:ofPatient :Patient527 ;
-      hsl:weightUnits "lb"^^xsd:string ;
+      hsl:weightUnits "kg"^^xsd:string ;
       schema:endDate "2012-03-30"^^xsd:date .
 
 hsl:bloodGlucoseLevel
@@ -355,12 +363,20 @@ hsl:pulseRate
       rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:integer .
 
+hsl:pulseUnits
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
 hsl:readingID
       rdf:type owl:DatatypeProperty .
 
 hsl:spO2
       rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:float .
+
+hsl:spO2Units
+      rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
 
 hsl:systolicPressure
       rdf:type owl:DatatypeProperty ;
