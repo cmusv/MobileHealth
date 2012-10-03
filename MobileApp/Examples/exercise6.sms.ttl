@@ -1,0 +1,111 @@
+# baseURI: http://SPARQLMotion-tutorial.com/exercise6
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix arg:     <http://spinrdf.org/arg#> .
+@prefix countries:  <http://topbraid.org/countries#> .
+@prefix exercise6:  <http://SPARQLMotion-tutorial.com/exercise6#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region:  <http://topbraid.org/owl/geo/region#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://SPARQLMotion-tutorial.com/exercise6>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+exercise6:CreateResponse
+      rdf:type sml:BindLiteralVariable ;
+      sm:next exercise6:ReturnCapital ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:datatype xsd:string ;
+      sml:template "{?capitalLabel} is the capital of {?arg1}"^^xsd:string .
+
+exercise6:GetCapital
+      rdf:type sml:BindBySelect ;
+      sm:next exercise6:CreateResponse ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "capitalLabel"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:setLanguage ;
+                                      arg:language "en" ;
+                                      sp:arg1 spin:_arg1
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "countryLabel"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "countryLabel"^^xsd:string
+                                    ] ;
+                            sp:predicate rdfs:label ;
+                            sp:subject
+                                    [ sp:varName "country"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "capital"^^xsd:string
+                                    ] ;
+                            sp:predicate region:capital ;
+                            sp:subject
+                                    [ sp:varName "country"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "cap"^^xsd:string
+                                    ] ;
+                            sp:predicate rdfs:label ;
+                            sp:subject
+                                    [ sp:varName "capital"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type sp:eq ;
+                                      sp:arg1 [ rdf:type sp:lang ;
+                                                sp:arg1 [ sp:varName "cap"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg2 "en"
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:setLanguage ;
+                                      arg:language "" ;
+                                      sp:arg1 [ sp:varName "cap"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "capitalLabel"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
+exercise6:LoadCountriesCapitals
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next exercise6:GetCapital ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "exercise4-output.rdf"^^xsd:string .
+
+exercise6:ReturnCapital
+      rdf:type sml:ReturnText ;
+      sml:mimeType "text"^^xsd:string .
+
+spin:ReturnCapital
+      rdf:type spin:Function ;
+      rdfs:subClassOf spin:Functions ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                rdfs:comment "The name of a country"^^xsd:string ;
+                spl:predicate sp:arg1 ;
+                spl:valueType xsd:string ;
+                sm:next exercise6:GetCapital
+              ] ;
+      sm:returnModule exercise6:ReturnCapital .

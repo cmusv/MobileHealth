@@ -1,0 +1,49 @@
+# baseURI: http://www.cmusv.edu/MobileHealth/medicalReadings
+# imports: http://cmusv/1.0/11073-Subset/Subset1.0
+# imports: http://cmusv/HSL
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+# imports: http://www.cmusv.edu/MobileHealth/1.0/Mapping
+
+@prefix medicalReadings:  <http://www.cmusv.edu/MobileHealth/medicalReadings#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/MobileHealth/medicalReadings>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://cmusv/HSL> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+medicalReadings:CreateOutput
+      rdf:type sml:BindLiteralVariable ;
+      sm:next medicalReadings:translateBloodPressureReading ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:datatype xsd:string ;
+      sml:template "Hello World patient_id={?arg1}&reading_id={?arg2}"^^xsd:string .
+
+medicalReadings:translateBloodPressureReading
+      rdf:type spin:Function , sml:ReturnText ;
+      rdfs:subClassOf spin:Functions ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                rdfs:comment "patient id"^^xsd:string ;
+                spl:predicate sp:arg1 ;
+                spl:valueType xsd:integer ;
+                sm:next medicalReadings:CreateOutput
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                rdfs:comment "reading id"^^xsd:string ;
+                spl:predicate sp:arg2 ;
+                spl:valueType xsd:integer ;
+                sm:next medicalReadings:CreateOutput
+              ] ;
+      sm:returnModule medicalReadings:translateBloodPressureReading ;
+      sml:mimeType "text"^^xsd:string .

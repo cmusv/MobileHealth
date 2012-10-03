@@ -1,0 +1,227 @@
+# baseURI: http://SPARQLMotion-tutorial.com/exercise4
+# imports: http://topbraid.org/countries
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix countries:  <http://topbraid.org/countries#> .
+@prefix exercise4:  <http://SPARQLMotion-tutorial.com/exercise4#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix region:  <http://topbraid.org/owl/geo/region#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://SPARQLMotion-tutorial.com/exercise4>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/countries> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+exercise4:BindLiteralVariable_1
+      rdf:type sml:BindLiteralVariable ;
+      sm:next exercise4:SpecifyRegionImport ;
+      sm:outputVariable "\"namespace\""^^xsd:string ;
+      sml:datatype xsd:string ;
+      sml:template "\"http://www.sparqlmotion-tutorial.com/exercise4\""^^xsd:string .
+
+exercise4:DefineRegion
+      rdf:type sml:ModifyPrefixes ;
+      sm:next exercise4:GetCapitals ;
+      sml:addedPrefix "region http://topbraid.org/owl/geo/region#"^^xsd:string .
+
+exercise4:ExportAll
+      rdf:type sml:ExportToRDFFile ;
+      sml:baseURI "{?namespace}"^^xsd:string ;
+      sml:targetFilePath "exercise4-output.rdf"^^xsd:string .
+
+exercise4:GetCapitals
+      rdf:type sml:ApplyConstruct ;
+      sm:next exercise4:MakeLocalCapitals ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object region:Capital ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "capital"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "name"^^xsd:string
+                                    ] ;
+                            sp:predicate rdfs:label ;
+                            sp:subject
+                                    [ sp:varName "capital"^^xsd:string
+                                    ]
+                          ]) ;
+                sp:where ([ rdf:type sp:Service ;
+                            sp:elements (([ sp:object
+                                                  [ sp:varName "capital"^^xsd:string
+                                                  ] ;
+                                          sp:predicate <http://dbpedia.org/property/capital> ;
+                                          sp:subject
+                                                  [ sp:varName "dbpediaURI"^^xsd:string
+                                                  ]
+                                        ] [ sp:object
+                                                  [ sp:varName "name"^^xsd:string
+                                                  ] ;
+                                          sp:predicate rdfs:label ;
+                                          sp:subject
+                                                  [ sp:varName "capital"^^xsd:string
+                                                  ]
+                                        ])) ;
+                            sp:serviceURI <http://dbpedia.org/sparql>
+                          ])
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
+exercise4:LoadCountries
+      rdf:type sml:ImportRDFFromURL ;
+      sm:next exercise4:RemoveOntologyStatements , exercise4:SelectDBPediaURI ;
+      sml:url "http://www.topquadrant.com/topbraid/countries"^^xsd:string .
+
+exercise4:MakeLocalCapitals
+      rdf:type sml:ApplyConstruct ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object region:City ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "uri"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "name"^^xsd:string
+                                    ] ;
+                            sp:predicate rdfs:label ;
+                            sp:subject
+                                    [ sp:varName "uri"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "uri"^^xsd:string
+                                    ] ;
+                            sp:predicate region:capital ;
+                            sp:subject
+                                    [ sp:varName "country"^^xsd:string
+                                    ]
+                          ]) ;
+                sp:where ([ sp:object region:Capital ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "capital"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type afn:localname ;
+                                      sp:arg1 [ sp:varName "capital"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "localname"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:buildURI ;
+                                      sp:arg1 "region:{?localname}"
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "uri"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "name"^^xsd:string
+                                    ] ;
+                            sp:predicate rdfs:label ;
+                            sp:subject
+                                    [ sp:varName "capital"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
+exercise4:RemoveOntologyStatements
+      rdf:type sml:FilterByConstruct ;
+      sm:next exercise4:ExportAll ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object owl:Ontology ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "o"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "s"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "o"^^xsd:string
+                                    ]
+                          ]) ;
+                sp:where ([ sp:object owl:Ontology ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "o"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "s"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "o"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
+exercise4:SelectDBPediaURI
+      rdf:type sml:IterateOverSelect ;
+      sm:body exercise4:GetCapitals ;
+      sm:next exercise4:RemoveOntologyStatements ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "dbpediaURI"^^xsd:string
+                          ] [ sp:varName "country"^^xsd:string
+                          ]) ;
+                sp:where ([ sp:object countries:Country ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "country"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "dbpediaURI"^^xsd:string
+                                    ] ;
+                            sp:predicate owl:sameAs ;
+                            sp:subject
+                                    [ sp:varName "country"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
+exercise4:SpecifyRegionImport
+      rdf:type sml:ApplyConstruct ;
+      sm:next exercise4:ExportAll ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object <http://topbraid.org/owl/geo/region> ;
+                            sp:predicate owl:imports ;
+                            sp:subject
+                                    [ sp:varName "namespaceURI"^^xsd:string
+                                    ]
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:buildURI ;
+                                      sp:arg1 "{?namespace}"
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "namespaceURI"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
+countries:AD
+      owl:sameAs <http://dbpedia.org/resource/Andorra> .
