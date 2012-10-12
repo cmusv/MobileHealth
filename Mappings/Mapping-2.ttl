@@ -1,13 +1,12 @@
-# Saved by TopBraid on Sun Feb 26 10:37:27 PST 2012
 # baseURI: http://cmusv/Mapping-2
-# imports: http://topbraid.org/spin/spinmapl
 # imports: http://cmusv/FakeClasses2
-# imports: http://cmusv/HSL
+# imports: http://cmusv/hsl
 # imports: http://spinrdf.org/spin
+# imports: http://topbraid.org/spin/spinmapl
 
 @prefix :        <http://cmusv/Mapping-2#> .
 @prefix FakeClasses2:  <http://cmusv/FakeClasses2#> .
-@prefix HSL:     <http://cmusv/HSL#> .
+@prefix HSL:     <http://cmusv/hsl#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -34,43 +33,15 @@ FakeClasses2:SystolicReading
 
 <http://cmusv/HSL/BPReading>
       spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context :BPReading-DiastolicReading ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        <http://cmusv/HSL/diastolicPressure> ;
-                spinmap:targetPredicate1
-                        FakeClasses2:ReadingValue
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context :BPReading-DiastolicReading ;
-                spinmap:expression FakeClasses2:DiastolicReading ;
-                spinmap:targetPredicate1
-                        rdf:type
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context :BPReading-SystolicReading ;
-                spinmap:expression FakeClasses2:SystolicReading ;
-                spinmap:targetPredicate1
-                        rdf:type
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context :BPReading-SystolicReading ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        <http://cmusv/HSL/systolicPressure> ;
-                spinmap:targetPredicate1
-                        FakeClasses2:ReadingValue
-              ] ;
-      spinmap:rule
               [ rdf:type spinmap:Mapping-0-1 ;
                 spinmap:context :BPReading-BloodPressureReading ;
-                spinmap:expression FakeClasses2:BloodPressureReading ;
+                spinmap:expression
+                        [ rdf:type spinmap:targetResource ;
+                          sp:arg1 spin:_arg1 ;
+                          spinmap:context :BPReading-SystolicReading
+                        ] ;
                 spinmap:targetPredicate1
-                        rdf:type
+                        FakeClasses2:hasSystolic
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-0-1 ;
@@ -86,18 +57,46 @@ FakeClasses2:SystolicReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-0-1 ;
                 spinmap:context :BPReading-BloodPressureReading ;
-                spinmap:expression
-                        [ rdf:type spinmap:targetResource ;
-                          sp:arg1 spin:_arg1 ;
-                          spinmap:context :BPReading-SystolicReading
-                        ] ;
+                spinmap:expression FakeClasses2:BloodPressureReading ;
                 spinmap:targetPredicate1
-                        FakeClasses2:hasSystolic
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context :BPReading-SystolicReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://cmusv/HSL/systolicPressure> ;
+                spinmap:targetPredicate1
+                        FakeClasses2:ReadingValue
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context :BPReading-SystolicReading ;
+                spinmap:expression FakeClasses2:SystolicReading ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context :BPReading-DiastolicReading ;
+                spinmap:expression FakeClasses2:DiastolicReading ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context :BPReading-DiastolicReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://cmusv/HSL/diastolicPressure> ;
+                spinmap:targetPredicate1
+                        FakeClasses2:ReadingValue
               ] .
 
 <http://cmusv/Mapping-2>
       rdf:type owl:Ontology ;
-      owl:imports <http://spinrdf.org/spin> , <http://topbraid.org/spin/spinmapl> , <http://cmusv/HSL> , <http://cmusv/FakeClasses2> ;
+      owl:imports <http://cmusv/hsl> , <http://cmusv/FakeClasses2> , <http://topbraid.org/spin/spinmapl> , <http://spinrdf.org/spin> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 :BPReading-BloodPressureReading

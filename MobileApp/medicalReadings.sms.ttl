@@ -1,6 +1,6 @@
 # baseURI: http://www.cmusv.edu/MobileHealth/medicalReadings
 # imports: http://cmusv/1.0/11073-Subset/Subset1.0
-# imports: http://cmusv/HSL
+# imports: http://cmusv/hsl
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 # imports: http://www.cmusv.edu/MobileHealth/1.0/Mapping
@@ -56,20 +56,20 @@ sp:units
 
 <http://www.cmusv.edu/MobileHealth/medicalReadings>
       rdf:type owl:Ontology ;
-      owl:imports <http://cmusv/HSL> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://cmusv/hsl> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://cmusv/1.0/11073-Subset/Subset1.0> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 medicalReadings:ApplyConstruct_1
       rdf:type sml:ApplyConstruct ;
-      sm:next medicalReadings:translateBloodPressureReadingAsXML ;
+      sm:next medicalReadings:ApplyOWLIM_1 , medicalReadings:translateBloodPressureReadingAsXML ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
-                sp:templates ([ sp:object <http://cmusv/HSL/Patient> ;
+                sp:templates ([ sp:object <http://cmusv/hsl#Patient> ;
                             sp:predicate rdf:type ;
                             sp:subject
                                     [ sp:varName "newPatient"^^xsd:string
                                     ]
-                          ] [ sp:object <http://cmusv/HSL/BPReading> ;
+                          ] [ sp:object <http://cmusv/hsl#BPReading> ;
                             sp:predicate rdf:type ;
                             sp:subject
                                     [ sp:varName "bloodPressureReading"^^xsd:string
@@ -77,32 +77,42 @@ medicalReadings:ApplyConstruct_1
                           ] [ sp:object
                                     [ sp:varName "newPatient"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/HSL/ofPatient> ;
+                            sp:predicate <http://cmusv/hsl#ofPatient> ;
                             sp:subject
                                     [ sp:varName "bloodPressureReading"^^xsd:string
                                     ]
-                          ] [ sp:object 11 ;
-                            sp:predicate <http://cmusv/HSL/diastolicPressure> ;
+                          ] [ sp:object
+                                    [ sp:varName "diastolicPressure"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#diastolicPressure> ;
                             sp:subject
                                     [ sp:varName "bloodPressureReading"^^xsd:string
                                     ]
-                          ] [ sp:object 22 ;
-                            sp:predicate <http://cmusv/HSL/meanArterialPressure> ;
+                          ] [ sp:object
+                                    [ sp:varName "meanArterialPressure"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#meanArterialPressure> ;
                             sp:subject
                                     [ sp:varName "bloodPressureReading"^^xsd:string
                                     ]
-                          ] [ sp:object 33 ;
-                            sp:predicate <http://cmusv/HSL/systolicPressure> ;
+                          ] [ sp:object
+                                    [ sp:varName "systolicPressure"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#systolicPressure> ;
                             sp:subject
                                     [ sp:varName "bloodPressureReading"^^xsd:string
                                     ]
-                          ] [ sp:object 44 ;
-                            sp:predicate <http://cmusv/HSL/pulseRate> ;
+                          ] [ sp:object
+                                    [ sp:varName "pulseRate"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#pulseRate> ;
                             sp:subject
                                     [ sp:varName "bloodPressureReading"^^xsd:string
                                     ]
-                          ] [ sp:object "mmhg" ;
-                            sp:predicate <http://cmusv/HSL/units> ;
+                          ] [ sp:object
+                                    [ sp:varName "units"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#units> ;
                             sp:subject
                                     [ sp:varName "bloodPressureReading"^^xsd:string
                                     ]
@@ -111,7 +121,7 @@ medicalReadings:ApplyConstruct_1
                             sp:expression
                                     [ rdf:type spif:buildURI ;
                                       sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 "http://cmusv/HSL#" ;
+                                                sp:arg1 "http://cmusv/hsl#" ;
                                                 sp:arg2 [ sp:varName "patientId"^^xsd:string
                                                         ]
                                               ]
@@ -123,7 +133,7 @@ medicalReadings:ApplyConstruct_1
                             sp:expression
                                     [ rdf:type spif:buildURI ;
                                       sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 "http://cmusv/HSL#" ;
+                                                sp:arg1 "http://cmusv/hsl#" ;
                                                 sp:arg2 [ sp:varName "readingId"^^xsd:string
                                                         ]
                                               ]
@@ -132,59 +142,36 @@ medicalReadings:ApplyConstruct_1
                                     [ sp:varName "bloodPressureReading"^^xsd:string
                                     ]
                           ])
-              ] .
+              ] ;
+      sml:replace "true"^^xsd:boolean .
 
-medicalReadings:BindBySelect
-      rdf:type sml:BindBySelect ;
-      sm:next medicalReadings:ConvertRDFToXML ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:where ([ sp:object <http://cmusv/HSL/Person> ;
-                            sp:predicate rdf:type ;
-                            sp:subject
-                                    [ sp:varName "patient"^^xsd:string
-                                    ]
-                          ] [ sp:object <http://cmusv/HSL#Patient527> ;
-                            sp:predicate <http://cmusv/HSL/playsRoleOf> ;
-                            sp:subject
-                                    [ sp:varName "patient"^^xsd:string
-                                    ]
-                          ])
-              ] .
+medicalReadings:ApplyOWLIM_1
+      rdf:type sml:ApplyOWLIM ;
+      sm:next medicalReadings:ExportToRDFFile_1 ;
+      sml:replace "true"^^xsd:boolean .
 
-medicalReadings:BindBySelect_1
-      rdf:type sml:BindBySelect ;
-      sm:next medicalReadings:ConvertRDFToXML_1 ;
-      sm:nodeX 127 ;
-      sm:nodeY 133 .
-
-medicalReadings:ConvertRDFToXML
-      rdf:type sml:ConvertRDFToXML ;
-      sm:next medicalReadings:translateAsXML ;
-      sm:outputVariable "xml" .
-
-medicalReadings:ConvertRDFToXML_1
-      rdf:type sml:ConvertRDFToXML ;
-      sm:nodeX 130 ;
-      sm:nodeY 258 ;
-      sm:outputVariable "xml" .
-
-medicalReadings:CreateOutput
-      rdf:type sml:BindLiteralVariable ;
-      sm:next medicalReadings:BindBySelect ;
-      sm:outputVariable "xml"^^xsd:string ;
-      sml:datatype xsd:string ;
-      sml:template "systolicPressure is {?systolicPressure} and diastolicPressure is {?diastolicPressure}"^^xsd:string .
+medicalReadings:ExportToRDFFile_1
+      rdf:type sml:ExportToRDFFile ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/medicalReadings/output"^^xsd:string ;
+      sml:targetFilePath "output.rdf"^^xsd:string .
 
 <http://www.cmusv.edu/MobileHealth/medicalReadings#Import-HSL.ttl_1>
       rdf:type sml:ImportRDFFromWorkspace ;
       rdfs:label "Import HSL.ttl"^^xsd:string ;
-      sm:next medicalReadings:ApplyConstruct_1 ;
-      sml:baseURI "http://cmusv/HSL"^^xsd:string .
+      sm:next medicalReadings:ExportToRDFFile_1 , medicalReadings:ApplyOWLIM_1 , medicalReadings:ApplyConstruct_1 ;
+      sml:baseURI "http://cmusv/hsl"^^xsd:string .
 
-medicalReadings:translateAsXML
-      rdf:type sml:ReturnXML ;
-      sml:mimeType "text/xml"^^xsd:string .
+<http://www.cmusv.edu/MobileHealth/medicalReadings#Import-Mapping.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import Mapping.ttl"^^xsd:string ;
+      sm:next medicalReadings:ApplyOWLIM_1 ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/Mapping"^^xsd:string .
+
+<http://www.cmusv.edu/MobileHealth/medicalReadings#Import-Subset1.0.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import Subset1.0.ttl"^^xsd:string ;
+      sm:next medicalReadings:ApplyOWLIM_1 ;
+      sml:baseURI "http://cmusv/1.0/11073-Subset/Subset1.0"^^xsd:string .
 
 medicalReadings:translateBloodPressureReadingAsXML
       rdf:type sm:Function , sml:ReturnSPARQLResults ;
@@ -192,15 +179,15 @@ medicalReadings:translateBloodPressureReadingAsXML
       spin:constraint
               [ rdf:type spl:Argument ;
                 spl:defaultValue 0 ;
-                spl:predicate sp:diastolicPressure ;
+                spl:predicate sp:meanArterialPressure ;
                 spl:valueType xsd:integer ;
                 sm:next medicalReadings:ApplyConstruct_1
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "mmhg"^^xsd:string ;
-                spl:predicate sp:units ;
-                spl:valueType xsd:string ;
+                spl:defaultValue 0 ;
+                spl:predicate sp:diastolicPressure ;
+                spl:valueType xsd:integer ;
                 sm:next medicalReadings:ApplyConstruct_1
               ] ;
       spin:constraint
@@ -212,9 +199,9 @@ medicalReadings:translateBloodPressureReadingAsXML
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue 0 ;
-                spl:predicate sp:meanArterialPressure ;
-                spl:valueType xsd:integer ;
+                spl:defaultValue "Patient528"^^xsd:string ;
+                spl:predicate sp:patientId ;
+                spl:valueType xsd:string ;
                 sm:next medicalReadings:ApplyConstruct_1
               ] ;
       spin:constraint
@@ -233,8 +220,8 @@ medicalReadings:translateBloodPressureReadingAsXML
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "Patient528"^^xsd:string ;
-                spl:predicate sp:patientId ;
+                spl:defaultValue "mmhg"^^xsd:string ;
+                spl:predicate sp:units ;
                 spl:valueType xsd:string ;
                 sm:next medicalReadings:ApplyConstruct_1
               ] ;
@@ -251,12 +238,24 @@ medicalReadings:translateBloodPressureReadingAsXML
                             sp:subject
                                     [ sp:varName "s"^^xsd:string
                                     ]
-                          ] [ sp:object <http://cmusv/HSL#Patient528> ;
-                            sp:predicate <http://cmusv/HSL/ofPatient> ;
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 "http://cmusv/hsl#" ;
+                                                sp:arg2 [ sp:varName "patientId"^^xsd:string
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newPatient"^^xsd:string
+                                    ]
+                          ] [ sp:object <http://cmusv/hsl#Patient528> ;
+                            sp:predicate <http://cmusv/hsl#ofPatient> ;
                             sp:subject
                                     [ sp:varName "s"^^xsd:string
                                     ]
-                          ] [ sp:object <http://cmusv/HSL/BPReading> ;
+                          ] [ sp:object <http://cmusv/hsl#BPReading> ;
                             sp:predicate rdf:type ;
                             sp:subject
                                     [ sp:varName "s"^^xsd:string
@@ -264,6 +263,3 @@ medicalReadings:translateBloodPressureReadingAsXML
                           ])
               ] ;
       sml:serialization sm:XML .
-
-medicalReadings:translateXML45_Return
-      rdf:type sml:ReturnXML .
