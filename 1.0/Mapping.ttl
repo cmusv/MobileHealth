@@ -16,6 +16,7 @@
 @prefix spinmapl:  <http://topbraid.org/spin/spinmapl#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix hsl:	 <http://cmusv/hsl#> .
 
 <http://cmusv/1.0/11073-Subset/Subset1.0#SpO2Reading>
       rdfs:subClassOf
