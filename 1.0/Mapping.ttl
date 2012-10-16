@@ -4,10 +4,8 @@
 # imports: http://spinrdf.org/spin
 # imports: http://topbraid.org/spin/spinmapl
 
-@prefix HSL:     <http://cmusv/hsl#> .
 @prefix Mapping:  <http://www.cmusv.edu/MobileHealth/1.0/Mapping#> .
 @prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
-@prefix hsl:     <http://cmusv/HSL/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -38,11 +36,44 @@ hsl:BPReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "mmhg"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_MMHG" ;
+                          sp:arg3 ""
+                        ] ;
+                spinmap:sourcePredicate1
+                        hsl:units ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:BPReading-BloodPressureReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        hsl:systolicPressure ;
+                        schema:endDate ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#systolicBP>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#BloodPressureReading> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:diastolicPressure ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#diastolicBP>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -58,20 +89,24 @@ hsl:BPReading
                 spinmap:context Mapping:BPReading-BloodPressureReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        hsl:diastolicPressure ;
+                        hsl:systolicPressure ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#diastolicBP>
-              ] ;
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#systolicBP>
+              ] .
+
+hsl:GlucoseReading
       spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context Mapping:BPReading-BloodPressureReading ;
-                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#BloodPressureReading> ;
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:GlucoseReading-GlucoseReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:bloodGlucoseLevel ;
                 spinmap:targetPredicate1
-                        rdf:type
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:BPReading-BloodPressureReading ;
+                spinmap:context Mapping:GlucoseReading-GlucoseReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
                         schema:endDate ;
@@ -79,24 +114,12 @@ hsl:BPReading
                         <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
               ] ;
       spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:BPReading-BloodPressureReading ;
-                spinmap:expression
-                        [ rdf:type sp:if ;
-                          sp:arg1 [ rdf:type fn:matches ;
-                                    sp:arg1 spin:_arg1 ;
-                                    sp:arg2 "mmhg"
-                                  ] ;
-                          sp:arg2 "MDC_DIM_MMHG" ;
-                          sp:arg3 ""
-                        ] ;
-                spinmap:sourcePredicate1
-                        hsl:units ;
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context Mapping:GlucoseReading-GlucoseReading ;
+                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#GlucoseReading> ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
-              ] .
-
-hsl:GlucoseReading
+                        rdf:type
+              ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:GlucoseReading-GlucoseReading ;
@@ -113,87 +136,30 @@ hsl:GlucoseReading
                         hsl:units ;
                 spinmap:targetPredicate1
                         <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context Mapping:GlucoseReading-GlucoseReading ;
-                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#GlucoseReading> ;
-                spinmap:targetPredicate1
-                        rdf:type
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:GlucoseReading-GlucoseReading ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        schema:endDate ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:GlucoseReading-GlucoseReading ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        hsl:bloodGlucoseLevel ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
               ] .
 
 hsl:GlucoseReading_2
       rdf:type hsl:GlucoseReading ;
-      hsl:units "in"^^xsd:string .
+      hsl:units
+              "in"^^xsd:string .
 
 hsl:PulseReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:PulseReading-PulseRateReadingOximeter ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        hsl:pulseRate ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:PulseReading-PulseRateReadingOximeter ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        schema:endDate ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:PulseReading-SpO2Reading ;
-                spinmap:expression spin:_arg1 ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "%"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_PERCENT" ;
+                          sp:arg3 ""
+                        ] ;
                 spinmap:sourcePredicate1
-                        hsl:spO2 ;
+                        hsl:spO2Units ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context Mapping:PulseReading-SpO2Reading ;
-                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#SpO2Reading> ;
-                spinmap:targetPredicate1
-                        rdf:type
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context Mapping:PulseReading-PulseRateReadingOximeter ;
-                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#PulseRateReadingOximeter> ;
-                spinmap:targetPredicate1
-                        rdf:type
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:PulseReading-SpO2Reading ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        schema:endDate ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -215,27 +181,6 @@ hsl:PulseReading
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:PulseReading-SpO2Reading ;
-                spinmap:expression
-                        [ rdf:type sp:if ;
-                          sp:arg1 [ rdf:type fn:matches ;
-                                    sp:arg1 spin:_arg1 ;
-                                    sp:arg2 "%"
-                                  ] ;
-                          sp:arg2 "MDC_DIM_PERCENT" ;
-                          sp:arg3 ""
-                        ] ;
-                spinmap:sourcePredicate1
-                        hsl:spO2Units ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
-              ] .
-
-hsl:TemperatureReading
-      rdf:type owl:Class ;
-      rdfs:subClassOf hsl:MedicalReading ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
                         schema:endDate ;
@@ -244,44 +189,49 @@ hsl:TemperatureReading
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
-                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#TemperatureReading> ;
+                spinmap:context Mapping:PulseReading-PulseRateReadingOximeter ;
+                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#PulseRateReadingOximeter> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context Mapping:PulseReading-SpO2Reading ;
+                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#SpO2Reading> ;
                 spinmap:targetPredicate1
                         rdf:type
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
+                spinmap:context Mapping:PulseReading-SpO2Reading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        hsl:bodyTemperature ;
+                        hsl:spO2 ;
                 spinmap:targetPredicate1
                         <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
-                spinmap:expression
-                        [ rdf:type sp:if ;
-                          sp:arg1 [ rdf:type fn:matches ;
-                                    sp:arg1 spin:_arg1 ;
-                                    sp:arg2 "F"
-                                  ] ;
-                          sp:arg2 "MDC_DIM_FAHR" ;
-                          sp:arg3 [ rdf:type sp:if ;
-                                    sp:arg1 [ rdf:type fn:matches ;
-                                              sp:arg1 spin:_arg1 ;
-                                              sp:arg2 "C"
-                                            ] ;
-                                    sp:arg2 "MDC_DIM_DEGC" ;
-                                    sp:arg3 ""
-                                  ]
-                        ] ;
+                spinmap:context Mapping:PulseReading-PulseRateReadingOximeter ;
+                spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        hsl:units ;
+                        schema:endDate ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
               ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:PulseReading-PulseRateReadingOximeter ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:pulseRate ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
+              ] .
+
+hsl:TemperatureReading
+      rdf:type owl:Class ;
+      rdfs:subClassOf hsl:MedicalReading ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:TemperatureReading-TemperatureReading ;
@@ -354,11 +304,69 @@ hsl:TemperatureReading
                         hsl:temperatureOption ;
                 spinmap:targetPredicate1
                         <http://cmusv/1.0/11073-Subset/Subset1.0#hasType>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "F"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_FAHR" ;
+                          sp:arg3 [ rdf:type sp:if ;
+                                    sp:arg1 [ rdf:type fn:matches ;
+                                              sp:arg1 spin:_arg1 ;
+                                              sp:arg2 "C"
+                                            ] ;
+                                    sp:arg2 "MDC_DIM_DEGC" ;
+                                    sp:arg3 ""
+                                  ]
+                        ] ;
+                spinmap:sourcePredicate1
+                        hsl:units ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:bodyTemperature ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
+                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#TemperatureReading> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:TemperatureReading-TemperatureReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        schema:endDate ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
               ] .
 
 hsl:WeightScaleReading
       rdf:type owl:Class ;
       rdfs:subClassOf hsl:MedicalReading ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:WeightScaleReading-BodyMassIndexReading ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        hsl:bodyMassIndex ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
+              ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-0-1 ;
                 spinmap:context Mapping:WeightScaleReading-BodyHeightReading ;
@@ -374,6 +382,30 @@ hsl:WeightScaleReading
                         hsl:bodyHeight ;
                 spinmap:targetPredicate1
                         <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context Mapping:WeightScaleReading-BodyWeightReading ;
+                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#BodyWeightReading> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:WeightScaleReading-BodyWeightReading ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "kg"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_KILO_G" ;
+                          sp:arg3 ""
+                        ] ;
+                spinmap:sourcePredicate1
+                        hsl:weightUnits ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -401,6 +433,23 @@ hsl:WeightScaleReading
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context Mapping:WeightScaleReading-BodyMassIndexReading ;
+                spinmap:expression
+                        [ rdf:type sp:if ;
+                          sp:arg1 [ rdf:type fn:matches ;
+                                    sp:arg1 spin:_arg1 ;
+                                    sp:arg2 "kg/m^2"
+                                  ] ;
+                          sp:arg2 "MDC_DIM_KG_PER_M_SQ" ;
+                          sp:arg3 ""
+                        ] ;
+                spinmap:sourcePredicate1
+                        hsl:bodyMassIndexUnits ;
+                spinmap:targetPredicate1
+                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
                 spinmap:context Mapping:WeightScaleReading-BodyHeightReading ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
@@ -418,21 +467,11 @@ hsl:WeightScaleReading
                         <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
               ] ;
       spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
+              [ rdf:type spinmap:Mapping-0-1 ;
                 spinmap:context Mapping:WeightScaleReading-BodyMassIndexReading ;
-                spinmap:expression
-                        [ rdf:type sp:if ;
-                          sp:arg1 [ rdf:type fn:matches ;
-                                    sp:arg1 spin:_arg1 ;
-                                    sp:arg2 "kg/m^2"
-                                  ] ;
-                          sp:arg2 "MDC_DIM_KG_PER_M_SQ" ;
-                          sp:arg3 ""
-                        ] ;
-                spinmap:sourcePredicate1
-                        hsl:bodyMassIndexUnits ;
+                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#BodyMassIndexReading> ;
                 spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
+                        rdf:type
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -451,46 +490,6 @@ hsl:WeightScaleReading
                         schema:endDate ;
                 spinmap:targetPredicate1
                         <http://cmusv/1.0/11073-Subset/Subset1.0#timeValue>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context Mapping:WeightScaleReading-BodyWeightReading ;
-                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#BodyWeightReading> ;
-                spinmap:targetPredicate1
-                        rdf:type
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:WeightScaleReading-BodyWeightReading ;
-                spinmap:expression
-                        [ rdf:type sp:if ;
-                          sp:arg1 [ rdf:type fn:matches ;
-                                    sp:arg1 spin:_arg1 ;
-                                    sp:arg2 "kg"
-                                  ] ;
-                          sp:arg2 "MDC_DIM_KILO_G" ;
-                          sp:arg3 ""
-                        ] ;
-                spinmap:sourcePredicate1
-                        hsl:weightUnits ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#hasUnitCode>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context Mapping:WeightScaleReading-BodyMassIndexReading ;
-                spinmap:expression <http://cmusv/1.0/11073-Subset/Subset1.0#BodyMassIndexReading> ;
-                spinmap:targetPredicate1
-                        rdf:type
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context Mapping:WeightScaleReading-BodyMassIndexReading ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        hsl:bodyMassIndex ;
-                spinmap:targetPredicate1
-                        <http://cmusv/1.0/11073-Subset/Subset1.0#measurementValue>
               ] .
 
 hsl:bodyHeight
@@ -517,12 +516,13 @@ hsl:units
       rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:string .
 
-HSL:BPReading_1
-      hsl:units "mmhg"^^xsd:string .
+<http://cmusv/hsl#BPReading_1>
+      hsl:units
+              "mmhg"^^xsd:string .
 
 <http://www.cmusv.edu/MobileHealth/1.0/Mapping>
       rdf:type owl:Ontology ;
-      owl:imports <http://cmusv/hsl> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://topbraid.org/spin/spinmapl> , <http://spinrdf.org/spin> ;
+      owl:imports <http://spinrdf.org/spin> , <http://topbraid.org/spin/spinmapl> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://cmusv/hsl> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 Mapping:BPReading-BloodPressureReading
