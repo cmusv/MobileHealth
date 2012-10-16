@@ -56,12 +56,12 @@ sp:units
 
 <http://www.cmusv.edu/MobileHealth/medicalReadings>
       rdf:type owl:Ontology ;
-      owl:imports <http://cmusv/hsl> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://cmusv/1.0/11073-Subset/Subset1.0> ;
+      owl:imports <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://cmusv/hsl> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 medicalReadings:ApplyConstruct_1
       rdf:type sml:ApplyConstruct ;
-      sm:next medicalReadings:ApplyOWLIM_1 , medicalReadings:translateBloodPressureReadingAsXML ;
+      sm:next medicalReadings:ApplyTopSPIN_1 ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
                 sp:templates ([ sp:object <http://cmusv/hsl#Patient> ;
@@ -145,32 +145,34 @@ medicalReadings:ApplyConstruct_1
               ] ;
       sml:replace "true"^^xsd:boolean .
 
-medicalReadings:ApplyOWLIM_1
-      rdf:type sml:ApplyOWLIM ;
+medicalReadings:ApplyTopSPIN_1
+      rdf:type sml:ApplyTopSPIN ;
       sm:next medicalReadings:ExportToRDFFile_1 ;
+      sml:predicate spin:rule ;
       sml:replace "true"^^xsd:boolean .
 
 medicalReadings:ExportToRDFFile_1
       rdf:type sml:ExportToRDFFile ;
+      sm:next medicalReadings:translateBloodPressureReadingAsXML ;
       sml:baseURI "http://www.cmusv.edu/MobileHealth/medicalReadings/output"^^xsd:string ;
       sml:targetFilePath "output.rdf"^^xsd:string .
 
 <http://www.cmusv.edu/MobileHealth/medicalReadings#Import-HSL.ttl_1>
       rdf:type sml:ImportRDFFromWorkspace ;
       rdfs:label "Import HSL.ttl"^^xsd:string ;
-      sm:next medicalReadings:ExportToRDFFile_1 , medicalReadings:ApplyOWLIM_1 , medicalReadings:ApplyConstruct_1 ;
+      sm:next medicalReadings:ApplyConstruct_1 , medicalReadings:ApplyTopSPIN_1 ;
       sml:baseURI "http://cmusv/hsl"^^xsd:string .
 
 <http://www.cmusv.edu/MobileHealth/medicalReadings#Import-Mapping.ttl_1>
       rdf:type sml:ImportRDFFromWorkspace ;
       rdfs:label "Import Mapping.ttl"^^xsd:string ;
-      sm:next medicalReadings:ApplyOWLIM_1 ;
+      sm:next medicalReadings:ApplyTopSPIN_1 ;
       sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/Mapping"^^xsd:string .
 
 <http://www.cmusv.edu/MobileHealth/medicalReadings#Import-Subset1.0.ttl_1>
       rdf:type sml:ImportRDFFromWorkspace ;
       rdfs:label "Import Subset1.0.ttl"^^xsd:string ;
-      sm:next medicalReadings:ApplyOWLIM_1 ;
+      sm:next medicalReadings:ApplyTopSPIN_1 ;
       sml:baseURI "http://cmusv/1.0/11073-Subset/Subset1.0"^^xsd:string .
 
 medicalReadings:translateBloodPressureReadingAsXML
@@ -178,15 +180,22 @@ medicalReadings:translateBloodPressureReadingAsXML
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
+                spl:defaultValue "Patient528"^^xsd:string ;
+                spl:predicate sp:patientId ;
+                spl:valueType xsd:string ;
+                sm:next medicalReadings:ApplyConstruct_1
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
                 spl:defaultValue 0 ;
-                spl:predicate sp:meanArterialPressure ;
+                spl:predicate sp:systolicPressure ;
                 spl:valueType xsd:integer ;
                 sm:next medicalReadings:ApplyConstruct_1
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
                 spl:defaultValue 0 ;
-                spl:predicate sp:diastolicPressure ;
+                spl:predicate sp:meanArterialPressure ;
                 spl:valueType xsd:integer ;
                 sm:next medicalReadings:ApplyConstruct_1
               ] ;
@@ -199,13 +208,6 @@ medicalReadings:translateBloodPressureReadingAsXML
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "Patient528"^^xsd:string ;
-                spl:predicate sp:patientId ;
-                spl:valueType xsd:string ;
-                sm:next medicalReadings:ApplyConstruct_1
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
                 spl:defaultValue "BPReading_2"^^xsd:string ;
                 spl:predicate sp:readingId ;
                 spl:valueType xsd:string ;
@@ -214,7 +216,7 @@ medicalReadings:translateBloodPressureReadingAsXML
       spin:constraint
               [ rdf:type spl:Argument ;
                 spl:defaultValue 0 ;
-                spl:predicate sp:systolicPressure ;
+                spl:predicate sp:diastolicPressure ;
                 spl:valueType xsd:integer ;
                 sm:next medicalReadings:ApplyConstruct_1
               ] ;
