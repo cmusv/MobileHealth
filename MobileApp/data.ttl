@@ -1,0 +1,38 @@
+# baseURI: http://www.cmusv.edu/MobileHealth/medicalReadings/data
+
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcam:    <http://purl.org/dc/dcam/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix hsl:     <http://cmusv/hsl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbcgeo:  <http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#> .
+@prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wot:     <http://xmlns.com/wot/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/MobileHealth/medicalReadings/data>
+      rdf:type owl:Ontology .
+
+hsl:Patient528
+      rdf:type hsl:Patient ;
+      hsl:patientId "Patient528"^^xsd:string .
+
+hsl:BPReading_2
+      rdf:type hsl:BPReading ;
+      hsl:diastolicPressure
+              -1 ;
+      hsl:meanArterialPressure
+              -1 ;
+      hsl:pulseRate -1 ;
+      hsl:readingID "BPReading_2"^^xsd:string ;
+      hsl:systolicPressure
+              -1 ;
+      hsl:units "mmhg"^^xsd:string ;
+      schema:endDate "2012-10-16"^^xsd:date .
