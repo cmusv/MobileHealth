@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/MobileHealth/medicalReadings
+# baseURI: http://www.cmusv.edu/MobileHealth/temperaturePressureReadings
 # imports: http://cmusv/1.0/11073-Subset/Subset1.0
 # imports: http://cmusv/hsl
 # imports: http://topbraid.org/sparqlmotionfunctions
@@ -8,7 +8,6 @@
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
 @prefix arg:     <http://spinrdf.org/arg#> .
 @prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
-@prefix medicalReadings:  <http://www.cmusv.edu/MobileHealth/medicalReadings#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,7 +17,12 @@
 @prefix spif:    <http://spinrdf.org/spif#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
+@prefix temperaturePressureReadings:  <http://www.cmusv.edu/MobileHealth/temperaturePressureReadings#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+sp:bodyTemperature
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
 
 sp:diastolicPressure
       rdf:type rdf:Property ;
@@ -28,7 +32,15 @@ sp:location
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
+sp:manufacturer
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
 sp:meanArterialPressure
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:model
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
@@ -48,18 +60,58 @@ sp:systolicPressure
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
+sp:temperatureOption
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
 sp:units
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
-<http://www.cmusv.edu/MobileHealth/medicalReadings>
+<http://www.cmusv.edu/MobileHealth/temperaturePressureReadings>
       rdf:type owl:Ontology ;
       owl:imports <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://cmusv/hsl> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
-medicalReadings:ApplyConstruct_1
+temperaturePressureReadings:ApplyTopSPIN_1
+      rdf:type sml:ApplyTopSPIN ;
+      sm:next temperaturePressureReadings:ExportSubsetToRDFFile ;
+      sml:predicate spin:rule ;
+      sml:replace "true"^^xsd:boolean .
+
+temperaturePressureReadings:ExportHSLToRDFFile
+      rdf:type sml:ExportToRDFFile ;
+      sm:next temperaturePressureReadings:ApplyTopSPIN_1 ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/temperaturePressureReadings/data"^^xsd:string ;
+      sml:targetFilePath "data.ttl"^^xsd:string .
+
+temperaturePressureReadings:ExportSubsetToRDFFile
+      rdf:type sml:ExportToRDFFile ;
+      sm:next temperaturePressureReadings:translateTemperatureReadingAsXML ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/temperaturePressureReadings/output"^^xsd:string ;
+      sml:targetFilePath "output.rdf"^^xsd:string .
+
+<http://www.cmusv.edu/MobileHealth/temperaturePressureReadings#Import-HSL.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import HSL.ttl"^^xsd:string ;
+      sm:next temperaturePressureReadings:createTemperatureReading ;
+      sml:baseURI "http://cmusv/hsl"^^xsd:string .
+
+<http://www.cmusv.edu/MobileHealth/temperaturePressureReadings#Import-Mapping.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import Mapping.ttl"^^xsd:string ;
+      sm:next temperaturePressureReadings:ApplyTopSPIN_1 ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/Mapping"^^xsd:string .
+
+<http://www.cmusv.edu/MobileHealth/temperaturePressureReadings#Import-Subset1.0.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import Subset1.0.ttl"^^xsd:string ;
+      sm:next temperaturePressureReadings:ApplyTopSPIN_1 ;
+      sml:baseURI "http://cmusv/1.0/11073-Subset/Subset1.0"^^xsd:string .
+
+temperaturePressureReadings:createTemperatureReading
       rdf:type sml:ApplyConstruct ;
-      sm:next medicalReadings:ExportToDataRDFFile ;
+      sm:next temperaturePressureReadings:ExportHSLToRDFFile ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
                 sp:templates ([ sp:object <http://cmusv/hsl#Patient> ;
@@ -74,66 +126,66 @@ medicalReadings:ApplyConstruct_1
                             sp:subject
                                     [ sp:varName "newHslPatient"^^xsd:string
                                     ]
-                          ] [ sp:object <http://cmusv/hsl#BPReading> ;
+                          ] [ sp:object <http://cmusv/hsl#TemperatureReading> ;
                             sp:predicate rdf:type ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "readingId"^^xsd:string
                                     ] ;
                             sp:predicate <http://cmusv/hsl#readingID> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "newPatient"^^xsd:string
                                     ] ;
                             sp:predicate <http://cmusv/hsl#ofPatient> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
-                                    [ sp:varName "diastolicPressure"^^xsd:string
+                                    [ sp:varName "temperatureOption"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#diastolicPressure> ;
+                            sp:predicate <http://cmusv/hsl#temperatureOption> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
-                                    [ sp:varName "meanArterialPressure"^^xsd:string
+                                    [ sp:varName "model"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#meanArterialPressure> ;
+                            sp:predicate <http://cmusv/hsl#model> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
-                                    [ sp:varName "systolicPressure"^^xsd:string
+                                    [ sp:varName "bodyTemperature"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#systolicPressure> ;
+                            sp:predicate <http://cmusv/hsl#bodyTemperature> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
-                                    [ sp:varName "pulseRate"^^xsd:string
+                                    [ sp:varName "manufacturer"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#pulseRate> ;
+                            sp:predicate <http://cmusv/hsl#manufacturer> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "units"^^xsd:string
                                     ] ;
                             sp:predicate <http://cmusv/hsl#units> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "currentDate"^^xsd:string
                                     ] ;
                             sp:predicate <http://schema.org/endDate> ;
                             sp:subject
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ]) ;
                 sp:where ([ rdf:type sp:Bind ;
@@ -165,7 +217,7 @@ medicalReadings:ApplyConstruct_1
                                               ]
                                     ] ;
                             sp:variable
-                                    [ sp:varName "newHslBPReading"^^xsd:string
+                                    [ sp:varName "newHslTemperatureReading"^^xsd:string
                                     ]
                           ] [ rdf:type sp:Bind ;
                             sp:expression
@@ -185,96 +237,59 @@ medicalReadings:ApplyConstruct_1
               ] ;
       sml:replace "true"^^xsd:boolean .
 
-medicalReadings:ApplyTopSPIN_1
-      rdf:type sml:ApplyTopSPIN ;
-      sm:next medicalReadings:ExportToRDFFile_1 ;
-      sml:predicate spin:rule ;
-      sml:replace "true"^^xsd:boolean .
-
-medicalReadings:ExportToDataRDFFile
-      rdf:type sml:ExportToRDFFile ;
-      sm:next medicalReadings:ApplyTopSPIN_1 ;
-      sml:baseURI "http://www.cmusv.edu/MobileHealth/medicalReadings/data"^^xsd:string ;
-      sml:targetFilePath "data.ttl"^^xsd:string .
-
-medicalReadings:ExportToRDFFile_1
-      rdf:type sml:ExportToRDFFile ;
-      sm:next medicalReadings:translateBloodPressureReadingAsXML ;
-      sml:baseURI "http://www.cmusv.edu/MobileHealth/medicalReadings/output"^^xsd:string ;
-      sml:targetFilePath "output.rdf"^^xsd:string .
-
-<http://www.cmusv.edu/MobileHealth/medicalReadings#Import-HSL.ttl_1>
-      rdf:type sml:ImportRDFFromWorkspace ;
-      rdfs:label "Import HSL.ttl"^^xsd:string ;
-      sm:next medicalReadings:ApplyConstruct_1 ;
-      sml:baseURI "http://cmusv/hsl"^^xsd:string .
-
-<http://www.cmusv.edu/MobileHealth/medicalReadings#Import-Mapping.ttl_1>
-      rdf:type sml:ImportRDFFromWorkspace ;
-      rdfs:label "Import Mapping.ttl"^^xsd:string ;
-      sm:next medicalReadings:ApplyTopSPIN_1 ;
-      sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/Mapping"^^xsd:string .
-
-<http://www.cmusv.edu/MobileHealth/medicalReadings#Import-Subset1.0.ttl_1>
-      rdf:type sml:ImportRDFFromWorkspace ;
-      rdfs:label "Import Subset1.0.ttl"^^xsd:string ;
-      sm:next medicalReadings:ApplyTopSPIN_1 ;
-      sml:baseURI "http://cmusv/1.0/11073-Subset/Subset1.0"^^xsd:string .
-
-medicalReadings:translateBloodPressureReadingAsXML
+temperaturePressureReadings:translateTemperatureReadingAsXML
       rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "Medisana"^^xsd:string ;
+                spl:predicate sp:manufacturer ;
+                spl:valueType xsd:string ;
+                sm:next temperaturePressureReadings:createTemperatureReading
+              ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
                 spl:defaultValue "Patient528"^^xsd:string ;
                 spl:predicate sp:patientId ;
                 spl:valueType xsd:string ;
-                sm:next medicalReadings:ApplyConstruct_1
+                sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue -1 ;
-                spl:predicate sp:systolicPressure ;
-                spl:valueType xsd:integer ;
-                sm:next medicalReadings:ApplyConstruct_1
+                spl:defaultValue "96.5"^^xsd:string ;
+                spl:predicate sp:bodyTemperature ;
+                spl:valueType xsd:float ;
+                sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue -1 ;
-                spl:predicate sp:meanArterialPressure ;
-                spl:valueType xsd:integer ;
-                sm:next medicalReadings:ApplyConstruct_1
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue -1 ;
-                spl:predicate sp:pulseRate ;
-                spl:valueType xsd:integer ;
-                sm:next medicalReadings:ApplyConstruct_1
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "BPReading_2"^^xsd:string ;
-                spl:predicate sp:readingId ;
+                spl:defaultValue "Thermodock"^^xsd:string ;
+                spl:predicate sp:model ;
                 spl:valueType xsd:string ;
-                sm:next medicalReadings:ApplyConstruct_1
+                sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue -1 ;
-                spl:predicate sp:diastolicPressure ;
-                spl:valueType xsd:integer ;
-                sm:next medicalReadings:ApplyConstruct_1
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "mmhg"^^xsd:string ;
+                spl:defaultValue "F"^^xsd:string ;
                 spl:predicate sp:units ;
                 spl:valueType xsd:string ;
-                sm:next medicalReadings:ApplyConstruct_1
+                sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
-      sm:returnModule medicalReadings:translateBloodPressureReadingAsXML ;
-      sml:mimeType "text/xml"^^xsd:string ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "TemperatureReading_13"^^xsd:string ;
+                spl:predicate sp:readingId ;
+                spl:valueType xsd:string ;
+                sm:next temperaturePressureReadings:createTemperatureReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "ear"^^xsd:string ;
+                spl:predicate sp:temperatureOption ;
+                spl:valueType xsd:string ;
+                sm:next temperaturePressureReadings:createTemperatureReading
+              ] ;
+      sm:returnModule temperaturePressureReadings:translateTemperatureReadingAsXML ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:where ([ rdf:type sp:Bind ;
@@ -306,7 +321,7 @@ medicalReadings:translateBloodPressureReadingAsXML
                                               ]
                                     ] ;
                             sp:variable
-                                    [ sp:varName "newSubsetBPReading"^^xsd:string
+                                    [ sp:varName "newSubsetTemperatureReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "o"^^xsd:string
@@ -324,7 +339,7 @@ medicalReadings:translateBloodPressureReadingAsXML
                                     [ sp:varName "p"^^xsd:string
                                     ] ;
                             sp:subject
-                                    [ sp:varName "newSubsetBPReading"^^xsd:string
+                                    [ sp:varName "newSubsetTemperatureReading"^^xsd:string
                                     ]
                           ])
               ] ;

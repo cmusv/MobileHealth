@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/MobileHealth/medicalReadings/data
+# baseURI: http://www.cmusv.edu/MobileHealth/bloodPressureReadings/data
 
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix dcam:    <http://purl.org/dc/dcam/> .
@@ -17,22 +17,22 @@
 @prefix wot:     <http://xmlns.com/wot/0.1/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/MobileHealth/medicalReadings/data>
-      rdf:type owl:Ontology .
-
-hsl:Patient528
-      rdf:type hsl:Patient ;
-      hsl:patientId "Patient528"^^xsd:string .
-
-hsl:BPReading_2
+hsl:BPReading_14
       rdf:type hsl:BPReading ;
       hsl:diastolicPressure
-              -1 ;
+              89 ;
       hsl:meanArterialPressure
-              -1 ;
+              100 ;
       hsl:pulseRate -1 ;
-      hsl:readingID "BPReading_2"^^xsd:string ;
+      hsl:readingID "BPReading_14"^^xsd:string ;
       hsl:systolicPressure
-              -1 ;
+              110 ;
       hsl:units "mmhg"^^xsd:string ;
-      schema:endDate "2012-10-16"^^xsd:date .
+      schema:endDate "2012-10-21"^^xsd:date .
+
+<http://www.cmusv.edu/MobileHealth/bloodPressureReadings/data>
+      rdf:type owl:Ontology .
+
+hsl:Patient529
+      rdf:type hsl:Patient ;
+      hsl:patientId "Patient529"^^xsd:string .
