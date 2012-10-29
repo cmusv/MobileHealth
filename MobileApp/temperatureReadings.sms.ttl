@@ -70,7 +70,7 @@ sp:units
 
 <http://www.cmusv.edu/MobileHealth/temperaturePressureReadings>
       rdf:type owl:Ontology ;
-      owl:imports <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://cmusv/hsl> ;
+      owl:imports <http://cmusv/hsl> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://cmusv/1.0/11073-Subset/Subset1.0> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 temperaturePressureReadings:ApplyTopSPIN_1
@@ -242,15 +242,15 @@ temperaturePressureReadings:translateTemperatureReadingAsXML
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "Medisana"^^xsd:string ;
-                spl:predicate sp:manufacturer ;
+                spl:defaultValue "Patient528"^^xsd:string ;
+                spl:predicate sp:patientId ;
                 spl:valueType xsd:string ;
                 sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "Patient528"^^xsd:string ;
-                spl:predicate sp:patientId ;
+                spl:defaultValue "Thermodock"^^xsd:string ;
+                spl:predicate sp:model ;
                 spl:valueType xsd:string ;
                 sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
@@ -259,13 +259,6 @@ temperaturePressureReadings:translateTemperatureReadingAsXML
                 spl:defaultValue "96.5"^^xsd:string ;
                 spl:predicate sp:bodyTemperature ;
                 spl:valueType xsd:float ;
-                sm:next temperaturePressureReadings:createTemperatureReading
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "Thermodock"^^xsd:string ;
-                spl:predicate sp:model ;
-                spl:valueType xsd:string ;
                 sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
       spin:constraint
@@ -289,39 +282,27 @@ temperaturePressureReadings:translateTemperatureReadingAsXML
                 spl:valueType xsd:string ;
                 sm:next temperaturePressureReadings:createTemperatureReading
               ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "Medisana"^^xsd:string ;
+                spl:predicate sp:manufacturer ;
+                spl:valueType xsd:string ;
+                sm:next temperaturePressureReadings:createTemperatureReading
+              ] ;
       sm:returnModule temperaturePressureReadings:translateTemperatureReadingAsXML ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:where ([ rdf:type sp:Bind ;
-                            sp:expression "http://cmusv/1.0/11073-Subset/Subset1.0#" ;
-                            sp:variable
-                                    [ sp:varName "subsetUri"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
                             sp:expression
                                     [ rdf:type spif:buildURI ;
                                       sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 [ sp:varName "subsetUri"^^xsd:string
-                                                        ] ;
-                                                sp:arg2 [ sp:varName "patientId"^^xsd:string
-                                                        ]
-                                              ]
-                                    ] ;
-                            sp:variable
-                                    [ sp:varName "newSubsetPatient"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
-                            sp:expression
-                                    [ rdf:type spif:buildURI ;
-                                      sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 [ sp:varName "subsetUri"^^xsd:string
-                                                        ] ;
+                                                sp:arg1 "http://cmusv/1.0/11073-Subset/Subset1.0#" ;
                                                 sp:arg2 [ sp:varName "readingId"^^xsd:string
                                                         ]
                                               ]
                                     ] ;
                             sp:variable
-                                    [ sp:varName "newSubsetTemperatureReading"^^xsd:string
+                                    [ sp:varName "newSubsetReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "o"^^xsd:string
@@ -330,16 +311,7 @@ temperaturePressureReadings:translateTemperatureReadingAsXML
                                     [ sp:varName "p"^^xsd:string
                                     ] ;
                             sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ] [ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "p"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "newSubsetTemperatureReading"^^xsd:string
+                                    [ sp:varName "newSubsetReading"^^xsd:string
                                     ]
                           ])
               ] ;

@@ -70,7 +70,7 @@ sp:units
 
 <http://www.cmusv.edu/MobileHealth/bloodPressureReadings>
       rdf:type owl:Ontology ;
-      owl:imports <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://cmusv/hsl> ;
+      owl:imports <http://cmusv/hsl> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://cmusv/1.0/11073-Subset/Subset1.0> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 bloodPressureReadings:ApplyTopSPIN_1
@@ -249,20 +249,6 @@ bloodPressureReadings:translateBloodPressureReadingAsXML
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue 110 ;
-                spl:predicate sp:systolicPressure ;
-                spl:valueType xsd:integer ;
-                sm:next bloodPressureReadings:createBPReading
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue 89 ;
-                spl:predicate sp:diastolicPressure ;
-                spl:valueType xsd:integer ;
-                sm:next bloodPressureReadings:createBPReading
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
                 spl:defaultValue "mmhg"^^xsd:string ;
                 spl:predicate sp:units ;
                 spl:valueType xsd:string ;
@@ -270,8 +256,8 @@ bloodPressureReadings:translateBloodPressureReadingAsXML
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue 100 ;
-                spl:predicate sp:meanArterialPressure ;
+                spl:defaultValue -1 ;
+                spl:predicate sp:pulseRate ;
                 spl:valueType xsd:integer ;
                 sm:next bloodPressureReadings:createBPReading
               ] ;
@@ -284,8 +270,22 @@ bloodPressureReadings:translateBloodPressureReadingAsXML
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue -1 ;
-                spl:predicate sp:pulseRate ;
+                spl:defaultValue 89 ;
+                spl:predicate sp:diastolicPressure ;
+                spl:valueType xsd:integer ;
+                sm:next bloodPressureReadings:createBPReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue 110 ;
+                spl:predicate sp:systolicPressure ;
+                spl:valueType xsd:integer ;
+                sm:next bloodPressureReadings:createBPReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue 100 ;
+                spl:predicate sp:meanArterialPressure ;
                 spl:valueType xsd:integer ;
                 sm:next bloodPressureReadings:createBPReading
               ] ;
@@ -293,35 +293,16 @@ bloodPressureReadings:translateBloodPressureReadingAsXML
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:where ([ rdf:type sp:Bind ;
-                            sp:expression "http://cmusv/1.0/11073-Subset/Subset1.0#" ;
-                            sp:variable
-                                    [ sp:varName "subsetUri"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
                             sp:expression
                                     [ rdf:type spif:buildURI ;
                                       sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 [ sp:varName "subsetUri"^^xsd:string
-                                                        ] ;
-                                                sp:arg2 [ sp:varName "patientId"^^xsd:string
-                                                        ]
-                                              ]
-                                    ] ;
-                            sp:variable
-                                    [ sp:varName "newSubsetPatient"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
-                            sp:expression
-                                    [ rdf:type spif:buildURI ;
-                                      sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 [ sp:varName "subsetUri"^^xsd:string
-                                                        ] ;
+                                                sp:arg1 "http://cmusv/1.0/11073-Subset/Subset1.0#" ;
                                                 sp:arg2 [ sp:varName "readingId"^^xsd:string
                                                         ]
                                               ]
                                     ] ;
                             sp:variable
-                                    [ sp:varName "newSubsetBPReading"^^xsd:string
+                                    [ sp:varName "newSubsetReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "o"^^xsd:string
@@ -330,16 +311,7 @@ bloodPressureReadings:translateBloodPressureReadingAsXML
                                     [ sp:varName "p"^^xsd:string
                                     ] ;
                             sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ] [ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "p"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "newSubsetBPReading"^^xsd:string
+                                    [ sp:varName "newSubsetReading"^^xsd:string
                                     ]
                           ])
               ] ;

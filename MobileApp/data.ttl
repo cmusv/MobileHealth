@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/MobileHealth/bloodPressureReadings/data
+# baseURI: http://www.cmusv.edu/MobileHealth/temperaturePressureReadings/data
 
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix dcam:    <http://purl.org/dc/dcam/> .
@@ -17,22 +17,20 @@
 @prefix wot:     <http://xmlns.com/wot/0.1/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-hsl:BPReading_14
-      rdf:type hsl:BPReading ;
-      hsl:diastolicPressure
-              89 ;
-      hsl:meanArterialPressure
-              100 ;
-      hsl:pulseRate -1 ;
-      hsl:readingID "BPReading_14"^^xsd:string ;
-      hsl:systolicPressure
-              110 ;
-      hsl:units "mmhg"^^xsd:string ;
-      schema:endDate "2012-10-21"^^xsd:date .
+<http://cmusv/hsl#403>
+      rdf:type hsl:TemperatureReading ;
+      hsl:bodyTemperature "96.5"^^xsd:float ;
+      hsl:manufacturer "Medisana"^^xsd:string ;
+      hsl:model "Thermodock"^^xsd:string ;
+      hsl:readingID "403"^^xsd:string ;
+      hsl:temperatureOption
+              "ear"^^xsd:string ;
+      hsl:units "F"^^xsd:string ;
+      schema:endDate "2012-10-28"^^xsd:date .
 
-<http://www.cmusv.edu/MobileHealth/bloodPressureReadings/data>
+<http://www.cmusv.edu/MobileHealth/temperaturePressureReadings/data>
       rdf:type owl:Ontology .
 
-hsl:Patient529
+<http://cmusv/hsl#1990>
       rdf:type hsl:Patient ;
-      hsl:patientId "Patient529"^^xsd:string .
+      hsl:patientId "1990"^^xsd:string .

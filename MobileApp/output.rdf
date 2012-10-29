@@ -41,22 +41,19 @@
     xmlns:let="http://uispin.org/let#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:spl="http://spinrdf.org/spl#"
-  xml:base="http://www.cmusv.edu/MobileHealth/bloodPressureReadings/output" > 
-  <rdf:Description rdf:about="http://cmusv/1.0/11073-Subset/Subset1.0#BPReading_14">
-    <subset:hasMetricIdList rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-91"/>
-    <subset:meanArterialPressureBP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</subset:meanArterialPressureBP>
-    <subset:systolicBP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</subset:systolicBP>
-    <subset:hasAttributeValueMap rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementOOA.3.1.1thru3.2.2.5-96"/>
-    <subset:metricSpecSmall rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mss-avail-stored-data</subset:metricSpecSmall>
-    <rdf:type rdf:resource="http://cmusv/1.0/11073-Subset/Subset1.0#BloodPressureReading"/>
-    <subset:hasUnitCode>MDC_DIM_MMHG</subset:hasUnitCode>
-    <subset:timeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-10-21</subset:timeValue>
-    <subset:handle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subset:handle>
-    <subset:hasType rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-150"/>
-    <subset:diastolicBP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</subset:diastolicBP>
-  </rdf:Description>
+  xml:base="http://www.cmusv.edu/MobileHealth/temperaturePressureReadings/output" > 
   <rdf:Description rdf:about="">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cmusv/1.0/11073-Subset/Subset1.0#403">
+    <subset:timeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-10-28</subset:timeValue>
+    <subset:measurementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">96.5</subset:measurementValue>
+    <subset:hasUnitCode>MDC_DIM_FAHR</subset:hasUnitCode>
+    <subset:hasType>MDC_TEMP_EAR</subset:hasType>
+    <subset:metricSpecSmall rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mss-avail-stored-data</subset:metricSpecSmall>
+    <subset:hasAttributeValueMap rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementOOA.3.1.1thru3.2.2.5-663"/>
+    <subset:handle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subset:handle>
+    <rdf:type rdf:resource="http://cmusv/1.0/11073-Subset/Subset1.0#TemperatureReading"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://cmusv/1.0/11073-Subset/Subset1.0#12345">
     <subset:timeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-30</subset:timeValue>
@@ -64,17 +61,17 @@
     <subset:hasUnitCode>MDC_DIM_FAHR</subset:hasUnitCode>
     <subset:hasType>MDC_TEMP_EAR</subset:hasType>
     <subset:metricSpecSmall rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mss-avail-stored-data</subset:metricSpecSmall>
-    <subset:handle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subset:handle>
     <subset:hasAttributeValueMap rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementOOA.3.1.1thru3.2.2.5-663"/>
+    <subset:handle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subset:handle>
     <rdf:type rdf:resource="http://cmusv/1.0/11073-Subset/Subset1.0#TemperatureReading"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://cmusv/1.0/11073-Subset/Subset1.0#184765">
     <subset:handle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subset:handle>
+    <subset:hasMetricIdList rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-152"/>
     <subset:systolicBP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</subset:systolicBP>
     <subset:hasUnitCode>MDC_DIM_MMHG</subset:hasUnitCode>
     <subset:timeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-02-20</subset:timeValue>
     <rdf:type rdf:resource="http://cmusv/1.0/11073-Subset/Subset1.0#BloodPressureReading"/>
-    <subset:hasMetricIdList rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-91"/>
     <subset:hasType rdf:resource="http://www.cmusv.edu/MobileHealth/2.1/11073/10101/11073-10101#MeasurementHemoA.8.3.4-150"/>
     <subset:metricSpecSmall rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mss-avail-stored-data</subset:metricSpecSmall>
     <subset:meanArterialPressureBP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</subset:meanArterialPressureBP>
