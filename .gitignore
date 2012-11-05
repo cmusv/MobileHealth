@@ -2,3 +2,6 @@
 .DS_Store
 .settings
 */TestInput.xls
+MobileApp/data.ttl
+
+MobileApp/output.rdf
