@@ -1,0 +1,3031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="_16_9_f2e0365_1336398385436_194584_1887" xmlns="_16_9_f2e0365_1336398385436_194584_1887" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- ========== Imports ========== -->
+  <!-- ========== Roots ========== -->
+<xsd:element name="Activate_Operation" type="Activate_Operation"/>
+<xsd:element name="Alert" type="Alert"/>
+<xsd:element name="Alert_Monitor" type="Alert_Monitor"/>
+<xsd:element name="Alert_Scanner" type="Alert_Scanner"/>
+<xsd:element name="Alert_Status" type="Alert_Status"/>
+<xsd:element name="BCC" type="BCC"/>
+<xsd:element name="Battery" type="Battery"/>
+<xsd:element name="CfgScanner" type="CfgScanner"/>
+<xsd:element name="Channel" type="Channel"/>
+<xsd:element name="Clock" type="Clock"/>
+<xsd:element name="Communication_Controller" type="Communication_Controller"/>
+<xsd:element name="Complex_Metric" type="Complex_Metric"/>
+<xsd:element name="Composite_Multiple_Bed_MDS" type="Composite_Multiple_Bed_MDS"/>
+<xsd:element name="Composite_Single_Bed_MDS" type="Composite_Single_Bed_MDS"/>
+<xsd:element name="Context_Scanner" type="Context_Scanner"/>
+<xsd:element name="DCC" type="DCC"/>
+<xsd:element name="Device_Interface" type="Device_Interface"/>
+<xsd:element name="Device_Interface_MibElement" type="Device_Interface_MibElement"/>
+<xsd:element name="Distribution_Sample_Array" type="Distribution_Sample_Array"/>
+<xsd:element name="Enumeration" type="Enumeration"/>
+<xsd:element name="EpiCfgScanner" type="EpiCfgScanner"/>
+<xsd:element name="Event_Log" type="Event_Log"/>
+<xsd:element name="FastPeriCfgScanner" type="FastPeriCfgScanner"/>
+<xsd:element name="General_Communication_Statistics_MibElement" type="General_Communication_Statistics_MibElement"/>
+<xsd:element name="Hydra_MDS" type="Hydra_MDS"/>
+<xsd:element name="Limit_Alert_Operation" type="Limit_Alert_Operation"/>
+<xsd:element name="Log" type="Log"/>
+<xsd:element name="MDS" type="MDS"/>
+<xsd:element name="Metric" type="Metric"/>
+<xsd:element name="MibElement" type="MibElement"/>
+<xsd:element name="Multipatient_Archive" type="Multipatient_Archive"/>
+<xsd:element name="Numeric" type="Numeric"/>
+<xsd:element name="Operating_Scanner" type="Operating_Scanner"/>
+<xsd:element name="Operation" type="Operation"/>
+<xsd:element name="PM-Segment" type="PM-Segment"/>
+<xsd:element name="PM-Store" type="PM-Store"/>
+<xsd:element name="Patient_Archive" type="Patient_Archive"/>
+<xsd:element name="Patient_Demographics" type="Patient_Demographics"/>
+<xsd:element name="PeriCfgScanner" type="PeriCfgScanner"/>
+<xsd:element name="Physician" type="Physician"/>
+<xsd:element name="Real_Time_Sample_Array" type="Real_Time_Sample_Array"/>
+<xsd:element name="SCO" type="SCO"/>
+<xsd:element name="Sample_Array" type="Sample_Array"/>
+<xsd:element name="Scanner" type="Scanner"/>
+<xsd:element name="Select_Item_Operation" type="Select_Item_Operation"/>
+<xsd:element name="Session_Archive" type="Session_Archive"/>
+<xsd:element name="Session_Notes" type="Session_Notes"/>
+<xsd:element name="Session_Test" type="Session_Test"/>
+<xsd:element name="Set_Range_Operation" type="Set_Range_Operation"/>
+<xsd:element name="Set_String_Operation" type="Set_String_Operation"/>
+<xsd:element name="Set_Value_Operation" type="Set_Value_Operation"/>
+<xsd:element name="Simple_MDS" type="Simple_MDS"/>
+<xsd:element name="Time_Sample_Array" type="Time_Sample_Array"/>
+<xsd:element name="Toggle_Flag_Operation" type="Toggle_Flag_Operation"/>
+<xsd:element name="Top" type="Top"/>
+<xsd:element name="UcfgScanner" type="UcfgScanner"/>
+<xsd:element name="VMD" type="VMD"/>
+<xsd:element name="VMO" type="VMO"/>
+<xsd:element name="VMS" type="VMS"/>
+  <!-- ========== Primitives ========== -->
+  <xsd:simpleType name="AbsoluteTimeISO">
+    <xsd:restriction base="OCTET_STRING">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BITS-16">
+    <xsd:restriction base="BIT_STRING">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BITS-32">
+    <xsd:restriction base="BIT_STRING">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BITS-8">
+    <xsd:restriction base="BIT_STRING">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BIT_STRING">
+    <xsd:restriction base="xsd:string">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CC-Oid">
+    <xsd:restriction base="OID-Type">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="FLOAT-Type">
+    <xsd:restriction base="INT-U32">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="HANDLE">
+    <xsd:restriction base="INT-U16">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="HighResRelativeTime">
+    <xsd:restriction base="OCTET_STRING">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="INT-I16">
+    <xsd:restriction base="xsd:integer">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="INT-I32">
+    <xsd:restriction base="xsd:integer">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="INT-I8">
+    <xsd:restriction base="xsd:integer">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="INT-U16">
+    <xsd:restriction base="xsd:integer">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="INT-U32">
+    <xsd:restriction base="xsd:integer">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="INT-U8">
+    <xsd:restriction base="xsd:integer">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="InstNumber">
+    <xsd:restriction base="INT-U16">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MdsContext">
+    <xsd:restriction base="INT-U16">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MdsSetStateResult">
+    <xsd:restriction base="MDSStatus">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MibCcCounter">
+    <xsd:restriction base="INT-U32">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MibCcGauge">
+    <xsd:restriction base="INT-U32">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OCTET_STRING">
+    <xsd:restriction base="xsd:string">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OID-Type">
+    <xsd:restriction base="INT-U16">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PrivateOid">
+    <xsd:restriction base="INT-U16">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="RelativeTime">
+    <xsd:restriction base="INT-U32">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SegDataRtsaOpt">
+    <xsd:restriction base="OCTET_STRING">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TimeProtocolId">
+    <xsd:restriction base="OID-Type">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TimeStampId">
+    <xsd:restriction base="OID-Type">
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ========== Enumerations ========== -->
+  <xsd:simpleType name="AdministrativeState">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="locked"/>
+      <xsd:enumeration value="unlocked"/>
+      <xsd:enumeration value="shuttingDown"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AlOpCapab">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="low-limit-sup"/>
+      <xsd:enumeration value="high-limit-sup"/>
+      <xsd:enumeration value="auto-limit-sup"/>
+      <xsd:enumeration value="low-lim-on-off-sup"/>
+      <xsd:enumeration value="high-lim-on-off-sup"/>
+      <xsd:enumeration value="lim-on-off-sup"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AlertControls">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="ac-obj-off"/>
+      <xsd:enumeration value="ac-chan-off"/>
+      <xsd:enumeration value="ac-all-obj-al-off"/>
+      <xsd:enumeration value="ac-alert-off"/>
+      <xsd:enumeration value="ac-alert-muted"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AlertFlags">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="local-audible"/>
+      <xsd:enumeration value="remote-audible"/>
+      <xsd:enumeration value="visual-latching"/>
+      <xsd:enumeration value="audible-latching"/>
+      <xsd:enumeration value="derived"/>
+      <xsd:enumeration value="record-inhibit"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AlertState">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="al-inhibited"/>
+      <xsd:enumeration value="al-suspended"/>
+      <xsd:enumeration value="al-latched"/>
+      <xsd:enumeration value="al-silenced-reset"/>
+      <xsd:enumeration value="al-dev-in-test-mode"/>
+      <xsd:enumeration value="al-dev-in-standby-mode"/>
+      <xsd:enumeration value="al-dev-in-demo-mode"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AlertType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="no-alert"/>
+      <xsd:enumeration value="low-pri-t-al"/>
+      <xsd:enumeration value="med-pri-t-al"/>
+      <xsd:enumeration value="hi-pri-t-al"/>
+      <xsd:enumeration value="low-pri-p-al"/>
+      <xsd:enumeration value="med-pri-p-al"/>
+      <xsd:enumeration value="hi-pri-p-al"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ApplicationArea">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="area-unspec"/>
+      <xsd:enumeration value="area-operating-room"/>
+      <xsd:enumeration value="area-intensive-care"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BatteryStatus">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="batt-discharged"/>
+      <xsd:enumeration value="batt-full"/>
+      <xsd:enumeration value="batt-discharging"/>
+      <xsd:enumeration value="batt-chargingFull"/>
+      <xsd:enumeration value="batt-chargingTrickle"/>
+      <xsd:enumeration value="batt-malfunction"/>
+      <xsd:enumeration value="batt-needs-conditioning"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CcCapability">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="cc-sup-ext-mgmt-protocol"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CcExtMgmtProto">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="mgmt-proto-snmp-v1"/>
+      <xsd:enumeration value="mgmt-proto-snmp-v2"/>
+      <xsd:enumeration value="mgmt-proto-snmp-v3"/>
+      <xsd:enumeration value="mgmt-proto-cmip"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ChannelStatus">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="chan-off"/>
+      <xsd:enumeration value="chan-not-ready"/>
+      <xsd:enumeration value="chan-standby"/>
+      <xsd:enumeration value="chan-transduc-discon"/>
+      <xsd:enumeration value="chan-hw-discon"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CharSet">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="charset-unspec"/>
+      <xsd:enumeration value="charset-iso-10646-ucs-2"/>
+      <xsd:enumeration value="charset-iso-10646-ucs-4"/>
+      <xsd:enumeration value="charset-iso-8859-1"/>
+      <xsd:enumeration value="charset-iso-8859-2"/>
+      <xsd:enumeration value="charset-iso-8859-3"/>
+      <xsd:enumeration value="charset-iso-8859-4"/>
+      <xsd:enumeration value="charset-iso-8859-5"/>
+      <xsd:enumeration value="charset-iso-8859-6"/>
+      <xsd:enumeration value="charset-iso-8859-7"/>
+      <xsd:enumeration value="charset-iso-8859-8"/>
+      <xsd:enumeration value="charset-iso-8859-9"/>
+      <xsd:enumeration value="charset-iso-8859-10"/>
+      <xsd:enumeration value="charset-iso-8859-13"/>
+      <xsd:enumeration value="charset-iso-8859-14"/>
+      <xsd:enumeration value="charset-iso-8859-15"/>
+      <xsd:enumeration value="charset-iso-2022-kr"/>
+      <xsd:enumeration value="charset-ks-c-5601"/>
+      <xsd:enumeration value="charset-iso-2022-jp"/>
+      <xsd:enumeration value="charset-iso-2022-jp-2"/>
+      <xsd:enumeration value="charset-jis-x0208"/>
+      <xsd:enumeration value="charset-iso-2022-cn"/>
+      <xsd:enumeration value="charset-gb-2312"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ClearLogOptions">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="log-clear-if-unchanged"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ClearLogResult">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="log-range-cleared"/>
+      <xsd:enumeration value="log-changed-clear-error"/>
+      <xsd:enumeration value="log-change-counter-not-supported"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CmplxFlags">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="cmplx-flag-reserved"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CmplxObsElemFlags">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="cm-obs-elem-flg-mplex"/>
+      <xsd:enumeration value="cm-obs-elem-flg-is-setting"/>
+      <xsd:enumeration value="cm-obs-elem-flg-updt-episodic"/>
+      <xsd:enumeration value="cm-obs-elem-flg-msmt-noncontinuous"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ConfirmMode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="unconfirmed"/>
+      <xsd:enumeration value="confirmed"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ContextMode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="static-mode"/>
+      <xsd:enumeration value="dynamic-mode"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CurLimAlStat">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="lim-alert-off"/>
+      <xsd:enumeration value="lim-low-off"/>
+      <xsd:enumeration value="lim-high-off"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DateTimeUsage">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="dt-use-remote-sync"/>
+      <xsd:enumeration value="dt-use-operator-set"/>
+      <xsd:enumeration value="dt-use-rtc-synced"/>
+      <xsd:enumeration value="dt-use-critical-use"/>
+      <xsd:enumeration value="dt-use-displayed"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DifMibPortState">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="difmib-port-enabled"/>
+      <xsd:enumeration value="difmib-port-connected"/>
+      <xsd:enumeration value="difmib-port-associated"/>
+      <xsd:enumeration value="difmib-port-failure"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="EventLogInfo">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="ev-log-clear-range-sup"/>
+      <xsd:enumeration value="ev-log-get-act-sup"/>
+      <xsd:enumeration value="ev-log-binary-entries"/>
+      <xsd:enumeration value="ev-log-full"/>
+      <xsd:enumeration value="ev-log-wrap-detect"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LineFrequency">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="line-f-unspec"/>
+      <xsd:enumeration value="line-f-50hz"/>
+      <xsd:enumeration value="line-f-60hz"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MDSStatus">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="disconnected"/>
+      <xsd:enumeration value="unassociated"/>
+      <xsd:enumeration value="associating"/>
+      <xsd:enumeration value="associated"/>
+      <xsd:enumeration value="configuring"/>
+      <xsd:enumeration value="configured"/>
+      <xsd:enumeration value="operating"/>
+      <xsd:enumeration value="re-initializing"/>
+      <xsd:enumeration value="terminating"/>
+      <xsd:enumeration value="disassociating"/>
+      <xsd:enumeration value="disassociated"/>
+      <xsd:enumeration value="re-configuring"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MeasurementStatus">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="invalid"/>
+      <xsd:enumeration value="questionable"/>
+      <xsd:enumeration value="not-available"/>
+      <xsd:enumeration value="calibration-ongoing"/>
+      <xsd:enumeration value="test-data"/>
+      <xsd:enumeration value="demo-data"/>
+      <xsd:enumeration value="validated-data"/>
+      <xsd:enumeration value="early-indication"/>
+      <xsd:enumeration value="msmt-ongoing"/>
+      <xsd:enumeration value="msmt-state-in-alarm"/>
+      <xsd:enumeration value="msmt-state-al-inhibited"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MetricAccess">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="avail-intermittent"/>
+      <xsd:enumeration value="upd-periodic"/>
+      <xsd:enumeration value="upd-episodic"/>
+      <xsd:enumeration value="msmt-noncontinuous"/>
+      <xsd:enumeration value="acc-evrep"/>
+      <xsd:enumeration value="acc-get"/>
+      <xsd:enumeration value="acc-scan"/>
+      <xsd:enumeration value="gen-opt-sync"/>
+      <xsd:enumeration value="sc-opt-normal"/>
+      <xsd:enumeration value="sc-opt-extensive"/>
+      <xsd:enumeration value="sc-opt-long-pd-avail"/>
+      <xsd:enumeration value="sc-opt-confirm"/>
+      <xsd:enumeration value="sc-opt-refresh"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MetricCalState">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="not-calibrated"/>
+      <xsd:enumeration value="cal-required"/>
+      <xsd:enumeration value="calibrated"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MetricCalType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="cal-unspec"/>
+      <xsd:enumeration value="cal-offset"/>
+      <xsd:enumeration value="cal-gain"/>
+      <xsd:enumeration value="cal-two-point"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MetricCategory">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="mcat-unspec"/>
+      <xsd:enumeration value="auto-measurement"/>
+      <xsd:enumeration value="manual-measurement"/>
+      <xsd:enumeration value="auto-setting"/>
+      <xsd:enumeration value="manual-setting"/>
+      <xsd:enumeration value="auto-calculation"/>
+      <xsd:enumeration value="manual-calculation"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MetricRelevance">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="rv-unspec"/>
+      <xsd:enumeration value="rv-internal"/>
+      <xsd:enumeration value="rv-store-only"/>
+      <xsd:enumeration value="rv-no-recording"/>
+      <xsd:enumeration value="rv-phys-ev-ind"/>
+      <xsd:enumeration value="rv-btb-metric"/>
+      <xsd:enumeration value="rv-app-specific"/>
+      <xsd:enumeration value="rv-service"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MetricStatus">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="metric-off"/>
+      <xsd:enumeration value="metric-not-ready"/>
+      <xsd:enumeration value="metric-standby"/>
+      <xsd:enumeration value="metric-transduc-discon"/>
+      <xsd:enumeration value="metric-hw-discon"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MetricStructure__ms-struct__ANON_ENUM">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="simple"/>
+      <xsd:enumeration value="compound"/>
+      <xsd:enumeration value="complex"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MibCcCommMode">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="comm-mode-simplex"/>
+      <xsd:enumeration value="comm-mode-half-duplex"/>
+      <xsd:enumeration value="comm-mode-full-duplex"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MsmtPrinciple">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="msp-other"/>
+      <xsd:enumeration value="msp-chemical"/>
+      <xsd:enumeration value="msp-electrical"/>
+      <xsd:enumeration value="msp-impedance"/>
+      <xsd:enumeration value="msp-nuclear"/>
+      <xsd:enumeration value="msp-optical"/>
+      <xsd:enumeration value="msp-thermal"/>
+      <xsd:enumeration value="msp-biological"/>
+      <xsd:enumeration value="msp-mechanical"/>
+      <xsd:enumeration value="msp-acoustical"/>
+      <xsd:enumeration value="msp-manual"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NomPartition">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="nom-part-unspec"/>
+      <xsd:enumeration value="nom-part-obj"/>
+      <xsd:enumeration value="nom-part-metric"/>
+      <xsd:enumeration value="nom-part-alert"/>
+      <xsd:enumeration value="nom-part-dim"/>
+      <xsd:enumeration value="nom-part-vattr"/>
+      <xsd:enumeration value="nom-part-pgrp"/>
+      <xsd:enumeration value="nom-part-sites"/>
+      <xsd:enumeration value="nom-part-infrastruct"/>
+      <xsd:enumeration value="nom-part-fef"/>
+      <xsd:enumeration value="nom-part-ecg-extn"/>
+      <xsd:enumeration value="nom-part-ext-nom"/>
+      <xsd:enumeration value="nom-part-priv"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NomenclatureVersion__nom-major-version__ANON_ENUM">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="majorVersion1"/>
+      <xsd:enumeration value="majorVersion2"/>
+      <xsd:enumeration value="majorVersion3"/>
+      <xsd:enumeration value="majorVersion4"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OpInvResult">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="op-successful"/>
+      <xsd:enumeration value="op-failure"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OpLevel">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="op-level-basic"/>
+      <xsd:enumeration value="op-level-advanced"/>
+      <xsd:enumeration value="op-level-professional"/>
+      <xsd:enumeration value="op-item-normal"/>
+      <xsd:enumeration value="op-item-config"/>
+      <xsd:enumeration value="op-item-service"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OpModType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="op-replace"/>
+      <xsd:enumeration value="op-setToDefault"/>
+      <xsd:enumeration value="op-invokeAction"/>
+      <xsd:enumeration value="op-invokeActionWithArgs"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OpOptions">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="needs-confirmation"/>
+      <xsd:enumeration value="supports-default"/>
+      <xsd:enumeration value="sets-sco-lock"/>
+      <xsd:enumeration value="is-setting"/>
+      <xsd:enumeration value="op-dependency"/>
+      <xsd:enumeration value="op-auto-repeat"/>
+      <xsd:enumeration value="op-ctxt-help"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OperationalState">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="disabled"/>
+      <xsd:enumeration value="enabled"/>
+      <xsd:enumeration value="notAvailable"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PatDemoState">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="empty"/>
+      <xsd:enumeration value="pre-admitted"/>
+      <xsd:enumeration value="admitted"/>
+      <xsd:enumeration value="discharged"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PatientRace">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="race-unspecified"/>
+      <xsd:enumeration value="race-caucasian"/>
+      <xsd:enumeration value="race-black"/>
+      <xsd:enumeration value="race-oriental"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PatientSex">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="sex-unknown"/>
+      <xsd:enumeration value="male"/>
+      <xsd:enumeration value="female"/>
+      <xsd:enumeration value="sex-unspecified"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PatientType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="pt-unspecified"/>
+      <xsd:enumeration value="adult"/>
+      <xsd:enumeration value="pediatric"/>
+      <xsd:enumeration value="neonatal"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PowerStatus">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="onMains"/>
+      <xsd:enumeration value="onBattery"/>
+      <xsd:enumeration value="chargingFull"/>
+      <xsd:enumeration value="chargingTrickle"/>
+      <xsd:enumeration value="chargingOff"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ProdSpecEntry__spec-type__ANON_ENUM">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="unspecified"/>
+      <xsd:enumeration value="serial-number"/>
+      <xsd:enumeration value="part-number"/>
+      <xsd:enumeration value="hw-revision"/>
+      <xsd:enumeration value="sw-revision"/>
+      <xsd:enumeration value="fw-revision"/>
+      <xsd:enumeration value="protocol-revision"/>
+      <xsd:enumeration value="prod-spec-gmdn"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SaCalDataType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="bar"/>
+      <xsd:enumeration value="stair"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SaFilterEntry__filter-type__ANON_ENUM">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="other"/>
+      <xsd:enumeration value="low-pass"/>
+      <xsd:enumeration value="high-pass"/>
+      <xsd:enumeration value="notch"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SaFlags">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="smooth-curve"/>
+      <xsd:enumeration value="delayed-curve"/>
+      <xsd:enumeration value="static-scale"/>
+      <xsd:enumeration value="sa-ext-val-range"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ScanConfigLimit">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="no-scan-delete"/>
+      <xsd:enumeration value="no-scan-list-mod"/>
+      <xsd:enumeration value="auto-init-scan-list"/>
+      <xsd:enumeration value="auto-updt-scan-list"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ScanExtend">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="extensive"/>
+      <xsd:enumeration value="superpositive"/>
+      <xsd:enumeration value="superpositive-avg"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ScoActivityIndicator">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="act-ind-off"/>
+      <xsd:enumeration value="act-ind-on"/>
+      <xsd:enumeration value="act-ind-blinking"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ScoCapability">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="act-indicator"/>
+      <xsd:enumeration value="sco-locks"/>
+      <xsd:enumeration value="sco-ctxt-help"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ScoOperInvokeError__op-error__ANON_ENUM">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="op-err-unspec"/>
+      <xsd:enumeration value="checksum-error"/>
+      <xsd:enumeration value="sco-lock-violation"/>
+      <xsd:enumeration value="unknown-operation"/>
+      <xsd:enumeration value="invalid-value"/>
+      <xsd:enumeration value="invalid-mod-type"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SetStrOpt">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="setstr-null-terminated"/>
+      <xsd:enumeration value="setstr-displayable"/>
+      <xsd:enumeration value="setstr-var-length"/>
+      <xsd:enumeration value="setstr-hidden-val"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SimpleColour">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="col-black"/>
+      <xsd:enumeration value="col-red"/>
+      <xsd:enumeration value="col-green"/>
+      <xsd:enumeration value="col-yellow"/>
+      <xsd:enumeration value="col-blue"/>
+      <xsd:enumeration value="col-magenta"/>
+      <xsd:enumeration value="col-cyan"/>
+      <xsd:enumeration value="col-white"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StoSampleAlg">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="st-alg-nos"/>
+      <xsd:enumeration value="st-alg-moving-average"/>
+      <xsd:enumeration value="st-alg-recursive"/>
+      <xsd:enumeration value="st-alg-min-pick"/>
+      <xsd:enumeration value="st-alg-max-pick"/>
+      <xsd:enumeration value="st-alg-median"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StorageFormat">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="sto-t-nos"/>
+      <xsd:enumeration value="sto-t-gen"/>
+      <xsd:enumeration value="sto-t-nu-opt"/>
+      <xsd:enumeration value="sto-t-rtsa-opt"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StringFlags">
+    <xsd:restriction base="BITS-16">
+      <xsd:enumeration value="str-flag-nt"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SystemCapability">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="sc-multiple-context"/>
+      <xsd:enumeration value="sc-dyn-configuration"/>
+      <xsd:enumeration value="sc-dyn-scanner-create"/>
+      <xsd:enumeration value="sc-auto-init-scan-list"/>
+      <xsd:enumeration value="sc-auto-updt-scan-list"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TimeCapability">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="time-capab-real-time-clock"/>
+      <xsd:enumeration value="time-capab-ebww"/>
+      <xsd:enumeration value="time-capab-leap-second-aware"/>
+      <xsd:enumeration value="time-capab-time-zone-aware"/>
+      <xsd:enumeration value="time-capab-internal-only"/>
+      <xsd:enumeration value="time-capab-time-displayed"/>
+      <xsd:enumeration value="time-capab-patient-care"/>
+      <xsd:enumeration value="time-capab-rtsa-time-sync-annotations"/>
+      <xsd:enumeration value="time-capab-rtsa-time-sync-high-precision"/>
+      <xsd:enumeration value="time-capab-set-time-action-sup"/>
+      <xsd:enumeration value="time-capab-set-time-zone-action-sup"/>
+      <xsd:enumeration value="time-capab-set-leap-sec-action-sup"/>
+      <xsd:enumeration value="time-capab-set-time-iso-sup"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ToggleState">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="tog-state0"/>
+      <xsd:enumeration value="tog-state1"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="VMDStatus">
+    <xsd:restriction base="BIT_STRING">
+      <xsd:enumeration value="vmd-off"/>
+      <xsd:enumeration value="vmd-not-ready"/>
+      <xsd:enumeration value="vmd-standby"/>
+      <xsd:enumeration value="vmd-transduc-discon"/>
+      <xsd:enumeration value="vmd-hw-discon"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ========== Interfaces Defined ========== -->
+  <!-- === Interface CtxtHelp === -->
+  <xsd:group name="CtxtHelp">
+    <xsd:choice>
+      <xsd:element name="OCTET_STRING" type="OCTET_STRING"/>
+      <xsd:element name="OID-Type" type="OID-Type"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface EnumVal === -->
+  <xsd:group name="EnumVal">
+    <xsd:choice>
+      <xsd:element name="BITS-32" type="BITS-32"/>
+      <xsd:element name="EnumRecordMetric" type="EnumRecordMetric"/>
+      <xsd:element name="EnumRecordOo" type="EnumRecordOo"/>
+      <xsd:element name="ExtNomenRef" type="ExtNomenRef"/>
+      <xsd:element name="INT-U32" type="INT-U32"/>
+      <xsd:element name="OCTET_STRING" type="OCTET_STRING"/>
+      <xsd:element name="OID-Type" type="OID-Type"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_AL === -->
+  <xsd:group name="MDC_ATTR_GRP_AL">
+    <xsd:choice>
+      <xsd:element name="Alert" type="Alert"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_AL_MON === -->
+  <xsd:group name="MDC_ATTR_GRP_AL_MON">
+    <xsd:choice>
+      <xsd:element name="Alert_Monitor" type="Alert_Monitor"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_AL_STAT === -->
+  <xsd:group name="MDC_ATTR_GRP_AL_STAT">
+    <xsd:choice>
+      <xsd:element name="Alert_Status" type="Alert_Status"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_ARCHIVE__Multipatient_Archive === -->
+  <xsd:group name="MDC_ATTR_GRP_ARCHIVE__Multipatient_Archive">
+    <xsd:choice>
+      <xsd:element name="Multipatient_Archive" type="Multipatient_Archive"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_ARCHIVE__Patient_Archive === -->
+  <xsd:group name="MDC_ATTR_GRP_ARCHIVE__Patient_Archive">
+    <xsd:choice>
+      <xsd:element name="Patient_Archive" type="Patient_Archive"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_ARCHIVE__Session_Archive === -->
+  <xsd:group name="MDC_ATTR_GRP_ARCHIVE__Session_Archive">
+    <xsd:choice>
+      <xsd:element name="Session_Archive" type="Session_Archive"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_ARCHIVE__Session_Notes === -->
+  <xsd:group name="MDC_ATTR_GRP_ARCHIVE__Session_Notes">
+    <xsd:choice>
+      <xsd:element name="Session_Notes" type="Session_Notes"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_ARCHIVE__Session_Test === -->
+  <xsd:group name="MDC_ATTR_GRP_ARCHIVE__Session_Test">
+    <xsd:choice>
+      <xsd:element name="Session_Test" type="Session_Test"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_BATT === -->
+  <xsd:group name="MDC_ATTR_GRP_BATT">
+    <xsd:choice>
+      <xsd:element name="Battery" type="Battery"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_CC === -->
+  <xsd:group name="MDC_ATTR_GRP_CC">
+    <xsd:choice>
+      <xsd:element name="Communication_Controller" type="Communication_Controller"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_CLOCK === -->
+  <xsd:group name="MDC_ATTR_GRP_CLOCK">
+    <xsd:choice>
+      <xsd:element name="Clock" type="Clock"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Complex_Metric === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Complex_Metric">
+    <xsd:choice>
+      <xsd:element name="Complex_Metric" type="Complex_Metric"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Distribution_Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Distribution_Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Distribution_Sample_Array" type="Distribution_Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Enumeration === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Enumeration">
+    <xsd:choice>
+      <xsd:element name="Enumeration" type="Enumeration"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Metric === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Metric">
+    <xsd:choice>
+      <xsd:element name="Metric" type="Metric"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Numeric === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Numeric">
+    <xsd:choice>
+      <xsd:element name="Numeric" type="Numeric"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Real_Time_Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Real_Time_Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Real_Time_Sample_Array" type="Real_Time_Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Sample_Array" type="Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_METRIC_VAL_OBS__Time_Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_METRIC_VAL_OBS__Time_Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Time_Sample_Array" type="Time_Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Activate_Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Activate_Operation">
+    <xsd:choice>
+      <xsd:element name="Activate_Operation" type="Activate_Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Limit_Alert_Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Limit_Alert_Operation">
+    <xsd:choice>
+      <xsd:element name="Limit_Alert_Operation" type="Limit_Alert_Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Operation">
+    <xsd:choice>
+      <xsd:element name="Operation" type="Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Select_Item_Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Select_Item_Operation">
+    <xsd:choice>
+      <xsd:element name="Select_Item_Operation" type="Select_Item_Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Set_Range_Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Set_Range_Operation">
+    <xsd:choice>
+      <xsd:element name="Set_Range_Operation" type="Set_Range_Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Set_String_Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Set_String_Operation">
+    <xsd:choice>
+      <xsd:element name="Set_String_Operation" type="Set_String_Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Set_Value_Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Set_Value_Operation">
+    <xsd:choice>
+      <xsd:element name="Set_Value_Operation" type="Set_Value_Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_OP_DYN_CTXT__Toggle_Flag_Operation === -->
+  <xsd:group name="MDC_ATTR_GRP_OP_DYN_CTXT__Toggle_Flag_Operation">
+    <xsd:choice>
+      <xsd:element name="Toggle_Flag_Operation" type="Toggle_Flag_Operation"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_PHYSICIAN === -->
+  <xsd:group name="MDC_ATTR_GRP_PHYSICIAN">
+    <xsd:choice>
+      <xsd:element name="Physician" type="Physician"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_PMSTORE === -->
+  <xsd:group name="MDC_ATTR_GRP_PMSTORE">
+    <xsd:choice>
+      <xsd:element name="PM-Store" type="PM-Store"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_PT_DEMOG === -->
+  <xsd:group name="MDC_ATTR_GRP_PT_DEMOG">
+    <xsd:choice>
+      <xsd:element name="Patient_Demographics" type="Patient_Demographics"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_RELATION__VMO === -->
+  <xsd:group name="MDC_ATTR_GRP_RELATION__VMO">
+    <xsd:choice>
+      <xsd:element name="VMO" type="VMO"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_RELATION__VMS === -->
+  <xsd:group name="MDC_ATTR_GRP_RELATION__VMS">
+    <xsd:choice>
+      <xsd:element name="VMS" type="VMS"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SCAN__CfgScanner === -->
+  <xsd:group name="MDC_ATTR_GRP_SCAN__CfgScanner">
+    <xsd:choice>
+      <xsd:element name="CfgScanner" type="CfgScanner"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SCAN__PeriCfgScanner === -->
+  <xsd:group name="MDC_ATTR_GRP_SCAN__PeriCfgScanner">
+    <xsd:choice>
+      <xsd:element name="PeriCfgScanner" type="PeriCfgScanner"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SCAN__Scanner === -->
+  <xsd:group name="MDC_ATTR_GRP_SCAN__Scanner">
+    <xsd:choice>
+      <xsd:element name="Scanner" type="Scanner"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SCAN__UcfgScanner === -->
+  <xsd:group name="MDC_ATTR_GRP_SCAN__UcfgScanner">
+    <xsd:choice>
+      <xsd:element name="UcfgScanner" type="UcfgScanner"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SCO_TRANSACTION === -->
+  <xsd:group name="MDC_ATTR_GRP_SCO_TRANSACTION">
+    <xsd:choice>
+      <xsd:element name="SCO" type="SCO"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SYS_APPL__MDS === -->
+  <xsd:group name="MDC_ATTR_GRP_SYS_APPL__MDS">
+    <xsd:choice>
+      <xsd:element name="MDS" type="MDS"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SYS_APPL__VMS === -->
+  <xsd:group name="MDC_ATTR_GRP_SYS_APPL__VMS">
+    <xsd:choice>
+      <xsd:element name="VMS" type="VMS"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SYS_ID__MDS === -->
+  <xsd:group name="MDC_ATTR_GRP_SYS_ID__MDS">
+    <xsd:choice>
+      <xsd:element name="MDS" type="MDS"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SYS_ID__VMS === -->
+  <xsd:group name="MDC_ATTR_GRP_SYS_ID__VMS">
+    <xsd:choice>
+      <xsd:element name="VMS" type="VMS"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SYS_PROD__MDS === -->
+  <xsd:group name="MDC_ATTR_GRP_SYS_PROD__MDS">
+    <xsd:choice>
+      <xsd:element name="MDS" type="MDS"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_SYS_PROD__VMS === -->
+  <xsd:group name="MDC_ATTR_GRP_SYS_PROD__VMS">
+    <xsd:choice>
+      <xsd:element name="VMS" type="VMS"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMD_APPL === -->
+  <xsd:group name="MDC_ATTR_GRP_VMD_APPL">
+    <xsd:choice>
+      <xsd:element name="VMD" type="VMD"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMD_PROD === -->
+  <xsd:group name="MDC_ATTR_GRP_VMD_PROD">
+    <xsd:choice>
+      <xsd:element name="VMD" type="VMD"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Alert === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Alert">
+    <xsd:choice>
+      <xsd:element name="Alert" type="Alert"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Alert_Monitor === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Alert_Monitor">
+    <xsd:choice>
+      <xsd:element name="Alert_Monitor" type="Alert_Monitor"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Alert_Status === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Alert_Status">
+    <xsd:choice>
+      <xsd:element name="Alert_Status" type="Alert_Status"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Channel === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Channel">
+    <xsd:choice>
+      <xsd:element name="Channel" type="Channel"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Complex_Metric === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Complex_Metric">
+    <xsd:choice>
+      <xsd:element name="Complex_Metric" type="Complex_Metric"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Distribution_Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Distribution_Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Distribution_Sample_Array" type="Distribution_Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Enumeration === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Enumeration">
+    <xsd:choice>
+      <xsd:element name="Enumeration" type="Enumeration"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Metric === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Metric">
+    <xsd:choice>
+      <xsd:element name="Metric" type="Metric"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Numeric === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Numeric">
+    <xsd:choice>
+      <xsd:element name="Numeric" type="Numeric"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__PM-Store === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__PM-Store">
+    <xsd:choice>
+      <xsd:element name="PM-Store" type="PM-Store"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Real_Time_Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Real_Time_Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Real_Time_Sample_Array" type="Real_Time_Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__SCO === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__SCO">
+    <xsd:choice>
+      <xsd:element name="SCO" type="SCO"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Sample_Array" type="Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__Time_Sample_Array === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__Time_Sample_Array">
+    <xsd:choice>
+      <xsd:element name="Time_Sample_Array" type="Time_Sample_Array"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__VMD === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__VMD">
+    <xsd:choice>
+      <xsd:element name="VMD" type="VMD"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface MDC_ATTR_GRP_VMO_DYN__VMO === -->
+  <xsd:group name="MDC_ATTR_GRP_VMO_DYN__VMO">
+    <xsd:choice>
+      <xsd:element name="VMO" type="VMO"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface Metric__Body-Site-List__ANON_CHOICE === -->
+  <xsd:group name="Metric__Body-Site-List__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="ExtNomenRef" type="ExtNomenRef"/>
+      <xsd:element name="OID-Type" type="OID-Type"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface Metric__Msmt-Site-List__ANON_CHOICE === -->
+  <xsd:group name="Metric__Msmt-Site-List__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="ExtNomenRef" type="ExtNomenRef"/>
+      <xsd:element name="OID-Type" type="OID-Type"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface PM-Segment__Segment-Data__ANON_CHOICE === -->
+  <xsd:group name="PM-Segment__Segment-Data__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="AVA-Type" type="AVA-Type"/>
+      <xsd:element name="FLOAT-Type" type="FLOAT-Type"/>
+      <xsd:element name="SegDataRtsaOpt" type="SegDataRtsaOpt"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface Sample_Array__Sa-Calibration-Data__ANON_CHOICE === -->
+  <xsd:group name="Sample_Array__Sa-Calibration-Data__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="SaCalData16" type="SaCalData16"/>
+      <xsd:element name="SaCalData32" type="SaCalData32"/>
+      <xsd:element name="SaCalData8" type="SaCalData8"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface Sample_Array__Sa-Marker-List__ANON_CHOICE === -->
+  <xsd:group name="Sample_Array__Sa-Marker-List__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="MarkerEntrySaVal16" type="MarkerEntrySaVal16"/>
+      <xsd:element name="MarkerEntrySaVal32" type="MarkerEntrySaVal32"/>
+      <xsd:element name="MarkerEntrySaVal8" type="MarkerEntrySaVal8"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface Sample_Array__Sa-Physiological-Range__ANON_CHOICE === -->
+  <xsd:group name="Sample_Array__Sa-Physiological-Range__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="ScaledRange16" type="ScaledRange16"/>
+      <xsd:element name="ScaledRange32" type="ScaledRange32"/>
+      <xsd:element name="ScaledRange8" type="ScaledRange8"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface Sample_Array__Scale-and-Range-Specification__ANON_CHOICE === -->
+  <xsd:group name="Sample_Array__Scale-and-Range-Specification__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="ScaleRangeSpec16" type="ScaleRangeSpec16"/>
+      <xsd:element name="ScaleRangeSpec32" type="ScaleRangeSpec32"/>
+      <xsd:element name="ScaleRangeSpec8" type="ScaleRangeSpec8"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface Sample_Array__Visual-Grid__ANON_CHOICE === -->
+  <xsd:group name="Sample_Array__Visual-Grid__ANON_CHOICE">
+    <xsd:choice>
+      <xsd:element name="SaGridEntry16" type="SaGridEntry16"/>
+      <xsd:element name="SaGridEntry32" type="SaGridEntry32"/>
+      <xsd:element name="SaGridEntry8" type="SaGridEntry8"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface SegmSelection === -->
+  <xsd:group name="SegmSelection">
+    <xsd:choice>
+      <xsd:element name="AbsTimeRange" type="AbsTimeRange"/>
+      <xsd:element name="INT-U16" type="INT-U16"/>
+      <xsd:element name="InstNumber" type="InstNumber"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- === Interface SelectList === -->
+  <xsd:group name="SelectList">
+    <xsd:choice>
+      <xsd:element name="FLOAT-Type" type="FLOAT-Type"/>
+      <xsd:element name="OCTET_STRING" type="OCTET_STRING"/>
+      <xsd:element name="OID-Type" type="OID-Type"/>
+      <xsd:element name="SelectUValueEntry" type="SelectUValueEntry"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- ========== Interfaces Extended ========== -->
+  <!-- ========== Classes ========== -->
+  <xsd:complexType name="AVA-Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="attribute-value" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="attribute-id" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="AbsTimeRange">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="from-time" type="AbsoluteTime"/>
+      <xsd:element minOccurs="0" name="to-time" type="AbsoluteTime"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="AbsoluteRange">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-value" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-value" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="AbsoluteRelativeTimeSync">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="absolute-time-mark" type="AbsoluteTime"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="ext-time-marks" type="ExtTimeStamp"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="high-res-rollovers" type="INT-U16"/>
+    <xsd:attribute name="hires-time-mark" type="HighResRelativeTime"/>
+    <xsd:attribute name="relative-rollovers" type="INT-U16"/>
+    <xsd:attribute name="relative-time-mark" type="RelativeTime"/>
+  </xsd:complexType>
+  <xsd:complexType name="AbsoluteTime">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="century" type="INT-U8"/>
+    <xsd:attribute name="day" type="INT-U8"/>
+    <xsd:attribute name="hour" type="INT-U8"/>
+    <xsd:attribute name="minute" type="INT-U8"/>
+    <xsd:attribute name="month" type="INT-U8"/>
+    <xsd:attribute name="sec-fractions" type="INT-U8"/>
+    <xsd:attribute name="second" type="INT-U8"/>
+    <xsd:attribute name="year" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="Activate_Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Operation">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AlStatChgCnt">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="al-new-chg-cnt" type="INT-U8"/>
+    <xsd:attribute name="al-stack-chg-cnt" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="Alert">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element name="Alert-Condition" type="AlertCondition"/>
+          <xsd:element minOccurs="0" name="Limit-Specification" type="LimitSpecEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Vmo-Reference" type="HANDLE"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AlertCapabEntry">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="al-rep-flags" type="BIT_STRING"/>
+    <xsd:attribute name="alert-group" type="OID-Type"/>
+    <xsd:attribute name="max-p-obj-al" type="INT-U16"/>
+    <xsd:attribute name="max-p-severity" type="AlertType"/>
+    <xsd:attribute name="max-t-obj-al" type="INT-U16"/>
+    <xsd:attribute name="max-t-severity" type="AlertType"/>
+    <xsd:attribute name="obj-class" type="OID-Type"/>
+    <xsd:attribute name="obj-reference" type="HANDLE"/>
+  </xsd:complexType>
+  <xsd:complexType name="AlertCondition">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="alert-info" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="alert-code1" type="OID-Type"/>
+    <xsd:attribute name="alert-flags" type="AlertFlags"/>
+    <xsd:attribute name="alert-info-id" type="PrivateOid"/>
+    <xsd:attribute name="alert-source" type="OID-Type"/>
+    <xsd:attribute name="alert-type" type="AlertType"/>
+    <xsd:attribute name="controls" type="AlertControls"/>
+    <xsd:attribute name="obj-reference" type="HANDLE"/>
+  </xsd:complexType>
+  <xsd:complexType name="AlertEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="alert-info" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="alert-code1" type="OID-Type"/>
+    <xsd:attribute name="alert-info-id" type="PrivateOid"/>
+    <xsd:attribute name="alert-source" type="OID-Type"/>
+    <xsd:attribute name="alert-type" type="AlertType"/>
+    <xsd:attribute name="controls" type="AlertControls"/>
+    <xsd:attribute name="instance" type="InstNumber"/>
+    <xsd:attribute name="obj-reference" type="HANDLE"/>
+  </xsd:complexType>
+  <xsd:complexType name="AlertOpTextString">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-text" type="OCTET_STRING"/>
+    <xsd:attribute name="upper-text" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="Alert_Monitor">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="Device-P-Alarm-List" type="DevAlarmEntry"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Device-Sup-Alarm-List" type="DevAlarmEntry"/>
+          <xsd:element maxOccurs="unbounded" name="Device-T-Alarm-List" type="DevAlarmEntry"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Limit-Spec-List" type="LimitSpecEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Device-Alert-Condition" type="OCTET_STRING"/>
+        <xsd:attribute name="Suspension-Period" type="RelativeTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Alert_Scanner">
+    <xsd:complexContent>
+      <xsd:extension base="UcfgScanner">
+        <xsd:attribute name="Reporting-Interval" type="RelativeTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Alert_Status">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="Alert-Capab-List" type="AlertCapabEntry"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Limit-Spec-List" type="LimitSpecEntry"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Physio-Alert-List" type="AlertEntry"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Tech-Alert-List" type="AlertEntry"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ArchiveProtection">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="protection-key" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="protection-type" type="PrivateOid"/>
+  </xsd:complexType>
+  <xsd:complexType name="Authorization">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="authorization-key" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="authorization-type" type="PrivateOid"/>
+  </xsd:complexType>
+  <xsd:complexType name="BCC">
+    <xsd:complexContent>
+      <xsd:extension base="Communication_Controller">
+        <xsd:sequence>
+          <xsd:element name="Device_Interface" type="Device_Interface"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="BatMeasure">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="unit" type="OID-Type"/>
+    <xsd:attribute name="value" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="Battery">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Battery-Temperature" type="BatMeasure"/>
+          <xsd:element minOccurs="0" name="Capacity-Full-Charge" type="BatMeasure"/>
+          <xsd:element minOccurs="0" name="Capacity-Remaining" type="BatMeasure"/>
+          <xsd:element minOccurs="0" name="Capacity-Specified" type="BatMeasure"/>
+          <xsd:element minOccurs="0" name="Current" type="BatMeasure"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Production-Specification" type="ProdSpecEntry"/>
+          <xsd:element minOccurs="0" name="Remaining-Battery-Time" type="BatMeasure"/>
+          <xsd:element minOccurs="0" name="Voltage" type="BatMeasure"/>
+          <xsd:element minOccurs="0" name="Voltage-Specified" type="BatMeasure"/>
+        </xsd:sequence>
+        <xsd:attribute name="Battery-Status" type="BatteryStatus"/>
+        <xsd:attribute name="Charge-Cycles" type="INT-U32"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="CfgScanner">
+    <xsd:complexContent>
+      <xsd:extension base="Scanner">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="Scan-List" type="ScanEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Confirm-Mode" type="ConfirmMode"/>
+        <xsd:attribute name="Confirm-Timeout" type="RelativeTime"/>
+        <xsd:attribute name="Scan-Config-Limit" type="ScanConfigLimit"/>
+        <xsd:attribute name="Transmit-Window" type="INT-U16"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Channel">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Alert" type="Alert"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Metric" type="Metric"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="PM-Store" type="PM-Store"/>
+        </xsd:sequence>
+        <xsd:attribute name="Channel-Id" type="OID-Type"/>
+        <xsd:attribute name="Channel-Status" type="ChannelStatus"/>
+        <xsd:attribute name="Color" type="OCTET_STRING"/>
+        <xsd:attribute name="Logical-Channel-No" type="INT-U16"/>
+        <xsd:attribute name="Measurement-Principle" type="MsmtPrinciple"/>
+        <xsd:attribute name="Parameter-Group" type="OID-Type"/>
+        <xsd:attribute name="Physical-Channel-No" type="INT-U16"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ClearLogRangeInvoke">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="clear-log-option" type="ClearLogOptions"/>
+    <xsd:attribute name="from-log-entry-index" type="INT-U32"/>
+    <xsd:attribute name="log-change-count" type="INT-U16"/>
+    <xsd:attribute name="to-log-entry-index" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="ClearLogRangeResult">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="clear-log-result" type="ClearLogResult"/>
+    <xsd:attribute name="current-log-entries" type="INT-U32"/>
+    <xsd:attribute name="from-log-entry-index" type="INT-U32"/>
+    <xsd:attribute name="log-change-count" type="INT-U16"/>
+    <xsd:attribute name="to-log-entry-index" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="Clock">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Absolute-Relative-Sync" type="AbsoluteRelativeTimeSync"/>
+          <xsd:element minOccurs="0" name="Date-Time-Status" type="DateTimeStatus"/>
+          <xsd:element minOccurs="0" name="Date-and-Time" type="AbsoluteTime"/>
+          <xsd:element minOccurs="0" name="Daylight-Savings-Transition" type="DaylightSavingsTransition"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Ext-Time-Stamp-List" type="ExtTimeStamp"/>
+          <xsd:element minOccurs="0" name="Next-Leap-Seconds" type="LeapSecondsTransition"/>
+          <xsd:element name="Time-Support" type="TimeSupport"/>
+          <xsd:element minOccurs="0" name="Time-Zone" type="UTCTimeZone"/>
+        </xsd:sequence>
+        <xsd:attribute name="Cumulative-Leap-Seconds" type="INT-U32"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="HiRes-Relative-Time" type="HighResRelativeTime"/>
+        <xsd:attribute name="ISO-Date-and-Time" type="AbsoluteTimeISO"/>
+        <xsd:attribute name="Relative-Time" type="RelativeTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ClockStatusUpdateInfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="date-time-status" type="DateTimeStatus"/>
+      <xsd:element minOccurs="0" name="time-sync" type="AbsoluteRelativeTimeSync"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxDynAttr">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="cm-dyn-elem-list" type="CmplxDynAttrElem"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cm-dyn-cnt" type="INT-U8"/>
+    <xsd:attribute name="unused" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxDynAttrElem">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cm-elem-idx-1" type="INT-U8"/>
+    <xsd:attribute name="cm-elem-idx-2" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxElemInfo">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="class-id" type="OID-Type"/>
+    <xsd:attribute name="max-comp-no" type="INT-U8"/>
+    <xsd:attribute name="max-inst" type="INT-U8"/>
+    <xsd:attribute name="max-inst-comp" type="INT-U8"/>
+    <xsd:attribute name="max-inst-mplex" type="INT-U8"/>
+    <xsd:attribute name="max-str-size" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxMetricInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="cm-elem-info-list" type="CmplxElemInfo"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="max-mplex-dyn" type="INT-U8"/>
+    <xsd:attribute name="max-mplex-obs" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxObsElem">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cm-elem-idx" type="INT-U8"/>
+    <xsd:attribute name="cm-obs-elem-flgs" type="CmplxObsElemFlags"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxObsValue">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="cm-obs-elem-list" type="CmplxObsElem"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cm-obs-cnt" type="INT-U8"/>
+    <xsd:attribute name="cm-obs-flags" type="CmplxFlags"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxStaticAttr">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="cm-static-elem-list" type="CmplxStaticAttrElem"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="CmplxStaticAttrElem">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cm-elem-idx-1" type="INT-U8"/>
+    <xsd:attribute name="cm-elem-idx-2" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Communication_Controller">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:attribute name="CC-Type" type="CC-Oid"/>
+        <xsd:attribute name="Capability" type="CcCapability"/>
+        <xsd:attribute name="Cc-Ext-Mgmt-Proto-Id" type="CcExtMgmtProto"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Number-Of-Difs" type="INT-U16"/>
+        <xsd:attribute name="This-Connection-Dif-Index" type="INT-U16"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Complex_Metric">
+    <xsd:complexContent>
+      <xsd:extension base="Metric">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Cmplx-Dyn-Attr" type="CmplxDynAttr"/>
+          <xsd:element name="Cmplx-Metric-Info" type="CmplxMetricInfo"/>
+          <xsd:element name="Cmplx-Observed-Value" type="CmplxObsValue"/>
+          <xsd:element minOccurs="0" name="Cmplx-Static-Attr" type="CmplxStaticAttr"/>
+          <xsd:element maxOccurs="unbounded" name="Metric" type="Metric"/>
+        </xsd:sequence>
+        <xsd:attribute name="Cmplx-Recursion-Depth" type="INT-U16"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Composite_Multiple_Bed_MDS">
+    <xsd:complexContent>
+      <xsd:extension base="MDS">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Composite_Single_Bed_MDS">
+    <xsd:complexContent>
+      <xsd:extension base="MDS">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Context_Scanner">
+    <xsd:complexContent>
+      <xsd:extension base="UcfgScanner">
+        <xsd:attribute name="Context-Mode" type="ContextMode"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CreateEntry">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="created-object" type="CreatedObject"/>
+      <xsd:element minOccurs="0" name="superior-object" type="ManagedObjectId"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="CreatedObject">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="AVA-Type"/>
+      <xsd:element minOccurs="0" name="class-id" type="ManagedObjectId"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="CtxtHelpRequest">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="op-instance-no" type="InstNumber"/>
+    <xsd:attribute name="type" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="CtxtHelpResult">
+    <xsd:sequence>
+      <xsd:element name="help">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:group maxOccurs="unbounded" minOccurs="0" ref="CtxtHelp"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="hold-time" type="RelativeTime"/>
+    <xsd:attribute name="op-instance-no" type="InstNumber"/>
+    <xsd:attribute name="type" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="CurLimAlVal">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower" type="FLOAT-Type"/>
+    <xsd:attribute name="upper" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="CurrentRange">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower" type="FLOAT-Type"/>
+    <xsd:attribute name="upper" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="DCC">
+    <xsd:complexContent>
+      <xsd:extension base="Communication_Controller">
+        <xsd:sequence>
+          <xsd:element name="Device_Interface" type="Device_Interface"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Date">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="century" type="INT-U8"/>
+    <xsd:attribute name="day" type="INT-U8"/>
+    <xsd:attribute name="month" type="INT-U8"/>
+    <xsd:attribute name="year" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="DateTimeStatus">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="clock-last-set" type="AbsoluteTime"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="active-sync-protocol" type="TimeProtocolId"/>
+    <xsd:attribute name="clock-accuracy" type="FLOAT-Type"/>
+    <xsd:attribute name="usage-status" type="DateTimeUsage"/>
+  </xsd:complexType>
+  <xsd:complexType name="DaylightSavingsTransition">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="next-offset" type="UTCTimeZone"/>
+      <xsd:element minOccurs="0" name="transition-date" type="AbsoluteTime"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="DevAlarmEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="alert-info" type="xsd:anyType"/>
+      <xsd:element minOccurs="0" name="object" type="ManagedObjectId"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="al-code1" type="OID-Type"/>
+    <xsd:attribute name="al-source" type="OID-Type"/>
+    <xsd:attribute name="al-state" type="AlertState"/>
+    <xsd:attribute name="al-type" type="AlertType"/>
+    <xsd:attribute name="alert-info-id" type="PrivateOid"/>
+  </xsd:complexType>
+  <xsd:complexType name="DevAlertCondition">
+    <xsd:complexContent>
+      <xsd:extension base="DeviceAlertCondition">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DeviceAlertCondition">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="al-stat-chg-cnt" type="AlStatChgCnt"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="device-alert-state" type="AlertState"/>
+    <xsd:attribute name="max-aud-alarm" type="AlertType"/>
+    <xsd:attribute name="max-p-alarm" type="AlertType"/>
+    <xsd:attribute name="max-t-alarm" type="AlertType"/>
+  </xsd:complexType>
+  <xsd:complexType name="Device_Interface">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="Mib_Element" type="MibElement"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="Device_Interface_MibElement">
+    <xsd:complexContent>
+      <xsd:extension base="MibElement">
+        <xsd:attribute name="Active-Profile" type="OID-Type"/>
+        <xsd:attribute name="Dif-Id" type="INT-U16"/>
+        <xsd:attribute name="Dif-Type" type="CC-Oid"/>
+        <xsd:attribute name="Link-Speed" type="INT-U32"/>
+        <xsd:attribute name="MTU" type="INT-U32"/>
+        <xsd:attribute name="Mib-Element-List" type="CC-Oid" use="required"/>
+        <xsd:attribute name="Port-Number" type="INT-U16"/>
+        <xsd:attribute name="Port-State" type="DifMibPortState"/>
+        <xsd:attribute name="Supported-Profiles" type="CC-Oid"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DispResolution">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="post-point" type="INT-U8"/>
+    <xsd:attribute name="pre-point" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="Distribution_Sample_Array">
+    <xsd:complexContent>
+      <xsd:extension base="Sample_Array">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Absolute-Time-Stamp" type="AbsoluteTime"/>
+          <xsd:element name="Distribution-Range-Specification" type="DsaRangeSpec"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Dsa-Marker-List" type="MarkerEntryIndex"/>
+        </xsd:sequence>
+        <xsd:attribute name="HiRes-Time-Stamp" type="HighResRelativeTime"/>
+        <xsd:attribute name="Relative-Time-Stamp" type="RelativeTime"/>
+        <xsd:attribute name="x-Unit-Code" type="OID-Type"/>
+        <xsd:attribute name="x-Unit-Label-String" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DsaRangeSpec">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="first-element-value" type="FLOAT-Type"/>
+    <xsd:attribute name="last-element-value" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="EnumMsmtRangeLabel">
+    <xsd:sequence>
+      <xsd:element name="value">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:group maxOccurs="unbounded" minOccurs="0" ref="EnumVal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="label" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="EnumObsValue">
+    <xsd:sequence>
+      <xsd:element name="value">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:group maxOccurs="unbounded" minOccurs="0" ref="EnumVal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="metric-id" type="OID-Type"/>
+    <xsd:attribute name="state" type="MeasurementStatus"/>
+  </xsd:complexType>
+  <xsd:complexType name="EnumRecordMetric">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="record-data" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="record-type-code" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="EnumRecordOo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="record-data" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="record-type-code" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="Enumeration">
+    <xsd:complexContent>
+      <xsd:extension base="Metric">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Absolute-Time-Stamp" type="AbsoluteTime"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Compound-Enum-Observed-Value" type="EnumObsValue"/>
+          <xsd:element minOccurs="0" name="Enum-Observed-Value" type="EnumObsValue"/>
+        </xsd:sequence>
+        <xsd:attribute name="Enum-Measure-Range" type="OID-Type"/>
+        <xsd:attribute name="Enum-Measure-Range-Bit-String" type="BITS-32"/>
+        <xsd:attribute name="Enum-Measure-Range-Labels" type="OCTET_STRING"/>
+        <xsd:attribute name="HiRes-Time-Stamp" type="HighResRelativeTime"/>
+        <xsd:attribute name="Relative-Time-Stamp" type="RelativeTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="EpiCfgScanner">
+    <xsd:complexContent>
+      <xsd:extension base="CfgScanner">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="EventLogEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="abs-time" type="AbsoluteTime"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="entry-number" type="INT-U32"/>
+    <xsd:attribute name="event-entry" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="Event_Log">
+    <xsd:complexContent>
+      <xsd:extension base="Log">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="Event-Log-Entry-List" type="EventLogEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Event-Log-Info" type="EventLogInfo"/>
+        <xsd:attribute name="Type" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ExtNomenRef">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="nomenclature-code" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="nomenclature-id" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="ExtObjRelationEntry">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="relation-attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="related-object" type="OID-Type"/>
+    <xsd:attribute name="relation-type" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="ExtTimeStamp">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="time-stamp" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="time-stamp-id" type="TimeStampId"/>
+  </xsd:complexType>
+  <xsd:complexType name="FastPeriCfgScanner">
+    <xsd:complexContent>
+      <xsd:extension base="PeriCfgScanner">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="FastScanReportInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="glb-scan-info" type="SingleCtxtFastScan"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scan-report-no" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="GLB-HANDLE">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="context-id" type="MdsContext"/>
+    <xsd:attribute name="handle" type="HANDLE"/>
+  </xsd:complexType>
+  <xsd:complexType name="General_Communication_Statistics_MibElement">
+    <xsd:complexContent>
+      <xsd:extension base="MibElement">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Dif-Last-Change" type="AbsoluteTime"/>
+        </xsd:sequence>
+        <xsd:attribute name="Average-Speed" type="INT-U32"/>
+        <xsd:attribute name="Dif-Admin-Status" type="OCTET_STRING"/>
+        <xsd:attribute name="Dif-Oper-Status" type="OCTET_STRING"/>
+        <xsd:attribute name="Discarded-Packets-In" type="MibCcCounter"/>
+        <xsd:attribute name="Discarded-Packets-Out" type="MibCcCounter"/>
+        <xsd:attribute name="Errors-In" type="MibCcCounter"/>
+        <xsd:attribute name="Errors-Out" type="MibCcCounter"/>
+        <xsd:attribute name="Generic-Mode" type="MibCcCommMode"/>
+        <xsd:attribute name="Maximum-Speed" type="INT-U32"/>
+        <xsd:attribute name="Octets-In" type="MibCcCounter"/>
+        <xsd:attribute name="Octets-Out" type="MibCcCounter"/>
+        <xsd:attribute name="Packets-In" type="MibCcCounter"/>
+        <xsd:attribute name="Packets-Out" type="MibCcCounter"/>
+        <xsd:attribute name="Queue-Len-In" type="MibCcGauge"/>
+        <xsd:attribute name="Queue-Len-Out" type="MibCcGauge"/>
+        <xsd:attribute name="Unknown-Protocol-Packets-In" type="MibCcCounter"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="GetMibDataRequest">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="dif-index" type="INT-U16"/>
+    <xsd:attribute name="mib-id-list" type="CC-Oid"/>
+  </xsd:complexType>
+  <xsd:complexType name="GetMibDataResult">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="mib-data-list" type="MibDataEntry"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="dif-index" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="Hydra_MDS">
+    <xsd:complexContent>
+      <xsd:extension base="MDS">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LeapSecondsTransition">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="transition-date" type="Date"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="next-cum-leap-seconds" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="LimitSpecEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="lim-al-val" type="CurLimAlVal"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="al-source-id" type="OID-Type"/>
+    <xsd:attribute name="lim-al-stat" type="CurLimAlStat"/>
+    <xsd:attribute name="object-handle" type="HANDLE"/>
+    <xsd:attribute name="unit-code" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="Limit_Alert_Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Operation">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Alert-Op-Text-String" type="AlertOpTextString"/>
+          <xsd:element name="Current-Limits" type="CurLimAlVal"/>
+          <xsd:element name="Set-Value-Range" type="OpSetValueRange"/>
+        </xsd:sequence>
+        <xsd:attribute name="Alert-Op-Capability" type="AlOpCapab"/>
+        <xsd:attribute name="Alert-Op-State" type="CurLimAlStat"/>
+        <xsd:attribute name="Metric-Id" type="OID-Type"/>
+        <xsd:attribute name="Unit-Code" type="OID-Type"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Locale">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="str-spec" type="StringSpec"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="Language" type="INT-U32"/>
+    <xsd:attribute name="charset" type="CharSet"/>
+    <xsd:attribute name="country" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Log">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:attribute name="Current-Log-Entries" type="INT-U32"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Log-Change-Count" type="INT-U16"/>
+        <xsd:attribute name="Max-Log-Entries" type="INT-U32"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="MDS">
+    <xsd:complexContent>
+      <xsd:extension base="VMS">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Alert" type="Alert"/>
+          <xsd:element minOccurs="0" name="AlertStatus" type="Alert_Status"/>
+          <xsd:element minOccurs="0" name="Alert_Monitor" type="Alert_Monitor"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Battery" type="Battery"/>
+          <xsd:element minOccurs="0" name="Clock" type="Clock"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Communication_Controller" type="Communication_Controller"/>
+          <xsd:element minOccurs="0" name="Date-and-Time" type="AbsoluteTime"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Log" type="Log"/>
+          <xsd:element minOccurs="0" name="Remaining-Battery-Time" type="BatMeasure"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Scanner" type="Scanner"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Service-and-Control" type="SCO"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="VMD" type="VMD"/>
+        </xsd:sequence>
+        <xsd:attribute name="Altitude" type="INT-I16"/>
+        <xsd:attribute name="Application-Area" type="ApplicationArea"/>
+        <xsd:attribute name="Association-Invoke-Id" type="INT-U16"/>
+        <xsd:attribute name="Battery-Level" type="INT-U16"/>
+        <xsd:attribute name="Bed-Label" type="OCTET_STRING"/>
+        <xsd:attribute name="HiRes-Relative-Time" type="HighResRelativeTime"/>
+        <xsd:attribute name="Line-Frequency" type="LineFrequency"/>
+        <xsd:attribute name="Locale" type="OCTET_STRING"/>
+        <xsd:attribute name="Mds-Status" type="MDSStatus"/>
+        <xsd:attribute name="Operating-Mode" type="PrivateOid"/>
+        <xsd:attribute name="Patient-Type" type="PatientType"/>
+        <xsd:attribute name="Power-Status" type="PowerStatus"/>
+        <xsd:attribute name="Relative-Time" type="RelativeTime"/>
+        <xsd:attribute name="Soft-Id" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ManagedObjectId">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="m-obj-inst" type="GLB-HANDLE"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="m-obj-class" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="MarkerEntryIndex">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="marker-id" type="OID-Type"/>
+    <xsd:attribute name="marker-index" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="MarkerEntryRelTim">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="marker-id" type="OID-Type"/>
+    <xsd:attribute name="marker-time" type="RelativeTime"/>
+  </xsd:complexType>
+  <xsd:complexType name="MarkerEntrySaVal16">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="marker-id" type="OID-Type"/>
+    <xsd:attribute name="marker-val" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="MarkerEntrySaVal32">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="marker-id" type="OID-Type"/>
+    <xsd:attribute name="marker-val" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="MarkerEntrySaVal8">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="marker-id" type="OID-Type"/>
+    <xsd:attribute name="marker-val" type="INT-U8"/>
+    <xsd:attribute name="unused" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="MdsCreateInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attribute-list" type="AVA-Type"/>
+      <xsd:element minOccurs="0" name="class-id" type="ManagedObjectId"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="MdsErrorInfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="error-info" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="error-type" type="PrivateOid"/>
+  </xsd:complexType>
+  <xsd:complexType name="MdsSetStateInvoke">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="authorization" type="INT-U32"/>
+    <xsd:attribute name="new-state" type="MDSStatus"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Metric">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Averaging-Period" type="MetricMeasure"/>
+          <xsd:element name="Body-Site-List">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="0" ref="Metric__Body-Site-List__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Measure-Period" type="MetricMeasure"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Metric-Calibration" type="MetricCalEntry"/>
+          <xsd:element minOccurs="0" name="Metric-Id-Ext" type="ExtNomenRef"/>
+          <xsd:element name="Metric-Specification" type="MetricSpec"/>
+          <xsd:element name="Msmt-Site-List">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="0" ref="Metric__Msmt-Site-List__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="PM-Segment" type="PM-Segment"/>
+          <xsd:element minOccurs="0" name="Start-Time" type="AbsoluteTime"/>
+          <xsd:element minOccurs="0" name="Stop-Time" type="AbsoluteTime"/>
+          <xsd:element minOccurs="0" name="Substance" type="ExtNomenRef"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Vmo-Source-List" type="VmoSourceEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Color" type="OCTET_STRING"/>
+        <xsd:attribute name="Max-Delay-Time" type="RelativeTime"/>
+        <xsd:attribute name="Measure-Mode" type="PrivateOid"/>
+        <xsd:attribute name="Measurement-Status" type="MeasurementStatus"/>
+        <xsd:attribute name="Metric-Id" type="OID-Type"/>
+        <xsd:attribute name="Metric-Id-Partition" type="OCTET_STRING"/>
+        <xsd:attribute name="Metric-Info-LabelString" type="OCTET_STRING"/>
+        <xsd:attribute name="Metric-Source-List" type="OID-Type"/>
+        <xsd:attribute name="Metric-Status" type="MetricStatus"/>
+        <xsd:attribute name="Substance-LabelString" type="OCTET_STRING"/>
+        <xsd:attribute name="Unit-Code" type="OID-Type"/>
+        <xsd:attribute name="Unit-LabelString" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="MetricCalEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="cal-time" type="AbsoluteTime"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cal-state" type="MetricCalState"/>
+    <xsd:attribute name="cal-type" type="MetricCalType"/>
+  </xsd:complexType>
+  <xsd:complexType name="MetricMeasure">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="unit-code" type="OID-Type"/>
+    <xsd:attribute name="value" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="MetricSpec">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="structure" type="MetricStructure"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="access" type="MetricAccess"/>
+    <xsd:attribute name="category" type="MetricCategory"/>
+    <xsd:attribute name="relevance" type="MetricRelevance"/>
+    <xsd:attribute name="update-period" type="RelativeTime"/>
+  </xsd:complexType>
+  <xsd:complexType name="MetricStructure">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="ms-comp-no" type="INT-U8"/>
+    <xsd:attribute name="ms-struct" type="MetricStructure__ms-struct__ANON_ENUM"/>
+  </xsd:complexType>
+  <xsd:complexType name="MibDataEntry">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="mib-attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="mib-id" type="CC-Oid"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="MibElement">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="Mib-Ext-Oid" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="Multipatient_Archive">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Patient_Archive" type="Patient_Archive"/>
+        </xsd:sequence>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Location" type="OCTET_STRING"/>
+        <xsd:attribute name="Study-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="System-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="Version" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="NomenclatureVersion">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="nom-major-version" type="NomenclatureVersion__nom-major-version__ANON_ENUM"/>
+    <xsd:attribute name="nom-minor-version" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="NuObsValue">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="metric-id" type="OID-Type"/>
+    <xsd:attribute name="state" type="MeasurementStatus"/>
+    <xsd:attribute name="unit-code" type="OID-Type"/>
+    <xsd:attribute name="value" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="Numeric">
+    <xsd:complexContent>
+      <xsd:extension base="Metric">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Absolute-Time-Stamp" type="AbsoluteTime"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Compound-Nu-Observed-Value" type="NuObsValue"/>
+          <xsd:element minOccurs="0" name="Display-Resolution" type="DispResolution"/>
+          <xsd:element minOccurs="0" name="Nu-Measure-Range" type="AbsoluteRange"/>
+          <xsd:element minOccurs="0" name="Nu-Observed-Value" type="NuObsValue"/>
+          <xsd:element minOccurs="0" name="Nu-Physiological-Range" type="AbsoluteRange"/>
+        </xsd:sequence>
+        <xsd:attribute name="Accuracy" type="FLOAT-Type"/>
+        <xsd:attribute name="HiRes-Time-Stamp" type="HighResRelativeTime"/>
+        <xsd:attribute name="Nu-Measure-Resolution" type="FLOAT-Type"/>
+        <xsd:attribute name="Relative-Time-Stamp" type="RelativeTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ObjCreateInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="scan-report-info" type="CreateEntry"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scan-report-no" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="ObjDeleteInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="object-list" type="ManagedObjectId"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scan-report-no" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="ObservationScan">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="obj-handle" type="HANDLE"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpAttributeInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="glb-scan-info" type="SingleCtxtOperScan"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scan-report-no" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpAttributeScan">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="op-elem-updt-list" type="OpElemAttr"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="invoke-cookie" type="INT-U32"/>
+    <xsd:attribute name="lock-state" type="AdministrativeState"/>
+    <xsd:attribute name="sco-handle" type="HANDLE"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpCreateEntry">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="created-op-list" type="OpElemAttr"/>
+      <xsd:element minOccurs="0" name="sco-glb-handle" type="GLB-HANDLE"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpCreateInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="scan-info" type="OpCreateEntry"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scan-report-no" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpDeleteEntry">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="deleted-op-list" type="OpElem"/>
+      <xsd:element minOccurs="0" name="sco-glb-handle" type="GLB-HANDLE"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpDeleteInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="deleted-op-list" type="OpDeleteEntry"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scan-report-no" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpElem">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="op-class-id" type="OID-Type"/>
+    <xsd:attribute name="op-instance-no" type="InstNumber"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpElemAttr">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="op-class-id" type="OID-Type"/>
+    <xsd:attribute name="op-instance-no" type="InstNumber"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpGrouping">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="group" type="INT-U8"/>
+    <xsd:attribute name="priority" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpInvokeElement">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="op-class-id" type="OID-Type"/>
+    <xsd:attribute name="op-instance-no" type="InstNumber"/>
+    <xsd:attribute name="op-mod-type" type="OpModType"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpSetValueRange">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="maximum" type="FLOAT-Type"/>
+    <xsd:attribute name="minimum" type="FLOAT-Type"/>
+    <xsd:attribute name="resolution" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="OperSpec">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="grouping" type="OpGrouping"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="level" type="OpLevel"/>
+    <xsd:attribute name="op-target" type="OID-Type"/>
+    <xsd:attribute name="options" type="OpOptions"/>
+    <xsd:attribute name="vattr-id" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="OperTextStrings">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="confirm" type="OCTET_STRING"/>
+    <xsd:attribute name="help" type="OCTET_STRING"/>
+    <xsd:attribute name="label" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="Operating_Scanner">
+    <xsd:complexContent>
+      <xsd:extension base="UcfgScanner">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element name="Operation-Spec" type="OperSpec"/>
+          <xsd:element minOccurs="0" name="Operation-Text-Strings" type="OperTextStrings"/>
+          <xsd:element minOccurs="0" name="Operation-Text-Strings-Dyn" type="OperTextStrings"/>
+        </xsd:sequence>
+        <xsd:attribute name="Instance-Number" type="InstNumber"/>
+        <xsd:attribute name="Operational-State" type="OCTET_STRING"/>
+        <xsd:attribute name="Vmo-Reference" type="HANDLE"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OperationInvoke">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="op-elem-list" type="OpInvokeElement"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="checksum" type="INT-I16"/>
+    <xsd:attribute name="invoke-cookie" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="OperationInvokeResult">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="invoke-cookie" type="INT-U32"/>
+    <xsd:attribute name="result" type="OpInvResult"/>
+  </xsd:complexType>
+  <xsd:complexType name="PM-Segment">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Metric-Id-Ext" type="ExtNomenRef"/>
+          <xsd:element name="Segment-Data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="1" ref="PM-Segment__Segment-Data__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Segment-End-Abs-Time" type="AbsoluteTime"/>
+          <xsd:element minOccurs="0" name="Segment-Start-Abs-Time" type="AbsoluteTime"/>
+          <xsd:element minOccurs="0" name="Vmo-Global-Reference" type="GLB-HANDLE"/>
+        </xsd:sequence>
+        <xsd:attribute name="Instance-Number" type="InstNumber"/>
+        <xsd:attribute name="Metric-Id" type="OID-Type"/>
+        <xsd:attribute name="Segment-Usage-Count" type="INT-U32"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PM-Store">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="PM-Segment" type="PM-Segment"/>
+        </xsd:sequence>
+        <xsd:attribute name="Metric-Class" type="OID-Type"/>
+        <xsd:attribute name="Number-Of-Segments" type="INT-U16"/>
+        <xsd:attribute name="Sample-Period" type="RelativeTime"/>
+        <xsd:attribute name="Storage-Format" type="StorageFormat"/>
+        <xsd:attribute name="Store-Capacity-Count" type="INT-U32"/>
+        <xsd:attribute name="Store-Sample-Algorithm" type="StoSampleAlg"/>
+        <xsd:attribute name="Store-Usage-Count" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PatMeasure">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="m-unit" type="OID-Type"/>
+    <xsd:attribute name="value" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="Patient_Archive">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element name="Protection" type="ArchiveProtection"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Session_Archive" type="Session_Archive"/>
+        </xsd:sequence>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Processing-History" type="OCTET_STRING"/>
+        <xsd:attribute name="System-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="System-Name" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Patient_Demographics">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Date-Of-Birth" type="Date"/>
+          <xsd:element minOccurs="0" name="Date-Of-Procedure" type="Date"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Diagnostic-Codes" type="ExtNomenRef"/>
+          <xsd:element minOccurs="0" name="Gestational-Age" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="MDS" type="MDS"/>
+          <xsd:element minOccurs="0" name="Patient-Age" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient-Birth-Length" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient-Birth-Weight" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient-Bsa" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient-Head-Circumference" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient-Height" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient-Lbm" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient-Weight" type="PatMeasure"/>
+          <xsd:element minOccurs="0" name="Patient_Archive" type="Patient_Archive"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Procedure-Codes" type="ExtNomenRef"/>
+          <xsd:element minOccurs="0" name="Session_Archive" type="Session_Archive"/>
+        </xsd:sequence>
+        <xsd:attribute name="Admitting-Physician" type="OCTET_STRING"/>
+        <xsd:attribute name="Anaesthetist" type="OCTET_STRING"/>
+        <xsd:attribute name="Attending-Physician" type="OCTET_STRING"/>
+        <xsd:attribute name="Bed-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="Birth-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Diagnostic-Info" type="OCTET_STRING"/>
+        <xsd:attribute name="Family-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Given-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Middle-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Mother-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Mother-Patient-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Pat-Demo-State" type="PatDemoState"/>
+        <xsd:attribute name="Patient-Gen-Info" type="OCTET_STRING"/>
+        <xsd:attribute name="Patient-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="Patient-Type" type="PatientType"/>
+        <xsd:attribute name="Procedure-Description" type="OCTET_STRING"/>
+        <xsd:attribute name="Race" type="PatientRace"/>
+        <xsd:attribute name="Sex" type="PatientSex"/>
+        <xsd:attribute name="Surgeon" type="OCTET_STRING"/>
+        <xsd:attribute name="Title-Name" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="PeriCfgScanner">
+    <xsd:complexContent>
+      <xsd:extension base="CfgScanner">
+        <xsd:attribute name="Reporting-Interval" type="RelativeTime"/>
+        <xsd:attribute name="Scan-Extensibility" type="ScanExtend"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Physician">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Authorization-Level" type="Authorization"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Session_Archive" type="Session_Archive"/>
+        </xsd:sequence>
+        <xsd:attribute name="Family-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Given-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Middle-Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Name" type="OCTET_STRING"/>
+        <xsd:attribute name="Physician-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="Title-Name" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ProdSpecEntry">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="component-id" type="PrivateOid"/>
+    <xsd:attribute name="prod-spec" type="OCTET_STRING"/>
+    <xsd:attribute name="spec-type" type="ProdSpecEntry__spec-type__ANON_ENUM"/>
+  </xsd:complexType>
+  <xsd:complexType name="RangeOpText">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="high-text" type="OCTET_STRING"/>
+    <xsd:attribute name="low-text" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="Real_Time_Sample_Array">
+    <xsd:complexContent>
+      <xsd:extension base="Sample_Array">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Sweep-Speed" type="MetricMeasure"/>
+        </xsd:sequence>
+        <xsd:attribute name="Average-Reporting-Delay" type="RelativeTime"/>
+        <xsd:attribute name="HiRes-Sample-Time-Sync" type="HighResRelativeTime"/>
+        <xsd:attribute name="Sample-Period" type="RelativeTime"/>
+        <xsd:attribute name="Sample-Time-Sync" type="RelativeTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="RefreshObjEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="object-glb-handle" type="GLB-HANDLE"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scanned-attribute" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="RtsaObservationScan">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="observation" type="SaObsValue"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="handle" type="HANDLE"/>
+  </xsd:complexType>
+  <xsd:complexType name="SCO">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Operation" type="Operation"/>
+        </xsd:sequence>
+        <xsd:attribute name="Activity-Indicator" type="ScoActivityIndicator"/>
+        <xsd:attribute name="Invoke-Cookie" type="INT-U32"/>
+        <xsd:attribute name="Lock-State" type="AdministrativeState"/>
+        <xsd:attribute name="Sco-Capability" type="ScoCapability"/>
+        <xsd:attribute name="Sco-Help-Text-String" type="OCTET_STRING"/>
+        <xsd:attribute name="Vmo-Reference" type="HANDLE"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="SNTPTimeStamp">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="fraction" type="INT-U32"/>
+    <xsd:attribute name="seconds" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaCalData16">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cal-type" type="SaCalDataType"/>
+    <xsd:attribute name="increment" type="INT-U16"/>
+    <xsd:attribute name="lower-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U16"/>
+    <xsd:attribute name="upper-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaCalData32">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cal-type" type="SaCalDataType"/>
+    <xsd:attribute name="increment" type="INT-U32"/>
+    <xsd:attribute name="lower-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U32"/>
+    <xsd:attribute name="upper-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaCalData8">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="cal-type" type="SaCalDataType"/>
+    <xsd:attribute name="increment" type="INT-U16"/>
+    <xsd:attribute name="lower-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U8"/>
+    <xsd:attribute name="upper-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaFilterEntry">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="filter-order" type="INT-I16"/>
+    <xsd:attribute name="filter-type" type="SaFilterEntry__filter-type__ANON_ENUM"/>
+    <xsd:attribute name="frequency" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaGridEntry16">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="level" type="INT-U16"/>
+    <xsd:attribute name="scaled-value" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaGridEntry32">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="level" type="INT-U16"/>
+    <xsd:attribute name="scaled-value" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaGridEntry8">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="level" type="INT-U8"/>
+    <xsd:attribute name="scaled-value" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaObsValue">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="array" type="OCTET_STRING"/>
+    <xsd:attribute name="metric-id" type="OID-Type"/>
+    <xsd:attribute name="state" type="MeasurementStatus"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaSignalFrequency">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="high-edge-freq" type="FLOAT-Type"/>
+    <xsd:attribute name="low-edge-freq" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="SaSpec">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="sample-type" type="SampleType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="array-size" type="INT-U16"/>
+    <xsd:attribute name="flags" type="SaFlags"/>
+  </xsd:complexType>
+  <xsd:complexType name="SampleType">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="sample-size" type="INT-U8"/>
+    <xsd:attribute name="significant-bits" type="xsd:integer"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Sample_Array">
+    <xsd:complexContent>
+      <xsd:extension base="Metric">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Compound-Sa-Observed-Value" type="SaObsValue"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Filter-Specification" type="SaFilterEntry"/>
+          <xsd:element name="Sa-Calibration-Data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="0" ref="Sample_Array__Sa-Calibration-Data__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="Sa-Marker-List">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="0" ref="Sample_Array__Sa-Marker-List__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Sa-Observed-Value" type="SaObsValue"/>
+          <xsd:element name="Sa-Physiological-Range">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="0" ref="Sample_Array__Sa-Physiological-Range__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Sa-Signal-Frequency" type="SaSignalFrequency"/>
+          <xsd:element name="Sa-Specification" type="SaSpec"/>
+          <xsd:element name="Scale-and-Range-Specification">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="1" ref="Sample_Array__Scale-and-Range-Specification__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="Visual-Grid">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="0" ref="Sample_Array__Visual-Grid__ANON_CHOICE"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="Compression" type="PrivateOid"/>
+        <xsd:attribute name="Filter-Label-String" type="OCTET_STRING"/>
+        <xsd:attribute name="Sa-Measure-Resolution" type="FLOAT-Type"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ScaleRangeSpec16">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U16"/>
+    <xsd:attribute name="upper-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScaleRangeSpec32">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U32"/>
+    <xsd:attribute name="upper-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScaleRangeSpec8">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U8"/>
+    <xsd:attribute name="upper-absolute-value" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScaledRange16">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U16"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScaledRange32">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U32"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U32"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScaledRange8">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lower-scaled-value" type="INT-U8"/>
+    <xsd:attribute name="upper-scaled-value" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScanEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="object-glb-handle" type="GLB-HANDLE"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scanned-attribute" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScanReportInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="glb-scan-info" type="SingleCtxtScan"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="scan-report-no" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Scanner">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Instance-Number" type="InstNumber"/>
+        <xsd:attribute name="Operational-State" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ScoOperInvokeError">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="failed-operation-list" type="InstNumber"/>
+    <xsd:attribute name="invoke-cookie" type="INT-U32"/>
+    <xsd:attribute name="op-error" type="ScoOperInvokeError__op-error__ANON_ENUM"/>
+  </xsd:complexType>
+  <xsd:complexType name="ScoOperReqSpec">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="op-req-info" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="op-req-id" type="PrivateOid"/>
+  </xsd:complexType>
+  <xsd:complexType name="SegmentAttr">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="seg-attr" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="seg-inst-no" type="InstNumber"/>
+  </xsd:complexType>
+  <xsd:complexType name="SegmentInfo">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="seg-info" type="AVA-Type"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="seg-inst-no" type="InstNumber"/>
+  </xsd:complexType>
+  <xsd:complexType name="SelectUValueEntry">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="m-units" type="OID-Type"/>
+    <xsd:attribute name="value" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="Select_Item_Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Operation">
+        <xsd:sequence>
+          <xsd:element name="Select-List">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:group maxOccurs="unbounded" minOccurs="1" ref="SelectList"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="Nom-Partition" type="OCTET_STRING"/>
+        <xsd:attribute name="Selected-Item-Index" type="INT-U16"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Session_Archive">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Protection" type="ArchiveProtection"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Session-Test" type="Session_Test"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Session_Notes" type="Session_Notes"/>
+          <xsd:element name="Start-Time" type="AbsoluteTime"/>
+          <xsd:element name="Stop-Time" type="AbsoluteTime"/>
+        </xsd:sequence>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="S-Archive-Comments" type="OCTET_STRING"/>
+        <xsd:attribute name="S-Archive-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="S-Archive-Name" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Session_Notes">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="Diagnostic-Codes" type="ExtNomenRef"/>
+          <xsd:element maxOccurs="unbounded" name="Procedure-Code" type="ExtNomenRef"/>
+          <xsd:element minOccurs="0" name="Protection" type="ArchiveProtection"/>
+          <xsd:element name="Start-Time" type="AbsoluteTime"/>
+          <xsd:element name="Stop-Time" type="AbsoluteTime"/>
+        </xsd:sequence>
+        <xsd:attribute name="Diagnosis-Description" type="OCTET_STRING"/>
+        <xsd:attribute name="Findings" type="OCTET_STRING"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Procedure-Description" type="OCTET_STRING"/>
+        <xsd:attribute name="Sn-Comments" type="OCTET_STRING"/>
+        <xsd:attribute name="Sn-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="Sn-Name" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Session_Test">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="MDS" type="MDS"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="PM-Store" type="PM-Store"/>
+          <xsd:element minOccurs="0" name="Protection" type="ArchiveProtection"/>
+          <xsd:element name="Start-Time" type="AbsoluteTime"/>
+          <xsd:element name="Stop-Time" type="AbsoluteTime"/>
+        </xsd:sequence>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="St-Archive-Comments" type="OCTET_STRING"/>
+        <xsd:attribute name="St-Archive-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="St-Archive-Name" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="SetLeapSecondsInvoke">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="next-leap-seconds" type="LeapSecondsTransition"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="leap-seconds-cum" type="INT-I32"/>
+  </xsd:complexType>
+  <xsd:complexType name="SetStringSpec">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="char-size" type="INT-U16"/>
+    <xsd:attribute name="max-str-len" type="INT-U16"/>
+    <xsd:attribute name="set-str-opt" type="SetStrOpt"/>
+  </xsd:complexType>
+  <xsd:complexType name="SetTimeInvoke">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="date-time" type="AbsoluteTime"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="accuracy" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="SetTimeZoneInvoke">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="next-time-zone" type="DaylightSavingsTransition"/>
+      <xsd:element minOccurs="0" name="time-zone" type="UTCTimeZone"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="Set_Range_Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Operation">
+        <xsd:sequence>
+          <xsd:element name="Current-Range" type="CurrentRange"/>
+          <xsd:element minOccurs="0" name="Range-Op-Text" type="RangeOpText"/>
+          <xsd:element name="Set-Value-Range" type="OpSetValueRange"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Step-Width" type="StepWidthEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Unit-Code" type="OID-Type"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Set_String_Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Operation">
+        <xsd:sequence>
+          <xsd:element name="Set-String-Spec" type="SetStringSpec"/>
+        </xsd:sequence>
+        <xsd:attribute name="Current-String" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Set_Value_Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Operation">
+        <xsd:sequence>
+          <xsd:element name="Set-Value-Range" type="OpSetValueRange"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Step-Width" type="StepWidthEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Current-Value" type="FLOAT-Type"/>
+        <xsd:attribute name="Unit-Code" type="OID-Type"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Simple_MDS">
+    <xsd:complexContent>
+      <xsd:extension base="MDS">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="SingleCtxtFastScan">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="scan-info" type="RtsaObservationScan"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="context-id" type="MdsContext"/>
+  </xsd:complexType>
+  <xsd:complexType name="SingleCtxtOperScan">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="scan-info" type="OpAttributeScan"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="context-id" type="MdsContext"/>
+  </xsd:complexType>
+  <xsd:complexType name="SingleCtxtScan">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="scan-info" type="ObservationScan"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="context-id" type="MdsContext"/>
+  </xsd:complexType>
+  <xsd:complexType name="StepWidthEntry">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="step-width" type="FLOAT-Type"/>
+    <xsd:attribute name="upper-edge" type="FLOAT-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="StringSpec">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="str-flags" type="StringFlags"/>
+    <xsd:attribute name="str-max-len" type="INT-U16"/>
+  </xsd:complexType>
+  <xsd:complexType name="SystemModel">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="manufacturer" type="OCTET_STRING"/>
+    <xsd:attribute name="model-number" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="SystemSpecEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="component-spec" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="component-capab-id" type="PrivateOid"/>
+  </xsd:complexType>
+  <xsd:complexType name="TYPE">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="code" type="OID-Type"/>
+    <xsd:attribute name="partition" type="NomPartition"/>
+  </xsd:complexType>
+  <xsd:complexType name="TimeSupport">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="relative-accuracy" type="INT-U32"/>
+    <xsd:attribute name="relative-resolution" type="INT-U32"/>
+    <xsd:attribute name="time-capability" type="TimeCapability"/>
+    <xsd:attribute name="time-protocols" type="TimeProtocolId"/>
+  </xsd:complexType>
+  <xsd:complexType name="Time_Sample_Array">
+    <xsd:complexContent>
+      <xsd:extension base="Sample_Array">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Absolute-Time-Stamp" type="AbsoluteTime"/>
+          <xsd:element minOccurs="0" name="Sweep-Speed" type="MetricMeasure"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Tsa-Marker-List" type="MarkerEntryRelTim"/>
+        </xsd:sequence>
+        <xsd:attribute name="HiRes-Time-Stamp" type="HighResRelativeTime"/>
+        <xsd:attribute name="Relative-Time-Stamp" type="RelativeTime"/>
+        <xsd:attribute name="Sample-Period" type="RelativeTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ToggleLabelStrings">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="lbl-state0" type="OCTET_STRING"/>
+    <xsd:attribute name="lbl-state1" type="OCTET_STRING"/>
+  </xsd:complexType>
+  <xsd:complexType name="Toggle_Flag_Operation">
+    <xsd:complexContent>
+      <xsd:extension base="Operation">
+        <xsd:sequence>
+          <xsd:element name="Toggle-Label-Strings" type="ToggleLabelStrings"/>
+        </xsd:sequence>
+        <xsd:attribute name="Toggle-State" type="ToggleState"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Top">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="Class" type="OID-Type"/>
+    <xsd:attribute name="Name-Binding" type="OID-Type"/>
+  </xsd:complexType>
+  <xsd:complexType name="UTCTimeZone">
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="time-zone-label" type="OCTET_STRING"/>
+    <xsd:attribute name="time-zone-offset-hours" type="INT-I8"/>
+    <xsd:attribute name="time-zone-offset-minutes" type="INT-U8"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="UcfgScanner">
+    <xsd:complexContent>
+      <xsd:extension base="Scanner">
+        <xsd:attribute name="Confirm-Mode" type="ConfirmMode"/>
+        <xsd:attribute name="Confirm-Timeout" type="RelativeTime"/>
+        <xsd:attribute name="Transmit-Window" type="INT-U16"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="VMD">
+    <xsd:complexContent>
+      <xsd:extension base="VMO">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Alert" type="Alert"/>
+          <xsd:element name="AlertStatus" type="Alert_Status"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Channel" type="Channel"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="PM-Store" type="PM-Store"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Production-Specification" type="ProdSpecEntry"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Service-and-Control" type="SCO"/>
+          <xsd:element minOccurs="0" name="VMD-Model" type="SystemModel"/>
+        </xsd:sequence>
+        <xsd:attribute name="Compatibility-Id" type="INT-U32"/>
+        <xsd:attribute name="Instance-Number" type="InstNumber"/>
+        <xsd:attribute name="Locale" type="OCTET_STRING"/>
+        <xsd:attribute name="Measurement-Principle" type="MsmtPrinciple"/>
+        <xsd:attribute name="Operating-Hours" type="INT-U32"/>
+        <xsd:attribute name="Operation-Cycles" type="INT-U32"/>
+        <xsd:attribute name="Parameter-Group" type="OID-Type"/>
+        <xsd:attribute name="Position" type="INT-U16"/>
+        <xsd:attribute name="VMD-Status" type="VMDStatus"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="VMO">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:attribute name="Ext-Obj-Relations" type="OCTET_STRING"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="Label-String" type="OCTET_STRING"/>
+        <xsd:attribute name="Type" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="VMS">
+    <xsd:complexContent>
+      <xsd:extension base="Top">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Nomenclature-Version" type="NomenclatureVersion"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Production-Specification" type="ProdSpecEntry"/>
+          <xsd:element minOccurs="0" name="System-Model" type="SystemModel"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="System-Specification" type="SystemSpecEntry"/>
+        </xsd:sequence>
+        <xsd:attribute name="Compatibility-Id" type="INT-U32"/>
+        <xsd:attribute name="Ext-Obj-Relations" type="OCTET_STRING"/>
+        <xsd:attribute name="Handle" type="HANDLE"/>
+        <xsd:attribute name="System-Capability" type="SystemCapability"/>
+        <xsd:attribute name="System-Id" type="OCTET_STRING"/>
+        <xsd:attribute name="System-Type" type="OCTET_STRING"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="VmoSourceEntry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="glb-handle" type="GLB-HANDLE"/>
+    </xsd:sequence>
+    <xsd:attribute name="object_id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="vmo-type" type="OID-Type"/>
+  </xsd:complexType>
+</xsd:schema>

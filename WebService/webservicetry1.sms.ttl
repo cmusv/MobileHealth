@@ -1,0 +1,16 @@
+# baseURI: http://cmusv/webservicetry1
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix webservicetry1:  <http://cmusv/webservicetry1#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cmusv/webservicetry1>
+      rdf:type <http://www.w3.org/2002/07/owl#Ontology> ;
+      <http://www.w3.org/2002/07/owl#imports>
+              <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      <http://www.w3.org/2002/07/owl#versionInfo>
+              "Created with TopBraid Composer"^^xsd:string .
