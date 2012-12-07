@@ -1,0 +1,243 @@
+# baseURI: http://www.cmusv.edu/MobileHealth/pulseRateReadings
+# imports: http://cmusv/1.0/11073-Subset/Subset1.0
+# imports: http://cmusv/hsl
+# imports: http://purl.org/dc/terms/
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+# imports: http://www.cmusv.edu/MobileHealth/1.0/Mapping
+# imports: http://xmlns.com/foaf/0.1/20050603.rdf
+
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix arg:     <http://spinrdf.org/arg#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix pulseReadings:  <http://www.cmusv.edu/MobileHealth/pulseRateReadings#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+sp:patientId
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:pulseRate
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:readingId
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:spO2
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:timestamp
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+<http://www.cmusv.edu/MobileHealth/pulseRateReadings>
+      rdf:type owl:Ontology ;
+      owl:imports <http://cmusv/hsl> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://xmlns.com/foaf/0.1/20050603.rdf> , <http://purl.org/dc/terms/> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+pulseReadings:ApplyTopSPIN_1
+      rdf:type sml:ApplyTopSPIN ;
+      sm:next pulseReadings:ExportSubsetToRDFFile ;
+      sml:predicate spin:rule ;
+      sml:replace "true"^^xsd:boolean .
+
+pulseReadings:ExportHSLToRDFFile
+      rdf:type sml:ExportToRDFFile ;
+      sm:next pulseReadings:ApplyTopSPIN_1 ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/pulseReadings/data"^^xsd:string ;
+      sml:targetFilePath "data.ttl"^^xsd:string .
+
+pulseReadings:ExportSubsetToRDFFile
+      rdf:type sml:ExportToRDFFile ;
+      sm:next <http://www.cmusv.edu/MobileHealth/pulseReadings#translatePulseReadingAsXML> ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/pulseReadings/output"^^xsd:string ;
+      sml:targetFilePath "output.rdf"^^xsd:string .
+
+<http://www.cmusv.edu/MobileHealth/pulseRateReadings#Import-HSL.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import HSL.ttl"^^xsd:string ;
+      sm:next pulseReadings:createPulseReading ;
+      sml:baseURI "http://cmusv/hsl"^^xsd:string .
+
+<http://www.cmusv.edu/MobileHealth/pulseRateReadings#Import-Mapping.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import Mapping.ttl"^^xsd:string ;
+      sm:next pulseReadings:ApplyTopSPIN_1 ;
+      sml:baseURI "http://www.cmusv.edu/MobileHealth/1.0/Mapping"^^xsd:string .
+
+<http://www.cmusv.edu/MobileHealth/pulseRateReadings#Import-Subset1.0.ttl_1>
+      rdf:type sml:ImportRDFFromWorkspace ;
+      rdfs:label "Import Subset1.0.ttl"^^xsd:string ;
+      sm:next pulseReadings:ApplyTopSPIN_1 ;
+      sml:baseURI "http://cmusv/1.0/11073-Subset/Subset1.0"^^xsd:string .
+
+pulseReadings:createPulseReading
+      rdf:type sml:ApplyConstruct ;
+      sm:next pulseReadings:ExportHSLToRDFFile ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object <http://cmusv/hsl#Patient> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "newHslPatient"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "patientId"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#patientId> ;
+                            sp:subject
+                                    [ sp:varName "newHslPatient"^^xsd:string
+                                    ]
+                          ] [ sp:object <http://cmusv/hsl#PulseReading> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "newHslReading"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "readingId"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#readingID> ;
+                            sp:subject
+                                    [ sp:varName "newHslReading"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "newPatient"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#ofPatient> ;
+                            sp:subject
+                                    [ sp:varName "newHslReading"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "pulseRate"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#pulseRate> ;
+                            sp:subject
+                                    [ sp:varName "newHslReading"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "spO2"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://cmusv/hsl#spO2> ;
+                            sp:subject
+                                    [ sp:varName "newHslReading"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "timestamp"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://schema.org/endDate> ;
+                            sp:subject
+                                    [ sp:varName "newHslReading"^^xsd:string
+                                    ]
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression "http://cmusv/hsl#" ;
+                            sp:variable
+                                    [ sp:varName "hslUri"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 [ sp:varName "hslUri"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 [ sp:varName "patientId"^^xsd:string
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newHslPatient"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 [ sp:varName "hslUri"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 [ sp:varName "readingId"^^xsd:string
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newHslReading"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
+<http://www.cmusv.edu/MobileHealth/pulseReadings#translatePulseReadingAsXML>
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdfs:subClassOf sm:Functions ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue -1 ;
+                spl:predicate sp:timestamp ;
+                spl:valueType xsd:string ;
+                sm:next pulseReadings:createPulseReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue -1 ;
+                spl:predicate sp:pulseRate ;
+                spl:valueType xsd:integer ;
+                sm:next pulseReadings:createPulseReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue -1 ;
+                spl:predicate sp:spO2 ;
+                spl:valueType xsd:integer ;
+                sm:next pulseReadings:createPulseReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "Patient529"^^xsd:string ;
+                spl:predicate sp:patientId ;
+                spl:valueType xsd:string ;
+                sm:next pulseReadings:createPulseReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "PulseReading_14"^^xsd:string ;
+                spl:predicate sp:readingId ;
+                spl:valueType xsd:string ;
+                sm:next pulseReadings:createPulseReading
+              ] ;
+      sm:returnModule <http://www.cmusv.edu/MobileHealth/pulseReadings#translatePulseReadingAsXML> ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 "http://cmusv/1.0/11073-Subset/Subset1.0#" ;
+                                                sp:arg2 [ sp:varName "readingId"^^xsd:string
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newSubsetReading"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "newSubsetReading"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
