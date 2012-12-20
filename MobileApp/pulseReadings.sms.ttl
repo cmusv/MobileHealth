@@ -10,6 +10,7 @@
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
 @prefix arg:     <http://spinrdf.org/arg#> .
 @prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
+@prefix hsl:     <http://cmusv/hsl#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix pulseReadings:  <http://www.cmusv.edu/MobileHealth/pulseRateReadings#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -19,6 +20,7 @@
 @prefix sp:      <http://spinrdf.org/sp#> .
 @prefix spif:    <http://spinrdf.org/spif#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spinmapl:  <http://topbraid.org/spin/spinmapl#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
@@ -44,7 +46,7 @@ sp:timestamp
 
 <http://www.cmusv.edu/MobileHealth/pulseRateReadings>
       rdf:type owl:Ontology ;
-      owl:imports <http://cmusv/hsl> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://xmlns.com/foaf/0.1/20050603.rdf> , <http://purl.org/dc/terms/> ;
+      owl:imports <http://purl.org/dc/terms/> , <http://xmlns.com/foaf/0.1/20050603.rdf> , <http://cmusv/1.0/11073-Subset/Subset1.0> , <http://www.cmusv.edu/MobileHealth/1.0/Mapping> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://cmusv/hsl> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 pulseReadings:ApplyTopSPIN_1
@@ -88,7 +90,7 @@ pulseReadings:createPulseReading
       sm:next pulseReadings:ExportHSLToRDFFile ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
-                sp:templates ([ sp:object <http://cmusv/hsl#Patient> ;
+                sp:templates ([ sp:object hsl:Patient ;
                             sp:predicate rdf:type ;
                             sp:subject
                                     [ sp:varName "newHslPatient"^^xsd:string
@@ -96,11 +98,11 @@ pulseReadings:createPulseReading
                           ] [ sp:object
                                     [ sp:varName "patientId"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#patientId> ;
+                            sp:predicate hsl:patientId ;
                             sp:subject
                                     [ sp:varName "newHslPatient"^^xsd:string
                                     ]
-                          ] [ sp:object <http://cmusv/hsl#PulseReading> ;
+                          ] [ sp:object hsl:PulseReading ;
                             sp:predicate rdf:type ;
                             sp:subject
                                     [ sp:varName "newHslReading"^^xsd:string
@@ -108,28 +110,28 @@ pulseReadings:createPulseReading
                           ] [ sp:object
                                     [ sp:varName "readingId"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#readingID> ;
+                            sp:predicate hsl:readingID ;
                             sp:subject
                                     [ sp:varName "newHslReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "newPatient"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#ofPatient> ;
+                            sp:predicate hsl:ofPatient ;
                             sp:subject
                                     [ sp:varName "newHslReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "pulseRate"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#pulseRate> ;
+                            sp:predicate hsl:pulseRate ;
                             sp:subject
                                     [ sp:varName "newHslReading"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "spO2"^^xsd:string
                                     ] ;
-                            sp:predicate <http://cmusv/hsl#spO2> ;
+                            sp:predicate hsl:spO2 ;
                             sp:subject
                                     [ sp:varName "newHslReading"^^xsd:string
                                     ]
@@ -182,13 +184,6 @@ pulseReadings:createPulseReading
       spin:constraint
               [ rdf:type spl:Argument ;
                 spl:defaultValue -1 ;
-                spl:predicate sp:timestamp ;
-                spl:valueType xsd:string ;
-                sm:next pulseReadings:createPulseReading
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue -1 ;
                 spl:predicate sp:pulseRate ;
                 spl:valueType xsd:integer ;
                 sm:next pulseReadings:createPulseReading
@@ -196,8 +191,15 @@ pulseReadings:createPulseReading
       spin:constraint
               [ rdf:type spl:Argument ;
                 spl:defaultValue -1 ;
-                spl:predicate sp:spO2 ;
-                spl:valueType xsd:integer ;
+                spl:predicate sp:timestamp ;
+                spl:valueType xsd:string ;
+                sm:next pulseReadings:createPulseReading
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "PulseReading_14"^^xsd:string ;
+                spl:predicate sp:readingId ;
+                spl:valueType xsd:string ;
                 sm:next pulseReadings:createPulseReading
               ] ;
       spin:constraint
@@ -209,9 +211,9 @@ pulseReadings:createPulseReading
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "PulseReading_14"^^xsd:string ;
-                spl:predicate sp:readingId ;
-                spl:valueType xsd:string ;
+                spl:defaultValue -1 ;
+                spl:predicate sp:spO2 ;
+                spl:valueType xsd:integer ;
                 sm:next pulseReadings:createPulseReading
               ] ;
       sm:returnModule <http://www.cmusv.edu/MobileHealth/pulseReadings#translatePulseReadingAsXML> ;
@@ -241,3 +243,7 @@ pulseReadings:createPulseReading
                           ])
               ] ;
       sml:serialization sm:XML .
+
+[]    spinmapl:template "subset:{?1}"^^xsd:string .
+
+[]    spinmapl:template "subset:{?1}"^^xsd:string .
